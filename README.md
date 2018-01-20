@@ -1,8 +1,6 @@
-# Libbitcoin
+# Libbitcoin-ruby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/libbitcoin`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a wrapper for C++ library libbitcoin (https://libbitcoin.org). Work in progress.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Work in progress.
 
 ## Development
 
@@ -32,5 +30,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/libbitcoin.
+Bug reports and pull requests are welcome on GitHub at https://github.com/cryptogopher/libbitcoin-ruby.
 
