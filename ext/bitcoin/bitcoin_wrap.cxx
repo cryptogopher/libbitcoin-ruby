@@ -1898,10 +1898,10 @@ static swig_module_info swig_module = {swig_types, 67, 0, 0, 0, 0};
 
 /* -------- TYPES TABLE (END) -------- */
 
-#define SWIG_init    Init_libbitcoin
-#define SWIG_name    "Libbitcoin"
+#define SWIG_init    Init_bitcoin
+#define SWIG_name    "Bitcoin"
 
-static VALUE mLibbitcoin;
+static VALUE mBitcoin;
 
 #define SWIG_RUBY_THREAD_BEGIN_BLOCK
 #define SWIG_RUBY_THREAD_END_BLOCK
@@ -1918,7 +1918,6 @@ static VALUE mLibbitcoin;
 #include <stdexcept>
 
 
-//#include "bitcoin/bitcoin.hpp"
 #include "bitcoin/bitcoin/compat.hpp"
 #include "bitcoin/bitcoin/constants.hpp"
 #include "bitcoin/bitcoin/define.hpp"
@@ -4632,7 +4631,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::bitcoin_uri.<
+  Document-method: Bitcoin::bitcoin_uri.<
 
   call-seq:
     <(other) -> bool
@@ -4676,7 +4675,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::bitcoin_uri.==
+  Document-method: Bitcoin::bitcoin_uri.==
 
   call-seq:
     ==(other) -> bool
@@ -6302,7 +6301,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ec_private.<
+  Document-method: Bitcoin::ec_private.<
 
   call-seq:
     <(other) -> bool
@@ -6346,7 +6345,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ec_private.==
+  Document-method: Bitcoin::ec_private.==
 
   call-seq:
     ==(other) -> bool
@@ -7042,7 +7041,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ec_public.<
+  Document-method: Bitcoin::ec_public.<
 
   call-seq:
     <(other) -> bool
@@ -7086,7 +7085,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ec_public.==
+  Document-method: Bitcoin::ec_public.==
 
   call-seq:
     ==(other) -> bool
@@ -7594,7 +7593,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ek_private.<
+  Document-method: Bitcoin::ek_private.<
 
   call-seq:
     <(other) -> bool
@@ -7638,7 +7637,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ek_private.==
+  Document-method: Bitcoin::ek_private.==
 
   call-seq:
     ==(other) -> bool
@@ -7946,7 +7945,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ek_public.<
+  Document-method: Bitcoin::ek_public.<
 
   call-seq:
     <(other) -> bool
@@ -7990,7 +7989,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ek_public.==
+  Document-method: Bitcoin::ek_public.==
 
   call-seq:
     ==(other) -> bool
@@ -8298,7 +8297,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ek_token.<
+  Document-method: Bitcoin::ek_token.<
 
   call-seq:
     <(other) -> bool
@@ -8342,7 +8341,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::ek_token.==
+  Document-method: Bitcoin::ek_token.==
 
   call-seq:
     ==(other) -> bool
@@ -9346,7 +9345,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::hd_lineage.==
+  Document-method: Bitcoin::hd_lineage.==
 
   call-seq:
     ==(other) -> bool
@@ -9746,7 +9745,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::hd_public.<
+  Document-method: Bitcoin::hd_public.<
 
   call-seq:
     <(other) -> bool
@@ -9790,7 +9789,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::hd_public.==
+  Document-method: Bitcoin::hd_public.==
 
   call-seq:
     ==(other) -> bool
@@ -10611,7 +10610,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::hd_private.<
+  Document-method: Bitcoin::hd_private.<
 
   call-seq:
     <(other) -> bool
@@ -10655,7 +10654,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::hd_private.==
+  Document-method: Bitcoin::hd_private.==
 
   call-seq:
     ==(other) -> bool
@@ -12845,7 +12844,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::payment_address.<
+  Document-method: Bitcoin::payment_address.<
 
   call-seq:
     <(other) -> bool
@@ -12889,7 +12888,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::payment_address.==
+  Document-method: Bitcoin::payment_address.==
 
   call-seq:
     ==(other) -> bool
@@ -13029,7 +13028,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::payment_address.hash
+  Document-method: Bitcoin::payment_address.hash
 
   call-seq:
     hash -> short_hash const &
@@ -13309,7 +13308,7 @@ static swig_class SwigClassSelect_outputs;
 
 
 /*
-  Document-method: Libbitcoin::select_outputs.select
+  Document-method: Bitcoin::select_outputs.select
 
   call-seq:
     select(out, unspent, minimum_value, option=greedy)
@@ -13984,7 +13983,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::stealth_address.<
+  Document-method: Bitcoin::stealth_address.<
 
   call-seq:
     <(other) -> bool
@@ -14028,7 +14027,7 @@ fail:
 
 
 /*
-  Document-method: Libbitcoin::stealth_address.==
+  Document-method: Bitcoin::stealth_address.==
 
   call-seq:
     ==(other) -> bool
@@ -15608,11 +15607,11 @@ SWIG_PropagateClientData(void) {
 #ifdef __cplusplus
 extern "C"
 #endif
-SWIGEXPORT void Init_libbitcoin(void) {
+SWIGEXPORT void Init_bitcoin(void) {
   size_t i;
   
   SWIG_InitRuntime();
-  mLibbitcoin = rb_define_module("Libbitcoin");
+  mBitcoin = rb_define_module("Bitcoin");
   
   SWIG_InitializeModule(0);
   for (i = 0; i < swig_module.size; i++) {
@@ -15620,304 +15619,304 @@ SWIGEXPORT void Init_libbitcoin(void) {
   }
   
   SWIG_RubyInitializeTrackings();
-  rb_define_singleton_method(mLibbitcoin, "min_int64", VALUEFUNC(_wrap_min_int64_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_int64", VALUEFUNC(_wrap_max_int64_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "min_int32", VALUEFUNC(_wrap_min_int32_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_int32", VALUEFUNC(_wrap_max_int32_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_uint64", VALUEFUNC(_wrap_max_uint64_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_uint32", VALUEFUNC(_wrap_max_uint32_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_uint16", VALUEFUNC(_wrap_max_uint16_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_uint8", VALUEFUNC(_wrap_max_uint8_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_size_t", VALUEFUNC(_wrap_max_size_t_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "byte_bits", VALUEFUNC(_wrap_byte_bits_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "no_previous_output", VALUEFUNC(_wrap_no_previous_output_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_input_sequence", VALUEFUNC(_wrap_max_input_sequence_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "sighash_null_value", VALUEFUNC(_wrap_sighash_null_value_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_counted_ops", VALUEFUNC(_wrap_max_counted_ops_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_stack_size", VALUEFUNC(_wrap_max_stack_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_script_size", VALUEFUNC(_wrap_max_script_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_push_data_size", VALUEFUNC(_wrap_max_push_data_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_script_public_keys", VALUEFUNC(_wrap_max_script_public_keys_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "multisig_default_sigops", VALUEFUNC(_wrap_multisig_default_sigops_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_number_size", VALUEFUNC(_wrap_max_number_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_check_locktime_verify_number_size", VALUEFUNC(_wrap_max_check_locktime_verify_number_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_check_sequence_verify_number_size", VALUEFUNC(_wrap_max_check_sequence_verify_number_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_null_data_size", VALUEFUNC(_wrap_max_null_data_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "min_coinbase_size", VALUEFUNC(_wrap_min_coinbase_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_coinbase_size", VALUEFUNC(_wrap_max_coinbase_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "coinbase_maturity", VALUEFUNC(_wrap_coinbase_maturity_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "median_time_past_interval", VALUEFUNC(_wrap_median_time_past_interval_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "locktime_threshold", VALUEFUNC(_wrap_locktime_threshold_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_block_size", VALUEFUNC(_wrap_max_block_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_sigops_factor", VALUEFUNC(_wrap_max_sigops_factor_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_block_sigops", VALUEFUNC(_wrap_max_block_sigops_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "relative_locktime_min_version", VALUEFUNC(_wrap_relative_locktime_min_version_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "relative_locktime_seconds_shift", VALUEFUNC(_wrap_relative_locktime_seconds_shift_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "relative_locktime_mask", VALUEFUNC(_wrap_relative_locktime_mask_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "relative_locktime_disabled", VALUEFUNC(_wrap_relative_locktime_disabled_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "relative_locktime_time_locked", VALUEFUNC(_wrap_relative_locktime_time_locked_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "retargeting_factor", VALUEFUNC(_wrap_retargeting_factor_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "easy_spacing_seconds", VALUEFUNC(_wrap_easy_spacing_seconds_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "target_spacing_seconds", VALUEFUNC(_wrap_target_spacing_seconds_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "target_timespan_seconds", VALUEFUNC(_wrap_target_timespan_seconds_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "timestamp_future_seconds", VALUEFUNC(_wrap_timestamp_future_seconds_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "retarget_proof_of_work_limit", VALUEFUNC(_wrap_retarget_proof_of_work_limit_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "no_retarget_proof_of_work_limit", VALUEFUNC(_wrap_no_retarget_proof_of_work_limit_get), 0);
-  rb_define_module_function(mLibbitcoin, "work_limit", VALUEFUNC(_wrap_work_limit), -1);
-  rb_define_singleton_method(mLibbitcoin, "min_timespan", VALUEFUNC(_wrap_min_timespan_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_timespan", VALUEFUNC(_wrap_max_timespan_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "retargeting_interval", VALUEFUNC(_wrap_retargeting_interval_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "first_version", VALUEFUNC(_wrap_first_version_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "bip34_version", VALUEFUNC(_wrap_bip34_version_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "bip66_version", VALUEFUNC(_wrap_bip66_version_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "bip65_version", VALUEFUNC(_wrap_bip65_version_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "bip9_version_bit0", VALUEFUNC(_wrap_bip9_version_bit0_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "bip9_version_bit1", VALUEFUNC(_wrap_bip9_version_bit1_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "bip9_version_base", VALUEFUNC(_wrap_bip9_version_base_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_active", VALUEFUNC(_wrap_mainnet_active_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_enforce", VALUEFUNC(_wrap_mainnet_enforce_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_sample", VALUEFUNC(_wrap_mainnet_sample_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_active", VALUEFUNC(_wrap_testnet_active_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_enforce", VALUEFUNC(_wrap_testnet_enforce_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_sample", VALUEFUNC(_wrap_testnet_sample_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip65_freeze", VALUEFUNC(_wrap_mainnet_bip65_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip66_freeze", VALUEFUNC(_wrap_mainnet_bip66_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip34_freeze", VALUEFUNC(_wrap_mainnet_bip34_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_bip65_freeze", VALUEFUNC(_wrap_testnet_bip65_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_bip66_freeze", VALUEFUNC(_wrap_testnet_bip66_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_bip34_freeze", VALUEFUNC(_wrap_testnet_bip34_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "regtest_bip65_freeze", VALUEFUNC(_wrap_regtest_bip65_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "regtest_bip66_freeze", VALUEFUNC(_wrap_regtest_bip66_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "regtest_bip34_freeze", VALUEFUNC(_wrap_regtest_bip34_freeze_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "bip16_activation_time", VALUEFUNC(_wrap_bip16_activation_time_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip16_exception_checkpoint", VALUEFUNC(_wrap_mainnet_bip16_exception_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip30_exception_checkpoint1", VALUEFUNC(_wrap_mainnet_bip30_exception_checkpoint1_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip30_exception_checkpoint2", VALUEFUNC(_wrap_mainnet_bip30_exception_checkpoint2_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip34_active_checkpoint", VALUEFUNC(_wrap_mainnet_bip34_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_bip34_active_checkpoint", VALUEFUNC(_wrap_testnet_bip34_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "regtest_bip34_active_checkpoint", VALUEFUNC(_wrap_regtest_bip34_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip9_bit0_active_checkpoint", VALUEFUNC(_wrap_mainnet_bip9_bit0_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_bip9_bit0_active_checkpoint", VALUEFUNC(_wrap_testnet_bip9_bit0_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "regtest_bip9_bit0_active_checkpoint", VALUEFUNC(_wrap_regtest_bip9_bit0_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mainnet_bip9_bit1_active_checkpoint", VALUEFUNC(_wrap_mainnet_bip9_bit1_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "testnet_bip9_bit1_active_checkpoint", VALUEFUNC(_wrap_testnet_bip9_bit1_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "regtest_bip9_bit1_active_checkpoint", VALUEFUNC(_wrap_regtest_bip9_bit1_active_checkpoint_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "command_size", VALUEFUNC(_wrap_command_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_address", VALUEFUNC(_wrap_max_address_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_filter_add", VALUEFUNC(_wrap_max_filter_add_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_filter_functions", VALUEFUNC(_wrap_max_filter_functions_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_filter_load", VALUEFUNC(_wrap_max_filter_load_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_get_blocks", VALUEFUNC(_wrap_max_get_blocks_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_get_headers", VALUEFUNC(_wrap_max_get_headers_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_get_data", VALUEFUNC(_wrap_max_get_data_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_inventory", VALUEFUNC(_wrap_max_inventory_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_locator", VALUEFUNC(_wrap_max_locator_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "varint_two_bytes", VALUEFUNC(_wrap_varint_two_bytes_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "varint_four_bytes", VALUEFUNC(_wrap_varint_four_bytes_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "varint_eight_bytes", VALUEFUNC(_wrap_varint_eight_bytes_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "string_terminator", VALUEFUNC(_wrap_string_terminator_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "witness_marker", VALUEFUNC(_wrap_witness_marker_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "witness_flag", VALUEFUNC(_wrap_witness_flag_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "witness_head", VALUEFUNC(_wrap_witness_head_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "fast_sigops_factor", VALUEFUNC(_wrap_fast_sigops_factor_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_fast_sigops", VALUEFUNC(_wrap_max_fast_sigops_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "light_weight_factor", VALUEFUNC(_wrap_light_weight_factor_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_block_weight", VALUEFUNC(_wrap_max_block_weight_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "base_size_contribution", VALUEFUNC(_wrap_base_size_contribution_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "total_size_contribution", VALUEFUNC(_wrap_total_size_contribution_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "min_witness_program", VALUEFUNC(_wrap_min_witness_program_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "max_witness_program", VALUEFUNC(_wrap_max_witness_program_get), 0);
-  rb_define_module_function(mLibbitcoin, "max_money_recursive", VALUEFUNC(_wrap_max_money_recursive), -1);
-  rb_define_singleton_method(mLibbitcoin, "satoshi_per_bitcoin", VALUEFUNC(_wrap_satoshi_per_bitcoin_get), 0);
-  rb_define_module_function(mLibbitcoin, "bitcoin_to_satoshi", VALUEFUNC(_wrap_bitcoin_to_satoshi), -1);
-  rb_define_singleton_method(mLibbitcoin, "initial_block_subsidy_bitcoin", VALUEFUNC(_wrap_initial_block_subsidy_bitcoin_get), 0);
-  rb_define_module_function(mLibbitcoin, "initial_block_subsidy_satoshi", VALUEFUNC(_wrap_initial_block_subsidy_satoshi), -1);
-  rb_define_singleton_method(mLibbitcoin, "recursive_money", VALUEFUNC(_wrap_recursive_money_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "retarget_subsidy_interval", VALUEFUNC(_wrap_retarget_subsidy_interval_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "no_retarget_subsidy_interval", VALUEFUNC(_wrap_no_retarget_subsidy_interval_get), 0);
-  rb_define_module_function(mLibbitcoin, "subsidy_interval", VALUEFUNC(_wrap_subsidy_interval), -1);
-  rb_define_module_function(mLibbitcoin, "max_money", VALUEFUNC(_wrap_max_money), -1);
-  rb_define_const(mLibbitcoin, "Failure", SWIG_From_int(static_cast< int >(libbitcoin::failure)));
-  rb_define_const(mLibbitcoin, "Okay", SWIG_From_int(static_cast< int >(libbitcoin::okay)));
-  rb_define_const(mLibbitcoin, "Invalid", SWIG_From_int(static_cast< int >(libbitcoin::invalid)));
-  rb_define_const(mLibbitcoin, "Success", SWIG_From_int(static_cast< int >(libbitcoin::error::success)));
-  rb_define_const(mLibbitcoin, "Deprecated", SWIG_From_int(static_cast< int >(libbitcoin::error::deprecated)));
-  rb_define_const(mLibbitcoin, "Unknown", SWIG_From_int(static_cast< int >(libbitcoin::error::unknown)));
-  rb_define_const(mLibbitcoin, "Not_found", SWIG_From_int(static_cast< int >(libbitcoin::error::not_found)));
-  rb_define_const(mLibbitcoin, "File_system", SWIG_From_int(static_cast< int >(libbitcoin::error::file_system)));
-  rb_define_const(mLibbitcoin, "Non_standard", SWIG_From_int(static_cast< int >(libbitcoin::error::non_standard)));
-  rb_define_const(mLibbitcoin, "Not_implemented", SWIG_From_int(static_cast< int >(libbitcoin::error::not_implemented)));
-  rb_define_const(mLibbitcoin, "Oversubscribed", SWIG_From_int(static_cast< int >(libbitcoin::error::oversubscribed)));
-  rb_define_const(mLibbitcoin, "Service_stopped", SWIG_From_int(static_cast< int >(libbitcoin::error::service_stopped)));
-  rb_define_const(mLibbitcoin, "Operation_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::operation_failed)));
-  rb_define_const(mLibbitcoin, "Resolve_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::resolve_failed)));
-  rb_define_const(mLibbitcoin, "Network_unreachable", SWIG_From_int(static_cast< int >(libbitcoin::error::network_unreachable)));
-  rb_define_const(mLibbitcoin, "Address_in_use", SWIG_From_int(static_cast< int >(libbitcoin::error::address_in_use)));
-  rb_define_const(mLibbitcoin, "Listen_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::listen_failed)));
-  rb_define_const(mLibbitcoin, "Accept_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::accept_failed)));
-  rb_define_const(mLibbitcoin, "Bad_stream", SWIG_From_int(static_cast< int >(libbitcoin::error::bad_stream)));
-  rb_define_const(mLibbitcoin, "Channel_timeout", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_timeout)));
-  rb_define_const(mLibbitcoin, "Address_blocked", SWIG_From_int(static_cast< int >(libbitcoin::error::address_blocked)));
-  rb_define_const(mLibbitcoin, "Channel_stopped", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_stopped)));
-  rb_define_const(mLibbitcoin, "Peer_throttling", SWIG_From_int(static_cast< int >(libbitcoin::error::peer_throttling)));
-  rb_define_const(mLibbitcoin, "Store_block_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_duplicate)));
-  rb_define_const(mLibbitcoin, "Store_block_invalid_height", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_invalid_height)));
-  rb_define_const(mLibbitcoin, "Store_block_missing_parent", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_missing_parent)));
-  rb_define_const(mLibbitcoin, "Duplicate_block", SWIG_From_int(static_cast< int >(libbitcoin::error::duplicate_block)));
-  rb_define_const(mLibbitcoin, "Orphan_block", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_block)));
-  rb_define_const(mLibbitcoin, "Invalid_previous_block", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_previous_block)));
-  rb_define_const(mLibbitcoin, "Insufficient_work", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_work)));
-  rb_define_const(mLibbitcoin, "Orphan_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_transaction)));
-  rb_define_const(mLibbitcoin, "Insufficient_fee", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_fee)));
-  rb_define_const(mLibbitcoin, "Dusty_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::dusty_transaction)));
-  rb_define_const(mLibbitcoin, "Stale_chain", SWIG_From_int(static_cast< int >(libbitcoin::error::stale_chain)));
-  rb_define_const(mLibbitcoin, "Invalid_proof_of_work", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_proof_of_work)));
-  rb_define_const(mLibbitcoin, "Futuristic_timestamp", SWIG_From_int(static_cast< int >(libbitcoin::error::futuristic_timestamp)));
-  rb_define_const(mLibbitcoin, "Checkpoints_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::checkpoints_failed)));
-  rb_define_const(mLibbitcoin, "Old_version_block", SWIG_From_int(static_cast< int >(libbitcoin::error::old_version_block)));
-  rb_define_const(mLibbitcoin, "Incorrect_proof_of_work", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_proof_of_work)));
-  rb_define_const(mLibbitcoin, "Timestamp_too_early", SWIG_From_int(static_cast< int >(libbitcoin::error::timestamp_too_early)));
-  rb_define_const(mLibbitcoin, "Block_size_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_size_limit)));
-  rb_define_const(mLibbitcoin, "Empty_block", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_block)));
-  rb_define_const(mLibbitcoin, "First_not_coinbase", SWIG_From_int(static_cast< int >(libbitcoin::error::first_not_coinbase)));
-  rb_define_const(mLibbitcoin, "Extra_coinbases", SWIG_From_int(static_cast< int >(libbitcoin::error::extra_coinbases)));
-  rb_define_const(mLibbitcoin, "Internal_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::internal_duplicate)));
-  rb_define_const(mLibbitcoin, "Block_internal_double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::block_internal_double_spend)));
-  rb_define_const(mLibbitcoin, "Forward_reference", SWIG_From_int(static_cast< int >(libbitcoin::error::forward_reference)));
-  rb_define_const(mLibbitcoin, "Merkle_mismatch", SWIG_From_int(static_cast< int >(libbitcoin::error::merkle_mismatch)));
-  rb_define_const(mLibbitcoin, "Block_legacy_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_legacy_sigop_limit)));
-  rb_define_const(mLibbitcoin, "Block_non_final", SWIG_From_int(static_cast< int >(libbitcoin::error::block_non_final)));
-  rb_define_const(mLibbitcoin, "Coinbase_height_mismatch", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_height_mismatch)));
-  rb_define_const(mLibbitcoin, "Coinbase_value_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_value_limit)));
-  rb_define_const(mLibbitcoin, "Block_embedded_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_embedded_sigop_limit)));
-  rb_define_const(mLibbitcoin, "Invalid_witness_commitment", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness_commitment)));
-  rb_define_const(mLibbitcoin, "Block_weight_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_weight_limit)));
-  rb_define_const(mLibbitcoin, "Empty_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_transaction)));
-  rb_define_const(mLibbitcoin, "Previous_output_null", SWIG_From_int(static_cast< int >(libbitcoin::error::previous_output_null)));
-  rb_define_const(mLibbitcoin, "Spend_overflow", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_overflow)));
-  rb_define_const(mLibbitcoin, "Invalid_coinbase_script_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_coinbase_script_size)));
-  rb_define_const(mLibbitcoin, "Coinbase_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_transaction)));
-  rb_define_const(mLibbitcoin, "Transaction_internal_double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_internal_double_spend)));
-  rb_define_const(mLibbitcoin, "Transaction_size_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_size_limit)));
-  rb_define_const(mLibbitcoin, "Transaction_legacy_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_legacy_sigop_limit)));
-  rb_define_const(mLibbitcoin, "Transaction_non_final", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_non_final)));
-  rb_define_const(mLibbitcoin, "Premature_validation", SWIG_From_int(static_cast< int >(libbitcoin::error::premature_validation)));
-  rb_define_const(mLibbitcoin, "Unspent_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::unspent_duplicate)));
-  rb_define_const(mLibbitcoin, "Missing_previous_output", SWIG_From_int(static_cast< int >(libbitcoin::error::missing_previous_output)));
-  rb_define_const(mLibbitcoin, "Double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::double_spend)));
-  rb_define_const(mLibbitcoin, "Coinbase_maturity", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_maturity)));
-  rb_define_const(mLibbitcoin, "Spend_exceeds_value", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_exceeds_value)));
-  rb_define_const(mLibbitcoin, "Transaction_embedded_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_embedded_sigop_limit)));
-  rb_define_const(mLibbitcoin, "Sequence_locked", SWIG_From_int(static_cast< int >(libbitcoin::error::sequence_locked)));
-  rb_define_const(mLibbitcoin, "Transaction_weight_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_weight_limit)));
-  rb_define_const(mLibbitcoin, "Invalid_script", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script)));
-  rb_define_const(mLibbitcoin, "Invalid_script_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_size)));
-  rb_define_const(mLibbitcoin, "Invalid_push_data_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_push_data_size)));
-  rb_define_const(mLibbitcoin, "Invalid_operation_count", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_operation_count)));
-  rb_define_const(mLibbitcoin, "Invalid_stack_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_size)));
-  rb_define_const(mLibbitcoin, "Invalid_stack_scope", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_scope)));
-  rb_define_const(mLibbitcoin, "Invalid_script_embed", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_embed)));
-  rb_define_const(mLibbitcoin, "Invalid_signature_encoding", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_encoding)));
-  rb_define_const(mLibbitcoin, "Invalid_signature_lax_encoding", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_lax_encoding)));
-  rb_define_const(mLibbitcoin, "Incorrect_signature", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_signature)));
-  rb_define_const(mLibbitcoin, "Unexpected_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::unexpected_witness)));
-  rb_define_const(mLibbitcoin, "Invalid_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness)));
-  rb_define_const(mLibbitcoin, "Dirty_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::dirty_witness)));
-  rb_define_const(mLibbitcoin, "Stack_false", SWIG_From_int(static_cast< int >(libbitcoin::error::stack_false)));
-  rb_define_const(mLibbitcoin, "Op_disabled", SWIG_From_int(static_cast< int >(libbitcoin::error::op_disabled)));
-  rb_define_const(mLibbitcoin, "Op_reserved", SWIG_From_int(static_cast< int >(libbitcoin::error::op_reserved)));
-  rb_define_const(mLibbitcoin, "Op_push_size", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_size)));
-  rb_define_const(mLibbitcoin, "Op_push_data", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_data)));
-  rb_define_const(mLibbitcoin, "Op_if", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if)));
-  rb_define_const(mLibbitcoin, "Op_notif", SWIG_From_int(static_cast< int >(libbitcoin::error::op_notif)));
-  rb_define_const(mLibbitcoin, "Op_else", SWIG_From_int(static_cast< int >(libbitcoin::error::op_else)));
-  rb_define_const(mLibbitcoin, "Op_endif", SWIG_From_int(static_cast< int >(libbitcoin::error::op_endif)));
-  rb_define_const(mLibbitcoin, "Op_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify1)));
-  rb_define_const(mLibbitcoin, "Op_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify2)));
-  rb_define_const(mLibbitcoin, "Op_return", SWIG_From_int(static_cast< int >(libbitcoin::error::op_return)));
-  rb_define_const(mLibbitcoin, "Op_to_alt_stack", SWIG_From_int(static_cast< int >(libbitcoin::error::op_to_alt_stack)));
-  rb_define_const(mLibbitcoin, "Op_from_alt_stack", SWIG_From_int(static_cast< int >(libbitcoin::error::op_from_alt_stack)));
-  rb_define_const(mLibbitcoin, "Op_drop2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop2)));
-  rb_define_const(mLibbitcoin, "Op_dup2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup2)));
-  rb_define_const(mLibbitcoin, "Op_dup3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup3)));
-  rb_define_const(mLibbitcoin, "Op_over2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over2)));
-  rb_define_const(mLibbitcoin, "Op_rot2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot2)));
-  rb_define_const(mLibbitcoin, "Op_swap2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap2)));
-  rb_define_const(mLibbitcoin, "Op_if_dup", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if_dup)));
-  rb_define_const(mLibbitcoin, "Op_drop", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop)));
-  rb_define_const(mLibbitcoin, "Op_dup", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup)));
-  rb_define_const(mLibbitcoin, "Op_nip", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nip)));
-  rb_define_const(mLibbitcoin, "Op_over", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over)));
-  rb_define_const(mLibbitcoin, "Op_pick", SWIG_From_int(static_cast< int >(libbitcoin::error::op_pick)));
-  rb_define_const(mLibbitcoin, "Op_roll", SWIG_From_int(static_cast< int >(libbitcoin::error::op_roll)));
-  rb_define_const(mLibbitcoin, "Op_rot", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot)));
-  rb_define_const(mLibbitcoin, "Op_swap", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap)));
-  rb_define_const(mLibbitcoin, "Op_tuck", SWIG_From_int(static_cast< int >(libbitcoin::error::op_tuck)));
-  rb_define_const(mLibbitcoin, "Op_size", SWIG_From_int(static_cast< int >(libbitcoin::error::op_size)));
-  rb_define_const(mLibbitcoin, "Op_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal)));
-  rb_define_const(mLibbitcoin, "Op_equal_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify1)));
-  rb_define_const(mLibbitcoin, "Op_equal_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify2)));
-  rb_define_const(mLibbitcoin, "Op_add1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add1)));
-  rb_define_const(mLibbitcoin, "Op_sub1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub1)));
-  rb_define_const(mLibbitcoin, "Op_negate", SWIG_From_int(static_cast< int >(libbitcoin::error::op_negate)));
-  rb_define_const(mLibbitcoin, "Op_abs", SWIG_From_int(static_cast< int >(libbitcoin::error::op_abs)));
-  rb_define_const(mLibbitcoin, "Op_not", SWIG_From_int(static_cast< int >(libbitcoin::error::op_not)));
-  rb_define_const(mLibbitcoin, "Op_nonzero", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nonzero)));
-  rb_define_const(mLibbitcoin, "Op_add", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add)));
-  rb_define_const(mLibbitcoin, "Op_sub", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub)));
-  rb_define_const(mLibbitcoin, "Op_bool_and", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_and)));
-  rb_define_const(mLibbitcoin, "Op_bool_or", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_or)));
-  rb_define_const(mLibbitcoin, "Op_num_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal)));
-  rb_define_const(mLibbitcoin, "Op_num_equal_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify1)));
-  rb_define_const(mLibbitcoin, "Op_num_equal_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify2)));
-  rb_define_const(mLibbitcoin, "Op_num_not_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_not_equal)));
-  rb_define_const(mLibbitcoin, "Op_less_than", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than)));
-  rb_define_const(mLibbitcoin, "Op_greater_than", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than)));
-  rb_define_const(mLibbitcoin, "Op_less_than_or_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than_or_equal)));
-  rb_define_const(mLibbitcoin, "Op_greater_than_or_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than_or_equal)));
-  rb_define_const(mLibbitcoin, "Op_min", SWIG_From_int(static_cast< int >(libbitcoin::error::op_min)));
-  rb_define_const(mLibbitcoin, "Op_max", SWIG_From_int(static_cast< int >(libbitcoin::error::op_max)));
-  rb_define_const(mLibbitcoin, "Op_within", SWIG_From_int(static_cast< int >(libbitcoin::error::op_within)));
-  rb_define_const(mLibbitcoin, "Op_ripemd160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_ripemd160)));
-  rb_define_const(mLibbitcoin, "Op_sha1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha1)));
-  rb_define_const(mLibbitcoin, "Op_sha256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha256)));
-  rb_define_const(mLibbitcoin, "Op_hash160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash160)));
-  rb_define_const(mLibbitcoin, "Op_hash256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash256)));
-  rb_define_const(mLibbitcoin, "Op_code_seperator", SWIG_From_int(static_cast< int >(libbitcoin::error::op_code_seperator)));
-  rb_define_const(mLibbitcoin, "Op_check_sig_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig_verify1)));
-  rb_define_const(mLibbitcoin, "Op_check_sig", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify1)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify2)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify3)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify4)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify5)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify6)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify7)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig)));
-  rb_define_const(mLibbitcoin, "Op_check_locktime_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify1)));
-  rb_define_const(mLibbitcoin, "Op_check_locktime_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify2)));
-  rb_define_const(mLibbitcoin, "Op_check_locktime_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify3)));
-  rb_define_const(mLibbitcoin, "Op_check_locktime_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify4)));
-  rb_define_const(mLibbitcoin, "Op_check_locktime_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify5)));
-  rb_define_const(mLibbitcoin, "Op_check_locktime_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify6)));
-  rb_define_const(mLibbitcoin, "Op_check_sequence_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify1)));
-  rb_define_const(mLibbitcoin, "Op_check_sequence_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify2)));
-  rb_define_const(mLibbitcoin, "Op_check_sequence_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify3)));
-  rb_define_const(mLibbitcoin, "Op_check_sequence_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify4)));
-  rb_define_const(mLibbitcoin, "Op_check_sequence_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify5)));
-  rb_define_const(mLibbitcoin, "Op_check_sequence_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify6)));
-  rb_define_const(mLibbitcoin, "Op_check_sequence_verify7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify7)));
-  rb_define_const(mLibbitcoin, "Op_check_multisig_verify8", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify8)));
-  rb_define_module_function(mLibbitcoin, "make_error_code", VALUEFUNC(_wrap_make_error_code), -1);
-  rb_define_module_function(mLibbitcoin, "make_error_condition", VALUEFUNC(_wrap_make_error_condition), -1);
-  rb_define_module_function(mLibbitcoin, "boost_to_error_code", VALUEFUNC(_wrap_boost_to_error_code), -1);
-  rb_define_module_function(mLibbitcoin, "posix_to_error_code", VALUEFUNC(_wrap_posix_to_error_code), -1);
-  rb_define_const(mLibbitcoin, "LIBBITCOIN_VERSION", SWIG_FromCharPtr("3.4.0"));
-  rb_define_const(mLibbitcoin, "LIBBITCOIN_MAJOR_VERSION", SWIG_From_int(static_cast< int >(3)));
-  rb_define_const(mLibbitcoin, "LIBBITCOIN_MINOR_VERSION", SWIG_From_int(static_cast< int >(4)));
-  rb_define_const(mLibbitcoin, "LIBBITCOIN_PATCH_VERSION", SWIG_From_int(static_cast< int >(0)));
+  rb_define_singleton_method(mBitcoin, "min_int64", VALUEFUNC(_wrap_min_int64_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_int64", VALUEFUNC(_wrap_max_int64_get), 0);
+  rb_define_singleton_method(mBitcoin, "min_int32", VALUEFUNC(_wrap_min_int32_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_int32", VALUEFUNC(_wrap_max_int32_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_uint64", VALUEFUNC(_wrap_max_uint64_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_uint32", VALUEFUNC(_wrap_max_uint32_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_uint16", VALUEFUNC(_wrap_max_uint16_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_uint8", VALUEFUNC(_wrap_max_uint8_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_size_t", VALUEFUNC(_wrap_max_size_t_get), 0);
+  rb_define_singleton_method(mBitcoin, "byte_bits", VALUEFUNC(_wrap_byte_bits_get), 0);
+  rb_define_singleton_method(mBitcoin, "no_previous_output", VALUEFUNC(_wrap_no_previous_output_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_input_sequence", VALUEFUNC(_wrap_max_input_sequence_get), 0);
+  rb_define_singleton_method(mBitcoin, "sighash_null_value", VALUEFUNC(_wrap_sighash_null_value_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_counted_ops", VALUEFUNC(_wrap_max_counted_ops_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_stack_size", VALUEFUNC(_wrap_max_stack_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_script_size", VALUEFUNC(_wrap_max_script_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_push_data_size", VALUEFUNC(_wrap_max_push_data_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_script_public_keys", VALUEFUNC(_wrap_max_script_public_keys_get), 0);
+  rb_define_singleton_method(mBitcoin, "multisig_default_sigops", VALUEFUNC(_wrap_multisig_default_sigops_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_number_size", VALUEFUNC(_wrap_max_number_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_check_locktime_verify_number_size", VALUEFUNC(_wrap_max_check_locktime_verify_number_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_check_sequence_verify_number_size", VALUEFUNC(_wrap_max_check_sequence_verify_number_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_null_data_size", VALUEFUNC(_wrap_max_null_data_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "min_coinbase_size", VALUEFUNC(_wrap_min_coinbase_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_coinbase_size", VALUEFUNC(_wrap_max_coinbase_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "coinbase_maturity", VALUEFUNC(_wrap_coinbase_maturity_get), 0);
+  rb_define_singleton_method(mBitcoin, "median_time_past_interval", VALUEFUNC(_wrap_median_time_past_interval_get), 0);
+  rb_define_singleton_method(mBitcoin, "locktime_threshold", VALUEFUNC(_wrap_locktime_threshold_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_block_size", VALUEFUNC(_wrap_max_block_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_sigops_factor", VALUEFUNC(_wrap_max_sigops_factor_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_block_sigops", VALUEFUNC(_wrap_max_block_sigops_get), 0);
+  rb_define_singleton_method(mBitcoin, "relative_locktime_min_version", VALUEFUNC(_wrap_relative_locktime_min_version_get), 0);
+  rb_define_singleton_method(mBitcoin, "relative_locktime_seconds_shift", VALUEFUNC(_wrap_relative_locktime_seconds_shift_get), 0);
+  rb_define_singleton_method(mBitcoin, "relative_locktime_mask", VALUEFUNC(_wrap_relative_locktime_mask_get), 0);
+  rb_define_singleton_method(mBitcoin, "relative_locktime_disabled", VALUEFUNC(_wrap_relative_locktime_disabled_get), 0);
+  rb_define_singleton_method(mBitcoin, "relative_locktime_time_locked", VALUEFUNC(_wrap_relative_locktime_time_locked_get), 0);
+  rb_define_singleton_method(mBitcoin, "retargeting_factor", VALUEFUNC(_wrap_retargeting_factor_get), 0);
+  rb_define_singleton_method(mBitcoin, "easy_spacing_seconds", VALUEFUNC(_wrap_easy_spacing_seconds_get), 0);
+  rb_define_singleton_method(mBitcoin, "target_spacing_seconds", VALUEFUNC(_wrap_target_spacing_seconds_get), 0);
+  rb_define_singleton_method(mBitcoin, "target_timespan_seconds", VALUEFUNC(_wrap_target_timespan_seconds_get), 0);
+  rb_define_singleton_method(mBitcoin, "timestamp_future_seconds", VALUEFUNC(_wrap_timestamp_future_seconds_get), 0);
+  rb_define_singleton_method(mBitcoin, "retarget_proof_of_work_limit", VALUEFUNC(_wrap_retarget_proof_of_work_limit_get), 0);
+  rb_define_singleton_method(mBitcoin, "no_retarget_proof_of_work_limit", VALUEFUNC(_wrap_no_retarget_proof_of_work_limit_get), 0);
+  rb_define_module_function(mBitcoin, "work_limit", VALUEFUNC(_wrap_work_limit), -1);
+  rb_define_singleton_method(mBitcoin, "min_timespan", VALUEFUNC(_wrap_min_timespan_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_timespan", VALUEFUNC(_wrap_max_timespan_get), 0);
+  rb_define_singleton_method(mBitcoin, "retargeting_interval", VALUEFUNC(_wrap_retargeting_interval_get), 0);
+  rb_define_singleton_method(mBitcoin, "first_version", VALUEFUNC(_wrap_first_version_get), 0);
+  rb_define_singleton_method(mBitcoin, "bip34_version", VALUEFUNC(_wrap_bip34_version_get), 0);
+  rb_define_singleton_method(mBitcoin, "bip66_version", VALUEFUNC(_wrap_bip66_version_get), 0);
+  rb_define_singleton_method(mBitcoin, "bip65_version", VALUEFUNC(_wrap_bip65_version_get), 0);
+  rb_define_singleton_method(mBitcoin, "bip9_version_bit0", VALUEFUNC(_wrap_bip9_version_bit0_get), 0);
+  rb_define_singleton_method(mBitcoin, "bip9_version_bit1", VALUEFUNC(_wrap_bip9_version_bit1_get), 0);
+  rb_define_singleton_method(mBitcoin, "bip9_version_base", VALUEFUNC(_wrap_bip9_version_base_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_active", VALUEFUNC(_wrap_mainnet_active_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_enforce", VALUEFUNC(_wrap_mainnet_enforce_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_sample", VALUEFUNC(_wrap_mainnet_sample_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_active", VALUEFUNC(_wrap_testnet_active_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_enforce", VALUEFUNC(_wrap_testnet_enforce_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_sample", VALUEFUNC(_wrap_testnet_sample_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip65_freeze", VALUEFUNC(_wrap_mainnet_bip65_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip66_freeze", VALUEFUNC(_wrap_mainnet_bip66_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip34_freeze", VALUEFUNC(_wrap_mainnet_bip34_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_bip65_freeze", VALUEFUNC(_wrap_testnet_bip65_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_bip66_freeze", VALUEFUNC(_wrap_testnet_bip66_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_bip34_freeze", VALUEFUNC(_wrap_testnet_bip34_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "regtest_bip65_freeze", VALUEFUNC(_wrap_regtest_bip65_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "regtest_bip66_freeze", VALUEFUNC(_wrap_regtest_bip66_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "regtest_bip34_freeze", VALUEFUNC(_wrap_regtest_bip34_freeze_get), 0);
+  rb_define_singleton_method(mBitcoin, "bip16_activation_time", VALUEFUNC(_wrap_bip16_activation_time_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip16_exception_checkpoint", VALUEFUNC(_wrap_mainnet_bip16_exception_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip30_exception_checkpoint1", VALUEFUNC(_wrap_mainnet_bip30_exception_checkpoint1_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip30_exception_checkpoint2", VALUEFUNC(_wrap_mainnet_bip30_exception_checkpoint2_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip34_active_checkpoint", VALUEFUNC(_wrap_mainnet_bip34_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_bip34_active_checkpoint", VALUEFUNC(_wrap_testnet_bip34_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "regtest_bip34_active_checkpoint", VALUEFUNC(_wrap_regtest_bip34_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip9_bit0_active_checkpoint", VALUEFUNC(_wrap_mainnet_bip9_bit0_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_bip9_bit0_active_checkpoint", VALUEFUNC(_wrap_testnet_bip9_bit0_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "regtest_bip9_bit0_active_checkpoint", VALUEFUNC(_wrap_regtest_bip9_bit0_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "mainnet_bip9_bit1_active_checkpoint", VALUEFUNC(_wrap_mainnet_bip9_bit1_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "testnet_bip9_bit1_active_checkpoint", VALUEFUNC(_wrap_testnet_bip9_bit1_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "regtest_bip9_bit1_active_checkpoint", VALUEFUNC(_wrap_regtest_bip9_bit1_active_checkpoint_get), 0);
+  rb_define_singleton_method(mBitcoin, "command_size", VALUEFUNC(_wrap_command_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_address", VALUEFUNC(_wrap_max_address_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_filter_add", VALUEFUNC(_wrap_max_filter_add_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_filter_functions", VALUEFUNC(_wrap_max_filter_functions_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_filter_load", VALUEFUNC(_wrap_max_filter_load_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_get_blocks", VALUEFUNC(_wrap_max_get_blocks_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_get_headers", VALUEFUNC(_wrap_max_get_headers_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_get_data", VALUEFUNC(_wrap_max_get_data_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_inventory", VALUEFUNC(_wrap_max_inventory_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_locator", VALUEFUNC(_wrap_max_locator_get), 0);
+  rb_define_singleton_method(mBitcoin, "varint_two_bytes", VALUEFUNC(_wrap_varint_two_bytes_get), 0);
+  rb_define_singleton_method(mBitcoin, "varint_four_bytes", VALUEFUNC(_wrap_varint_four_bytes_get), 0);
+  rb_define_singleton_method(mBitcoin, "varint_eight_bytes", VALUEFUNC(_wrap_varint_eight_bytes_get), 0);
+  rb_define_singleton_method(mBitcoin, "string_terminator", VALUEFUNC(_wrap_string_terminator_get), 0);
+  rb_define_singleton_method(mBitcoin, "witness_marker", VALUEFUNC(_wrap_witness_marker_get), 0);
+  rb_define_singleton_method(mBitcoin, "witness_flag", VALUEFUNC(_wrap_witness_flag_get), 0);
+  rb_define_singleton_method(mBitcoin, "witness_head", VALUEFUNC(_wrap_witness_head_get), 0);
+  rb_define_singleton_method(mBitcoin, "fast_sigops_factor", VALUEFUNC(_wrap_fast_sigops_factor_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_fast_sigops", VALUEFUNC(_wrap_max_fast_sigops_get), 0);
+  rb_define_singleton_method(mBitcoin, "light_weight_factor", VALUEFUNC(_wrap_light_weight_factor_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_block_weight", VALUEFUNC(_wrap_max_block_weight_get), 0);
+  rb_define_singleton_method(mBitcoin, "base_size_contribution", VALUEFUNC(_wrap_base_size_contribution_get), 0);
+  rb_define_singleton_method(mBitcoin, "total_size_contribution", VALUEFUNC(_wrap_total_size_contribution_get), 0);
+  rb_define_singleton_method(mBitcoin, "min_witness_program", VALUEFUNC(_wrap_min_witness_program_get), 0);
+  rb_define_singleton_method(mBitcoin, "max_witness_program", VALUEFUNC(_wrap_max_witness_program_get), 0);
+  rb_define_module_function(mBitcoin, "max_money_recursive", VALUEFUNC(_wrap_max_money_recursive), -1);
+  rb_define_singleton_method(mBitcoin, "satoshi_per_bitcoin", VALUEFUNC(_wrap_satoshi_per_bitcoin_get), 0);
+  rb_define_module_function(mBitcoin, "bitcoin_to_satoshi", VALUEFUNC(_wrap_bitcoin_to_satoshi), -1);
+  rb_define_singleton_method(mBitcoin, "initial_block_subsidy_bitcoin", VALUEFUNC(_wrap_initial_block_subsidy_bitcoin_get), 0);
+  rb_define_module_function(mBitcoin, "initial_block_subsidy_satoshi", VALUEFUNC(_wrap_initial_block_subsidy_satoshi), -1);
+  rb_define_singleton_method(mBitcoin, "recursive_money", VALUEFUNC(_wrap_recursive_money_get), 0);
+  rb_define_singleton_method(mBitcoin, "retarget_subsidy_interval", VALUEFUNC(_wrap_retarget_subsidy_interval_get), 0);
+  rb_define_singleton_method(mBitcoin, "no_retarget_subsidy_interval", VALUEFUNC(_wrap_no_retarget_subsidy_interval_get), 0);
+  rb_define_module_function(mBitcoin, "subsidy_interval", VALUEFUNC(_wrap_subsidy_interval), -1);
+  rb_define_module_function(mBitcoin, "max_money", VALUEFUNC(_wrap_max_money), -1);
+  rb_define_const(mBitcoin, "Failure", SWIG_From_int(static_cast< int >(libbitcoin::failure)));
+  rb_define_const(mBitcoin, "Okay", SWIG_From_int(static_cast< int >(libbitcoin::okay)));
+  rb_define_const(mBitcoin, "Invalid", SWIG_From_int(static_cast< int >(libbitcoin::invalid)));
+  rb_define_const(mBitcoin, "Success", SWIG_From_int(static_cast< int >(libbitcoin::error::success)));
+  rb_define_const(mBitcoin, "Deprecated", SWIG_From_int(static_cast< int >(libbitcoin::error::deprecated)));
+  rb_define_const(mBitcoin, "Unknown", SWIG_From_int(static_cast< int >(libbitcoin::error::unknown)));
+  rb_define_const(mBitcoin, "Not_found", SWIG_From_int(static_cast< int >(libbitcoin::error::not_found)));
+  rb_define_const(mBitcoin, "File_system", SWIG_From_int(static_cast< int >(libbitcoin::error::file_system)));
+  rb_define_const(mBitcoin, "Non_standard", SWIG_From_int(static_cast< int >(libbitcoin::error::non_standard)));
+  rb_define_const(mBitcoin, "Not_implemented", SWIG_From_int(static_cast< int >(libbitcoin::error::not_implemented)));
+  rb_define_const(mBitcoin, "Oversubscribed", SWIG_From_int(static_cast< int >(libbitcoin::error::oversubscribed)));
+  rb_define_const(mBitcoin, "Service_stopped", SWIG_From_int(static_cast< int >(libbitcoin::error::service_stopped)));
+  rb_define_const(mBitcoin, "Operation_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::operation_failed)));
+  rb_define_const(mBitcoin, "Resolve_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::resolve_failed)));
+  rb_define_const(mBitcoin, "Network_unreachable", SWIG_From_int(static_cast< int >(libbitcoin::error::network_unreachable)));
+  rb_define_const(mBitcoin, "Address_in_use", SWIG_From_int(static_cast< int >(libbitcoin::error::address_in_use)));
+  rb_define_const(mBitcoin, "Listen_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::listen_failed)));
+  rb_define_const(mBitcoin, "Accept_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::accept_failed)));
+  rb_define_const(mBitcoin, "Bad_stream", SWIG_From_int(static_cast< int >(libbitcoin::error::bad_stream)));
+  rb_define_const(mBitcoin, "Channel_timeout", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_timeout)));
+  rb_define_const(mBitcoin, "Address_blocked", SWIG_From_int(static_cast< int >(libbitcoin::error::address_blocked)));
+  rb_define_const(mBitcoin, "Channel_stopped", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_stopped)));
+  rb_define_const(mBitcoin, "Peer_throttling", SWIG_From_int(static_cast< int >(libbitcoin::error::peer_throttling)));
+  rb_define_const(mBitcoin, "Store_block_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_duplicate)));
+  rb_define_const(mBitcoin, "Store_block_invalid_height", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_invalid_height)));
+  rb_define_const(mBitcoin, "Store_block_missing_parent", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_missing_parent)));
+  rb_define_const(mBitcoin, "Duplicate_block", SWIG_From_int(static_cast< int >(libbitcoin::error::duplicate_block)));
+  rb_define_const(mBitcoin, "Orphan_block", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_block)));
+  rb_define_const(mBitcoin, "Invalid_previous_block", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_previous_block)));
+  rb_define_const(mBitcoin, "Insufficient_work", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_work)));
+  rb_define_const(mBitcoin, "Orphan_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_transaction)));
+  rb_define_const(mBitcoin, "Insufficient_fee", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_fee)));
+  rb_define_const(mBitcoin, "Dusty_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::dusty_transaction)));
+  rb_define_const(mBitcoin, "Stale_chain", SWIG_From_int(static_cast< int >(libbitcoin::error::stale_chain)));
+  rb_define_const(mBitcoin, "Invalid_proof_of_work", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_proof_of_work)));
+  rb_define_const(mBitcoin, "Futuristic_timestamp", SWIG_From_int(static_cast< int >(libbitcoin::error::futuristic_timestamp)));
+  rb_define_const(mBitcoin, "Checkpoints_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::checkpoints_failed)));
+  rb_define_const(mBitcoin, "Old_version_block", SWIG_From_int(static_cast< int >(libbitcoin::error::old_version_block)));
+  rb_define_const(mBitcoin, "Incorrect_proof_of_work", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_proof_of_work)));
+  rb_define_const(mBitcoin, "Timestamp_too_early", SWIG_From_int(static_cast< int >(libbitcoin::error::timestamp_too_early)));
+  rb_define_const(mBitcoin, "Block_size_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_size_limit)));
+  rb_define_const(mBitcoin, "Empty_block", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_block)));
+  rb_define_const(mBitcoin, "First_not_coinbase", SWIG_From_int(static_cast< int >(libbitcoin::error::first_not_coinbase)));
+  rb_define_const(mBitcoin, "Extra_coinbases", SWIG_From_int(static_cast< int >(libbitcoin::error::extra_coinbases)));
+  rb_define_const(mBitcoin, "Internal_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::internal_duplicate)));
+  rb_define_const(mBitcoin, "Block_internal_double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::block_internal_double_spend)));
+  rb_define_const(mBitcoin, "Forward_reference", SWIG_From_int(static_cast< int >(libbitcoin::error::forward_reference)));
+  rb_define_const(mBitcoin, "Merkle_mismatch", SWIG_From_int(static_cast< int >(libbitcoin::error::merkle_mismatch)));
+  rb_define_const(mBitcoin, "Block_legacy_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_legacy_sigop_limit)));
+  rb_define_const(mBitcoin, "Block_non_final", SWIG_From_int(static_cast< int >(libbitcoin::error::block_non_final)));
+  rb_define_const(mBitcoin, "Coinbase_height_mismatch", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_height_mismatch)));
+  rb_define_const(mBitcoin, "Coinbase_value_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_value_limit)));
+  rb_define_const(mBitcoin, "Block_embedded_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_embedded_sigop_limit)));
+  rb_define_const(mBitcoin, "Invalid_witness_commitment", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness_commitment)));
+  rb_define_const(mBitcoin, "Block_weight_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_weight_limit)));
+  rb_define_const(mBitcoin, "Empty_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_transaction)));
+  rb_define_const(mBitcoin, "Previous_output_null", SWIG_From_int(static_cast< int >(libbitcoin::error::previous_output_null)));
+  rb_define_const(mBitcoin, "Spend_overflow", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_overflow)));
+  rb_define_const(mBitcoin, "Invalid_coinbase_script_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_coinbase_script_size)));
+  rb_define_const(mBitcoin, "Coinbase_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_transaction)));
+  rb_define_const(mBitcoin, "Transaction_internal_double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_internal_double_spend)));
+  rb_define_const(mBitcoin, "Transaction_size_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_size_limit)));
+  rb_define_const(mBitcoin, "Transaction_legacy_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_legacy_sigop_limit)));
+  rb_define_const(mBitcoin, "Transaction_non_final", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_non_final)));
+  rb_define_const(mBitcoin, "Premature_validation", SWIG_From_int(static_cast< int >(libbitcoin::error::premature_validation)));
+  rb_define_const(mBitcoin, "Unspent_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::unspent_duplicate)));
+  rb_define_const(mBitcoin, "Missing_previous_output", SWIG_From_int(static_cast< int >(libbitcoin::error::missing_previous_output)));
+  rb_define_const(mBitcoin, "Double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::double_spend)));
+  rb_define_const(mBitcoin, "Coinbase_maturity", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_maturity)));
+  rb_define_const(mBitcoin, "Spend_exceeds_value", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_exceeds_value)));
+  rb_define_const(mBitcoin, "Transaction_embedded_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_embedded_sigop_limit)));
+  rb_define_const(mBitcoin, "Sequence_locked", SWIG_From_int(static_cast< int >(libbitcoin::error::sequence_locked)));
+  rb_define_const(mBitcoin, "Transaction_weight_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_weight_limit)));
+  rb_define_const(mBitcoin, "Invalid_script", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script)));
+  rb_define_const(mBitcoin, "Invalid_script_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_size)));
+  rb_define_const(mBitcoin, "Invalid_push_data_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_push_data_size)));
+  rb_define_const(mBitcoin, "Invalid_operation_count", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_operation_count)));
+  rb_define_const(mBitcoin, "Invalid_stack_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_size)));
+  rb_define_const(mBitcoin, "Invalid_stack_scope", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_scope)));
+  rb_define_const(mBitcoin, "Invalid_script_embed", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_embed)));
+  rb_define_const(mBitcoin, "Invalid_signature_encoding", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_encoding)));
+  rb_define_const(mBitcoin, "Invalid_signature_lax_encoding", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_lax_encoding)));
+  rb_define_const(mBitcoin, "Incorrect_signature", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_signature)));
+  rb_define_const(mBitcoin, "Unexpected_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::unexpected_witness)));
+  rb_define_const(mBitcoin, "Invalid_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness)));
+  rb_define_const(mBitcoin, "Dirty_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::dirty_witness)));
+  rb_define_const(mBitcoin, "Stack_false", SWIG_From_int(static_cast< int >(libbitcoin::error::stack_false)));
+  rb_define_const(mBitcoin, "Op_disabled", SWIG_From_int(static_cast< int >(libbitcoin::error::op_disabled)));
+  rb_define_const(mBitcoin, "Op_reserved", SWIG_From_int(static_cast< int >(libbitcoin::error::op_reserved)));
+  rb_define_const(mBitcoin, "Op_push_size", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_size)));
+  rb_define_const(mBitcoin, "Op_push_data", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_data)));
+  rb_define_const(mBitcoin, "Op_if", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if)));
+  rb_define_const(mBitcoin, "Op_notif", SWIG_From_int(static_cast< int >(libbitcoin::error::op_notif)));
+  rb_define_const(mBitcoin, "Op_else", SWIG_From_int(static_cast< int >(libbitcoin::error::op_else)));
+  rb_define_const(mBitcoin, "Op_endif", SWIG_From_int(static_cast< int >(libbitcoin::error::op_endif)));
+  rb_define_const(mBitcoin, "Op_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify1)));
+  rb_define_const(mBitcoin, "Op_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify2)));
+  rb_define_const(mBitcoin, "Op_return", SWIG_From_int(static_cast< int >(libbitcoin::error::op_return)));
+  rb_define_const(mBitcoin, "Op_to_alt_stack", SWIG_From_int(static_cast< int >(libbitcoin::error::op_to_alt_stack)));
+  rb_define_const(mBitcoin, "Op_from_alt_stack", SWIG_From_int(static_cast< int >(libbitcoin::error::op_from_alt_stack)));
+  rb_define_const(mBitcoin, "Op_drop2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop2)));
+  rb_define_const(mBitcoin, "Op_dup2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup2)));
+  rb_define_const(mBitcoin, "Op_dup3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup3)));
+  rb_define_const(mBitcoin, "Op_over2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over2)));
+  rb_define_const(mBitcoin, "Op_rot2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot2)));
+  rb_define_const(mBitcoin, "Op_swap2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap2)));
+  rb_define_const(mBitcoin, "Op_if_dup", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if_dup)));
+  rb_define_const(mBitcoin, "Op_drop", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop)));
+  rb_define_const(mBitcoin, "Op_dup", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup)));
+  rb_define_const(mBitcoin, "Op_nip", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nip)));
+  rb_define_const(mBitcoin, "Op_over", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over)));
+  rb_define_const(mBitcoin, "Op_pick", SWIG_From_int(static_cast< int >(libbitcoin::error::op_pick)));
+  rb_define_const(mBitcoin, "Op_roll", SWIG_From_int(static_cast< int >(libbitcoin::error::op_roll)));
+  rb_define_const(mBitcoin, "Op_rot", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot)));
+  rb_define_const(mBitcoin, "Op_swap", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap)));
+  rb_define_const(mBitcoin, "Op_tuck", SWIG_From_int(static_cast< int >(libbitcoin::error::op_tuck)));
+  rb_define_const(mBitcoin, "Op_size", SWIG_From_int(static_cast< int >(libbitcoin::error::op_size)));
+  rb_define_const(mBitcoin, "Op_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal)));
+  rb_define_const(mBitcoin, "Op_equal_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify1)));
+  rb_define_const(mBitcoin, "Op_equal_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify2)));
+  rb_define_const(mBitcoin, "Op_add1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add1)));
+  rb_define_const(mBitcoin, "Op_sub1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub1)));
+  rb_define_const(mBitcoin, "Op_negate", SWIG_From_int(static_cast< int >(libbitcoin::error::op_negate)));
+  rb_define_const(mBitcoin, "Op_abs", SWIG_From_int(static_cast< int >(libbitcoin::error::op_abs)));
+  rb_define_const(mBitcoin, "Op_not", SWIG_From_int(static_cast< int >(libbitcoin::error::op_not)));
+  rb_define_const(mBitcoin, "Op_nonzero", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nonzero)));
+  rb_define_const(mBitcoin, "Op_add", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add)));
+  rb_define_const(mBitcoin, "Op_sub", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub)));
+  rb_define_const(mBitcoin, "Op_bool_and", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_and)));
+  rb_define_const(mBitcoin, "Op_bool_or", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_or)));
+  rb_define_const(mBitcoin, "Op_num_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal)));
+  rb_define_const(mBitcoin, "Op_num_equal_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify1)));
+  rb_define_const(mBitcoin, "Op_num_equal_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify2)));
+  rb_define_const(mBitcoin, "Op_num_not_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_not_equal)));
+  rb_define_const(mBitcoin, "Op_less_than", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than)));
+  rb_define_const(mBitcoin, "Op_greater_than", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than)));
+  rb_define_const(mBitcoin, "Op_less_than_or_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than_or_equal)));
+  rb_define_const(mBitcoin, "Op_greater_than_or_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than_or_equal)));
+  rb_define_const(mBitcoin, "Op_min", SWIG_From_int(static_cast< int >(libbitcoin::error::op_min)));
+  rb_define_const(mBitcoin, "Op_max", SWIG_From_int(static_cast< int >(libbitcoin::error::op_max)));
+  rb_define_const(mBitcoin, "Op_within", SWIG_From_int(static_cast< int >(libbitcoin::error::op_within)));
+  rb_define_const(mBitcoin, "Op_ripemd160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_ripemd160)));
+  rb_define_const(mBitcoin, "Op_sha1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha1)));
+  rb_define_const(mBitcoin, "Op_sha256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha256)));
+  rb_define_const(mBitcoin, "Op_hash160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash160)));
+  rb_define_const(mBitcoin, "Op_hash256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash256)));
+  rb_define_const(mBitcoin, "Op_code_seperator", SWIG_From_int(static_cast< int >(libbitcoin::error::op_code_seperator)));
+  rb_define_const(mBitcoin, "Op_check_sig_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig_verify1)));
+  rb_define_const(mBitcoin, "Op_check_sig", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify1)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify2)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify3)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify4)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify5)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify6)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify7)));
+  rb_define_const(mBitcoin, "Op_check_multisig", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig)));
+  rb_define_const(mBitcoin, "Op_check_locktime_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify1)));
+  rb_define_const(mBitcoin, "Op_check_locktime_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify2)));
+  rb_define_const(mBitcoin, "Op_check_locktime_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify3)));
+  rb_define_const(mBitcoin, "Op_check_locktime_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify4)));
+  rb_define_const(mBitcoin, "Op_check_locktime_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify5)));
+  rb_define_const(mBitcoin, "Op_check_locktime_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify6)));
+  rb_define_const(mBitcoin, "Op_check_sequence_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify1)));
+  rb_define_const(mBitcoin, "Op_check_sequence_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify2)));
+  rb_define_const(mBitcoin, "Op_check_sequence_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify3)));
+  rb_define_const(mBitcoin, "Op_check_sequence_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify4)));
+  rb_define_const(mBitcoin, "Op_check_sequence_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify5)));
+  rb_define_const(mBitcoin, "Op_check_sequence_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify6)));
+  rb_define_const(mBitcoin, "Op_check_sequence_verify7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify7)));
+  rb_define_const(mBitcoin, "Op_check_multisig_verify8", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify8)));
+  rb_define_module_function(mBitcoin, "make_error_code", VALUEFUNC(_wrap_make_error_code), -1);
+  rb_define_module_function(mBitcoin, "make_error_condition", VALUEFUNC(_wrap_make_error_condition), -1);
+  rb_define_module_function(mBitcoin, "boost_to_error_code", VALUEFUNC(_wrap_boost_to_error_code), -1);
+  rb_define_module_function(mBitcoin, "posix_to_error_code", VALUEFUNC(_wrap_posix_to_error_code), -1);
+  rb_define_const(mBitcoin, "LIBBITCOIN_VERSION", SWIG_FromCharPtr("3.4.0"));
+  rb_define_const(mBitcoin, "LIBBITCOIN_MAJOR_VERSION", SWIG_From_int(static_cast< int >(3)));
+  rb_define_const(mBitcoin, "LIBBITCOIN_MINOR_VERSION", SWIG_From_int(static_cast< int >(4)));
+  rb_define_const(mBitcoin, "LIBBITCOIN_PATCH_VERSION", SWIG_From_int(static_cast< int >(0)));
   
-  SwigClassUri.klass = rb_define_class_under(mLibbitcoin, "Uri", rb_cObject);
+  SwigClassUri.klass = rb_define_class_under(mBitcoin, "Uri", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__uri, (void *) &SwigClassUri);
   rb_define_alloc_func(SwigClassUri.klass, _wrap_uri_allocate);
   rb_define_method(SwigClassUri.klass, "initialize", VALUEFUNC(_wrap_new_uri), -1);
@@ -15945,7 +15944,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassUri.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri;
   SwigClassUri.trackObjects = 0;
   
-  SwigClassUri_reader.klass = rb_define_class_under(mLibbitcoin, "Uri_reader", rb_cObject);
+  SwigClassUri_reader.klass = rb_define_class_under(mBitcoin, "Uri_reader", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__uri_reader, (void *) &SwigClassUri_reader);
   rb_undef_alloc_func(SwigClassUri_reader.klass);
   rb_define_method(SwigClassUri_reader.klass, "set_strict", VALUEFUNC(_wrap_uri_reader_set_strict), -1);
@@ -15958,7 +15957,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassUri_reader.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri_reader;
   SwigClassUri_reader.trackObjects = 0;
   
-  SwigClassBitcoin_uri.klass = rb_define_class_under(mLibbitcoin, "Bitcoin_uri", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__uri_reader->clientdata)->klass);
+  SwigClassBitcoin_uri.klass = rb_define_class_under(mBitcoin, "Bitcoin_uri", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__uri_reader->clientdata)->klass);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, (void *) &SwigClassBitcoin_uri);
   rb_define_alloc_func(SwigClassBitcoin_uri.klass, _wrap_bitcoin_uri_allocate);
   rb_define_method(SwigClassBitcoin_uri.klass, "initialize", VALUEFUNC(_wrap_new_bitcoin_uri), -1);
@@ -15988,22 +15987,22 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassBitcoin_uri.mark = 0;
   SwigClassBitcoin_uri.destroy = (void (*)(void *)) free_libbitcoin_wallet_bitcoin_uri;
   SwigClassBitcoin_uri.trackObjects = 0;
-  rb_define_singleton_method(mLibbitcoin, "dictionary_size", VALUEFUNC(_wrap_dictionary_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "en", VALUEFUNC(_wrap_en_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "es", VALUEFUNC(_wrap_es_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ja", VALUEFUNC(_wrap_ja_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "it", VALUEFUNC(_wrap_it_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "fr", VALUEFUNC(_wrap_fr_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "cs", VALUEFUNC(_wrap_cs_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ru", VALUEFUNC(_wrap_ru_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "uk", VALUEFUNC(_wrap_uk_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "zh_Hans", VALUEFUNC(_wrap_zh_Hans_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "zh_Hant", VALUEFUNC(_wrap_zh_Hant_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "all", VALUEFUNC(_wrap_all_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "wif_uncompressed_size", VALUEFUNC(_wrap_wif_uncompressed_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "wif_compressed_size", VALUEFUNC(_wrap_wif_compressed_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "dictionary_size", VALUEFUNC(_wrap_dictionary_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "en", VALUEFUNC(_wrap_en_get), 0);
+  rb_define_singleton_method(mBitcoin, "es", VALUEFUNC(_wrap_es_get), 0);
+  rb_define_singleton_method(mBitcoin, "ja", VALUEFUNC(_wrap_ja_get), 0);
+  rb_define_singleton_method(mBitcoin, "it", VALUEFUNC(_wrap_it_get), 0);
+  rb_define_singleton_method(mBitcoin, "fr", VALUEFUNC(_wrap_fr_get), 0);
+  rb_define_singleton_method(mBitcoin, "cs", VALUEFUNC(_wrap_cs_get), 0);
+  rb_define_singleton_method(mBitcoin, "ru", VALUEFUNC(_wrap_ru_get), 0);
+  rb_define_singleton_method(mBitcoin, "uk", VALUEFUNC(_wrap_uk_get), 0);
+  rb_define_singleton_method(mBitcoin, "zh_Hans", VALUEFUNC(_wrap_zh_Hans_get), 0);
+  rb_define_singleton_method(mBitcoin, "zh_Hant", VALUEFUNC(_wrap_zh_Hant_get), 0);
+  rb_define_singleton_method(mBitcoin, "all", VALUEFUNC(_wrap_all_get), 0);
+  rb_define_singleton_method(mBitcoin, "wif_uncompressed_size", VALUEFUNC(_wrap_wif_uncompressed_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "wif_compressed_size", VALUEFUNC(_wrap_wif_compressed_size_get), 0);
   
-  SwigClassEc_private.klass = rb_define_class_under(mLibbitcoin, "Ec_private", rb_cObject);
+  SwigClassEc_private.klass = rb_define_class_under(mBitcoin, "Ec_private", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_private, (void *) &SwigClassEc_private);
   rb_define_alloc_func(SwigClassEc_private.klass, _wrap_ec_private_allocate);
   rb_define_method(SwigClassEc_private.klass, "initialize", VALUEFUNC(_wrap_new_ec_private), -1);
@@ -16033,7 +16032,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassEc_private.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_private;
   SwigClassEc_private.trackObjects = 0;
   
-  SwigClassEc_public.klass = rb_define_class_under(mLibbitcoin, "Ec_public", rb_cObject);
+  SwigClassEc_public.klass = rb_define_class_under(mBitcoin, "Ec_public", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_public, (void *) &SwigClassEc_public);
   rb_define_alloc_func(SwigClassEc_public.klass, _wrap_ec_public_allocate);
   rb_define_method(SwigClassEc_public.klass, "initialize", VALUEFUNC(_wrap_new_ec_public), -1);
@@ -16055,7 +16054,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassEc_public.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_public;
   SwigClassEc_public.trackObjects = 0;
   
-  SwigClassEk_private.klass = rb_define_class_under(mLibbitcoin, "Ek_private", rb_cObject);
+  SwigClassEk_private.klass = rb_define_class_under(mBitcoin, "Ek_private", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_private, (void *) &SwigClassEk_private);
   rb_define_alloc_func(SwigClassEk_private.klass, _wrap_ek_private_allocate);
   rb_define_method(SwigClassEk_private.klass, "initialize", VALUEFUNC(_wrap_new_ek_private), -1);
@@ -16069,7 +16068,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassEk_private.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_private;
   SwigClassEk_private.trackObjects = 0;
   
-  SwigClassEk_public.klass = rb_define_class_under(mLibbitcoin, "Ek_public", rb_cObject);
+  SwigClassEk_public.klass = rb_define_class_under(mBitcoin, "Ek_public", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_public, (void *) &SwigClassEk_public);
   rb_define_alloc_func(SwigClassEk_public.klass, _wrap_ek_public_allocate);
   rb_define_method(SwigClassEk_public.klass, "initialize", VALUEFUNC(_wrap_new_ek_public), -1);
@@ -16083,7 +16082,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassEk_public.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_public;
   SwigClassEk_public.trackObjects = 0;
   
-  SwigClassEk_token.klass = rb_define_class_under(mLibbitcoin, "Ek_token", rb_cObject);
+  SwigClassEk_token.klass = rb_define_class_under(mBitcoin, "Ek_token", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_token, (void *) &SwigClassEk_token);
   rb_define_alloc_func(SwigClassEk_token.klass, _wrap_ek_token_allocate);
   rb_define_method(SwigClassEk_token.klass, "initialize", VALUEFUNC(_wrap_new_ek_token), -1);
@@ -16096,28 +16095,28 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassEk_token.mark = 0;
   SwigClassEk_token.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_token;
   SwigClassEk_token.trackObjects = 0;
-  rb_define_singleton_method(mLibbitcoin, "ek_max_lot", VALUEFUNC(_wrap_ek_max_lot_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ek_max_sequence", VALUEFUNC(_wrap_ek_max_sequence_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ek_salt_size", VALUEFUNC(_wrap_ek_salt_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ek_entropy_size", VALUEFUNC(_wrap_ek_entropy_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ek_seed_size", VALUEFUNC(_wrap_ek_seed_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "encrypted_token_encoded_size", VALUEFUNC(_wrap_encrypted_token_encoded_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "encrypted_token_decoded_size", VALUEFUNC(_wrap_encrypted_token_decoded_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ek_private_encoded_size", VALUEFUNC(_wrap_ek_private_encoded_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "ek_private_decoded_size", VALUEFUNC(_wrap_ek_private_decoded_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "encrypted_public_encoded_size", VALUEFUNC(_wrap_encrypted_public_encoded_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "encrypted_public_decoded_size", VALUEFUNC(_wrap_encrypted_public_decoded_size_get), 0);
-  rb_define_const(mLibbitcoin, "Lot_sequence_key", SWIG_From_int(static_cast< int >(libbitcoin::wallet::lot_sequence_key)));
-  rb_define_const(mLibbitcoin, "Ec_compressed_key", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_compressed_key)));
-  rb_define_const(mLibbitcoin, "Ec_non_multiplied_low", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_low)));
-  rb_define_const(mLibbitcoin, "Ec_non_multiplied_high", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_high)));
-  rb_define_const(mLibbitcoin, "Ec_non_multiplied", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied)));
-  rb_define_module_function(mLibbitcoin, "create_key_pair", VALUEFUNC(_wrap_create_key_pair), -1);
-  rb_define_singleton_method(mLibbitcoin, "hd_first_hardened_key", VALUEFUNC(_wrap_hd_first_hardened_key_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "hd_chain_code_size", VALUEFUNC(_wrap_hd_chain_code_size_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "hd_key_size", VALUEFUNC(_wrap_hd_key_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_max_lot", VALUEFUNC(_wrap_ek_max_lot_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_max_sequence", VALUEFUNC(_wrap_ek_max_sequence_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_salt_size", VALUEFUNC(_wrap_ek_salt_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_entropy_size", VALUEFUNC(_wrap_ek_entropy_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_seed_size", VALUEFUNC(_wrap_ek_seed_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_token_encoded_size", VALUEFUNC(_wrap_encrypted_token_encoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_token_decoded_size", VALUEFUNC(_wrap_encrypted_token_decoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_private_encoded_size", VALUEFUNC(_wrap_ek_private_encoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_private_decoded_size", VALUEFUNC(_wrap_ek_private_decoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_public_encoded_size", VALUEFUNC(_wrap_encrypted_public_encoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_public_decoded_size", VALUEFUNC(_wrap_encrypted_public_decoded_size_get), 0);
+  rb_define_const(mBitcoin, "Lot_sequence_key", SWIG_From_int(static_cast< int >(libbitcoin::wallet::lot_sequence_key)));
+  rb_define_const(mBitcoin, "Ec_compressed_key", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_compressed_key)));
+  rb_define_const(mBitcoin, "Ec_non_multiplied_low", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_low)));
+  rb_define_const(mBitcoin, "Ec_non_multiplied_high", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_high)));
+  rb_define_const(mBitcoin, "Ec_non_multiplied", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied)));
+  rb_define_module_function(mBitcoin, "create_key_pair", VALUEFUNC(_wrap_create_key_pair), -1);
+  rb_define_singleton_method(mBitcoin, "hd_first_hardened_key", VALUEFUNC(_wrap_hd_first_hardened_key_get), 0);
+  rb_define_singleton_method(mBitcoin, "hd_chain_code_size", VALUEFUNC(_wrap_hd_chain_code_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "hd_key_size", VALUEFUNC(_wrap_hd_key_size_get), 0);
   
-  SwigClassHd_lineage.klass = rb_define_class_under(mLibbitcoin, "Hd_lineage", rb_cObject);
+  SwigClassHd_lineage.klass = rb_define_class_under(mBitcoin, "Hd_lineage", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_lineage, (void *) &SwigClassHd_lineage);
   rb_define_alloc_func(SwigClassHd_lineage.klass, _wrap_hd_lineage_allocate);
   rb_define_method(SwigClassHd_lineage.klass, "initialize", VALUEFUNC(_wrap_new_hd_lineage), -1);
@@ -16134,7 +16133,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassHd_lineage.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_lineage;
   SwigClassHd_lineage.trackObjects = 0;
   
-  SwigClassHd_public.klass = rb_define_class_under(mLibbitcoin, "Hd_public", rb_cObject);
+  SwigClassHd_public.klass = rb_define_class_under(mBitcoin, "Hd_public", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_public, (void *) &SwigClassHd_public);
   rb_define_alloc_func(SwigClassHd_public.klass, _wrap_hd_public_allocate);
   rb_define_method(SwigClassHd_public.klass, "initialize", VALUEFUNC(_wrap_new_hd_public), -1);
@@ -16155,7 +16154,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassHd_public.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_public;
   SwigClassHd_public.trackObjects = 0;
   
-  SwigClassHd_private.klass = rb_define_class_under(mLibbitcoin, "Hd_private", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__hd_public->clientdata)->klass);
+  SwigClassHd_private.klass = rb_define_class_under(mBitcoin, "Hd_private", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__hd_public->clientdata)->klass);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_private, (void *) &SwigClassHd_private);
   rb_define_alloc_func(SwigClassHd_private.klass, _wrap_hd_private_allocate);
   rb_define_method(SwigClassHd_private.klass, "initialize", VALUEFUNC(_wrap_new_hd_private), -1);
@@ -16175,21 +16174,21 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassHd_private.mark = 0;
   SwigClassHd_private.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_private;
   SwigClassHd_private.trackObjects = 0;
-  rb_define_singleton_method(mLibbitcoin, "message_signature_size", VALUEFUNC(_wrap_message_signature_size_get), 0);
-  rb_define_module_function(mLibbitcoin, "hash_message", VALUEFUNC(_wrap_hash_message), -1);
-  rb_define_module_function(mLibbitcoin, "sign_message", VALUEFUNC(_wrap_sign_message), -1);
-  rb_define_module_function(mLibbitcoin, "verify_message", VALUEFUNC(_wrap_verify_message), -1);
-  rb_define_module_function(mLibbitcoin, "recovery_id_to_magic", VALUEFUNC(_wrap_recovery_id_to_magic), -1);
-  rb_define_module_function(mLibbitcoin, "magic_to_recovery_id", VALUEFUNC(_wrap_magic_to_recovery_id), -1);
-  rb_define_module_function(mLibbitcoin, "minikey_to_secret", VALUEFUNC(_wrap_minikey_to_secret), -1);
-  rb_define_singleton_method(mLibbitcoin, "mnemonic_word_multiple", VALUEFUNC(_wrap_mnemonic_word_multiple_get), 0);
-  rb_define_singleton_method(mLibbitcoin, "mnemonic_seed_multiple", VALUEFUNC(_wrap_mnemonic_seed_multiple_get), 0);
-  rb_define_module_function(mLibbitcoin, "create_mnemonic", VALUEFUNC(_wrap_create_mnemonic), -1);
-  rb_define_module_function(mLibbitcoin, "validate_mnemonic", VALUEFUNC(_wrap_validate_mnemonic), -1);
-  rb_define_module_function(mLibbitcoin, "decode_mnemonic", VALUEFUNC(_wrap_decode_mnemonic), -1);
-  rb_define_singleton_method(mLibbitcoin, "payment_size", VALUEFUNC(_wrap_payment_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "message_signature_size", VALUEFUNC(_wrap_message_signature_size_get), 0);
+  rb_define_module_function(mBitcoin, "hash_message", VALUEFUNC(_wrap_hash_message), -1);
+  rb_define_module_function(mBitcoin, "sign_message", VALUEFUNC(_wrap_sign_message), -1);
+  rb_define_module_function(mBitcoin, "verify_message", VALUEFUNC(_wrap_verify_message), -1);
+  rb_define_module_function(mBitcoin, "recovery_id_to_magic", VALUEFUNC(_wrap_recovery_id_to_magic), -1);
+  rb_define_module_function(mBitcoin, "magic_to_recovery_id", VALUEFUNC(_wrap_magic_to_recovery_id), -1);
+  rb_define_module_function(mBitcoin, "minikey_to_secret", VALUEFUNC(_wrap_minikey_to_secret), -1);
+  rb_define_singleton_method(mBitcoin, "mnemonic_word_multiple", VALUEFUNC(_wrap_mnemonic_word_multiple_get), 0);
+  rb_define_singleton_method(mBitcoin, "mnemonic_seed_multiple", VALUEFUNC(_wrap_mnemonic_seed_multiple_get), 0);
+  rb_define_module_function(mBitcoin, "create_mnemonic", VALUEFUNC(_wrap_create_mnemonic), -1);
+  rb_define_module_function(mBitcoin, "validate_mnemonic", VALUEFUNC(_wrap_validate_mnemonic), -1);
+  rb_define_module_function(mBitcoin, "decode_mnemonic", VALUEFUNC(_wrap_decode_mnemonic), -1);
+  rb_define_singleton_method(mBitcoin, "payment_size", VALUEFUNC(_wrap_payment_size_get), 0);
   
-  SwigClassPayment_address.klass = rb_define_class_under(mLibbitcoin, "Payment_address", rb_cObject);
+  SwigClassPayment_address.klass = rb_define_class_under(mBitcoin, "Payment_address", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__payment_address, (void *) &SwigClassPayment_address);
   rb_define_alloc_func(SwigClassPayment_address.klass, _wrap_payment_address_allocate);
   rb_define_method(SwigClassPayment_address.klass, "initialize", VALUEFUNC(_wrap_new_payment_address), -1);
@@ -16212,7 +16211,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassPayment_address.destroy = (void (*)(void *)) free_libbitcoin_wallet_payment_address;
   SwigClassPayment_address.trackObjects = 0;
   
-  SwigClassWrapped_data.klass = rb_define_class_under(mLibbitcoin, "Wrapped_data", rb_cObject);
+  SwigClassWrapped_data.klass = rb_define_class_under(mBitcoin, "Wrapped_data", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__wrapped_data, (void *) &SwigClassWrapped_data);
   rb_define_alloc_func(SwigClassWrapped_data.klass, _wrap_wrapped_data_allocate);
   rb_define_method(SwigClassWrapped_data.klass, "initialize", VALUEFUNC(_wrap_new_wrapped_data), -1);
@@ -16226,7 +16225,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassWrapped_data.destroy = (void (*)(void *)) free_libbitcoin_wallet_wrapped_data;
   SwigClassWrapped_data.trackObjects = 0;
   
-  SwigClassSelect_outputs.klass = rb_define_class_under(mLibbitcoin, "Select_outputs", rb_cObject);
+  SwigClassSelect_outputs.klass = rb_define_class_under(mBitcoin, "Select_outputs", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__select_outputs, (void *) &SwigClassSelect_outputs);
   rb_define_alloc_func(SwigClassSelect_outputs.klass, _wrap_select_outputs_allocate);
   rb_define_method(SwigClassSelect_outputs.klass, "initialize", VALUEFUNC(_wrap_new_select_outputs), -1);
@@ -16237,7 +16236,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassSelect_outputs.destroy = (void (*)(void *)) free_libbitcoin_wallet_select_outputs;
   SwigClassSelect_outputs.trackObjects = 0;
   
-  SwigClassStealth_address.klass = rb_define_class_under(mLibbitcoin, "Stealth_address", rb_cObject);
+  SwigClassStealth_address.klass = rb_define_class_under(mBitcoin, "Stealth_address", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_address, (void *) &SwigClassStealth_address);
   rb_define_alloc_func(SwigClassStealth_address.klass, _wrap_stealth_address_allocate);
   rb_define_method(SwigClassStealth_address.klass, "initialize", VALUEFUNC(_wrap_new_stealth_address), -1);
@@ -16260,7 +16259,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassStealth_address.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_address;
   SwigClassStealth_address.trackObjects = 0;
   
-  SwigClassStealth_receiver.klass = rb_define_class_under(mLibbitcoin, "Stealth_receiver", rb_cObject);
+  SwigClassStealth_receiver.klass = rb_define_class_under(mBitcoin, "Stealth_receiver", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_receiver, (void *) &SwigClassStealth_receiver);
   rb_define_alloc_func(SwigClassStealth_receiver.klass, _wrap_stealth_receiver_allocate);
   rb_define_method(SwigClassStealth_receiver.klass, "initialize", VALUEFUNC(_wrap_new_stealth_receiver), -1);
@@ -16272,7 +16271,7 @@ SWIGEXPORT void Init_libbitcoin(void) {
   SwigClassStealth_receiver.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_receiver;
   SwigClassStealth_receiver.trackObjects = 0;
   
-  SwigClassStealth_sender.klass = rb_define_class_under(mLibbitcoin, "Stealth_sender", rb_cObject);
+  SwigClassStealth_sender.klass = rb_define_class_under(mBitcoin, "Stealth_sender", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_sender, (void *) &SwigClassStealth_sender);
   rb_define_alloc_func(SwigClassStealth_sender.klass, _wrap_stealth_sender_allocate);
   rb_define_method(SwigClassStealth_sender.klass, "initialize", VALUEFUNC(_wrap_new_stealth_sender), -1);

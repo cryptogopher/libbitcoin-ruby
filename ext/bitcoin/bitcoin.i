@@ -1,7 +1,6 @@
-%module libbitcoin
+%module bitcoin
 
 %{
-//#include "bitcoin/bitcoin.hpp"
 #include "bitcoin/bitcoin/compat.hpp"
 #include "bitcoin/bitcoin/constants.hpp"
 #include "bitcoin/bitcoin/define.hpp"
