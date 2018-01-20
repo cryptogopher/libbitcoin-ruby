@@ -2,6 +2,10 @@ require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 require "rake/extensiontask"
 
+task :wrap do
+  sh "swig -I/usr/include -I#{RbConfig::CONFIG['rubyhdrdir']} -I#{RbConfig::CONFIG['rubyarchhdrdir']} -D'static_assert(...)=' -v -c++ -ruby ext/bitcoin/bitcoin.i"
+end
+
 Rake::ExtensionTask.new "bitcoin" do |ext|
   ext.lib_dir = "lib/bitcoin"
 end

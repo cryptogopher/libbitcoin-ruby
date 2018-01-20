@@ -1,4 +1,5 @@
 %module bitcoin
+%include std_string.i
 
 %{
 #include "bitcoin/bitcoin/compat.hpp"
@@ -40,9 +41,28 @@ using namespace libbitcoin::wallet;
 %warnfilter(SWIGWARN_IGNORE_OPERATOR_EQ_MSG) operator=;
 %warnfilter(503) operator<<;
 %warnfilter(503) operator>>;
-%warnfilter(801); //lowercase name
+//%warnfilter(801); //lowercase name
 
-%rename("present?") operator const bool;
+// give classes/constants nicer names
+%rename ("BitcoinURI") libbitcoin::wallet::bitcoin_uri;
+%rename ("URI") libbitcoin::wallet::uri;
+%rename ("URIReader") libbitcoin::wallet::uri_reader;
+%rename ("ECPrivate") libbitcoin::wallet::ec_private;
+%rename ("ECPublic") libbitcoin::wallet::ec_public;
+%rename ("EKPrivate") libbitcoin::wallet::ek_private;
+%rename ("EKPublic") libbitcoin::wallet::ek_public;
+%rename ("EKToken") libbitcoin::wallet::ek_token;
+%rename ("HDLineage") libbitcoin::wallet::hd_lineage;
+%rename ("HDPublic") libbitcoin::wallet::hd_public;
+%rename ("HDPrivate") libbitcoin::wallet::hd_private;
+%rename ("PaymentAddress") libbitcoin::wallet::payment_address;
+%rename ("WrappedData") libbitcoin::wallet::wrapped_data;
+%rename ("SelectOutputs") libbitcoin::wallet::select_outputs;
+%rename ("StealthAddress") libbitcoin::wallet::stealth_address;
+%rename ("StealthReceiver") libbitcoin::wallet::stealth_receiver;
+%rename ("StealthSender") libbitcoin::wallet::stealth_sender;
+
+%rename("valid?") operator const bool;
 %rename("ec_secret") operator const ec_secret&;
 %rename("ec_compressed") operator const ec_compressed&;
 %rename("encrypted_private") operator const encrypted_private&;

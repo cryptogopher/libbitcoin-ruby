@@ -1883,16 +1883,15 @@ int SWIG_Ruby_arity( VALUE proc, int minimal )
 #define SWIGTYPE_p_std__error_condition swig_types[56]
 #define SWIGTYPE_p_std__functionT_void_fstd__error_code_const_RF_t swig_types[57]
 #define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[58]
-#define SWIGTYPE_p_std__string swig_types[59]
-#define SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t swig_types[60]
-#define SWIGTYPE_p_stealth_address swig_types[61]
-#define SWIGTYPE_p_string_list swig_types[62]
-#define SWIGTYPE_p_uint16_t swig_types[63]
-#define SWIGTYPE_p_uint32_t swig_types[64]
-#define SWIGTYPE_p_uint64_t swig_types[65]
-#define SWIGTYPE_p_uint8_t swig_types[66]
-static swig_type_info *swig_types[68];
-static swig_module_info swig_module = {swig_types, 67, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t swig_types[59]
+#define SWIGTYPE_p_stealth_address swig_types[60]
+#define SWIGTYPE_p_string_list swig_types[61]
+#define SWIGTYPE_p_uint16_t swig_types[62]
+#define SWIGTYPE_p_uint32_t swig_types[63]
+#define SWIGTYPE_p_uint64_t swig_types[64]
+#define SWIGTYPE_p_uint8_t swig_types[65]
+static swig_type_info *swig_types[67];
+static swig_module_info swig_module = {swig_types, 66, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1916,6 +1915,9 @@ static VALUE mBitcoin;
 
 
 #include <stdexcept>
+
+
+#include <string>
 
 
 #include "bitcoin/bitcoin/compat.hpp"
@@ -2117,10 +2119,82 @@ SWIG_FromCharPtr(const char *cptr)
 }
 
 
+SWIGINTERN int
+SWIG_AsCharPtrAndSize(VALUE obj, char** cptr, size_t* psize, int *alloc)
+{
+  if (TYPE(obj) == T_STRING) {
+    char *cstr = StringValuePtr(obj); 
+    size_t size = RSTRING_LEN(obj) + 1;
+    if (cptr)  {
+      if (alloc) {
+	if (*alloc == SWIG_NEWOBJ) {
+	  *cptr = reinterpret_cast< char* >(memcpy(new char[size], cstr, sizeof(char)*(size)));
+	} else {
+	  *cptr = cstr;
+	  *alloc = SWIG_OLDOBJ;
+	}
+      }
+    }
+    if (psize) *psize = size;
+    return SWIG_OK;
+  } else {
+    swig_type_info* pchar_descriptor = SWIG_pchar_descriptor();
+    if (pchar_descriptor) {
+      void* vptr = 0;
+      if (SWIG_ConvertPtr(obj, &vptr, pchar_descriptor, 0) == SWIG_OK) {
+	if (cptr) *cptr = (char *)vptr;
+	if (psize) *psize = vptr ? (strlen((char*)vptr) + 1) : 0;
+	if (alloc) *alloc = SWIG_OLDOBJ;
+	return SWIG_OK;
+      }
+    }
+  }  
+  return SWIG_TypeError;
+}
+
+
+SWIGINTERN int
+SWIG_AsPtr_std_string (VALUE obj, std::string **val) 
+{
+  char* buf = 0 ; size_t size = 0; int alloc = SWIG_OLDOBJ;
+  if (SWIG_IsOK((SWIG_AsCharPtrAndSize(obj, &buf, &size, &alloc)))) {
+    if (buf) {
+      if (val) *val = new std::string(buf, size - 1);
+      if (alloc == SWIG_NEWOBJ) delete[] buf;
+      return SWIG_NEWOBJ;
+    } else {
+      if (val) *val = 0;
+      return SWIG_OLDOBJ;
+    }
+  } else {
+    static int init = 0;
+    static swig_type_info* descriptor = 0;
+    if (!init) {
+      descriptor = SWIG_TypeQuery("std::string" " *");
+      init = 1;
+    }
+    if (descriptor) {
+      std::string *vptr;
+      int res = SWIG_ConvertPtr(obj, (void**)&vptr, descriptor, 0);
+      if (SWIG_IsOK(res) && val) *val = vptr;
+      return res;
+    }
+  }
+  return SWIG_ERROR;
+}
+
+
 SWIGINTERNINLINE VALUE
 SWIG_From_bool  (bool value)
 {
   return value ? Qtrue : Qfalse;
+}
+
+
+SWIGINTERNINLINE VALUE
+SWIG_From_std_string  (const std::string& s)
+{
+  return SWIG_FromCharPtrAndSize(s.data(), s.size());
 }
 
 SWIGINTERN VALUE
@@ -3564,17 +3638,16 @@ fail:
 }
 
 
-static swig_class SwigClassUri;
+static swig_class SwigClassURI;
 
 SWIGINTERN VALUE
-_wrap_uri_decode__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_decode__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   std::string *arg2 = 0 ;
   bool arg3 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool val3 ;
   int ecode3 = 0 ;
   bool result;
@@ -3588,14 +3661,17 @@ _wrap_uri_decode__SWIG_0(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","decode", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","decode", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","decode", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","decode", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","decode", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   ecode3 = SWIG_AsVal_bool(argv[1], &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), Ruby_Format_TypeError( "", "bool","decode", 3, argv[1] ));
@@ -3603,20 +3679,21 @@ _wrap_uri_decode__SWIG_0(int argc, VALUE *argv, VALUE self) {
   arg3 = static_cast< bool >(val3);
   result = (bool)(arg1)->decode((std::string const &)*arg2,arg3);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_decode__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_decode__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -3628,23 +3705,28 @@ _wrap_uri_decode__SWIG_1(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","decode", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","decode", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","decode", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","decode", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","decode", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->decode((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
-SWIGINTERN VALUE _wrap_uri_decode(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_URI_decode(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[4];
   int ii;
@@ -3661,11 +3743,10 @@ SWIGINTERN VALUE _wrap_uri_decode(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__uri, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__string, 0);
+      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_uri_decode__SWIG_1(nargs, args, self);
+        return _wrap_URI_decode__SWIG_1(nargs, args, self);
       }
     }
   }
@@ -3675,8 +3756,7 @@ SWIGINTERN VALUE _wrap_uri_decode(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__uri, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__string, 0);
+      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
       _v = SWIG_CheckState(res);
       if (_v) {
         {
@@ -3684,23 +3764,23 @@ SWIGINTERN VALUE _wrap_uri_decode(int nargs, VALUE *args, VALUE self) {
           _v = SWIG_CheckState(res);
         }
         if (_v) {
-          return _wrap_uri_decode__SWIG_0(nargs, args, self);
+          return _wrap_URI_decode__SWIG_0(nargs, args, self);
         }
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 4, "uri.decode", 
-    "    bool uri.decode(std::string const &encoded, bool strict)\n"
-    "    bool uri.decode(std::string const &encoded)\n");
+  Ruby_Format_OverloadedError( argc, 4, "URI.decode", 
+    "    bool URI.decode(std::string const &encoded, bool strict)\n"
+    "    bool URI.decode(std::string const &encoded)\n");
   
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3716,7 +3796,7 @@ _wrap_uri_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
   result = ((libbitcoin::wallet::uri const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -3724,7 +3804,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_scheme(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_scheme(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3740,7 +3820,7 @@ _wrap_uri_scheme(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
   result = ((libbitcoin::wallet::uri const *)arg1)->scheme();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -3748,13 +3828,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_set_scheme(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_set_scheme(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -3764,23 +3843,28 @@ _wrap_uri_set_scheme(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","set_scheme", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_scheme((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_authority(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_authority(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3796,7 +3880,7 @@ _wrap_uri_authority(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
   result = ((libbitcoin::wallet::uri const *)arg1)->authority();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -3804,7 +3888,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_has_authority(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_has_authority(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3828,13 +3912,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_set_authority(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_set_authority(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -3844,23 +3927,28 @@ _wrap_uri_set_authority(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","set_authority", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_authority((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_remove_authority(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_remove_authority(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3881,7 +3969,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_path(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_path(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3897,7 +3985,7 @@ _wrap_uri_path(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
   result = ((libbitcoin::wallet::uri const *)arg1)->path();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -3905,13 +3993,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_set_path(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_set_path(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -3921,23 +4008,28 @@ _wrap_uri_set_path(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","set_path", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_path((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_query(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_query(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3953,7 +4045,7 @@ _wrap_uri_query(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
   result = ((libbitcoin::wallet::uri const *)arg1)->query();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -3961,7 +4053,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_has_query(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_has_query(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3985,13 +4077,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_set_query(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_set_query(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -4001,23 +4092,28 @@ _wrap_uri_set_query(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","set_query", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_query", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_query", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_query", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_query", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_query((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_remove_query(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_remove_query(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4038,7 +4134,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_fragment(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_fragment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4054,7 +4150,7 @@ _wrap_uri_fragment(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
   result = ((libbitcoin::wallet::uri const *)arg1)->fragment();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -4062,7 +4158,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_has_fragment(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_has_fragment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4086,13 +4182,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_set_fragment(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_set_fragment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -4102,23 +4197,28 @@ _wrap_uri_set_fragment(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","set_fragment", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_fragment((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_remove_fragment(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_remove_fragment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4139,11 +4239,11 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_decode_query(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_decode_query(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  libbitcoin::wallet::uri::query_map result;
+  SwigValueWrapper< std::map< std::string,std::string > > result;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
@@ -4163,7 +4263,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_encode_query(int argc, VALUE *argv, VALUE self) {
+_wrap_URI_encode_query(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *arg1 = (libbitcoin::wallet::uri *) 0 ;
   libbitcoin::wallet::uri::query_map *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -4196,9 +4296,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_uri_allocate(VALUE self)
+_wrap_URI_allocate(VALUE self)
 #else
-_wrap_uri_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_URI_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__uri);
@@ -4210,7 +4310,7 @@ _wrap_uri_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_uri(int argc, VALUE *argv, VALUE self) {
+_wrap_new_URI(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -4230,10 +4330,10 @@ free_libbitcoin_wallet_uri(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassUri_reader;
+static swig_class SwigClassURIReader;
 
 SWIGINTERN VALUE
-_wrap_uri_reader_set_strict(int argc, VALUE *argv, VALUE self) {
+_wrap_URIReader_set_strict(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri_reader *arg1 = (libbitcoin::wallet::uri_reader *) 0 ;
   bool arg2 ;
   void *argp1 = 0 ;
@@ -4262,13 +4362,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_uri_reader_set_scheme(int argc, VALUE *argv, VALUE self) {
+_wrap_URIReader_set_scheme(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri_reader *arg1 = (libbitcoin::wallet::uri_reader *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -4280,30 +4379,34 @@ _wrap_uri_reader_set_scheme(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri_reader *","set_scheme", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri_reader * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_scheme((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_reader_set_authority(int argc, VALUE *argv, VALUE self) {
+_wrap_URIReader_set_authority(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri_reader *arg1 = (libbitcoin::wallet::uri_reader *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -4315,30 +4418,34 @@ _wrap_uri_reader_set_authority(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri_reader *","set_authority", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri_reader * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_authority((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_reader_set_path(int argc, VALUE *argv, VALUE self) {
+_wrap_URIReader_set_path(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri_reader *arg1 = (libbitcoin::wallet::uri_reader *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -4350,30 +4457,34 @@ _wrap_uri_reader_set_path(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri_reader *","set_path", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri_reader * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_path((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_reader_set_fragment(int argc, VALUE *argv, VALUE self) {
+_wrap_URIReader_set_fragment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri_reader *arg1 = (libbitcoin::wallet::uri_reader *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -4385,33 +4496,36 @@ _wrap_uri_reader_set_fragment(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri_reader *","set_fragment", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri_reader * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_fragment((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_uri_reader_set_parameter(int argc, VALUE *argv, VALUE self) {
+_wrap_URIReader_set_parameter(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri_reader *arg1 = (libbitcoin::wallet::uri_reader *) 0 ;
   std::string *arg2 = 0 ;
   std::string *arg3 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  int res3 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -4423,26 +4537,36 @@ _wrap_uri_reader_set_parameter(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri_reader *","set_parameter", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri_reader * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 2, argv[0])); 
+  {
+    std::string *ptr = (std::string *)0;
+    res3 = SWIG_AsPtr_std_string(argv[1], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 3, argv[1] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 3, argv[1])); 
+    }
+    arg3 = ptr;
   }
-  arg2 = reinterpret_cast< std::string * >(argp2);
-  res3 = SWIG_ConvertPtr(argv[1], &argp3, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 3, argv[1] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 3, argv[1])); 
-  }
-  arg3 = reinterpret_cast< std::string * >(argp3);
   result = (bool)(arg1)->set_parameter((std::string const &)*arg2,(std::string const &)*arg3);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
   return Qnil;
 }
 
@@ -4453,10 +4577,10 @@ free_libbitcoin_wallet_uri_reader(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassBitcoin_uri;
+static swig_class SwigClassBitcoinURI;
 
 SWIGINTERN VALUE
-_wrap_new_bitcoin_uri__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_BitcoinURI__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -4471,7 +4595,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_bitcoin_uri__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_BitcoinURI__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -4497,11 +4621,10 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_bitcoin_uri__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_BitcoinURI__SWIG_2(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
   bool arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   bool val2 ;
   int ecode2 = 0 ;
   libbitcoin::wallet::bitcoin_uri *result = 0 ;
@@ -4509,14 +4632,17 @@ _wrap_new_bitcoin_uri__SWIG_2(int argc, VALUE *argv, VALUE self) {
   if ((argc < 2) || (argc > 2)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   ecode2 = SWIG_AsVal_bool(argv[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
     SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","bitcoin_uri", 2, argv[1] ));
@@ -4524,17 +4650,19 @@ _wrap_new_bitcoin_uri__SWIG_2(int argc, VALUE *argv, VALUE self) {
   arg2 = static_cast< bool >(val2);
   result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((std::string const &)*arg1,arg2);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_bitcoin_uri_allocate(VALUE self)
+_wrap_BitcoinURI_allocate(VALUE self)
 #else
-_wrap_bitcoin_uri_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_BitcoinURI_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri);
@@ -4546,32 +4674,36 @@ _wrap_bitcoin_uri_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_bitcoin_uri__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_BitcoinURI__SWIG_3(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::bitcoin_uri *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
-SWIGINTERN VALUE _wrap_new_bitcoin_uri(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_BitcoinURI(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[2];
   int ii;
@@ -4582,7 +4714,7 @@ SWIGINTERN VALUE _wrap_new_bitcoin_uri(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_bitcoin_uri__SWIG_0(nargs, args, self);
+    return _wrap_new_BitcoinURI__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -4590,22 +4722,20 @@ SWIGINTERN VALUE _wrap_new_bitcoin_uri(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_bitcoin_uri__SWIG_1(nargs, args, self);
+      return _wrap_new_BitcoinURI__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_bitcoin_uri__SWIG_3(nargs, args, self);
+      return _wrap_new_BitcoinURI__SWIG_3(nargs, args, self);
     }
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
       {
@@ -4613,7 +4743,7 @@ SWIGINTERN VALUE _wrap_new_bitcoin_uri(int nargs, VALUE *args, VALUE self) {
         _v = SWIG_CheckState(res);
       }
       if (_v) {
-        return _wrap_new_bitcoin_uri__SWIG_2(nargs, args, self);
+        return _wrap_new_BitcoinURI__SWIG_2(nargs, args, self);
       }
     }
   }
@@ -4631,7 +4761,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::bitcoin_uri.<
+  Document-method: Bitcoin::BitcoinURI.<
 
   call-seq:
     <(other) -> bool
@@ -4639,7 +4769,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_bitcoin_uri___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   libbitcoin::wallet::bitcoin_uri *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -4675,7 +4805,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::bitcoin_uri.==
+  Document-method: Bitcoin::BitcoinURI.==
 
   call-seq:
     ==(other) -> bool
@@ -4683,7 +4813,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_bitcoin_uri___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   libbitcoin::wallet::bitcoin_uri *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -4718,7 +4848,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4742,7 +4872,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4758,7 +4888,7 @@ _wrap_bitcoin_uri_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
   result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -4766,7 +4896,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_amount(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_amount(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4790,7 +4920,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_label(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_label(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4806,7 +4936,7 @@ _wrap_bitcoin_uri_label(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
   result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->label();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -4814,7 +4944,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_message(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_message(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4830,7 +4960,7 @@ _wrap_bitcoin_uri_message(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
   result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->message();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -4838,7 +4968,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_r(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_r(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4854,7 +4984,7 @@ _wrap_bitcoin_uri_r(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
   result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->r();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -4862,7 +4992,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_address(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_address(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4878,7 +5008,7 @@ _wrap_bitcoin_uri_address(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
   result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->address();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -4886,7 +5016,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_payment(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_payment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4910,7 +5040,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_stealth(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_stealth(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4934,13 +5064,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_parameter(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_parameter(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   std::string result;
   VALUE vresult = Qnil;
   
@@ -4952,24 +5081,29 @@ _wrap_bitcoin_uri_parameter(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","parameter", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","parameter", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","parameter", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","parameter", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","parameter", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->parameter((std::string const &)*arg2);
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_amount(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_amount(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   uint64_t arg2 ;
   void *argp1 = 0 ;
@@ -5004,13 +5138,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_label(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_label(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -5020,29 +5153,33 @@ _wrap_bitcoin_uri_set_label(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_label", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_label", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_label", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_label", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_label", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_label((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_message(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_message(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -5052,29 +5189,33 @@ _wrap_bitcoin_uri_set_message(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_message", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_message", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_message", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_message", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_message", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_message((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_r(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_r(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -5084,29 +5225,33 @@ _wrap_bitcoin_uri_set_r(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_r", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_r", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_r", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_r", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_r", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   (arg1)->set_r((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -5118,24 +5263,29 @@ _wrap_bitcoin_uri_set_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_address", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_address", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_address", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_address", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_address", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_address((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   payment_address *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -5167,7 +5317,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_address__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_address__SWIG_2(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   stealth_address *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -5198,7 +5348,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_bitcoin_uri_set_address(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_BitcoinURI_set_address(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[3];
   int ii;
@@ -5216,24 +5366,10 @@ SWIGINTERN VALUE _wrap_bitcoin_uri_set_address(int nargs, VALUE *args, VALUE sel
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__string, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_bitcoin_uri_set_address__SWIG_0(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_payment_address, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_bitcoin_uri_set_address__SWIG_1(nargs, args, self);
+        return _wrap_BitcoinURI_set_address__SWIG_1(nargs, args, self);
       }
     }
   }
@@ -5247,23 +5383,36 @@ SWIGINTERN VALUE _wrap_bitcoin_uri_set_address(int nargs, VALUE *args, VALUE sel
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_stealth_address, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_bitcoin_uri_set_address__SWIG_2(nargs, args, self);
+        return _wrap_BitcoinURI_set_address__SWIG_2(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_BitcoinURI_set_address__SWIG_0(nargs, args, self);
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 3, "bitcoin_uri.set_address", 
-    "    bool bitcoin_uri.set_address(std::string const &address)\n"
-    "    void bitcoin_uri.set_address(payment_address const &payment)\n"
-    "    void bitcoin_uri.set_address(stealth_address const &stealth)\n");
+  Ruby_Format_OverloadedError( argc, 3, "BitcoinURI.set_address", 
+    "    bool BitcoinURI.set_address(std::string const &address)\n"
+    "    void BitcoinURI.set_address(payment_address const &payment)\n"
+    "    void BitcoinURI.set_address(stealth_address const &stealth)\n");
   
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_strict(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_strict(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   bool arg2 ;
   void *argp1 = 0 ;
@@ -5292,13 +5441,12 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_scheme(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_scheme(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -5310,30 +5458,34 @@ _wrap_bitcoin_uri_set_scheme(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_scheme", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_scheme((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_authority(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_authority(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -5345,30 +5497,34 @@ _wrap_bitcoin_uri_set_authority(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_authority", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_authority((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_path(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_path(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -5380,30 +5536,34 @@ _wrap_bitcoin_uri_set_path(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_path", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_path((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_fragment(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_fragment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -5415,33 +5575,36 @@ _wrap_bitcoin_uri_set_fragment(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_fragment", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)(arg1)->set_fragment((std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_bitcoin_uri_set_parameter(int argc, VALUE *argv, VALUE self) {
+_wrap_BitcoinURI_set_parameter(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
   std::string *arg2 = 0 ;
   std::string *arg3 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  int res3 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -5453,26 +5616,36 @@ _wrap_bitcoin_uri_set_parameter(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_parameter", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 2, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 2, argv[0])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 2, argv[0])); 
+  {
+    std::string *ptr = (std::string *)0;
+    res3 = SWIG_AsPtr_std_string(argv[1], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 3, argv[1] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 3, argv[1])); 
+    }
+    arg3 = ptr;
   }
-  arg2 = reinterpret_cast< std::string * >(argp2);
-  res3 = SWIG_ConvertPtr(argv[1], &argp3, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 3, argv[1] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 3, argv[1])); 
-  }
-  arg3 = reinterpret_cast< std::string * >(argp3);
   result = (bool)(arg1)->set_parameter((std::string const &)*arg2,(std::string const &)*arg3);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
   return Qnil;
 }
 
@@ -5609,10 +5782,10 @@ _wrap_wif_compressed_size_get(VALUE self) {
 }
 
 
-static swig_class SwigClassEc_private;
+static swig_class SwigClassECPrivate;
 
 SWIGINTERN VALUE
-_wrap_ec_private_compressed_sentinel_get(VALUE self) {
+_wrap_ECPrivate_compressed_sentinel_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_private::compressed_sentinel), SWIGTYPE_p_uint8_t,  0 );
@@ -5621,7 +5794,7 @@ _wrap_ec_private_compressed_sentinel_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_mainnet_wif_get(VALUE self) {
+_wrap_ECPrivate_mainnet_wif_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_private::mainnet_wif), SWIGTYPE_p_uint8_t,  0 );
@@ -5630,7 +5803,7 @@ _wrap_ec_private_mainnet_wif_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_mainnet_p2kh_get(VALUE self) {
+_wrap_ECPrivate_mainnet_p2kh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_private::mainnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
@@ -5639,7 +5812,7 @@ _wrap_ec_private_mainnet_p2kh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_mainnet_get(VALUE self) {
+_wrap_ECPrivate_mainnet_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_private::mainnet), SWIGTYPE_p_uint16_t,  0 );
@@ -5648,7 +5821,7 @@ _wrap_ec_private_mainnet_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_testnet_wif_get(VALUE self) {
+_wrap_ECPrivate_testnet_wif_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_private::testnet_wif), SWIGTYPE_p_uint8_t,  0 );
@@ -5657,7 +5830,7 @@ _wrap_ec_private_testnet_wif_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_testnet_p2kh_get(VALUE self) {
+_wrap_ECPrivate_testnet_p2kh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_private::testnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
@@ -5666,7 +5839,7 @@ _wrap_ec_private_testnet_p2kh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_testnet_get(VALUE self) {
+_wrap_ECPrivate_testnet_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_private::testnet), SWIGTYPE_p_uint16_t,  0 );
@@ -5675,7 +5848,7 @@ _wrap_ec_private_testnet_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_to_address_prefix(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_to_address_prefix(int argc, VALUE *argv, VALUE self) {
   uint16_t arg1 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -5705,7 +5878,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_to_wif_prefix(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_to_wif_prefix(int argc, VALUE *argv, VALUE self) {
   uint16_t arg1 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -5735,7 +5908,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_to_version(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_to_version(int argc, VALUE *argv, VALUE self) {
   uint8_t arg1 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -5779,7 +5952,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -5794,7 +5967,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -5820,11 +5993,10 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
   uint8_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   void *argp2 ;
   int res2 = 0 ;
   libbitcoin::wallet::ec_private *result = 0 ;
@@ -5832,14 +6004,17 @@ _wrap_new_ec_private__SWIG_2(int argc, VALUE *argv, VALUE self) {
   if ((argc < 2) || (argc > 2)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_private", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   {
     res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint8_t,  0 );
     if (!SWIG_IsOK(res2)) {
@@ -5853,40 +6028,46 @@ _wrap_new_ec_private__SWIG_2(int argc, VALUE *argv, VALUE self) {
   }
   result = (libbitcoin::wallet::ec_private *)new libbitcoin::wallet::ec_private((std::string const &)*arg1,arg2);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_3(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::ec_private *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_private", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::ec_private *)new libbitcoin::wallet::ec_private((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_4(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_4(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wif_compressed *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -5926,7 +6107,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_5(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_5(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wif_compressed *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -5952,7 +6133,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_6(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_6(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wif_uncompressed *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -5992,7 +6173,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_7(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_7(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wif_uncompressed *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -6018,7 +6199,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_8(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_8(int argc, VALUE *argv, VALUE self) {
   ec_secret *arg1 = 0 ;
   uint16_t arg2 ;
   bool arg3 ;
@@ -6066,7 +6247,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_9(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_9(int argc, VALUE *argv, VALUE self) {
   ec_secret *arg1 = 0 ;
   uint16_t arg2 ;
   void *argp1 ;
@@ -6107,9 +6288,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_ec_private_allocate(VALUE self)
+_wrap_ECPrivate_allocate(VALUE self)
 #else
-_wrap_ec_private_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_ECPrivate_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ec_private);
@@ -6121,7 +6302,7 @@ _wrap_ec_private_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_private__SWIG_10(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPrivate__SWIG_10(int argc, VALUE *argv, VALUE self) {
   ec_secret *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -6146,7 +6327,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_ECPrivate(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[3];
   int ii;
@@ -6157,7 +6338,7 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_ec_private__SWIG_0(nargs, args, self);
+    return _wrap_new_ECPrivate__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -6165,16 +6346,7 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_private, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_private__SWIG_1(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ec_private__SWIG_3(nargs, args, self);
+      return _wrap_new_ECPrivate__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -6183,7 +6355,7 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_wif_uncompressed_size_1u_t, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_private__SWIG_5(nargs, args, self);
+      return _wrap_new_ECPrivate__SWIG_5(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -6192,7 +6364,7 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_37u_t, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_private__SWIG_7(nargs, args, self);
+      return _wrap_new_ECPrivate__SWIG_7(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -6201,7 +6373,15 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_secret, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_private__SWIG_10(nargs, args, self);
+      return _wrap_new_ECPrivate__SWIG_10(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_ECPrivate__SWIG_3(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -6214,7 +6394,7 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_ec_private__SWIG_6(nargs, args, self);
+        return _wrap_new_ECPrivate__SWIG_6(nargs, args, self);
       }
     }
   }
@@ -6228,7 +6408,7 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_ec_private__SWIG_4(nargs, args, self);
+        return _wrap_new_ECPrivate__SWIG_4(nargs, args, self);
       }
     }
   }
@@ -6242,21 +6422,20 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint16_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_ec_private__SWIG_9(nargs, args, self);
+        return _wrap_new_ECPrivate__SWIG_9(nargs, args, self);
       }
     }
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_ec_private__SWIG_2(nargs, args, self);
+        return _wrap_new_ECPrivate__SWIG_2(nargs, args, self);
       }
     }
   }
@@ -6275,7 +6454,7 @@ SWIGINTERN VALUE _wrap_new_ec_private(int nargs, VALUE *args, VALUE self) {
           _v = SWIG_CheckState(res);
         }
         if (_v) {
-          return _wrap_new_ec_private__SWIG_8(nargs, args, self);
+          return _wrap_new_ECPrivate__SWIG_8(nargs, args, self);
         }
       }
     }
@@ -6301,7 +6480,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ec_private.<
+  Document-method: Bitcoin::ECPrivate.<
 
   call-seq:
     <(other) -> bool
@@ -6309,7 +6488,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ec_private___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   libbitcoin::wallet::ec_private *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -6345,7 +6524,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ec_private.==
+  Document-method: Bitcoin::ECPrivate.==
 
   call-seq:
     ==(other) -> bool
@@ -6353,7 +6532,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ec_private___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   libbitcoin::wallet::ec_private *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -6388,7 +6567,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6412,7 +6591,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_ec_secret(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_ec_secret(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6436,7 +6615,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6452,7 +6631,7 @@ _wrap_ec_private_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::ec_private * >(argp1);
   result = ((libbitcoin::wallet::ec_private const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -6460,7 +6639,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_secret(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_secret(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6484,7 +6663,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_version(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_version(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6508,7 +6687,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_payment_version(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_payment_version(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6532,7 +6711,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_wif_version(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_wif_version(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6556,7 +6735,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_compressed(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_compressed(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6580,7 +6759,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_to_public(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_to_public(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6604,7 +6783,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_private_to_payment_address(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPrivate_to_payment_address(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -6633,10 +6812,10 @@ free_libbitcoin_wallet_ec_private(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassEc_public;
+static swig_class SwigClassECPublic;
 
 SWIGINTERN VALUE
-_wrap_ec_public_compressed_even_get(VALUE self) {
+_wrap_ECPublic_compressed_even_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::compressed_even), SWIGTYPE_p_uint8_t,  0 );
@@ -6645,7 +6824,7 @@ _wrap_ec_public_compressed_even_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_compressed_odd_get(VALUE self) {
+_wrap_ECPublic_compressed_odd_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::compressed_odd), SWIGTYPE_p_uint8_t,  0 );
@@ -6654,7 +6833,7 @@ _wrap_ec_public_compressed_odd_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_uncompressed_get(VALUE self) {
+_wrap_ECPublic_uncompressed_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::uncompressed), SWIGTYPE_p_uint8_t,  0 );
@@ -6663,7 +6842,7 @@ _wrap_ec_public_uncompressed_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_mainnet_p2kh_get(VALUE self) {
+_wrap_ECPublic_mainnet_p2kh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::mainnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
@@ -6672,7 +6851,7 @@ _wrap_ec_public_mainnet_p2kh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -6687,7 +6866,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -6713,7 +6892,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -6739,7 +6918,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
   data_chunk *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -6765,33 +6944,37 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_4(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_4(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::ec_public *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_public", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_public", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_public", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_5(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_5(int argc, VALUE *argv, VALUE self) {
   ec_compressed *arg1 = 0 ;
   bool arg2 ;
   void *argp1 ;
@@ -6825,7 +7008,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_6(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_6(int argc, VALUE *argv, VALUE self) {
   ec_compressed *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -6851,7 +7034,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_7(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_7(int argc, VALUE *argv, VALUE self) {
   ec_uncompressed *arg1 = 0 ;
   bool arg2 ;
   void *argp1 ;
@@ -6886,9 +7069,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_ec_public_allocate(VALUE self)
+_wrap_ECPublic_allocate(VALUE self)
 #else
-_wrap_ec_public_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_ECPublic_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ec_public);
@@ -6900,7 +7083,7 @@ _wrap_ec_public_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_ec_public__SWIG_8(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ECPublic__SWIG_8(int argc, VALUE *argv, VALUE self) {
   ec_uncompressed *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -6925,7 +7108,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_ECPublic(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[2];
   int ii;
@@ -6936,7 +7119,7 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_ec_public__SWIG_0(nargs, args, self);
+    return _wrap_new_ECPublic__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -6944,7 +7127,7 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_public__SWIG_1(nargs, args, self);
+      return _wrap_new_ECPublic__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -6953,7 +7136,7 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_private, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_public__SWIG_2(nargs, args, self);
+      return _wrap_new_ECPublic__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -6962,16 +7145,7 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_public__SWIG_3(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ec_public__SWIG_4(nargs, args, self);
+      return _wrap_new_ECPublic__SWIG_3(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -6980,7 +7154,7 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_compressed, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_public__SWIG_6(nargs, args, self);
+      return _wrap_new_ECPublic__SWIG_6(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -6989,7 +7163,15 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_uncompressed, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ec_public__SWIG_8(nargs, args, self);
+      return _wrap_new_ECPublic__SWIG_8(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_ECPublic__SWIG_4(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -7003,7 +7185,7 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
         _v = SWIG_CheckState(res);
       }
       if (_v) {
-        return _wrap_new_ec_public__SWIG_7(nargs, args, self);
+        return _wrap_new_ECPublic__SWIG_7(nargs, args, self);
       }
     }
   }
@@ -7018,7 +7200,7 @@ SWIGINTERN VALUE _wrap_new_ec_public(int nargs, VALUE *args, VALUE self) {
         _v = SWIG_CheckState(res);
       }
       if (_v) {
-        return _wrap_new_ec_public__SWIG_5(nargs, args, self);
+        return _wrap_new_ECPublic__SWIG_5(nargs, args, self);
       }
     }
   }
@@ -7041,7 +7223,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ec_public.<
+  Document-method: Bitcoin::ECPublic.<
 
   call-seq:
     <(other) -> bool
@@ -7049,7 +7231,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ec_public___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   libbitcoin::wallet::ec_public *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -7085,7 +7267,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ec_public.==
+  Document-method: Bitcoin::ECPublic.==
 
   call-seq:
     ==(other) -> bool
@@ -7093,7 +7275,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ec_public___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   libbitcoin::wallet::ec_public *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -7128,7 +7310,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7152,7 +7334,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_ec_compressed(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_ec_compressed(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7176,7 +7358,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7192,7 +7374,7 @@ _wrap_ec_public_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
   result = ((libbitcoin::wallet::ec_public const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -7200,7 +7382,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_point(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_point(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7224,7 +7406,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_compressed(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_compressed(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7248,7 +7430,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_to_data(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_to_data(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   data_chunk *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -7283,7 +7465,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_to_uncompressed(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_to_uncompressed(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   ec_uncompressed *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -7318,7 +7500,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_to_payment_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_to_payment_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   uint8_t arg2 ;
   void *argp1 = 0 ;
@@ -7356,7 +7538,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ec_public_to_payment_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_ECPublic_to_payment_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7379,7 +7561,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_ec_public_to_payment_address(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_ECPublic_to_payment_address(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[3];
   int ii;
@@ -7396,7 +7578,7 @@ SWIGINTERN VALUE _wrap_ec_public_to_payment_address(int nargs, VALUE *args, VALU
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_ec_public_to_payment_address__SWIG_1(nargs, args, self);
+      return _wrap_ECPublic_to_payment_address__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -7409,15 +7591,15 @@ SWIGINTERN VALUE _wrap_ec_public_to_payment_address(int nargs, VALUE *args, VALU
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_ec_public_to_payment_address__SWIG_0(nargs, args, self);
+        return _wrap_ECPublic_to_payment_address__SWIG_0(nargs, args, self);
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 3, "ec_public.to_payment_address", 
-    "    libbitcoin::wallet::payment_address ec_public.to_payment_address(uint8_t version)\n"
-    "    libbitcoin::wallet::payment_address ec_public.to_payment_address()\n");
+  Ruby_Format_OverloadedError( argc, 3, "ECPublic.to_payment_address", 
+    "    libbitcoin::wallet::payment_address ECPublic.to_payment_address(uint8_t version)\n"
+    "    libbitcoin::wallet::payment_address ECPublic.to_payment_address()\n");
   
   return Qnil;
 }
@@ -7429,10 +7611,10 @@ free_libbitcoin_wallet_ec_public(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassEk_private;
+static swig_class SwigClassEKPrivate;
 
 SWIGINTERN VALUE
-_wrap_new_ek_private__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPrivate__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -7447,33 +7629,37 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_private__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPrivate__SWIG_1(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::ek_private *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_private", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_private__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
   encrypted_private *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -7500,9 +7686,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_ek_private_allocate(VALUE self)
+_wrap_EKPrivate_allocate(VALUE self)
 #else
-_wrap_ek_private_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_EKPrivate_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_private);
@@ -7514,7 +7700,7 @@ _wrap_ek_private_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_private__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPrivate__SWIG_3(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -7539,7 +7725,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_ek_private(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_EKPrivate(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[1];
   int ii;
@@ -7550,16 +7736,7 @@ SWIGINTERN VALUE _wrap_new_ek_private(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_ek_private__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ek_private__SWIG_1(nargs, args, self);
-    }
+    return _wrap_new_EKPrivate__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -7567,7 +7744,7 @@ SWIGINTERN VALUE _wrap_new_ek_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_encrypted_private, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ek_private__SWIG_2(nargs, args, self);
+      return _wrap_new_EKPrivate__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -7576,7 +7753,15 @@ SWIGINTERN VALUE _wrap_new_ek_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_private, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ek_private__SWIG_3(nargs, args, self);
+      return _wrap_new_EKPrivate__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPrivate__SWIG_1(nargs, args, self);
     }
   }
   
@@ -7593,7 +7778,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ek_private.<
+  Document-method: Bitcoin::EKPrivate.<
 
   call-seq:
     <(other) -> bool
@@ -7601,7 +7786,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ek_private___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPrivate___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
   libbitcoin::wallet::ek_private *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -7637,7 +7822,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ek_private.==
+  Document-method: Bitcoin::EKPrivate.==
 
   call-seq:
     ==(other) -> bool
@@ -7645,7 +7830,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ek_private___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPrivate___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
   libbitcoin::wallet::ek_private *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -7680,7 +7865,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_private_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPrivate_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7704,7 +7889,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_private_encrypted_private(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPrivate_encrypted_private(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7728,7 +7913,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_private_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPrivate_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7744,7 +7929,7 @@ _wrap_ek_private_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
   result = ((libbitcoin::wallet::ek_private const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -7752,7 +7937,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_private_private_key(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPrivate_private_key(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -7781,10 +7966,10 @@ free_libbitcoin_wallet_ek_private(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassEk_public;
+static swig_class SwigClassEKPublic;
 
 SWIGINTERN VALUE
-_wrap_new_ek_public__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -7799,33 +7984,37 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_public__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::ek_public *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_public", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_public", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_public", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_public__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
   encrypted_public *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -7852,9 +8041,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_ek_public_allocate(VALUE self)
+_wrap_EKPublic_allocate(VALUE self)
 #else
-_wrap_ek_public_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_EKPublic_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_public);
@@ -7866,7 +8055,7 @@ _wrap_ek_public_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_public__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -7891,7 +8080,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_ek_public(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_EKPublic(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[1];
   int ii;
@@ -7902,16 +8091,7 @@ SWIGINTERN VALUE _wrap_new_ek_public(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_ek_public__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ek_public__SWIG_1(nargs, args, self);
-    }
+    return _wrap_new_EKPublic__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -7919,7 +8099,7 @@ SWIGINTERN VALUE _wrap_new_ek_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_encrypted_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ek_public__SWIG_2(nargs, args, self);
+      return _wrap_new_EKPublic__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -7928,7 +8108,15 @@ SWIGINTERN VALUE _wrap_new_ek_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ek_public__SWIG_3(nargs, args, self);
+      return _wrap_new_EKPublic__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPublic__SWIG_1(nargs, args, self);
     }
   }
   
@@ -7945,7 +8133,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ek_public.<
+  Document-method: Bitcoin::EKPublic.<
 
   call-seq:
     <(other) -> bool
@@ -7953,7 +8141,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ek_public___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPublic___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
   libbitcoin::wallet::ek_public *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -7989,7 +8177,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ek_public.==
+  Document-method: Bitcoin::EKPublic.==
 
   call-seq:
     ==(other) -> bool
@@ -7997,7 +8185,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ek_public___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPublic___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
   libbitcoin::wallet::ek_public *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -8032,7 +8220,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_public_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPublic_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8056,7 +8244,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_public_encrypted_public(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPublic_encrypted_public(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8080,7 +8268,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_public_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPublic_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8096,7 +8284,7 @@ _wrap_ek_public_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
   result = ((libbitcoin::wallet::ek_public const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -8104,7 +8292,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_public_public_key(int argc, VALUE *argv, VALUE self) {
+_wrap_EKPublic_public_key(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8133,10 +8321,10 @@ free_libbitcoin_wallet_ek_public(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassEk_token;
+static swig_class SwigClassEKToken;
 
 SWIGINTERN VALUE
-_wrap_new_ek_token__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKToken__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -8151,33 +8339,37 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_token__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKToken__SWIG_1(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::ek_token *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_token", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_token", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_token", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_token", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_token__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKToken__SWIG_2(int argc, VALUE *argv, VALUE self) {
   encrypted_token *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -8204,9 +8396,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_ek_token_allocate(VALUE self)
+_wrap_EKToken_allocate(VALUE self)
 #else
-_wrap_ek_token_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_EKToken_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_token);
@@ -8218,7 +8410,7 @@ _wrap_ek_token_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_ek_token__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EKToken__SWIG_3(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -8243,7 +8435,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_ek_token(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_EKToken(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[1];
   int ii;
@@ -8254,16 +8446,7 @@ SWIGINTERN VALUE _wrap_new_ek_token(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_ek_token__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ek_token__SWIG_1(nargs, args, self);
-    }
+    return _wrap_new_EKToken__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -8271,7 +8454,7 @@ SWIGINTERN VALUE _wrap_new_ek_token(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_encrypted_token, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ek_token__SWIG_2(nargs, args, self);
+      return _wrap_new_EKToken__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -8280,7 +8463,15 @@ SWIGINTERN VALUE _wrap_new_ek_token(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_token, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_ek_token__SWIG_3(nargs, args, self);
+      return _wrap_new_EKToken__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKToken__SWIG_1(nargs, args, self);
     }
   }
   
@@ -8297,7 +8488,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ek_token.<
+  Document-method: Bitcoin::EKToken.<
 
   call-seq:
     <(other) -> bool
@@ -8305,7 +8496,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ek_token___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_EKToken___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
   libbitcoin::wallet::ek_token *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -8341,7 +8532,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::ek_token.==
+  Document-method: Bitcoin::EKToken.==
 
   call-seq:
     ==(other) -> bool
@@ -8349,7 +8540,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_ek_token___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_EKToken___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
   libbitcoin::wallet::ek_token *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -8384,7 +8575,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_token_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_EKToken_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8408,7 +8599,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_token_encrypted_token(int argc, VALUE *argv, VALUE self) {
+_wrap_EKToken_encrypted_token(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8432,7 +8623,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_token_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_EKToken_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8448,7 +8639,7 @@ _wrap_ek_token_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
   result = ((libbitcoin::wallet::ek_token const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -8456,7 +8647,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_ek_token_token(int argc, VALUE *argv, VALUE self) {
+_wrap_EKToken_token(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9105,10 +9296,10 @@ _wrap_hd_key_size_get(VALUE self) {
 }
 
 
-static swig_class SwigClassHd_lineage;
+static swig_class SwigClassHDLineage;
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_prefixes_set(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_prefixes_set(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   uint64_t arg2 ;
   void *argp1 = 0 ;
@@ -9143,7 +9334,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_prefixes_get(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_prefixes_get(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9167,7 +9358,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_depth_set(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_depth_set(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   uint8_t arg2 ;
   void *argp1 = 0 ;
@@ -9202,7 +9393,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_depth_get(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_depth_get(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9226,7 +9417,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_parent_fingerprint_set(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_parent_fingerprint_set(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   uint32_t arg2 ;
   void *argp1 = 0 ;
@@ -9261,7 +9452,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_parent_fingerprint_get(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_parent_fingerprint_get(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9285,7 +9476,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_child_number_set(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_child_number_set(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   uint32_t arg2 ;
   void *argp1 = 0 ;
@@ -9320,7 +9511,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_lineage_child_number_get(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage_child_number_get(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9345,7 +9536,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::hd_lineage.==
+  Document-method: Bitcoin::HDLineage.==
 
   call-seq:
     ==(other) -> bool
@@ -9353,7 +9544,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_hd_lineage___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_HDLineage___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
   libbitcoin::wallet::hd_lineage *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -9389,9 +9580,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_hd_lineage_allocate(VALUE self)
+_wrap_HDLineage_allocate(VALUE self)
 #else
-_wrap_hd_lineage_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_HDLineage_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_lineage);
@@ -9403,7 +9594,7 @@ _wrap_hd_lineage_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_lineage(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDLineage(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_lineage *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -9423,10 +9614,10 @@ free_libbitcoin_wallet_hd_lineage(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassHd_public;
+static swig_class SwigClassHDPublic;
 
 SWIGINTERN VALUE
-_wrap_hd_public_mainnet_get(VALUE self) {
+_wrap_HDPublic_mainnet_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_public::mainnet), SWIGTYPE_p_uint32_t,  0 );
@@ -9435,7 +9626,7 @@ _wrap_hd_public_mainnet_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_testnet_get(VALUE self) {
+_wrap_HDPublic_testnet_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_public::testnet), SWIGTYPE_p_uint32_t,  0 );
@@ -9444,7 +9635,7 @@ _wrap_hd_public_testnet_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_to_prefix(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_to_prefix(int argc, VALUE *argv, VALUE self) {
   uint64_t arg1 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -9474,7 +9665,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_public__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -9489,7 +9680,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_public__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -9515,7 +9706,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_public__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_key *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -9541,7 +9732,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_public__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_key *arg1 = 0 ;
   uint32_t arg2 ;
   void *argp1 ;
@@ -9581,36 +9772,40 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_public__SWIG_4(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPublic__SWIG_4(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::hd_public *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_hd_public_allocate(VALUE self)
+_wrap_HDPublic_allocate(VALUE self)
 #else
-_wrap_hd_public_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_HDPublic_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_public);
@@ -9622,11 +9817,10 @@ _wrap_hd_public_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_public__SWIG_5(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPublic__SWIG_5(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
   uint32_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   void *argp2 ;
   int res2 = 0 ;
   libbitcoin::wallet::hd_public *result = 0 ;
@@ -9634,14 +9828,17 @@ _wrap_new_hd_public__SWIG_5(int argc, VALUE *argv, VALUE self) {
   if ((argc < 2) || (argc > 2)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   {
     res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
     if (!SWIG_IsOK(res2)) {
@@ -9655,13 +9852,15 @@ _wrap_new_hd_public__SWIG_5(int argc, VALUE *argv, VALUE self) {
   }
   result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((std::string const &)*arg1,arg2);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
-SWIGINTERN VALUE _wrap_new_hd_public(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_HDPublic(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[2];
   int ii;
@@ -9672,7 +9871,7 @@ SWIGINTERN VALUE _wrap_new_hd_public(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_hd_public__SWIG_0(nargs, args, self);
+    return _wrap_new_HDPublic__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -9680,7 +9879,7 @@ SWIGINTERN VALUE _wrap_new_hd_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__hd_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_hd_public__SWIG_1(nargs, args, self);
+      return _wrap_new_HDPublic__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -9689,16 +9888,15 @@ SWIGINTERN VALUE _wrap_new_hd_public(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_hd_public__SWIG_2(nargs, args, self);
+      return _wrap_new_HDPublic__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_hd_public__SWIG_4(nargs, args, self);
+      return _wrap_new_HDPublic__SWIG_4(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -9711,21 +9909,20 @@ SWIGINTERN VALUE _wrap_new_hd_public(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_hd_public__SWIG_3(nargs, args, self);
+        return _wrap_new_HDPublic__SWIG_3(nargs, args, self);
       }
     }
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_hd_public__SWIG_5(nargs, args, self);
+        return _wrap_new_HDPublic__SWIG_5(nargs, args, self);
       }
     }
   }
@@ -9745,7 +9942,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::hd_public.<
+  Document-method: Bitcoin::HDPublic.<
 
   call-seq:
     <(other) -> bool
@@ -9753,7 +9950,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_hd_public___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   libbitcoin::wallet::hd_public *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -9789,7 +9986,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::hd_public.==
+  Document-method: Bitcoin::HDPublic.==
 
   call-seq:
     ==(other) -> bool
@@ -9797,7 +9994,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_hd_public___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   libbitcoin::wallet::hd_public *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -9832,7 +10029,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9856,7 +10053,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_ec_compressed(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_ec_compressed(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9880,7 +10077,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9896,7 +10093,7 @@ _wrap_hd_public_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
   result = ((libbitcoin::wallet::hd_public const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -9904,7 +10101,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_chain_code(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_chain_code(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9928,7 +10125,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_lineage(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_lineage(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9952,7 +10149,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_point(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_point(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9976,7 +10173,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_to_hd_key(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_to_hd_key(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10000,7 +10197,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_public_derive_public(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPublic_derive_public(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
   uint32_t arg2 ;
   void *argp1 = 0 ;
@@ -10043,10 +10240,10 @@ free_libbitcoin_wallet_hd_public(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassHd_private;
+static swig_class SwigClassHDPrivate;
 
 SWIGINTERN VALUE
-_wrap_hd_private_mainnet_get(VALUE self) {
+_wrap_HDPrivate_mainnet_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_private::mainnet), SWIGTYPE_p_uint64_t,  0 );
@@ -10055,7 +10252,7 @@ _wrap_hd_private_mainnet_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_testnet_get(VALUE self) {
+_wrap_HDPrivate_testnet_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_private::testnet), SWIGTYPE_p_uint64_t,  0 );
@@ -10064,7 +10261,7 @@ _wrap_hd_private_testnet_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_to_prefix(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_to_prefix(int argc, VALUE *argv, VALUE self) {
   uint64_t arg1 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -10094,7 +10291,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_to_prefixes(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_to_prefixes(int argc, VALUE *argv, VALUE self) {
   uint32_t arg1 ;
   uint32_t arg2 ;
   void *argp1 ;
@@ -10138,7 +10335,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -10153,7 +10350,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -10179,7 +10376,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
   data_chunk *arg1 = 0 ;
   uint64_t arg2 ;
   void *argp1 ;
@@ -10219,7 +10416,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_3(int argc, VALUE *argv, VALUE self) {
   data_chunk *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -10245,7 +10442,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_4(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_4(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_key *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -10271,7 +10468,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_5(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_5(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_key *arg1 = 0 ;
   uint64_t arg2 ;
   void *argp1 ;
@@ -10311,7 +10508,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_6(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_6(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_key *arg1 = 0 ;
   uint32_t arg2 ;
   void *argp1 ;
@@ -10351,37 +10548,40 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_7(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_7(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::hd_private *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_8(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_8(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
   uint64_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   void *argp2 ;
   int res2 = 0 ;
   libbitcoin::wallet::hd_private *result = 0 ;
@@ -10389,14 +10589,17 @@ _wrap_new_hd_private__SWIG_8(int argc, VALUE *argv, VALUE self) {
   if ((argc < 2) || (argc > 2)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   {
     res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint64_t,  0 );
     if (!SWIG_IsOK(res2)) {
@@ -10410,17 +10613,19 @@ _wrap_new_hd_private__SWIG_8(int argc, VALUE *argv, VALUE self) {
   }
   result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1,arg2);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_hd_private_allocate(VALUE self)
+_wrap_HDPrivate_allocate(VALUE self)
 #else
-_wrap_hd_private_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_HDPrivate_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_private);
@@ -10432,11 +10637,10 @@ _wrap_hd_private_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_hd_private__SWIG_9(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HDPrivate__SWIG_9(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
   uint32_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   void *argp2 ;
   int res2 = 0 ;
   libbitcoin::wallet::hd_private *result = 0 ;
@@ -10444,14 +10648,17 @@ _wrap_new_hd_private__SWIG_9(int argc, VALUE *argv, VALUE self) {
   if ((argc < 2) || (argc > 2)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   {
     res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
     if (!SWIG_IsOK(res2)) {
@@ -10465,13 +10672,15 @@ _wrap_new_hd_private__SWIG_9(int argc, VALUE *argv, VALUE self) {
   }
   result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1,arg2);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
-SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_HDPrivate(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[2];
   int ii;
@@ -10482,7 +10691,7 @@ SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_hd_private__SWIG_0(nargs, args, self);
+    return _wrap_new_HDPrivate__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -10490,7 +10699,7 @@ SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__hd_private, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_hd_private__SWIG_1(nargs, args, self);
+      return _wrap_new_HDPrivate__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -10499,7 +10708,7 @@ SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_hd_private__SWIG_3(nargs, args, self);
+      return _wrap_new_HDPrivate__SWIG_3(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -10508,16 +10717,15 @@ SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_hd_private__SWIG_4(nargs, args, self);
+      return _wrap_new_HDPrivate__SWIG_4(nargs, args, self);
     }
   }
   if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_hd_private__SWIG_7(nargs, args, self);
+      return _wrap_new_HDPrivate__SWIG_7(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -10530,7 +10738,7 @@ SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint64_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_hd_private__SWIG_5(nargs, args, self);
+        return _wrap_new_HDPrivate__SWIG_5(nargs, args, self);
       }
     }
   }
@@ -10544,7 +10752,7 @@ SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_hd_private__SWIG_6(nargs, args, self);
+        return _wrap_new_HDPrivate__SWIG_6(nargs, args, self);
       }
     }
   }
@@ -10558,35 +10766,33 @@ SWIGINTERN VALUE _wrap_new_hd_private(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint64_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_hd_private__SWIG_2(nargs, args, self);
+        return _wrap_new_HDPrivate__SWIG_2(nargs, args, self);
       }
     }
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint64_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_hd_private__SWIG_8(nargs, args, self);
+        return _wrap_new_HDPrivate__SWIG_8(nargs, args, self);
       }
     }
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_hd_private__SWIG_9(nargs, args, self);
+        return _wrap_new_HDPrivate__SWIG_9(nargs, args, self);
       }
     }
   }
@@ -10610,7 +10816,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::hd_private.<
+  Document-method: Bitcoin::HDPrivate.<
 
   call-seq:
     <(other) -> bool
@@ -10618,7 +10824,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_hd_private___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   libbitcoin::wallet::hd_private *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -10654,7 +10860,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::hd_private.==
+  Document-method: Bitcoin::HDPrivate.==
 
   call-seq:
     ==(other) -> bool
@@ -10662,7 +10868,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_hd_private___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   libbitcoin::wallet::hd_private *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -10697,7 +10903,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_ec_secret(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_ec_secret(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10721,7 +10927,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10737,7 +10943,7 @@ _wrap_hd_private_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
   result = ((libbitcoin::wallet::hd_private const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -10745,7 +10951,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_secret(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_secret(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10769,7 +10975,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_to_hd_key(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_to_hd_key(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10793,7 +10999,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_to_public(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_to_public(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -10817,7 +11023,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_derive_private(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_derive_private(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   uint32_t arg2 ;
   void *argp1 = 0 ;
@@ -10855,7 +11061,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_hd_private_derive_public(int argc, VALUE *argv, VALUE self) {
+_wrap_HDPrivate_derive_public(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
   uint32_t arg2 ;
   void *argp1 = 0 ;
@@ -10998,8 +11204,7 @@ _wrap_sign_message__SWIG_1(int argc, VALUE *argv, VALUE self) {
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -11025,18 +11230,23 @@ _wrap_sign_message__SWIG_1(int argc, VALUE *argv, VALUE self) {
       arg2 = *(reinterpret_cast< data_slice * >(argp2));
     }
   }
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res3 = SWIG_AsPtr_std_string(argv[2], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
+    }
+    arg3 = ptr;
   }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< std::string * >(argp3);
   result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(std::string const &)*arg3);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res3)) delete arg3;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
   return Qnil;
 }
 
@@ -11193,10 +11403,10 @@ SWIGINTERN VALUE _wrap_sign_message(int nargs, VALUE *args, VALUE self) {
       _v = SWIG_CheckState(res);
       if (_v) {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_std__string, 0);
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_secret, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_sign_message__SWIG_1(nargs, args, self);
+          return _wrap_sign_message__SWIG_3(nargs, args, self);
         }
       }
     }
@@ -11211,11 +11421,10 @@ SWIGINTERN VALUE _wrap_sign_message(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_secret, 0);
+        int res = SWIG_AsPtr_std_string(argv[2], (std::string**)(0));
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_sign_message__SWIG_3(nargs, args, self);
+          return _wrap_sign_message__SWIG_1(nargs, args, self);
         }
       }
     }
@@ -11416,8 +11625,7 @@ _wrap_minikey_to_secret(int argc, VALUE *argv, VALUE self) {
   std::string *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
   bool result;
   VALUE vresult = Qnil;
   
@@ -11432,18 +11640,23 @@ _wrap_minikey_to_secret(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_secret &","libbitcoin::wallet::minikey_to_secret", 1, argv[0])); 
   }
   arg1 = reinterpret_cast< ec_secret * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[1], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1])); 
+    }
+    arg2 = ptr;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< std::string * >(argp2);
   result = (bool)libbitcoin::wallet::minikey_to_secret(*arg1,(std::string const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return vresult;
 fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
@@ -11777,10 +11990,10 @@ _wrap_payment_size_get(VALUE self) {
 }
 
 
-static swig_class SwigClassPayment_address;
+static swig_class SwigClassPaymentAddress;
 
 SWIGINTERN VALUE
-_wrap_payment_address_mainnet_p2kh_get(VALUE self) {
+_wrap_PaymentAddress_mainnet_p2kh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::payment_address::mainnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
@@ -11789,7 +12002,7 @@ _wrap_payment_address_mainnet_p2kh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_mainnet_p2sh_get(VALUE self) {
+_wrap_PaymentAddress_mainnet_p2sh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::payment_address::mainnet_p2sh), SWIGTYPE_p_uint8_t,  0 );
@@ -11798,7 +12011,7 @@ _wrap_payment_address_mainnet_p2sh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_testnet_p2kh_get(VALUE self) {
+_wrap_PaymentAddress_testnet_p2kh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::payment_address::testnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
@@ -11807,7 +12020,7 @@ _wrap_payment_address_testnet_p2kh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_testnet_p2sh_get(VALUE self) {
+_wrap_PaymentAddress_testnet_p2sh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::payment_address::testnet_p2sh), SWIGTYPE_p_uint8_t,  0 );
@@ -11816,7 +12029,7 @@ _wrap_payment_address_testnet_p2sh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract__SWIG_0(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   uint8_t arg2 ;
   uint8_t arg3 ;
@@ -11871,7 +12084,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract__SWIG_1(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -11912,7 +12125,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract__SWIG_2(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -11938,7 +12151,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_payment_address_extract(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_PaymentAddress_extract(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[3];
   int ii;
@@ -11954,7 +12167,7 @@ SWIGINTERN VALUE _wrap_payment_address_extract(int nargs, VALUE *args, VALUE sel
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__script, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_payment_address_extract__SWIG_2(nargs, args, self);
+      return _wrap_PaymentAddress_extract__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -11967,7 +12180,7 @@ SWIGINTERN VALUE _wrap_payment_address_extract(int nargs, VALUE *args, VALUE sel
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_payment_address_extract__SWIG_1(nargs, args, self);
+        return _wrap_PaymentAddress_extract__SWIG_1(nargs, args, self);
       }
     }
   }
@@ -11985,24 +12198,24 @@ SWIGINTERN VALUE _wrap_payment_address_extract(int nargs, VALUE *args, VALUE sel
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_uint8_t, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_payment_address_extract__SWIG_0(nargs, args, self);
+          return _wrap_PaymentAddress_extract__SWIG_0(nargs, args, self);
         }
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 3, "payment_address.extract", 
-    "    libbitcoin::wallet::payment_address payment_address.extract(chain::script const &script, uint8_t p2kh_version, uint8_t p2sh_version)\n"
-    "    libbitcoin::wallet::payment_address payment_address.extract(chain::script const &script, uint8_t p2kh_version)\n"
-    "    libbitcoin::wallet::payment_address payment_address.extract(chain::script const &script)\n");
+  Ruby_Format_OverloadedError( argc, 3, "PaymentAddress.extract", 
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract(chain::script const &script, uint8_t p2kh_version, uint8_t p2sh_version)\n"
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract(chain::script const &script, uint8_t p2kh_version)\n"
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract(chain::script const &script)\n");
   
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract_input__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract_input__SWIG_0(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   uint8_t arg2 ;
   uint8_t arg3 ;
@@ -12057,7 +12270,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract_input__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract_input__SWIG_1(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -12098,7 +12311,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract_input__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract_input__SWIG_2(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12124,7 +12337,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_payment_address_extract_input(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_PaymentAddress_extract_input(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[3];
   int ii;
@@ -12140,7 +12353,7 @@ SWIGINTERN VALUE _wrap_payment_address_extract_input(int nargs, VALUE *args, VAL
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__script, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_payment_address_extract_input__SWIG_2(nargs, args, self);
+      return _wrap_PaymentAddress_extract_input__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -12153,7 +12366,7 @@ SWIGINTERN VALUE _wrap_payment_address_extract_input(int nargs, VALUE *args, VAL
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_payment_address_extract_input__SWIG_1(nargs, args, self);
+        return _wrap_PaymentAddress_extract_input__SWIG_1(nargs, args, self);
       }
     }
   }
@@ -12171,24 +12384,24 @@ SWIGINTERN VALUE _wrap_payment_address_extract_input(int nargs, VALUE *args, VAL
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_uint8_t, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_payment_address_extract_input__SWIG_0(nargs, args, self);
+          return _wrap_PaymentAddress_extract_input__SWIG_0(nargs, args, self);
         }
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 3, "payment_address.extract_input", 
-    "    libbitcoin::wallet::payment_address payment_address.extract_input(chain::script const &script, uint8_t p2kh_version, uint8_t p2sh_version)\n"
-    "    libbitcoin::wallet::payment_address payment_address.extract_input(chain::script const &script, uint8_t p2kh_version)\n"
-    "    libbitcoin::wallet::payment_address payment_address.extract_input(chain::script const &script)\n");
+  Ruby_Format_OverloadedError( argc, 3, "PaymentAddress.extract_input", 
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract_input(chain::script const &script, uint8_t p2kh_version, uint8_t p2sh_version)\n"
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract_input(chain::script const &script, uint8_t p2kh_version)\n"
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract_input(chain::script const &script)\n");
   
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract_output__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract_output__SWIG_0(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   uint8_t arg2 ;
   uint8_t arg3 ;
@@ -12243,7 +12456,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract_output__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract_output__SWIG_1(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -12284,7 +12497,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_extract_output__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_extract_output__SWIG_2(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12310,7 +12523,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_payment_address_extract_output(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_PaymentAddress_extract_output(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[3];
   int ii;
@@ -12326,7 +12539,7 @@ SWIGINTERN VALUE _wrap_payment_address_extract_output(int nargs, VALUE *args, VA
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__script, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_payment_address_extract_output__SWIG_2(nargs, args, self);
+      return _wrap_PaymentAddress_extract_output__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -12339,7 +12552,7 @@ SWIGINTERN VALUE _wrap_payment_address_extract_output(int nargs, VALUE *args, VA
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_payment_address_extract_output__SWIG_1(nargs, args, self);
+        return _wrap_PaymentAddress_extract_output__SWIG_1(nargs, args, self);
       }
     }
   }
@@ -12357,24 +12570,24 @@ SWIGINTERN VALUE _wrap_payment_address_extract_output(int nargs, VALUE *args, VA
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_uint8_t, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_payment_address_extract_output__SWIG_0(nargs, args, self);
+          return _wrap_PaymentAddress_extract_output__SWIG_0(nargs, args, self);
         }
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 3, "payment_address.extract_output", 
-    "    libbitcoin::wallet::payment_address payment_address.extract_output(chain::script const &script, uint8_t p2kh_version, uint8_t p2sh_version)\n"
-    "    libbitcoin::wallet::payment_address payment_address.extract_output(chain::script const &script, uint8_t p2kh_version)\n"
-    "    libbitcoin::wallet::payment_address payment_address.extract_output(chain::script const &script)\n");
+  Ruby_Format_OverloadedError( argc, 3, "PaymentAddress.extract_output", 
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract_output(chain::script const &script, uint8_t p2kh_version, uint8_t p2sh_version)\n"
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract_output(chain::script const &script, uint8_t p2kh_version)\n"
+    "    libbitcoin::wallet::payment_address PaymentAddress.extract_output(chain::script const &script)\n");
   
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -12389,7 +12602,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12415,7 +12628,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_2(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12441,33 +12654,37 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_3(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::payment_address *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","payment_address", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","payment_address", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","payment_address", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","payment_address", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::payment_address *)new libbitcoin::wallet::payment_address((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_4(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_4(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12493,7 +12710,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_5(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_5(int argc, VALUE *argv, VALUE self) {
   short_hash *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -12533,7 +12750,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_6(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_6(int argc, VALUE *argv, VALUE self) {
   short_hash *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12559,7 +12776,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_7(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_7(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -12599,7 +12816,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_8(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_8(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_public *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12625,7 +12842,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_9(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_9(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   uint8_t arg2 ;
   void *argp1 ;
@@ -12666,9 +12883,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_payment_address_allocate(VALUE self)
+_wrap_PaymentAddress_allocate(VALUE self)
 #else
-_wrap_payment_address_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_PaymentAddress_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__payment_address);
@@ -12680,7 +12897,7 @@ _wrap_payment_address_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_payment_address__SWIG_10(int argc, VALUE *argv, VALUE self) {
+_wrap_new_PaymentAddress__SWIG_10(int argc, VALUE *argv, VALUE self) {
   chain::script *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -12705,7 +12922,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_PaymentAddress(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[2];
   int ii;
@@ -12716,7 +12933,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_payment_address__SWIG_0(nargs, args, self);
+    return _wrap_new_PaymentAddress__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -12724,7 +12941,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1u_short_hash_size_checksum_size_t, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_payment_address__SWIG_1(nargs, args, self);
+      return _wrap_new_PaymentAddress__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -12733,16 +12950,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_private, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_payment_address__SWIG_2(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_payment_address__SWIG_3(nargs, args, self);
+      return _wrap_new_PaymentAddress__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -12751,7 +12959,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__payment_address, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_payment_address__SWIG_4(nargs, args, self);
+      return _wrap_new_PaymentAddress__SWIG_4(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -12760,7 +12968,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_short_hash, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_payment_address__SWIG_6(nargs, args, self);
+      return _wrap_new_PaymentAddress__SWIG_6(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -12769,7 +12977,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_payment_address__SWIG_8(nargs, args, self);
+      return _wrap_new_PaymentAddress__SWIG_8(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -12778,7 +12986,15 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__script, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_payment_address__SWIG_10(nargs, args, self);
+      return _wrap_new_PaymentAddress__SWIG_10(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_PaymentAddress__SWIG_3(nargs, args, self);
     }
   }
   if (argc == 2) {
@@ -12791,7 +13007,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_payment_address__SWIG_5(nargs, args, self);
+        return _wrap_new_PaymentAddress__SWIG_5(nargs, args, self);
       }
     }
   }
@@ -12805,7 +13021,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_payment_address__SWIG_9(nargs, args, self);
+        return _wrap_new_PaymentAddress__SWIG_9(nargs, args, self);
       }
     }
   }
@@ -12819,7 +13035,7 @@ SWIGINTERN VALUE _wrap_new_payment_address(int nargs, VALUE *args, VALUE self) {
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_new_payment_address__SWIG_7(nargs, args, self);
+        return _wrap_new_PaymentAddress__SWIG_7(nargs, args, self);
       }
     }
   }
@@ -12844,7 +13060,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::payment_address.<
+  Document-method: Bitcoin::PaymentAddress.<
 
   call-seq:
     <(other) -> bool
@@ -12852,7 +13068,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_payment_address___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   libbitcoin::wallet::payment_address *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -12888,7 +13104,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::payment_address.==
+  Document-method: Bitcoin::PaymentAddress.==
 
   call-seq:
     ==(other) -> bool
@@ -12896,7 +13112,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_payment_address___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   libbitcoin::wallet::payment_address *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -12931,7 +13147,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -12955,7 +13171,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_short_hash(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_short_hash(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -12979,7 +13195,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -12995,7 +13211,7 @@ _wrap_payment_address_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::payment_address * >(argp1);
   result = ((libbitcoin::wallet::payment_address const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -13003,7 +13219,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_version(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_version(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -13028,7 +13244,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::payment_address.hash
+  Document-method: Bitcoin::PaymentAddress.hash
 
   call-seq:
     hash -> short_hash const &
@@ -13036,7 +13252,7 @@ fail:
 Hashing function for class.
 */
 SWIGINTERN VALUE
-_wrap_payment_address_hash(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_hash(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -13060,7 +13276,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_payment_address_to_payment(int argc, VALUE *argv, VALUE self) {
+_wrap_PaymentAddress_to_payment(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::payment_address *arg1 = (libbitcoin::wallet::payment_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -13089,10 +13305,10 @@ free_libbitcoin_wallet_payment_address(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassWrapped_data;
+static swig_class SwigClassWrappedData;
 
 SWIGINTERN VALUE
-_wrap_wrapped_data_version_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WrappedData_version_set(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wrapped_data *arg1 = (libbitcoin::wallet::wrapped_data *) 0 ;
   uint8_t arg2 ;
   void *argp1 = 0 ;
@@ -13127,7 +13343,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wrapped_data_version_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WrappedData_version_get(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wrapped_data *arg1 = (libbitcoin::wallet::wrapped_data *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -13151,7 +13367,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wrapped_data_payload_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WrappedData_payload_set(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wrapped_data *arg1 = (libbitcoin::wallet::wrapped_data *) 0 ;
   data_chunk arg2 ;
   void *argp1 = 0 ;
@@ -13186,7 +13402,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wrapped_data_payload_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WrappedData_payload_get(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wrapped_data *arg1 = (libbitcoin::wallet::wrapped_data *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -13210,7 +13426,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wrapped_data_checksum_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WrappedData_checksum_set(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wrapped_data *arg1 = (libbitcoin::wallet::wrapped_data *) 0 ;
   uint32_t arg2 ;
   void *argp1 = 0 ;
@@ -13245,7 +13461,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wrapped_data_checksum_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WrappedData_checksum_get(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wrapped_data *arg1 = (libbitcoin::wallet::wrapped_data *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -13270,9 +13486,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_wrapped_data_allocate(VALUE self)
+_wrap_WrappedData_allocate(VALUE self)
 #else
-_wrap_wrapped_data_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_WrappedData_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__wrapped_data);
@@ -13284,7 +13500,7 @@ _wrap_wrapped_data_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_wrapped_data(int argc, VALUE *argv, VALUE self) {
+_wrap_new_WrappedData(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::wrapped_data *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -13304,20 +13520,20 @@ free_libbitcoin_wallet_wrapped_data(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassSelect_outputs;
+static swig_class SwigClassSelectOutputs;
 
 
 /*
-  Document-method: Bitcoin::select_outputs.select
+  Document-method: Bitcoin::SelectOutputs.select
 
   call-seq:
     select(out, unspent, minimum_value, option=greedy)
     select(out, unspent, minimum_value)
 
-Iterate thru each element in the select_outputs and select those that match a condition.  A block must be provided.
+Iterate thru each element in the SelectOutputs and select those that match a condition.  A block must be provided.
 */
 SWIGINTERN VALUE
-_wrap_select_outputs_select__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_SelectOutputs_select__SWIG_0(int argc, VALUE *argv, VALUE self) {
   chain::points_value *arg1 = 0 ;
   chain::points_value *arg2 = 0 ;
   uint64_t arg3 ;
@@ -13374,7 +13590,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_select_outputs_select__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_SelectOutputs_select__SWIG_1(int argc, VALUE *argv, VALUE self) {
   chain::points_value *arg1 = 0 ;
   chain::points_value *arg2 = 0 ;
   uint64_t arg3 ;
@@ -13422,7 +13638,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_select_outputs_select(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_SelectOutputs_select(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[4];
   int ii;
@@ -13446,7 +13662,7 @@ SWIGINTERN VALUE _wrap_select_outputs_select(int nargs, VALUE *args, VALUE self)
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_uint64_t, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_select_outputs_select__SWIG_1(nargs, args, self);
+          return _wrap_SelectOutputs_select__SWIG_1(nargs, args, self);
         }
       }
     }
@@ -13470,7 +13686,7 @@ SWIGINTERN VALUE _wrap_select_outputs_select(int nargs, VALUE *args, VALUE self)
             _v = SWIG_CheckState(res);
           }
           if (_v) {
-            return _wrap_select_outputs_select__SWIG_0(nargs, args, self);
+            return _wrap_SelectOutputs_select__SWIG_0(nargs, args, self);
           }
         }
       }
@@ -13478,9 +13694,9 @@ SWIGINTERN VALUE _wrap_select_outputs_select(int nargs, VALUE *args, VALUE self)
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 4, "select_outputs.select", 
-    "    void select_outputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value, libbitcoin::wallet::select_outputs::algorithm option)\n"
-    "    void select_outputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value)\n");
+  Ruby_Format_OverloadedError( argc, 4, "SelectOutputs.select", 
+    "    void SelectOutputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value, libbitcoin::wallet::select_outputs::algorithm option)\n"
+    "    void SelectOutputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value)\n");
   
   return Qnil;
 }
@@ -13488,9 +13704,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_select_outputs_allocate(VALUE self)
+_wrap_SelectOutputs_allocate(VALUE self)
 #else
-_wrap_select_outputs_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_SelectOutputs_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__select_outputs);
@@ -13502,7 +13718,7 @@ _wrap_select_outputs_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_select_outputs(int argc, VALUE *argv, VALUE self) {
+_wrap_new_SelectOutputs(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::select_outputs *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -13522,10 +13738,10 @@ free_libbitcoin_wallet_select_outputs(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassStealth_address;
+static swig_class SwigClassStealthAddress;
 
 SWIGINTERN VALUE
-_wrap_stealth_address_mainnet_p2kh_get(VALUE self) {
+_wrap_StealthAddress_mainnet_p2kh_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::stealth_address::mainnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
@@ -13534,7 +13750,7 @@ _wrap_stealth_address_mainnet_p2kh_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_reuse_key_flag_get(VALUE self) {
+_wrap_StealthAddress_reuse_key_flag_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::stealth_address::reuse_key_flag), SWIGTYPE_p_uint8_t,  0 );
@@ -13543,7 +13759,7 @@ _wrap_stealth_address_reuse_key_flag_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_min_filter_bits_get(VALUE self) {
+_wrap_StealthAddress_min_filter_bits_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::stealth_address::min_filter_bits));
@@ -13552,7 +13768,7 @@ _wrap_stealth_address_min_filter_bits_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_max_filter_bits_get(VALUE self) {
+_wrap_StealthAddress_max_filter_bits_get(VALUE self) {
   VALUE _val;
   
   _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::stealth_address::max_filter_bits));
@@ -13561,7 +13777,7 @@ _wrap_stealth_address_max_filter_bits_get(VALUE self) {
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthAddress__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -13576,7 +13792,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthAddress__SWIG_1(int argc, VALUE *argv, VALUE self) {
   data_chunk *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -13602,33 +13818,37 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_address__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthAddress__SWIG_2(int argc, VALUE *argv, VALUE self) {
   std::string *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   libbitcoin::wallet::stealth_address *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_std__string,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","stealth_address", 1, argv[0] )); 
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","stealth_address", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","stealth_address", 1, argv[0])); 
+    }
+    arg1 = ptr;
   }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","stealth_address", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< std::string * >(argp1);
   result = (libbitcoin::wallet::stealth_address *)new libbitcoin::wallet::stealth_address((std::string const &)*arg1);
   DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_address__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthAddress__SWIG_3(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -13654,7 +13874,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_address__SWIG_4(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthAddress__SWIG_4(int argc, VALUE *argv, VALUE self) {
   binary *arg1 = 0 ;
   ec_compressed *arg2 = 0 ;
   point_list *arg3 = 0 ;
@@ -13730,7 +13950,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_address__SWIG_5(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthAddress__SWIG_5(int argc, VALUE *argv, VALUE self) {
   binary *arg1 = 0 ;
   ec_compressed *arg2 = 0 ;
   point_list *arg3 = 0 ;
@@ -13793,9 +14013,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_stealth_address_allocate(VALUE self)
+_wrap_StealthAddress_allocate(VALUE self)
 #else
-_wrap_stealth_address_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_StealthAddress_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__stealth_address);
@@ -13807,7 +14027,7 @@ _wrap_stealth_address_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_address__SWIG_6(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthAddress__SWIG_6(int argc, VALUE *argv, VALUE self) {
   binary *arg1 = 0 ;
   ec_compressed *arg2 = 0 ;
   point_list *arg3 = 0 ;
@@ -13854,7 +14074,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_stealth_address(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_StealthAddress(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[5];
   int ii;
@@ -13865,7 +14085,7 @@ SWIGINTERN VALUE _wrap_new_stealth_address(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_stealth_address__SWIG_0(nargs, args, self);
+    return _wrap_new_StealthAddress__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
@@ -13873,16 +14093,7 @@ SWIGINTERN VALUE _wrap_new_stealth_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_stealth_address__SWIG_1(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_std__string, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_stealth_address__SWIG_2(nargs, args, self);
+      return _wrap_new_StealthAddress__SWIG_1(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -13891,7 +14102,15 @@ SWIGINTERN VALUE _wrap_new_stealth_address(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__stealth_address, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_stealth_address__SWIG_3(nargs, args, self);
+      return _wrap_new_StealthAddress__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_StealthAddress__SWIG_2(nargs, args, self);
     }
   }
   if (argc == 3) {
@@ -13908,7 +14127,7 @@ SWIGINTERN VALUE _wrap_new_stealth_address(int nargs, VALUE *args, VALUE self) {
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_point_list, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_new_stealth_address__SWIG_6(nargs, args, self);
+          return _wrap_new_StealthAddress__SWIG_6(nargs, args, self);
         }
       }
     }
@@ -13931,7 +14150,7 @@ SWIGINTERN VALUE _wrap_new_stealth_address(int nargs, VALUE *args, VALUE self) {
           int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_uint8_t, 0);
           _v = SWIG_CheckState(res);
           if (_v) {
-            return _wrap_new_stealth_address__SWIG_5(nargs, args, self);
+            return _wrap_new_StealthAddress__SWIG_5(nargs, args, self);
           }
         }
       }
@@ -13959,7 +14178,7 @@ SWIGINTERN VALUE _wrap_new_stealth_address(int nargs, VALUE *args, VALUE self) {
             int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_uint8_t, 0);
             _v = SWIG_CheckState(res);
             if (_v) {
-              return _wrap_new_stealth_address__SWIG_4(nargs, args, self);
+              return _wrap_new_StealthAddress__SWIG_4(nargs, args, self);
             }
           }
         }
@@ -13983,7 +14202,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::stealth_address.<
+  Document-method: Bitcoin::StealthAddress.<
 
   call-seq:
     <(other) -> bool
@@ -13991,7 +14210,7 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_stealth_address___lt__(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress___lt__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   libbitcoin::wallet::stealth_address *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -14027,7 +14246,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::stealth_address.==
+  Document-method: Bitcoin::StealthAddress.==
 
   call-seq:
     ==(other) -> bool
@@ -14035,7 +14254,7 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_stealth_address___eq__(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress___eq__(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   libbitcoin::wallet::stealth_address *arg2 = 0 ;
   void *argp1 = 0 ;
@@ -14070,7 +14289,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14094,7 +14313,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_data_chunk(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_data_chunk(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14118,7 +14337,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_encoded(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_encoded(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14134,7 +14353,7 @@ _wrap_stealth_address_encoded(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::stealth_address * >(argp1);
   result = ((libbitcoin::wallet::stealth_address const *)arg1)->encoded();
-  vresult = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
   return Qnil;
@@ -14142,7 +14361,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_version(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_version(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14166,7 +14385,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_scan_key(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_scan_key(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14190,7 +14409,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_spend_keys(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_spend_keys(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14214,7 +14433,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_signatures(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_signatures(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14238,7 +14457,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_filter(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_filter(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14262,7 +14481,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_address_to_chunk(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthAddress_to_chunk(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14291,10 +14510,10 @@ free_libbitcoin_wallet_stealth_address(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassStealth_receiver;
+static swig_class SwigClassStealthReceiver;
 
 SWIGINTERN VALUE
-_wrap_new_stealth_receiver__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthReceiver__SWIG_0(int argc, VALUE *argv, VALUE self) {
   ec_secret *arg1 = 0 ;
   ec_secret *arg2 = 0 ;
   binary *arg3 = 0 ;
@@ -14357,9 +14576,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_stealth_receiver_allocate(VALUE self)
+_wrap_StealthReceiver_allocate(VALUE self)
 #else
-_wrap_stealth_receiver_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_StealthReceiver_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__stealth_receiver);
@@ -14371,7 +14590,7 @@ _wrap_stealth_receiver_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_receiver__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthReceiver__SWIG_1(int argc, VALUE *argv, VALUE self) {
   ec_secret *arg1 = 0 ;
   ec_secret *arg2 = 0 ;
   binary *arg3 = 0 ;
@@ -14418,7 +14637,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_stealth_receiver(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_StealthReceiver(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[4];
   int ii;
@@ -14442,7 +14661,7 @@ SWIGINTERN VALUE _wrap_new_stealth_receiver(int nargs, VALUE *args, VALUE self) 
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_binary, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_new_stealth_receiver__SWIG_1(nargs, args, self);
+          return _wrap_new_StealthReceiver__SWIG_1(nargs, args, self);
         }
       }
     }
@@ -14465,7 +14684,7 @@ SWIGINTERN VALUE _wrap_new_stealth_receiver(int nargs, VALUE *args, VALUE self) 
           int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_uint8_t, 0);
           _v = SWIG_CheckState(res);
           if (_v) {
-            return _wrap_new_stealth_receiver__SWIG_0(nargs, args, self);
+            return _wrap_new_StealthReceiver__SWIG_0(nargs, args, self);
           }
         }
       }
@@ -14482,7 +14701,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_receiver_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthReceiver_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_receiver *arg1 = (libbitcoin::wallet::stealth_receiver *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14506,7 +14725,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_receiver_stealth_address(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthReceiver_stealth_address(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_receiver *arg1 = (libbitcoin::wallet::stealth_receiver *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -14530,7 +14749,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_receiver_derive_address(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthReceiver_derive_address(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_receiver *arg1 = (libbitcoin::wallet::stealth_receiver *) 0 ;
   libbitcoin::wallet::payment_address *arg2 = 0 ;
   ec_compressed *arg3 = 0 ;
@@ -14576,7 +14795,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_receiver_derive_private(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthReceiver_derive_private(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_receiver *arg1 = (libbitcoin::wallet::stealth_receiver *) 0 ;
   ec_secret *arg2 = 0 ;
   ec_compressed *arg3 = 0 ;
@@ -14627,10 +14846,10 @@ free_libbitcoin_wallet_stealth_receiver(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassStealth_sender;
+static swig_class SwigClassStealthSender;
 
 SWIGINTERN VALUE
-_wrap_new_stealth_sender__SWIG_0(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthSender__SWIG_0(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = 0 ;
   data_chunk *arg2 = 0 ;
   binary *arg3 = 0 ;
@@ -14692,7 +14911,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_sender__SWIG_1(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthSender__SWIG_1(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_address *arg1 = 0 ;
   data_chunk *arg2 = 0 ;
   binary *arg3 = 0 ;
@@ -14740,7 +14959,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_sender__SWIG_2(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthSender__SWIG_2(int argc, VALUE *argv, VALUE self) {
   ec_secret *arg1 = 0 ;
   libbitcoin::wallet::stealth_address *arg2 = 0 ;
   data_chunk *arg3 = 0 ;
@@ -14814,9 +15033,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_stealth_sender_allocate(VALUE self)
+_wrap_StealthSender_allocate(VALUE self)
 #else
-_wrap_stealth_sender_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_StealthSender_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__stealth_sender);
@@ -14828,7 +15047,7 @@ _wrap_stealth_sender_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_stealth_sender__SWIG_3(int argc, VALUE *argv, VALUE self) {
+_wrap_new_StealthSender__SWIG_3(int argc, VALUE *argv, VALUE self) {
   ec_secret *arg1 = 0 ;
   libbitcoin::wallet::stealth_address *arg2 = 0 ;
   data_chunk *arg3 = 0 ;
@@ -14886,7 +15105,7 @@ fail:
 }
 
 
-SWIGINTERN VALUE _wrap_new_stealth_sender(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_StealthSender(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[5];
   int ii;
@@ -14910,7 +15129,7 @@ SWIGINTERN VALUE _wrap_new_stealth_sender(int nargs, VALUE *args, VALUE self) {
         int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_binary, 0);
         _v = SWIG_CheckState(res);
         if (_v) {
-          return _wrap_new_stealth_sender__SWIG_1(nargs, args, self);
+          return _wrap_new_StealthSender__SWIG_1(nargs, args, self);
         }
       }
     }
@@ -14933,7 +15152,7 @@ SWIGINTERN VALUE _wrap_new_stealth_sender(int nargs, VALUE *args, VALUE self) {
           int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_uint8_t, 0);
           _v = SWIG_CheckState(res);
           if (_v) {
-            return _wrap_new_stealth_sender__SWIG_0(nargs, args, self);
+            return _wrap_new_StealthSender__SWIG_0(nargs, args, self);
           }
         }
       }
@@ -14957,7 +15176,7 @@ SWIGINTERN VALUE _wrap_new_stealth_sender(int nargs, VALUE *args, VALUE self) {
           int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_binary, 0);
           _v = SWIG_CheckState(res);
           if (_v) {
-            return _wrap_new_stealth_sender__SWIG_3(nargs, args, self);
+            return _wrap_new_StealthSender__SWIG_3(nargs, args, self);
           }
         }
       }
@@ -14985,7 +15204,7 @@ SWIGINTERN VALUE _wrap_new_stealth_sender(int nargs, VALUE *args, VALUE self) {
             int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_uint8_t, 0);
             _v = SWIG_CheckState(res);
             if (_v) {
-              return _wrap_new_stealth_sender__SWIG_2(nargs, args, self);
+              return _wrap_new_StealthSender__SWIG_2(nargs, args, self);
             }
           }
         }
@@ -15005,7 +15224,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_sender_presentq___(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthSender_validq___(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_sender *arg1 = (libbitcoin::wallet::stealth_sender *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -15029,7 +15248,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_sender_stealth_script(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthSender_stealth_script(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_sender *arg1 = (libbitcoin::wallet::stealth_sender *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -15053,7 +15272,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_stealth_sender_payment_address(int argc, VALUE *argv, VALUE self) {
+_wrap_StealthSender_payment_address(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::stealth_sender *arg1 = (libbitcoin::wallet::stealth_sender *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -15150,7 +15369,6 @@ static swig_type_info _swigt__p_std__error_code = {"_p_std__error_code", "std::e
 static swig_type_info _swigt__p_std__error_condition = {"_p_std__error_condition", "std::error_condition *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__functionT_void_fstd__error_code_const_RF_t = {"_p_std__functionT_void_fstd__error_code_const_RF_t", "libbitcoin::handle0 *|std::function< void (std::error_code const &) > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_std__string_t = {"_p_std__mapT_std__string_std__string_t", "libbitcoin::wallet::uri::query_map *|std::map< std::string,std::string > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t = {"_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t", "std::vector< std::array< char const *,2048 > const * > *|libbitcoin::wallet::dictionary_list *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_stealth_address = {"_p_stealth_address", "stealth_address *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_string_list = {"_p_string_list", "string_list *|libbitcoin::wallet::word_list *", 0, 0, (void*)0, 0};
@@ -15219,7 +15437,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__error_condition,
   &_swigt__p_std__functionT_void_fstd__error_code_const_RF_t,
   &_swigt__p_std__mapT_std__string_std__string_t,
-  &_swigt__p_std__string,
   &_swigt__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,
   &_swigt__p_stealth_address,
   &_swigt__p_string_list,
@@ -15288,7 +15505,6 @@ static swig_cast_info _swigc__p_std__error_code[] = {  {&_swigt__p_std__error_co
 static swig_cast_info _swigc__p_std__error_condition[] = {  {&_swigt__p_std__error_condition, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__functionT_void_fstd__error_code_const_RF_t[] = {  {&_swigt__p_std__functionT_void_fstd__error_code_const_RF_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_std__string_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t[] = {  {&_swigt__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_stealth_address[] = {  {&_swigt__p_stealth_address, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_string_list[] = {  {&_swigt__p_string_list, 0, 0, 0},{0, 0, 0, 0}};
@@ -15357,7 +15573,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__error_condition,
   _swigc__p_std__functionT_void_fstd__error_code_const_RF_t,
   _swigc__p_std__mapT_std__string_std__string_t,
-  _swigc__p_std__string,
   _swigc__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,
   _swigc__p_stealth_address,
   _swigc__p_string_list,
@@ -15916,77 +16131,77 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_const(mBitcoin, "LIBBITCOIN_MINOR_VERSION", SWIG_From_int(static_cast< int >(4)));
   rb_define_const(mBitcoin, "LIBBITCOIN_PATCH_VERSION", SWIG_From_int(static_cast< int >(0)));
   
-  SwigClassUri.klass = rb_define_class_under(mBitcoin, "Uri", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__uri, (void *) &SwigClassUri);
-  rb_define_alloc_func(SwigClassUri.klass, _wrap_uri_allocate);
-  rb_define_method(SwigClassUri.klass, "initialize", VALUEFUNC(_wrap_new_uri), -1);
-  rb_define_method(SwigClassUri.klass, "decode", VALUEFUNC(_wrap_uri_decode), -1);
-  rb_define_method(SwigClassUri.klass, "encoded", VALUEFUNC(_wrap_uri_encoded), -1);
-  rb_define_method(SwigClassUri.klass, "scheme", VALUEFUNC(_wrap_uri_scheme), -1);
-  rb_define_method(SwigClassUri.klass, "set_scheme", VALUEFUNC(_wrap_uri_set_scheme), -1);
-  rb_define_method(SwigClassUri.klass, "authority", VALUEFUNC(_wrap_uri_authority), -1);
-  rb_define_method(SwigClassUri.klass, "has_authority", VALUEFUNC(_wrap_uri_has_authority), -1);
-  rb_define_method(SwigClassUri.klass, "set_authority", VALUEFUNC(_wrap_uri_set_authority), -1);
-  rb_define_method(SwigClassUri.klass, "remove_authority", VALUEFUNC(_wrap_uri_remove_authority), -1);
-  rb_define_method(SwigClassUri.klass, "path", VALUEFUNC(_wrap_uri_path), -1);
-  rb_define_method(SwigClassUri.klass, "set_path", VALUEFUNC(_wrap_uri_set_path), -1);
-  rb_define_method(SwigClassUri.klass, "query", VALUEFUNC(_wrap_uri_query), -1);
-  rb_define_method(SwigClassUri.klass, "has_query", VALUEFUNC(_wrap_uri_has_query), -1);
-  rb_define_method(SwigClassUri.klass, "set_query", VALUEFUNC(_wrap_uri_set_query), -1);
-  rb_define_method(SwigClassUri.klass, "remove_query", VALUEFUNC(_wrap_uri_remove_query), -1);
-  rb_define_method(SwigClassUri.klass, "fragment", VALUEFUNC(_wrap_uri_fragment), -1);
-  rb_define_method(SwigClassUri.klass, "has_fragment", VALUEFUNC(_wrap_uri_has_fragment), -1);
-  rb_define_method(SwigClassUri.klass, "set_fragment", VALUEFUNC(_wrap_uri_set_fragment), -1);
-  rb_define_method(SwigClassUri.klass, "remove_fragment", VALUEFUNC(_wrap_uri_remove_fragment), -1);
-  rb_define_method(SwigClassUri.klass, "decode_query", VALUEFUNC(_wrap_uri_decode_query), -1);
-  rb_define_method(SwigClassUri.klass, "encode_query", VALUEFUNC(_wrap_uri_encode_query), -1);
-  SwigClassUri.mark = 0;
-  SwigClassUri.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri;
-  SwigClassUri.trackObjects = 0;
+  SwigClassURI.klass = rb_define_class_under(mBitcoin, "URI", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__uri, (void *) &SwigClassURI);
+  rb_define_alloc_func(SwigClassURI.klass, _wrap_URI_allocate);
+  rb_define_method(SwigClassURI.klass, "initialize", VALUEFUNC(_wrap_new_URI), -1);
+  rb_define_method(SwigClassURI.klass, "decode", VALUEFUNC(_wrap_URI_decode), -1);
+  rb_define_method(SwigClassURI.klass, "encoded", VALUEFUNC(_wrap_URI_encoded), -1);
+  rb_define_method(SwigClassURI.klass, "scheme", VALUEFUNC(_wrap_URI_scheme), -1);
+  rb_define_method(SwigClassURI.klass, "set_scheme", VALUEFUNC(_wrap_URI_set_scheme), -1);
+  rb_define_method(SwigClassURI.klass, "authority", VALUEFUNC(_wrap_URI_authority), -1);
+  rb_define_method(SwigClassURI.klass, "has_authority", VALUEFUNC(_wrap_URI_has_authority), -1);
+  rb_define_method(SwigClassURI.klass, "set_authority", VALUEFUNC(_wrap_URI_set_authority), -1);
+  rb_define_method(SwigClassURI.klass, "remove_authority", VALUEFUNC(_wrap_URI_remove_authority), -1);
+  rb_define_method(SwigClassURI.klass, "path", VALUEFUNC(_wrap_URI_path), -1);
+  rb_define_method(SwigClassURI.klass, "set_path", VALUEFUNC(_wrap_URI_set_path), -1);
+  rb_define_method(SwigClassURI.klass, "query", VALUEFUNC(_wrap_URI_query), -1);
+  rb_define_method(SwigClassURI.klass, "has_query", VALUEFUNC(_wrap_URI_has_query), -1);
+  rb_define_method(SwigClassURI.klass, "set_query", VALUEFUNC(_wrap_URI_set_query), -1);
+  rb_define_method(SwigClassURI.klass, "remove_query", VALUEFUNC(_wrap_URI_remove_query), -1);
+  rb_define_method(SwigClassURI.klass, "fragment", VALUEFUNC(_wrap_URI_fragment), -1);
+  rb_define_method(SwigClassURI.klass, "has_fragment", VALUEFUNC(_wrap_URI_has_fragment), -1);
+  rb_define_method(SwigClassURI.klass, "set_fragment", VALUEFUNC(_wrap_URI_set_fragment), -1);
+  rb_define_method(SwigClassURI.klass, "remove_fragment", VALUEFUNC(_wrap_URI_remove_fragment), -1);
+  rb_define_method(SwigClassURI.klass, "decode_query", VALUEFUNC(_wrap_URI_decode_query), -1);
+  rb_define_method(SwigClassURI.klass, "encode_query", VALUEFUNC(_wrap_URI_encode_query), -1);
+  SwigClassURI.mark = 0;
+  SwigClassURI.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri;
+  SwigClassURI.trackObjects = 0;
   
-  SwigClassUri_reader.klass = rb_define_class_under(mBitcoin, "Uri_reader", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__uri_reader, (void *) &SwigClassUri_reader);
-  rb_undef_alloc_func(SwigClassUri_reader.klass);
-  rb_define_method(SwigClassUri_reader.klass, "set_strict", VALUEFUNC(_wrap_uri_reader_set_strict), -1);
-  rb_define_method(SwigClassUri_reader.klass, "set_scheme", VALUEFUNC(_wrap_uri_reader_set_scheme), -1);
-  rb_define_method(SwigClassUri_reader.klass, "set_authority", VALUEFUNC(_wrap_uri_reader_set_authority), -1);
-  rb_define_method(SwigClassUri_reader.klass, "set_path", VALUEFUNC(_wrap_uri_reader_set_path), -1);
-  rb_define_method(SwigClassUri_reader.klass, "set_fragment", VALUEFUNC(_wrap_uri_reader_set_fragment), -1);
-  rb_define_method(SwigClassUri_reader.klass, "set_parameter", VALUEFUNC(_wrap_uri_reader_set_parameter), -1);
-  SwigClassUri_reader.mark = 0;
-  SwigClassUri_reader.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri_reader;
-  SwigClassUri_reader.trackObjects = 0;
+  SwigClassURIReader.klass = rb_define_class_under(mBitcoin, "URIReader", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__uri_reader, (void *) &SwigClassURIReader);
+  rb_undef_alloc_func(SwigClassURIReader.klass);
+  rb_define_method(SwigClassURIReader.klass, "set_strict", VALUEFUNC(_wrap_URIReader_set_strict), -1);
+  rb_define_method(SwigClassURIReader.klass, "set_scheme", VALUEFUNC(_wrap_URIReader_set_scheme), -1);
+  rb_define_method(SwigClassURIReader.klass, "set_authority", VALUEFUNC(_wrap_URIReader_set_authority), -1);
+  rb_define_method(SwigClassURIReader.klass, "set_path", VALUEFUNC(_wrap_URIReader_set_path), -1);
+  rb_define_method(SwigClassURIReader.klass, "set_fragment", VALUEFUNC(_wrap_URIReader_set_fragment), -1);
+  rb_define_method(SwigClassURIReader.klass, "set_parameter", VALUEFUNC(_wrap_URIReader_set_parameter), -1);
+  SwigClassURIReader.mark = 0;
+  SwigClassURIReader.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri_reader;
+  SwigClassURIReader.trackObjects = 0;
   
-  SwigClassBitcoin_uri.klass = rb_define_class_under(mBitcoin, "Bitcoin_uri", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__uri_reader->clientdata)->klass);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, (void *) &SwigClassBitcoin_uri);
-  rb_define_alloc_func(SwigClassBitcoin_uri.klass, _wrap_bitcoin_uri_allocate);
-  rb_define_method(SwigClassBitcoin_uri.klass, "initialize", VALUEFUNC(_wrap_new_bitcoin_uri), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "<", VALUEFUNC(_wrap_bitcoin_uri___lt__), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "==", VALUEFUNC(_wrap_bitcoin_uri___eq__), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "present?", VALUEFUNC(_wrap_bitcoin_uri_presentq___), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "encoded", VALUEFUNC(_wrap_bitcoin_uri_encoded), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "amount", VALUEFUNC(_wrap_bitcoin_uri_amount), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "label", VALUEFUNC(_wrap_bitcoin_uri_label), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "message", VALUEFUNC(_wrap_bitcoin_uri_message), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "r", VALUEFUNC(_wrap_bitcoin_uri_r), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "address", VALUEFUNC(_wrap_bitcoin_uri_address), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "payment", VALUEFUNC(_wrap_bitcoin_uri_payment), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "stealth", VALUEFUNC(_wrap_bitcoin_uri_stealth), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "parameter", VALUEFUNC(_wrap_bitcoin_uri_parameter), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_amount", VALUEFUNC(_wrap_bitcoin_uri_set_amount), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_label", VALUEFUNC(_wrap_bitcoin_uri_set_label), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_message", VALUEFUNC(_wrap_bitcoin_uri_set_message), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_r", VALUEFUNC(_wrap_bitcoin_uri_set_r), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_address", VALUEFUNC(_wrap_bitcoin_uri_set_address), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_strict", VALUEFUNC(_wrap_bitcoin_uri_set_strict), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_scheme", VALUEFUNC(_wrap_bitcoin_uri_set_scheme), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_authority", VALUEFUNC(_wrap_bitcoin_uri_set_authority), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_path", VALUEFUNC(_wrap_bitcoin_uri_set_path), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_fragment", VALUEFUNC(_wrap_bitcoin_uri_set_fragment), -1);
-  rb_define_method(SwigClassBitcoin_uri.klass, "set_parameter", VALUEFUNC(_wrap_bitcoin_uri_set_parameter), -1);
-  SwigClassBitcoin_uri.mark = 0;
-  SwigClassBitcoin_uri.destroy = (void (*)(void *)) free_libbitcoin_wallet_bitcoin_uri;
-  SwigClassBitcoin_uri.trackObjects = 0;
+  SwigClassBitcoinURI.klass = rb_define_class_under(mBitcoin, "BitcoinURI", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__uri_reader->clientdata)->klass);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, (void *) &SwigClassBitcoinURI);
+  rb_define_alloc_func(SwigClassBitcoinURI.klass, _wrap_BitcoinURI_allocate);
+  rb_define_method(SwigClassBitcoinURI.klass, "initialize", VALUEFUNC(_wrap_new_BitcoinURI), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "<", VALUEFUNC(_wrap_BitcoinURI___lt__), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "==", VALUEFUNC(_wrap_BitcoinURI___eq__), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "valid?", VALUEFUNC(_wrap_BitcoinURI_validq___), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "encoded", VALUEFUNC(_wrap_BitcoinURI_encoded), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "amount", VALUEFUNC(_wrap_BitcoinURI_amount), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "label", VALUEFUNC(_wrap_BitcoinURI_label), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "message", VALUEFUNC(_wrap_BitcoinURI_message), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "r", VALUEFUNC(_wrap_BitcoinURI_r), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "address", VALUEFUNC(_wrap_BitcoinURI_address), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "payment", VALUEFUNC(_wrap_BitcoinURI_payment), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "stealth", VALUEFUNC(_wrap_BitcoinURI_stealth), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "parameter", VALUEFUNC(_wrap_BitcoinURI_parameter), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_amount", VALUEFUNC(_wrap_BitcoinURI_set_amount), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_label", VALUEFUNC(_wrap_BitcoinURI_set_label), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_message", VALUEFUNC(_wrap_BitcoinURI_set_message), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_r", VALUEFUNC(_wrap_BitcoinURI_set_r), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_address", VALUEFUNC(_wrap_BitcoinURI_set_address), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_strict", VALUEFUNC(_wrap_BitcoinURI_set_strict), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_scheme", VALUEFUNC(_wrap_BitcoinURI_set_scheme), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_authority", VALUEFUNC(_wrap_BitcoinURI_set_authority), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_path", VALUEFUNC(_wrap_BitcoinURI_set_path), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_fragment", VALUEFUNC(_wrap_BitcoinURI_set_fragment), -1);
+  rb_define_method(SwigClassBitcoinURI.klass, "set_parameter", VALUEFUNC(_wrap_BitcoinURI_set_parameter), -1);
+  SwigClassBitcoinURI.mark = 0;
+  SwigClassBitcoinURI.destroy = (void (*)(void *)) free_libbitcoin_wallet_bitcoin_uri;
+  SwigClassBitcoinURI.trackObjects = 0;
   rb_define_singleton_method(mBitcoin, "dictionary_size", VALUEFUNC(_wrap_dictionary_size_get), 0);
   rb_define_singleton_method(mBitcoin, "en", VALUEFUNC(_wrap_en_get), 0);
   rb_define_singleton_method(mBitcoin, "es", VALUEFUNC(_wrap_es_get), 0);
@@ -16002,99 +16217,99 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_singleton_method(mBitcoin, "wif_uncompressed_size", VALUEFUNC(_wrap_wif_uncompressed_size_get), 0);
   rb_define_singleton_method(mBitcoin, "wif_compressed_size", VALUEFUNC(_wrap_wif_compressed_size_get), 0);
   
-  SwigClassEc_private.klass = rb_define_class_under(mBitcoin, "Ec_private", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_private, (void *) &SwigClassEc_private);
-  rb_define_alloc_func(SwigClassEc_private.klass, _wrap_ec_private_allocate);
-  rb_define_method(SwigClassEc_private.klass, "initialize", VALUEFUNC(_wrap_new_ec_private), -1);
-  rb_define_singleton_method(SwigClassEc_private.klass, "compressed_sentinel", VALUEFUNC(_wrap_ec_private_compressed_sentinel_get), 0);
-  rb_define_singleton_method(SwigClassEc_private.klass, "mainnet_wif", VALUEFUNC(_wrap_ec_private_mainnet_wif_get), 0);
-  rb_define_singleton_method(SwigClassEc_private.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ec_private_mainnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassEc_private.klass, "mainnet", VALUEFUNC(_wrap_ec_private_mainnet_get), 0);
-  rb_define_singleton_method(SwigClassEc_private.klass, "testnet_wif", VALUEFUNC(_wrap_ec_private_testnet_wif_get), 0);
-  rb_define_singleton_method(SwigClassEc_private.klass, "testnet_p2kh", VALUEFUNC(_wrap_ec_private_testnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassEc_private.klass, "testnet", VALUEFUNC(_wrap_ec_private_testnet_get), 0);
-  rb_define_singleton_method(SwigClassEc_private.klass, "to_address_prefix", VALUEFUNC(_wrap_ec_private_to_address_prefix), -1);
-  rb_define_singleton_method(SwigClassEc_private.klass, "to_wif_prefix", VALUEFUNC(_wrap_ec_private_to_wif_prefix), -1);
-  rb_define_singleton_method(SwigClassEc_private.klass, "to_version", VALUEFUNC(_wrap_ec_private_to_version), -1);
-  rb_define_method(SwigClassEc_private.klass, "<", VALUEFUNC(_wrap_ec_private___lt__), -1);
-  rb_define_method(SwigClassEc_private.klass, "==", VALUEFUNC(_wrap_ec_private___eq__), -1);
-  rb_define_method(SwigClassEc_private.klass, "present?", VALUEFUNC(_wrap_ec_private_presentq___), -1);
-  rb_define_method(SwigClassEc_private.klass, "ec_secret", VALUEFUNC(_wrap_ec_private_ec_secret), -1);
-  rb_define_method(SwigClassEc_private.klass, "encoded", VALUEFUNC(_wrap_ec_private_encoded), -1);
-  rb_define_method(SwigClassEc_private.klass, "secret", VALUEFUNC(_wrap_ec_private_secret), -1);
-  rb_define_method(SwigClassEc_private.klass, "version", VALUEFUNC(_wrap_ec_private_version), -1);
-  rb_define_method(SwigClassEc_private.klass, "payment_version", VALUEFUNC(_wrap_ec_private_payment_version), -1);
-  rb_define_method(SwigClassEc_private.klass, "wif_version", VALUEFUNC(_wrap_ec_private_wif_version), -1);
-  rb_define_method(SwigClassEc_private.klass, "compressed", VALUEFUNC(_wrap_ec_private_compressed), -1);
-  rb_define_method(SwigClassEc_private.klass, "to_public", VALUEFUNC(_wrap_ec_private_to_public), -1);
-  rb_define_method(SwigClassEc_private.klass, "to_payment_address", VALUEFUNC(_wrap_ec_private_to_payment_address), -1);
-  SwigClassEc_private.mark = 0;
-  SwigClassEc_private.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_private;
-  SwigClassEc_private.trackObjects = 0;
+  SwigClassECPrivate.klass = rb_define_class_under(mBitcoin, "ECPrivate", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_private, (void *) &SwigClassECPrivate);
+  rb_define_alloc_func(SwigClassECPrivate.klass, _wrap_ECPrivate_allocate);
+  rb_define_method(SwigClassECPrivate.klass, "initialize", VALUEFUNC(_wrap_new_ECPrivate), -1);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "compressed_sentinel", VALUEFUNC(_wrap_ECPrivate_compressed_sentinel_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet_wif", VALUEFUNC(_wrap_ECPrivate_mainnet_wif_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ECPrivate_mainnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet", VALUEFUNC(_wrap_ECPrivate_mainnet_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet_wif", VALUEFUNC(_wrap_ECPrivate_testnet_wif_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet_p2kh", VALUEFUNC(_wrap_ECPrivate_testnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet", VALUEFUNC(_wrap_ECPrivate_testnet_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "to_address_prefix", VALUEFUNC(_wrap_ECPrivate_to_address_prefix), -1);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "to_wif_prefix", VALUEFUNC(_wrap_ECPrivate_to_wif_prefix), -1);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "to_version", VALUEFUNC(_wrap_ECPrivate_to_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "<", VALUEFUNC(_wrap_ECPrivate___lt__), -1);
+  rb_define_method(SwigClassECPrivate.klass, "==", VALUEFUNC(_wrap_ECPrivate___eq__), -1);
+  rb_define_method(SwigClassECPrivate.klass, "valid?", VALUEFUNC(_wrap_ECPrivate_validq___), -1);
+  rb_define_method(SwigClassECPrivate.klass, "ec_secret", VALUEFUNC(_wrap_ECPrivate_ec_secret), -1);
+  rb_define_method(SwigClassECPrivate.klass, "encoded", VALUEFUNC(_wrap_ECPrivate_encoded), -1);
+  rb_define_method(SwigClassECPrivate.klass, "secret", VALUEFUNC(_wrap_ECPrivate_secret), -1);
+  rb_define_method(SwigClassECPrivate.klass, "version", VALUEFUNC(_wrap_ECPrivate_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "payment_version", VALUEFUNC(_wrap_ECPrivate_payment_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "wif_version", VALUEFUNC(_wrap_ECPrivate_wif_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "compressed", VALUEFUNC(_wrap_ECPrivate_compressed), -1);
+  rb_define_method(SwigClassECPrivate.klass, "to_public", VALUEFUNC(_wrap_ECPrivate_to_public), -1);
+  rb_define_method(SwigClassECPrivate.klass, "to_payment_address", VALUEFUNC(_wrap_ECPrivate_to_payment_address), -1);
+  SwigClassECPrivate.mark = 0;
+  SwigClassECPrivate.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_private;
+  SwigClassECPrivate.trackObjects = 0;
   
-  SwigClassEc_public.klass = rb_define_class_under(mBitcoin, "Ec_public", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_public, (void *) &SwigClassEc_public);
-  rb_define_alloc_func(SwigClassEc_public.klass, _wrap_ec_public_allocate);
-  rb_define_method(SwigClassEc_public.klass, "initialize", VALUEFUNC(_wrap_new_ec_public), -1);
-  rb_define_singleton_method(SwigClassEc_public.klass, "compressed_even", VALUEFUNC(_wrap_ec_public_compressed_even_get), 0);
-  rb_define_singleton_method(SwigClassEc_public.klass, "compressed_odd", VALUEFUNC(_wrap_ec_public_compressed_odd_get), 0);
-  rb_define_singleton_method(SwigClassEc_public.klass, "uncompressed", VALUEFUNC(_wrap_ec_public_uncompressed_get), 0);
-  rb_define_singleton_method(SwigClassEc_public.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ec_public_mainnet_p2kh_get), 0);
-  rb_define_method(SwigClassEc_public.klass, "<", VALUEFUNC(_wrap_ec_public___lt__), -1);
-  rb_define_method(SwigClassEc_public.klass, "==", VALUEFUNC(_wrap_ec_public___eq__), -1);
-  rb_define_method(SwigClassEc_public.klass, "present?", VALUEFUNC(_wrap_ec_public_presentq___), -1);
-  rb_define_method(SwigClassEc_public.klass, "ec_compressed", VALUEFUNC(_wrap_ec_public_ec_compressed), -1);
-  rb_define_method(SwigClassEc_public.klass, "encoded", VALUEFUNC(_wrap_ec_public_encoded), -1);
-  rb_define_method(SwigClassEc_public.klass, "point", VALUEFUNC(_wrap_ec_public_point), -1);
-  rb_define_method(SwigClassEc_public.klass, "compressed", VALUEFUNC(_wrap_ec_public_compressed), -1);
-  rb_define_method(SwigClassEc_public.klass, "to_data", VALUEFUNC(_wrap_ec_public_to_data), -1);
-  rb_define_method(SwigClassEc_public.klass, "to_uncompressed", VALUEFUNC(_wrap_ec_public_to_uncompressed), -1);
-  rb_define_method(SwigClassEc_public.klass, "to_payment_address", VALUEFUNC(_wrap_ec_public_to_payment_address), -1);
-  SwigClassEc_public.mark = 0;
-  SwigClassEc_public.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_public;
-  SwigClassEc_public.trackObjects = 0;
+  SwigClassECPublic.klass = rb_define_class_under(mBitcoin, "ECPublic", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_public, (void *) &SwigClassECPublic);
+  rb_define_alloc_func(SwigClassECPublic.klass, _wrap_ECPublic_allocate);
+  rb_define_method(SwigClassECPublic.klass, "initialize", VALUEFUNC(_wrap_new_ECPublic), -1);
+  rb_define_singleton_method(SwigClassECPublic.klass, "compressed_even", VALUEFUNC(_wrap_ECPublic_compressed_even_get), 0);
+  rb_define_singleton_method(SwigClassECPublic.klass, "compressed_odd", VALUEFUNC(_wrap_ECPublic_compressed_odd_get), 0);
+  rb_define_singleton_method(SwigClassECPublic.klass, "uncompressed", VALUEFUNC(_wrap_ECPublic_uncompressed_get), 0);
+  rb_define_singleton_method(SwigClassECPublic.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ECPublic_mainnet_p2kh_get), 0);
+  rb_define_method(SwigClassECPublic.klass, "<", VALUEFUNC(_wrap_ECPublic___lt__), -1);
+  rb_define_method(SwigClassECPublic.klass, "==", VALUEFUNC(_wrap_ECPublic___eq__), -1);
+  rb_define_method(SwigClassECPublic.klass, "valid?", VALUEFUNC(_wrap_ECPublic_validq___), -1);
+  rb_define_method(SwigClassECPublic.klass, "ec_compressed", VALUEFUNC(_wrap_ECPublic_ec_compressed), -1);
+  rb_define_method(SwigClassECPublic.klass, "encoded", VALUEFUNC(_wrap_ECPublic_encoded), -1);
+  rb_define_method(SwigClassECPublic.klass, "point", VALUEFUNC(_wrap_ECPublic_point), -1);
+  rb_define_method(SwigClassECPublic.klass, "compressed", VALUEFUNC(_wrap_ECPublic_compressed), -1);
+  rb_define_method(SwigClassECPublic.klass, "to_data", VALUEFUNC(_wrap_ECPublic_to_data), -1);
+  rb_define_method(SwigClassECPublic.klass, "to_uncompressed", VALUEFUNC(_wrap_ECPublic_to_uncompressed), -1);
+  rb_define_method(SwigClassECPublic.klass, "to_payment_address", VALUEFUNC(_wrap_ECPublic_to_payment_address), -1);
+  SwigClassECPublic.mark = 0;
+  SwigClassECPublic.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_public;
+  SwigClassECPublic.trackObjects = 0;
   
-  SwigClassEk_private.klass = rb_define_class_under(mBitcoin, "Ek_private", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_private, (void *) &SwigClassEk_private);
-  rb_define_alloc_func(SwigClassEk_private.klass, _wrap_ek_private_allocate);
-  rb_define_method(SwigClassEk_private.klass, "initialize", VALUEFUNC(_wrap_new_ek_private), -1);
-  rb_define_method(SwigClassEk_private.klass, "<", VALUEFUNC(_wrap_ek_private___lt__), -1);
-  rb_define_method(SwigClassEk_private.klass, "==", VALUEFUNC(_wrap_ek_private___eq__), -1);
-  rb_define_method(SwigClassEk_private.klass, "present?", VALUEFUNC(_wrap_ek_private_presentq___), -1);
-  rb_define_method(SwigClassEk_private.klass, "encrypted_private", VALUEFUNC(_wrap_ek_private_encrypted_private), -1);
-  rb_define_method(SwigClassEk_private.klass, "encoded", VALUEFUNC(_wrap_ek_private_encoded), -1);
-  rb_define_method(SwigClassEk_private.klass, "private_key", VALUEFUNC(_wrap_ek_private_private_key), -1);
-  SwigClassEk_private.mark = 0;
-  SwigClassEk_private.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_private;
-  SwigClassEk_private.trackObjects = 0;
+  SwigClassEKPrivate.klass = rb_define_class_under(mBitcoin, "EKPrivate", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_private, (void *) &SwigClassEKPrivate);
+  rb_define_alloc_func(SwigClassEKPrivate.klass, _wrap_EKPrivate_allocate);
+  rb_define_method(SwigClassEKPrivate.klass, "initialize", VALUEFUNC(_wrap_new_EKPrivate), -1);
+  rb_define_method(SwigClassEKPrivate.klass, "<", VALUEFUNC(_wrap_EKPrivate___lt__), -1);
+  rb_define_method(SwigClassEKPrivate.klass, "==", VALUEFUNC(_wrap_EKPrivate___eq__), -1);
+  rb_define_method(SwigClassEKPrivate.klass, "valid?", VALUEFUNC(_wrap_EKPrivate_validq___), -1);
+  rb_define_method(SwigClassEKPrivate.klass, "encrypted_private", VALUEFUNC(_wrap_EKPrivate_encrypted_private), -1);
+  rb_define_method(SwigClassEKPrivate.klass, "encoded", VALUEFUNC(_wrap_EKPrivate_encoded), -1);
+  rb_define_method(SwigClassEKPrivate.klass, "private_key", VALUEFUNC(_wrap_EKPrivate_private_key), -1);
+  SwigClassEKPrivate.mark = 0;
+  SwigClassEKPrivate.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_private;
+  SwigClassEKPrivate.trackObjects = 0;
   
-  SwigClassEk_public.klass = rb_define_class_under(mBitcoin, "Ek_public", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_public, (void *) &SwigClassEk_public);
-  rb_define_alloc_func(SwigClassEk_public.klass, _wrap_ek_public_allocate);
-  rb_define_method(SwigClassEk_public.klass, "initialize", VALUEFUNC(_wrap_new_ek_public), -1);
-  rb_define_method(SwigClassEk_public.klass, "<", VALUEFUNC(_wrap_ek_public___lt__), -1);
-  rb_define_method(SwigClassEk_public.klass, "==", VALUEFUNC(_wrap_ek_public___eq__), -1);
-  rb_define_method(SwigClassEk_public.klass, "present?", VALUEFUNC(_wrap_ek_public_presentq___), -1);
-  rb_define_method(SwigClassEk_public.klass, "encrypted_public", VALUEFUNC(_wrap_ek_public_encrypted_public), -1);
-  rb_define_method(SwigClassEk_public.klass, "encoded", VALUEFUNC(_wrap_ek_public_encoded), -1);
-  rb_define_method(SwigClassEk_public.klass, "public_key", VALUEFUNC(_wrap_ek_public_public_key), -1);
-  SwigClassEk_public.mark = 0;
-  SwigClassEk_public.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_public;
-  SwigClassEk_public.trackObjects = 0;
+  SwigClassEKPublic.klass = rb_define_class_under(mBitcoin, "EKPublic", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_public, (void *) &SwigClassEKPublic);
+  rb_define_alloc_func(SwigClassEKPublic.klass, _wrap_EKPublic_allocate);
+  rb_define_method(SwigClassEKPublic.klass, "initialize", VALUEFUNC(_wrap_new_EKPublic), -1);
+  rb_define_method(SwigClassEKPublic.klass, "<", VALUEFUNC(_wrap_EKPublic___lt__), -1);
+  rb_define_method(SwigClassEKPublic.klass, "==", VALUEFUNC(_wrap_EKPublic___eq__), -1);
+  rb_define_method(SwigClassEKPublic.klass, "valid?", VALUEFUNC(_wrap_EKPublic_validq___), -1);
+  rb_define_method(SwigClassEKPublic.klass, "encrypted_public", VALUEFUNC(_wrap_EKPublic_encrypted_public), -1);
+  rb_define_method(SwigClassEKPublic.klass, "encoded", VALUEFUNC(_wrap_EKPublic_encoded), -1);
+  rb_define_method(SwigClassEKPublic.klass, "public_key", VALUEFUNC(_wrap_EKPublic_public_key), -1);
+  SwigClassEKPublic.mark = 0;
+  SwigClassEKPublic.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_public;
+  SwigClassEKPublic.trackObjects = 0;
   
-  SwigClassEk_token.klass = rb_define_class_under(mBitcoin, "Ek_token", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_token, (void *) &SwigClassEk_token);
-  rb_define_alloc_func(SwigClassEk_token.klass, _wrap_ek_token_allocate);
-  rb_define_method(SwigClassEk_token.klass, "initialize", VALUEFUNC(_wrap_new_ek_token), -1);
-  rb_define_method(SwigClassEk_token.klass, "<", VALUEFUNC(_wrap_ek_token___lt__), -1);
-  rb_define_method(SwigClassEk_token.klass, "==", VALUEFUNC(_wrap_ek_token___eq__), -1);
-  rb_define_method(SwigClassEk_token.klass, "present?", VALUEFUNC(_wrap_ek_token_presentq___), -1);
-  rb_define_method(SwigClassEk_token.klass, "encrypted_token", VALUEFUNC(_wrap_ek_token_encrypted_token), -1);
-  rb_define_method(SwigClassEk_token.klass, "encoded", VALUEFUNC(_wrap_ek_token_encoded), -1);
-  rb_define_method(SwigClassEk_token.klass, "token", VALUEFUNC(_wrap_ek_token_token), -1);
-  SwigClassEk_token.mark = 0;
-  SwigClassEk_token.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_token;
-  SwigClassEk_token.trackObjects = 0;
+  SwigClassEKToken.klass = rb_define_class_under(mBitcoin, "EKToken", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_token, (void *) &SwigClassEKToken);
+  rb_define_alloc_func(SwigClassEKToken.klass, _wrap_EKToken_allocate);
+  rb_define_method(SwigClassEKToken.klass, "initialize", VALUEFUNC(_wrap_new_EKToken), -1);
+  rb_define_method(SwigClassEKToken.klass, "<", VALUEFUNC(_wrap_EKToken___lt__), -1);
+  rb_define_method(SwigClassEKToken.klass, "==", VALUEFUNC(_wrap_EKToken___eq__), -1);
+  rb_define_method(SwigClassEKToken.klass, "valid?", VALUEFUNC(_wrap_EKToken_validq___), -1);
+  rb_define_method(SwigClassEKToken.klass, "encrypted_token", VALUEFUNC(_wrap_EKToken_encrypted_token), -1);
+  rb_define_method(SwigClassEKToken.klass, "encoded", VALUEFUNC(_wrap_EKToken_encoded), -1);
+  rb_define_method(SwigClassEKToken.klass, "token", VALUEFUNC(_wrap_EKToken_token), -1);
+  SwigClassEKToken.mark = 0;
+  SwigClassEKToken.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_token;
+  SwigClassEKToken.trackObjects = 0;
   rb_define_singleton_method(mBitcoin, "ek_max_lot", VALUEFUNC(_wrap_ek_max_lot_get), 0);
   rb_define_singleton_method(mBitcoin, "ek_max_sequence", VALUEFUNC(_wrap_ek_max_sequence_get), 0);
   rb_define_singleton_method(mBitcoin, "ek_salt_size", VALUEFUNC(_wrap_ek_salt_size_get), 0);
@@ -16116,64 +16331,64 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_singleton_method(mBitcoin, "hd_chain_code_size", VALUEFUNC(_wrap_hd_chain_code_size_get), 0);
   rb_define_singleton_method(mBitcoin, "hd_key_size", VALUEFUNC(_wrap_hd_key_size_get), 0);
   
-  SwigClassHd_lineage.klass = rb_define_class_under(mBitcoin, "Hd_lineage", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_lineage, (void *) &SwigClassHd_lineage);
-  rb_define_alloc_func(SwigClassHd_lineage.klass, _wrap_hd_lineage_allocate);
-  rb_define_method(SwigClassHd_lineage.klass, "initialize", VALUEFUNC(_wrap_new_hd_lineage), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "prefixes=", VALUEFUNC(_wrap_hd_lineage_prefixes_set), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "prefixes", VALUEFUNC(_wrap_hd_lineage_prefixes_get), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "depth=", VALUEFUNC(_wrap_hd_lineage_depth_set), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "depth", VALUEFUNC(_wrap_hd_lineage_depth_get), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "parent_fingerprint=", VALUEFUNC(_wrap_hd_lineage_parent_fingerprint_set), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "parent_fingerprint", VALUEFUNC(_wrap_hd_lineage_parent_fingerprint_get), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "child_number=", VALUEFUNC(_wrap_hd_lineage_child_number_set), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "child_number", VALUEFUNC(_wrap_hd_lineage_child_number_get), -1);
-  rb_define_method(SwigClassHd_lineage.klass, "==", VALUEFUNC(_wrap_hd_lineage___eq__), -1);
-  SwigClassHd_lineage.mark = 0;
-  SwigClassHd_lineage.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_lineage;
-  SwigClassHd_lineage.trackObjects = 0;
+  SwigClassHDLineage.klass = rb_define_class_under(mBitcoin, "HDLineage", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_lineage, (void *) &SwigClassHDLineage);
+  rb_define_alloc_func(SwigClassHDLineage.klass, _wrap_HDLineage_allocate);
+  rb_define_method(SwigClassHDLineage.klass, "initialize", VALUEFUNC(_wrap_new_HDLineage), -1);
+  rb_define_method(SwigClassHDLineage.klass, "prefixes=", VALUEFUNC(_wrap_HDLineage_prefixes_set), -1);
+  rb_define_method(SwigClassHDLineage.klass, "prefixes", VALUEFUNC(_wrap_HDLineage_prefixes_get), -1);
+  rb_define_method(SwigClassHDLineage.klass, "depth=", VALUEFUNC(_wrap_HDLineage_depth_set), -1);
+  rb_define_method(SwigClassHDLineage.klass, "depth", VALUEFUNC(_wrap_HDLineage_depth_get), -1);
+  rb_define_method(SwigClassHDLineage.klass, "parent_fingerprint=", VALUEFUNC(_wrap_HDLineage_parent_fingerprint_set), -1);
+  rb_define_method(SwigClassHDLineage.klass, "parent_fingerprint", VALUEFUNC(_wrap_HDLineage_parent_fingerprint_get), -1);
+  rb_define_method(SwigClassHDLineage.klass, "child_number=", VALUEFUNC(_wrap_HDLineage_child_number_set), -1);
+  rb_define_method(SwigClassHDLineage.klass, "child_number", VALUEFUNC(_wrap_HDLineage_child_number_get), -1);
+  rb_define_method(SwigClassHDLineage.klass, "==", VALUEFUNC(_wrap_HDLineage___eq__), -1);
+  SwigClassHDLineage.mark = 0;
+  SwigClassHDLineage.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_lineage;
+  SwigClassHDLineage.trackObjects = 0;
   
-  SwigClassHd_public.klass = rb_define_class_under(mBitcoin, "Hd_public", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_public, (void *) &SwigClassHd_public);
-  rb_define_alloc_func(SwigClassHd_public.klass, _wrap_hd_public_allocate);
-  rb_define_method(SwigClassHd_public.klass, "initialize", VALUEFUNC(_wrap_new_hd_public), -1);
-  rb_define_singleton_method(SwigClassHd_public.klass, "mainnet", VALUEFUNC(_wrap_hd_public_mainnet_get), 0);
-  rb_define_singleton_method(SwigClassHd_public.klass, "testnet", VALUEFUNC(_wrap_hd_public_testnet_get), 0);
-  rb_define_singleton_method(SwigClassHd_public.klass, "to_prefix", VALUEFUNC(_wrap_hd_public_to_prefix), -1);
-  rb_define_method(SwigClassHd_public.klass, "<", VALUEFUNC(_wrap_hd_public___lt__), -1);
-  rb_define_method(SwigClassHd_public.klass, "==", VALUEFUNC(_wrap_hd_public___eq__), -1);
-  rb_define_method(SwigClassHd_public.klass, "present?", VALUEFUNC(_wrap_hd_public_presentq___), -1);
-  rb_define_method(SwigClassHd_public.klass, "ec_compressed", VALUEFUNC(_wrap_hd_public_ec_compressed), -1);
-  rb_define_method(SwigClassHd_public.klass, "encoded", VALUEFUNC(_wrap_hd_public_encoded), -1);
-  rb_define_method(SwigClassHd_public.klass, "chain_code", VALUEFUNC(_wrap_hd_public_chain_code), -1);
-  rb_define_method(SwigClassHd_public.klass, "lineage", VALUEFUNC(_wrap_hd_public_lineage), -1);
-  rb_define_method(SwigClassHd_public.klass, "point", VALUEFUNC(_wrap_hd_public_point), -1);
-  rb_define_method(SwigClassHd_public.klass, "to_hd_key", VALUEFUNC(_wrap_hd_public_to_hd_key), -1);
-  rb_define_method(SwigClassHd_public.klass, "derive_public", VALUEFUNC(_wrap_hd_public_derive_public), -1);
-  SwigClassHd_public.mark = 0;
-  SwigClassHd_public.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_public;
-  SwigClassHd_public.trackObjects = 0;
+  SwigClassHDPublic.klass = rb_define_class_under(mBitcoin, "HDPublic", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_public, (void *) &SwigClassHDPublic);
+  rb_define_alloc_func(SwigClassHDPublic.klass, _wrap_HDPublic_allocate);
+  rb_define_method(SwigClassHDPublic.klass, "initialize", VALUEFUNC(_wrap_new_HDPublic), -1);
+  rb_define_singleton_method(SwigClassHDPublic.klass, "mainnet", VALUEFUNC(_wrap_HDPublic_mainnet_get), 0);
+  rb_define_singleton_method(SwigClassHDPublic.klass, "testnet", VALUEFUNC(_wrap_HDPublic_testnet_get), 0);
+  rb_define_singleton_method(SwigClassHDPublic.klass, "to_prefix", VALUEFUNC(_wrap_HDPublic_to_prefix), -1);
+  rb_define_method(SwigClassHDPublic.klass, "<", VALUEFUNC(_wrap_HDPublic___lt__), -1);
+  rb_define_method(SwigClassHDPublic.klass, "==", VALUEFUNC(_wrap_HDPublic___eq__), -1);
+  rb_define_method(SwigClassHDPublic.klass, "valid?", VALUEFUNC(_wrap_HDPublic_validq___), -1);
+  rb_define_method(SwigClassHDPublic.klass, "ec_compressed", VALUEFUNC(_wrap_HDPublic_ec_compressed), -1);
+  rb_define_method(SwigClassHDPublic.klass, "encoded", VALUEFUNC(_wrap_HDPublic_encoded), -1);
+  rb_define_method(SwigClassHDPublic.klass, "chain_code", VALUEFUNC(_wrap_HDPublic_chain_code), -1);
+  rb_define_method(SwigClassHDPublic.klass, "lineage", VALUEFUNC(_wrap_HDPublic_lineage), -1);
+  rb_define_method(SwigClassHDPublic.klass, "point", VALUEFUNC(_wrap_HDPublic_point), -1);
+  rb_define_method(SwigClassHDPublic.klass, "to_hd_key", VALUEFUNC(_wrap_HDPublic_to_hd_key), -1);
+  rb_define_method(SwigClassHDPublic.klass, "derive_public", VALUEFUNC(_wrap_HDPublic_derive_public), -1);
+  SwigClassHDPublic.mark = 0;
+  SwigClassHDPublic.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_public;
+  SwigClassHDPublic.trackObjects = 0;
   
-  SwigClassHd_private.klass = rb_define_class_under(mBitcoin, "Hd_private", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__hd_public->clientdata)->klass);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_private, (void *) &SwigClassHd_private);
-  rb_define_alloc_func(SwigClassHd_private.klass, _wrap_hd_private_allocate);
-  rb_define_method(SwigClassHd_private.klass, "initialize", VALUEFUNC(_wrap_new_hd_private), -1);
-  rb_define_singleton_method(SwigClassHd_private.klass, "mainnet", VALUEFUNC(_wrap_hd_private_mainnet_get), 0);
-  rb_define_singleton_method(SwigClassHd_private.klass, "testnet", VALUEFUNC(_wrap_hd_private_testnet_get), 0);
-  rb_define_singleton_method(SwigClassHd_private.klass, "to_prefix", VALUEFUNC(_wrap_hd_private_to_prefix), -1);
-  rb_define_singleton_method(SwigClassHd_private.klass, "to_prefixes", VALUEFUNC(_wrap_hd_private_to_prefixes), -1);
-  rb_define_method(SwigClassHd_private.klass, "<", VALUEFUNC(_wrap_hd_private___lt__), -1);
-  rb_define_method(SwigClassHd_private.klass, "==", VALUEFUNC(_wrap_hd_private___eq__), -1);
-  rb_define_method(SwigClassHd_private.klass, "ec_secret", VALUEFUNC(_wrap_hd_private_ec_secret), -1);
-  rb_define_method(SwigClassHd_private.klass, "encoded", VALUEFUNC(_wrap_hd_private_encoded), -1);
-  rb_define_method(SwigClassHd_private.klass, "secret", VALUEFUNC(_wrap_hd_private_secret), -1);
-  rb_define_method(SwigClassHd_private.klass, "to_hd_key", VALUEFUNC(_wrap_hd_private_to_hd_key), -1);
-  rb_define_method(SwigClassHd_private.klass, "to_public", VALUEFUNC(_wrap_hd_private_to_public), -1);
-  rb_define_method(SwigClassHd_private.klass, "derive_private", VALUEFUNC(_wrap_hd_private_derive_private), -1);
-  rb_define_method(SwigClassHd_private.klass, "derive_public", VALUEFUNC(_wrap_hd_private_derive_public), -1);
-  SwigClassHd_private.mark = 0;
-  SwigClassHd_private.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_private;
-  SwigClassHd_private.trackObjects = 0;
+  SwigClassHDPrivate.klass = rb_define_class_under(mBitcoin, "HDPrivate", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__hd_public->clientdata)->klass);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__hd_private, (void *) &SwigClassHDPrivate);
+  rb_define_alloc_func(SwigClassHDPrivate.klass, _wrap_HDPrivate_allocate);
+  rb_define_method(SwigClassHDPrivate.klass, "initialize", VALUEFUNC(_wrap_new_HDPrivate), -1);
+  rb_define_singleton_method(SwigClassHDPrivate.klass, "mainnet", VALUEFUNC(_wrap_HDPrivate_mainnet_get), 0);
+  rb_define_singleton_method(SwigClassHDPrivate.klass, "testnet", VALUEFUNC(_wrap_HDPrivate_testnet_get), 0);
+  rb_define_singleton_method(SwigClassHDPrivate.klass, "to_prefix", VALUEFUNC(_wrap_HDPrivate_to_prefix), -1);
+  rb_define_singleton_method(SwigClassHDPrivate.klass, "to_prefixes", VALUEFUNC(_wrap_HDPrivate_to_prefixes), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "<", VALUEFUNC(_wrap_HDPrivate___lt__), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "==", VALUEFUNC(_wrap_HDPrivate___eq__), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "ec_secret", VALUEFUNC(_wrap_HDPrivate_ec_secret), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "encoded", VALUEFUNC(_wrap_HDPrivate_encoded), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "secret", VALUEFUNC(_wrap_HDPrivate_secret), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "to_hd_key", VALUEFUNC(_wrap_HDPrivate_to_hd_key), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "to_public", VALUEFUNC(_wrap_HDPrivate_to_public), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "derive_private", VALUEFUNC(_wrap_HDPrivate_derive_private), -1);
+  rb_define_method(SwigClassHDPrivate.klass, "derive_public", VALUEFUNC(_wrap_HDPrivate_derive_public), -1);
+  SwigClassHDPrivate.mark = 0;
+  SwigClassHDPrivate.destroy = (void (*)(void *)) free_libbitcoin_wallet_hd_private;
+  SwigClassHDPrivate.trackObjects = 0;
   rb_define_singleton_method(mBitcoin, "message_signature_size", VALUEFUNC(_wrap_message_signature_size_get), 0);
   rb_define_module_function(mBitcoin, "hash_message", VALUEFUNC(_wrap_hash_message), -1);
   rb_define_module_function(mBitcoin, "sign_message", VALUEFUNC(_wrap_sign_message), -1);
@@ -16188,98 +16403,98 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_module_function(mBitcoin, "decode_mnemonic", VALUEFUNC(_wrap_decode_mnemonic), -1);
   rb_define_singleton_method(mBitcoin, "payment_size", VALUEFUNC(_wrap_payment_size_get), 0);
   
-  SwigClassPayment_address.klass = rb_define_class_under(mBitcoin, "Payment_address", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__payment_address, (void *) &SwigClassPayment_address);
-  rb_define_alloc_func(SwigClassPayment_address.klass, _wrap_payment_address_allocate);
-  rb_define_method(SwigClassPayment_address.klass, "initialize", VALUEFUNC(_wrap_new_payment_address), -1);
-  rb_define_singleton_method(SwigClassPayment_address.klass, "mainnet_p2kh", VALUEFUNC(_wrap_payment_address_mainnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassPayment_address.klass, "mainnet_p2sh", VALUEFUNC(_wrap_payment_address_mainnet_p2sh_get), 0);
-  rb_define_singleton_method(SwigClassPayment_address.klass, "testnet_p2kh", VALUEFUNC(_wrap_payment_address_testnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassPayment_address.klass, "testnet_p2sh", VALUEFUNC(_wrap_payment_address_testnet_p2sh_get), 0);
-  rb_define_singleton_method(SwigClassPayment_address.klass, "extract", VALUEFUNC(_wrap_payment_address_extract), -1);
-  rb_define_singleton_method(SwigClassPayment_address.klass, "extract_input", VALUEFUNC(_wrap_payment_address_extract_input), -1);
-  rb_define_singleton_method(SwigClassPayment_address.klass, "extract_output", VALUEFUNC(_wrap_payment_address_extract_output), -1);
-  rb_define_method(SwigClassPayment_address.klass, "<", VALUEFUNC(_wrap_payment_address___lt__), -1);
-  rb_define_method(SwigClassPayment_address.klass, "==", VALUEFUNC(_wrap_payment_address___eq__), -1);
-  rb_define_method(SwigClassPayment_address.klass, "present?", VALUEFUNC(_wrap_payment_address_presentq___), -1);
-  rb_define_method(SwigClassPayment_address.klass, "short_hash", VALUEFUNC(_wrap_payment_address_short_hash), -1);
-  rb_define_method(SwigClassPayment_address.klass, "encoded", VALUEFUNC(_wrap_payment_address_encoded), -1);
-  rb_define_method(SwigClassPayment_address.klass, "version", VALUEFUNC(_wrap_payment_address_version), -1);
-  rb_define_method(SwigClassPayment_address.klass, "hash", VALUEFUNC(_wrap_payment_address_hash), -1);
-  rb_define_method(SwigClassPayment_address.klass, "to_payment", VALUEFUNC(_wrap_payment_address_to_payment), -1);
-  SwigClassPayment_address.mark = 0;
-  SwigClassPayment_address.destroy = (void (*)(void *)) free_libbitcoin_wallet_payment_address;
-  SwigClassPayment_address.trackObjects = 0;
+  SwigClassPaymentAddress.klass = rb_define_class_under(mBitcoin, "PaymentAddress", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__payment_address, (void *) &SwigClassPaymentAddress);
+  rb_define_alloc_func(SwigClassPaymentAddress.klass, _wrap_PaymentAddress_allocate);
+  rb_define_method(SwigClassPaymentAddress.klass, "initialize", VALUEFUNC(_wrap_new_PaymentAddress), -1);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "mainnet_p2kh", VALUEFUNC(_wrap_PaymentAddress_mainnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "mainnet_p2sh", VALUEFUNC(_wrap_PaymentAddress_mainnet_p2sh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "testnet_p2kh", VALUEFUNC(_wrap_PaymentAddress_testnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "testnet_p2sh", VALUEFUNC(_wrap_PaymentAddress_testnet_p2sh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract", VALUEFUNC(_wrap_PaymentAddress_extract), -1);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract_input", VALUEFUNC(_wrap_PaymentAddress_extract_input), -1);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract_output", VALUEFUNC(_wrap_PaymentAddress_extract_output), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "<", VALUEFUNC(_wrap_PaymentAddress___lt__), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "==", VALUEFUNC(_wrap_PaymentAddress___eq__), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "valid?", VALUEFUNC(_wrap_PaymentAddress_validq___), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "short_hash", VALUEFUNC(_wrap_PaymentAddress_short_hash), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "encoded", VALUEFUNC(_wrap_PaymentAddress_encoded), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "version", VALUEFUNC(_wrap_PaymentAddress_version), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "hash", VALUEFUNC(_wrap_PaymentAddress_hash), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "to_payment", VALUEFUNC(_wrap_PaymentAddress_to_payment), -1);
+  SwigClassPaymentAddress.mark = 0;
+  SwigClassPaymentAddress.destroy = (void (*)(void *)) free_libbitcoin_wallet_payment_address;
+  SwigClassPaymentAddress.trackObjects = 0;
   
-  SwigClassWrapped_data.klass = rb_define_class_under(mBitcoin, "Wrapped_data", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__wrapped_data, (void *) &SwigClassWrapped_data);
-  rb_define_alloc_func(SwigClassWrapped_data.klass, _wrap_wrapped_data_allocate);
-  rb_define_method(SwigClassWrapped_data.klass, "initialize", VALUEFUNC(_wrap_new_wrapped_data), -1);
-  rb_define_method(SwigClassWrapped_data.klass, "version=", VALUEFUNC(_wrap_wrapped_data_version_set), -1);
-  rb_define_method(SwigClassWrapped_data.klass, "version", VALUEFUNC(_wrap_wrapped_data_version_get), -1);
-  rb_define_method(SwigClassWrapped_data.klass, "payload=", VALUEFUNC(_wrap_wrapped_data_payload_set), -1);
-  rb_define_method(SwigClassWrapped_data.klass, "payload", VALUEFUNC(_wrap_wrapped_data_payload_get), -1);
-  rb_define_method(SwigClassWrapped_data.klass, "checksum=", VALUEFUNC(_wrap_wrapped_data_checksum_set), -1);
-  rb_define_method(SwigClassWrapped_data.klass, "checksum", VALUEFUNC(_wrap_wrapped_data_checksum_get), -1);
-  SwigClassWrapped_data.mark = 0;
-  SwigClassWrapped_data.destroy = (void (*)(void *)) free_libbitcoin_wallet_wrapped_data;
-  SwigClassWrapped_data.trackObjects = 0;
+  SwigClassWrappedData.klass = rb_define_class_under(mBitcoin, "WrappedData", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__wrapped_data, (void *) &SwigClassWrappedData);
+  rb_define_alloc_func(SwigClassWrappedData.klass, _wrap_WrappedData_allocate);
+  rb_define_method(SwigClassWrappedData.klass, "initialize", VALUEFUNC(_wrap_new_WrappedData), -1);
+  rb_define_method(SwigClassWrappedData.klass, "version=", VALUEFUNC(_wrap_WrappedData_version_set), -1);
+  rb_define_method(SwigClassWrappedData.klass, "version", VALUEFUNC(_wrap_WrappedData_version_get), -1);
+  rb_define_method(SwigClassWrappedData.klass, "payload=", VALUEFUNC(_wrap_WrappedData_payload_set), -1);
+  rb_define_method(SwigClassWrappedData.klass, "payload", VALUEFUNC(_wrap_WrappedData_payload_get), -1);
+  rb_define_method(SwigClassWrappedData.klass, "checksum=", VALUEFUNC(_wrap_WrappedData_checksum_set), -1);
+  rb_define_method(SwigClassWrappedData.klass, "checksum", VALUEFUNC(_wrap_WrappedData_checksum_get), -1);
+  SwigClassWrappedData.mark = 0;
+  SwigClassWrappedData.destroy = (void (*)(void *)) free_libbitcoin_wallet_wrapped_data;
+  SwigClassWrappedData.trackObjects = 0;
   
-  SwigClassSelect_outputs.klass = rb_define_class_under(mBitcoin, "Select_outputs", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__select_outputs, (void *) &SwigClassSelect_outputs);
-  rb_define_alloc_func(SwigClassSelect_outputs.klass, _wrap_select_outputs_allocate);
-  rb_define_method(SwigClassSelect_outputs.klass, "initialize", VALUEFUNC(_wrap_new_select_outputs), -1);
-  rb_define_const(SwigClassSelect_outputs.klass, "Algorithm_greedy", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::greedy)));
-  rb_define_const(SwigClassSelect_outputs.klass, "Algorithm_individual", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::individual)));
-  rb_define_singleton_method(SwigClassSelect_outputs.klass, "select", VALUEFUNC(_wrap_select_outputs_select), -1);
-  SwigClassSelect_outputs.mark = 0;
-  SwigClassSelect_outputs.destroy = (void (*)(void *)) free_libbitcoin_wallet_select_outputs;
-  SwigClassSelect_outputs.trackObjects = 0;
+  SwigClassSelectOutputs.klass = rb_define_class_under(mBitcoin, "SelectOutputs", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__select_outputs, (void *) &SwigClassSelectOutputs);
+  rb_define_alloc_func(SwigClassSelectOutputs.klass, _wrap_SelectOutputs_allocate);
+  rb_define_method(SwigClassSelectOutputs.klass, "initialize", VALUEFUNC(_wrap_new_SelectOutputs), -1);
+  rb_define_const(SwigClassSelectOutputs.klass, "Algorithm_greedy", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::greedy)));
+  rb_define_const(SwigClassSelectOutputs.klass, "Algorithm_individual", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::individual)));
+  rb_define_singleton_method(SwigClassSelectOutputs.klass, "select", VALUEFUNC(_wrap_SelectOutputs_select), -1);
+  SwigClassSelectOutputs.mark = 0;
+  SwigClassSelectOutputs.destroy = (void (*)(void *)) free_libbitcoin_wallet_select_outputs;
+  SwigClassSelectOutputs.trackObjects = 0;
   
-  SwigClassStealth_address.klass = rb_define_class_under(mBitcoin, "Stealth_address", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_address, (void *) &SwigClassStealth_address);
-  rb_define_alloc_func(SwigClassStealth_address.klass, _wrap_stealth_address_allocate);
-  rb_define_method(SwigClassStealth_address.klass, "initialize", VALUEFUNC(_wrap_new_stealth_address), -1);
-  rb_define_singleton_method(SwigClassStealth_address.klass, "mainnet_p2kh", VALUEFUNC(_wrap_stealth_address_mainnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassStealth_address.klass, "reuse_key_flag", VALUEFUNC(_wrap_stealth_address_reuse_key_flag_get), 0);
-  rb_define_singleton_method(SwigClassStealth_address.klass, "min_filter_bits", VALUEFUNC(_wrap_stealth_address_min_filter_bits_get), 0);
-  rb_define_singleton_method(SwigClassStealth_address.klass, "max_filter_bits", VALUEFUNC(_wrap_stealth_address_max_filter_bits_get), 0);
-  rb_define_method(SwigClassStealth_address.klass, "<", VALUEFUNC(_wrap_stealth_address___lt__), -1);
-  rb_define_method(SwigClassStealth_address.klass, "==", VALUEFUNC(_wrap_stealth_address___eq__), -1);
-  rb_define_method(SwigClassStealth_address.klass, "present?", VALUEFUNC(_wrap_stealth_address_presentq___), -1);
-  rb_define_method(SwigClassStealth_address.klass, "data_chunk", VALUEFUNC(_wrap_stealth_address_data_chunk), -1);
-  rb_define_method(SwigClassStealth_address.klass, "encoded", VALUEFUNC(_wrap_stealth_address_encoded), -1);
-  rb_define_method(SwigClassStealth_address.klass, "version", VALUEFUNC(_wrap_stealth_address_version), -1);
-  rb_define_method(SwigClassStealth_address.klass, "scan_key", VALUEFUNC(_wrap_stealth_address_scan_key), -1);
-  rb_define_method(SwigClassStealth_address.klass, "spend_keys", VALUEFUNC(_wrap_stealth_address_spend_keys), -1);
-  rb_define_method(SwigClassStealth_address.klass, "signatures", VALUEFUNC(_wrap_stealth_address_signatures), -1);
-  rb_define_method(SwigClassStealth_address.klass, "filter", VALUEFUNC(_wrap_stealth_address_filter), -1);
-  rb_define_method(SwigClassStealth_address.klass, "to_chunk", VALUEFUNC(_wrap_stealth_address_to_chunk), -1);
-  SwigClassStealth_address.mark = 0;
-  SwigClassStealth_address.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_address;
-  SwigClassStealth_address.trackObjects = 0;
+  SwigClassStealthAddress.klass = rb_define_class_under(mBitcoin, "StealthAddress", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_address, (void *) &SwigClassStealthAddress);
+  rb_define_alloc_func(SwigClassStealthAddress.klass, _wrap_StealthAddress_allocate);
+  rb_define_method(SwigClassStealthAddress.klass, "initialize", VALUEFUNC(_wrap_new_StealthAddress), -1);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "mainnet_p2kh", VALUEFUNC(_wrap_StealthAddress_mainnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "reuse_key_flag", VALUEFUNC(_wrap_StealthAddress_reuse_key_flag_get), 0);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "min_filter_bits", VALUEFUNC(_wrap_StealthAddress_min_filter_bits_get), 0);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "max_filter_bits", VALUEFUNC(_wrap_StealthAddress_max_filter_bits_get), 0);
+  rb_define_method(SwigClassStealthAddress.klass, "<", VALUEFUNC(_wrap_StealthAddress___lt__), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "==", VALUEFUNC(_wrap_StealthAddress___eq__), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "valid?", VALUEFUNC(_wrap_StealthAddress_validq___), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "data_chunk", VALUEFUNC(_wrap_StealthAddress_data_chunk), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "encoded", VALUEFUNC(_wrap_StealthAddress_encoded), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "version", VALUEFUNC(_wrap_StealthAddress_version), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "scan_key", VALUEFUNC(_wrap_StealthAddress_scan_key), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "spend_keys", VALUEFUNC(_wrap_StealthAddress_spend_keys), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "signatures", VALUEFUNC(_wrap_StealthAddress_signatures), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "filter", VALUEFUNC(_wrap_StealthAddress_filter), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "to_chunk", VALUEFUNC(_wrap_StealthAddress_to_chunk), -1);
+  SwigClassStealthAddress.mark = 0;
+  SwigClassStealthAddress.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_address;
+  SwigClassStealthAddress.trackObjects = 0;
   
-  SwigClassStealth_receiver.klass = rb_define_class_under(mBitcoin, "Stealth_receiver", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_receiver, (void *) &SwigClassStealth_receiver);
-  rb_define_alloc_func(SwigClassStealth_receiver.klass, _wrap_stealth_receiver_allocate);
-  rb_define_method(SwigClassStealth_receiver.klass, "initialize", VALUEFUNC(_wrap_new_stealth_receiver), -1);
-  rb_define_method(SwigClassStealth_receiver.klass, "present?", VALUEFUNC(_wrap_stealth_receiver_presentq___), -1);
-  rb_define_method(SwigClassStealth_receiver.klass, "stealth_address", VALUEFUNC(_wrap_stealth_receiver_stealth_address), -1);
-  rb_define_method(SwigClassStealth_receiver.klass, "derive_address", VALUEFUNC(_wrap_stealth_receiver_derive_address), -1);
-  rb_define_method(SwigClassStealth_receiver.klass, "derive_private", VALUEFUNC(_wrap_stealth_receiver_derive_private), -1);
-  SwigClassStealth_receiver.mark = 0;
-  SwigClassStealth_receiver.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_receiver;
-  SwigClassStealth_receiver.trackObjects = 0;
+  SwigClassStealthReceiver.klass = rb_define_class_under(mBitcoin, "StealthReceiver", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_receiver, (void *) &SwigClassStealthReceiver);
+  rb_define_alloc_func(SwigClassStealthReceiver.klass, _wrap_StealthReceiver_allocate);
+  rb_define_method(SwigClassStealthReceiver.klass, "initialize", VALUEFUNC(_wrap_new_StealthReceiver), -1);
+  rb_define_method(SwigClassStealthReceiver.klass, "valid?", VALUEFUNC(_wrap_StealthReceiver_validq___), -1);
+  rb_define_method(SwigClassStealthReceiver.klass, "stealth_address", VALUEFUNC(_wrap_StealthReceiver_stealth_address), -1);
+  rb_define_method(SwigClassStealthReceiver.klass, "derive_address", VALUEFUNC(_wrap_StealthReceiver_derive_address), -1);
+  rb_define_method(SwigClassStealthReceiver.klass, "derive_private", VALUEFUNC(_wrap_StealthReceiver_derive_private), -1);
+  SwigClassStealthReceiver.mark = 0;
+  SwigClassStealthReceiver.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_receiver;
+  SwigClassStealthReceiver.trackObjects = 0;
   
-  SwigClassStealth_sender.klass = rb_define_class_under(mBitcoin, "Stealth_sender", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_sender, (void *) &SwigClassStealth_sender);
-  rb_define_alloc_func(SwigClassStealth_sender.klass, _wrap_stealth_sender_allocate);
-  rb_define_method(SwigClassStealth_sender.klass, "initialize", VALUEFUNC(_wrap_new_stealth_sender), -1);
-  rb_define_method(SwigClassStealth_sender.klass, "present?", VALUEFUNC(_wrap_stealth_sender_presentq___), -1);
-  rb_define_method(SwigClassStealth_sender.klass, "stealth_script", VALUEFUNC(_wrap_stealth_sender_stealth_script), -1);
-  rb_define_method(SwigClassStealth_sender.klass, "payment_address", VALUEFUNC(_wrap_stealth_sender_payment_address), -1);
-  SwigClassStealth_sender.mark = 0;
-  SwigClassStealth_sender.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_sender;
-  SwigClassStealth_sender.trackObjects = 0;
+  SwigClassStealthSender.klass = rb_define_class_under(mBitcoin, "StealthSender", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_sender, (void *) &SwigClassStealthSender);
+  rb_define_alloc_func(SwigClassStealthSender.klass, _wrap_StealthSender_allocate);
+  rb_define_method(SwigClassStealthSender.klass, "initialize", VALUEFUNC(_wrap_new_StealthSender), -1);
+  rb_define_method(SwigClassStealthSender.klass, "valid?", VALUEFUNC(_wrap_StealthSender_validq___), -1);
+  rb_define_method(SwigClassStealthSender.klass, "stealth_script", VALUEFUNC(_wrap_StealthSender_stealth_script), -1);
+  rb_define_method(SwigClassStealthSender.klass, "payment_address", VALUEFUNC(_wrap_StealthSender_payment_address), -1);
+  SwigClassStealthSender.mark = 0;
+  SwigClassStealthSender.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_sender;
+  SwigClassStealthSender.trackObjects = 0;
 }
 
