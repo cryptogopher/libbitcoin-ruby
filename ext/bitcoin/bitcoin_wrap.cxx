@@ -1846,52 +1846,46 @@ int SWIG_Ruby_arity( VALUE proc, int minimal )
 #define SWIGTYPE_p_data_chunk swig_types[19]
 #define SWIGTYPE_p_data_slice swig_types[20]
 #define SWIGTYPE_p_ec_compressed swig_types[21]
-#define SWIGTYPE_p_ec_public swig_types[22]
-#define SWIGTYPE_p_ec_secret swig_types[23]
-#define SWIGTYPE_p_ec_uncompressed swig_types[24]
-#define SWIGTYPE_p_encrypted_private swig_types[25]
-#define SWIGTYPE_p_encrypted_public swig_types[26]
-#define SWIGTYPE_p_encrypted_token swig_types[27]
-#define SWIGTYPE_p_hash_digest swig_types[28]
-#define SWIGTYPE_p_int32_t swig_types[29]
-#define SWIGTYPE_p_int64_t swig_types[30]
-#define SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri swig_types[31]
-#define SWIGTYPE_p_libbitcoin__wallet__ec_private swig_types[32]
-#define SWIGTYPE_p_libbitcoin__wallet__ec_public swig_types[33]
-#define SWIGTYPE_p_libbitcoin__wallet__ek_private swig_types[34]
-#define SWIGTYPE_p_libbitcoin__wallet__ek_public swig_types[35]
-#define SWIGTYPE_p_libbitcoin__wallet__ek_token swig_types[36]
-#define SWIGTYPE_p_libbitcoin__wallet__hd_lineage swig_types[37]
-#define SWIGTYPE_p_libbitcoin__wallet__hd_private swig_types[38]
-#define SWIGTYPE_p_libbitcoin__wallet__hd_public swig_types[39]
-#define SWIGTYPE_p_libbitcoin__wallet__payment_address swig_types[40]
-#define SWIGTYPE_p_libbitcoin__wallet__select_outputs swig_types[41]
-#define SWIGTYPE_p_libbitcoin__wallet__stealth_address swig_types[42]
-#define SWIGTYPE_p_libbitcoin__wallet__stealth_receiver swig_types[43]
-#define SWIGTYPE_p_libbitcoin__wallet__stealth_sender swig_types[44]
-#define SWIGTYPE_p_libbitcoin__wallet__uri swig_types[45]
-#define SWIGTYPE_p_libbitcoin__wallet__uri_reader swig_types[46]
-#define SWIGTYPE_p_libbitcoin__wallet__wrapped_data swig_types[47]
-#define SWIGTYPE_p_long_hash swig_types[48]
-#define SWIGTYPE_p_payment_address swig_types[49]
-#define SWIGTYPE_p_point_list swig_types[50]
-#define SWIGTYPE_p_ptr swig_types[51]
-#define SWIGTYPE_p_query_map swig_types[52]
-#define SWIGTYPE_p_short_hash swig_types[53]
-#define SWIGTYPE_p_std__arrayT_char_const_p_2048_t swig_types[54]
-#define SWIGTYPE_p_std__error_code swig_types[55]
-#define SWIGTYPE_p_std__error_condition swig_types[56]
-#define SWIGTYPE_p_std__functionT_void_fstd__error_code_const_RF_t swig_types[57]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[58]
-#define SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t swig_types[59]
-#define SWIGTYPE_p_stealth_address swig_types[60]
-#define SWIGTYPE_p_string_list swig_types[61]
-#define SWIGTYPE_p_uint16_t swig_types[62]
-#define SWIGTYPE_p_uint32_t swig_types[63]
-#define SWIGTYPE_p_uint64_t swig_types[64]
-#define SWIGTYPE_p_uint8_t swig_types[65]
-static swig_type_info *swig_types[67];
-static swig_module_info swig_module = {swig_types, 66, 0, 0, 0, 0};
+#define SWIGTYPE_p_ec_secret swig_types[22]
+#define SWIGTYPE_p_ec_uncompressed swig_types[23]
+#define SWIGTYPE_p_hash_digest swig_types[24]
+#define SWIGTYPE_p_int32_t swig_types[25]
+#define SWIGTYPE_p_int64_t swig_types[26]
+#define SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri swig_types[27]
+#define SWIGTYPE_p_libbitcoin__wallet__ec_private swig_types[28]
+#define SWIGTYPE_p_libbitcoin__wallet__ec_public swig_types[29]
+#define SWIGTYPE_p_libbitcoin__wallet__ek_private swig_types[30]
+#define SWIGTYPE_p_libbitcoin__wallet__ek_public swig_types[31]
+#define SWIGTYPE_p_libbitcoin__wallet__ek_token swig_types[32]
+#define SWIGTYPE_p_libbitcoin__wallet__hd_lineage swig_types[33]
+#define SWIGTYPE_p_libbitcoin__wallet__hd_private swig_types[34]
+#define SWIGTYPE_p_libbitcoin__wallet__hd_public swig_types[35]
+#define SWIGTYPE_p_libbitcoin__wallet__payment_address swig_types[36]
+#define SWIGTYPE_p_libbitcoin__wallet__select_outputs swig_types[37]
+#define SWIGTYPE_p_libbitcoin__wallet__stealth_address swig_types[38]
+#define SWIGTYPE_p_libbitcoin__wallet__stealth_receiver swig_types[39]
+#define SWIGTYPE_p_libbitcoin__wallet__stealth_sender swig_types[40]
+#define SWIGTYPE_p_libbitcoin__wallet__uri swig_types[41]
+#define SWIGTYPE_p_libbitcoin__wallet__uri_reader swig_types[42]
+#define SWIGTYPE_p_libbitcoin__wallet__wrapped_data swig_types[43]
+#define SWIGTYPE_p_long_hash swig_types[44]
+#define SWIGTYPE_p_point_list swig_types[45]
+#define SWIGTYPE_p_ptr swig_types[46]
+#define SWIGTYPE_p_query_map swig_types[47]
+#define SWIGTYPE_p_short_hash swig_types[48]
+#define SWIGTYPE_p_std__arrayT_char_const_p_2048_t swig_types[49]
+#define SWIGTYPE_p_std__error_code swig_types[50]
+#define SWIGTYPE_p_std__error_condition swig_types[51]
+#define SWIGTYPE_p_std__functionT_void_fstd__error_code_const_RF_t swig_types[52]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[53]
+#define SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t swig_types[54]
+#define SWIGTYPE_p_string_list swig_types[55]
+#define SWIGTYPE_p_uint16_t swig_types[56]
+#define SWIGTYPE_p_uint32_t swig_types[57]
+#define SWIGTYPE_p_uint64_t swig_types[58]
+#define SWIGTYPE_p_uint8_t swig_types[59]
+static swig_type_info *swig_types[61];
+static swig_module_info swig_module = {swig_types, 60, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1929,15 +1923,16 @@ static VALUE mBitcoin;
 
 #include "bitcoin/bitcoin/wallet/uri.hpp"
 #include "bitcoin/bitcoin/wallet/uri_reader.hpp"
+#include "bitcoin/bitcoin/wallet/ec_public.hpp"
+#include "bitcoin/bitcoin/wallet/ec_private.hpp"
 #include "bitcoin/bitcoin/wallet/payment_address.hpp"
+#include "bitcoin/bitcoin/wallet/stealth_address.hpp"
 #include "bitcoin/bitcoin/wallet/bitcoin_uri.hpp"
 #include "bitcoin/bitcoin/wallet/dictionary.hpp"
-#include "bitcoin/bitcoin/wallet/ec_private.hpp"
-#include "bitcoin/bitcoin/wallet/ec_public.hpp"
+#include "bitcoin/bitcoin/wallet/encrypted_keys.hpp"
 #include "bitcoin/bitcoin/wallet/ek_private.hpp"
 #include "bitcoin/bitcoin/wallet/ek_public.hpp"
 #include "bitcoin/bitcoin/wallet/ek_token.hpp"
-#include "bitcoin/bitcoin/wallet/encrypted_keys.hpp"
 #include "bitcoin/bitcoin/wallet/hd_public.hpp"
 #include "bitcoin/bitcoin/wallet/hd_private.hpp"
 #include "bitcoin/bitcoin/wallet/message.hpp"
@@ -1945,12 +1940,10 @@ static VALUE mBitcoin;
 #include "bitcoin/bitcoin/wallet/mnemonic.hpp"
 #include "bitcoin/bitcoin/wallet/qrcode.hpp"
 #include "bitcoin/bitcoin/wallet/select_outputs.hpp"
-#include "bitcoin/bitcoin/wallet/stealth_address.hpp"
 #include "bitcoin/bitcoin/wallet/stealth_receiver.hpp"
 #include "bitcoin/bitcoin/wallet/stealth_sender.hpp"
 
 using namespace libbitcoin;
-using namespace libbitcoin::wallet;
 
 
 #include <limits.h>
@@ -3227,8 +3220,6 @@ _wrap_max_witness_program_get(VALUE self) {
 SWIGINTERN VALUE
 _wrap_max_money_recursive(int argc, VALUE *argv, VALUE self) {
   uint64_t arg1 ;
-  void *argp1 ;
-  int res1 = 0 ;
   uint64_t result;
   VALUE vresult = Qnil;
   
@@ -3236,15 +3227,7 @@ _wrap_max_money_recursive(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
   {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint64_t","libbitcoin::max_money_recursive", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","libbitcoin::max_money_recursive", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< uint64_t * >(argp1));
-    }
+    arg1 = NUM2ULONG(argv[0]);
   }
   result = libbitcoin::max_money_recursive(arg1);
   vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
@@ -3266,8 +3249,6 @@ _wrap_satoshi_per_bitcoin_get(VALUE self) {
 SWIGINTERN VALUE
 _wrap_bitcoin_to_satoshi__SWIG_0(int argc, VALUE *argv, VALUE self) {
   uint64_t arg1 ;
-  void *argp1 ;
-  int res1 = 0 ;
   uint64_t result;
   VALUE vresult = Qnil;
   
@@ -3275,15 +3256,7 @@ _wrap_bitcoin_to_satoshi__SWIG_0(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
   {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint64_t","libbitcoin::bitcoin_to_satoshi", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","libbitcoin::bitcoin_to_satoshi", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< uint64_t * >(argp1));
-    }
+    arg1 = NUM2ULONG(argv[0]);
   }
   result = libbitcoin::bitcoin_to_satoshi(arg1);
   vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
@@ -3324,9 +3297,9 @@ SWIGINTERN VALUE _wrap_bitcoin_to_satoshi(int nargs, VALUE *args, VALUE self) {
   }
   if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_uint64_t, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = FIXNUM_P(argv[0]) ? 1 : 0;
+    }
     if (_v) {
       return _wrap_bitcoin_to_satoshi__SWIG_0(nargs, args, self);
     }
@@ -4577,16 +4550,52 @@ free_libbitcoin_wallet_uri_reader(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassBitcoinURI;
+static swig_class SwigClassECPublic;
 
 SWIGINTERN VALUE
-_wrap_new_BitcoinURI__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+_wrap_ECPublic_compressed_even_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::compressed_even), SWIGTYPE_p_uint8_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ECPublic_compressed_odd_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::compressed_odd), SWIGTYPE_p_uint8_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ECPublic_uncompressed_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::uncompressed), SWIGTYPE_p_uint8_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ECPublic_mainnet_p2kh_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::mainnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_ECPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
-  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri();
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public();
   DATA_PTR(self) = result;
   return self;
 fail:
@@ -4595,24 +4604,24 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_BitcoinURI__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = 0 ;
+_wrap_new_ECPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
-  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+  libbitcoin::wallet::ec_public *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri,  0 );
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ec_public,  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const &","bitcoin_uri", 1, argv[0] )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const &","ec_public", 1, argv[0] )); 
   }
   if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::bitcoin_uri const &","bitcoin_uri", 1, argv[0])); 
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_public const &","ec_public", 1, argv[0])); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((libbitcoin::wallet::bitcoin_uri const &)*arg1);
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((libbitcoin::wallet::ec_public const &)*arg1);
   DATA_PTR(self) = result;
   return self;
 fail:
@@ -4621,51 +4630,189 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_new_BitcoinURI__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  bool arg2 ;
-  int res1 = SWIG_OLDOBJ ;
-  bool val2 ;
-  int ecode2 = 0 ;
-  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+_wrap_new_ECPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_private *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ec_public *result = 0 ;
   
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ec_private,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_private const &","ec_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_private const &","ec_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_private * >(argp1);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((libbitcoin::wallet::ec_private const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_ECPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  data_chunk *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ec_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_chunk,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_chunk const &","ec_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk const &","ec_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< data_chunk * >(argp1);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((data_chunk const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_ECPublic__SWIG_4(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::ec_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
   {
     std::string *ptr = (std::string *)0;
     res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_public", 1, argv[0] )); 
     }
     if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_public", 1, argv[0])); 
     }
     arg1 = ptr;
   }
-  ecode2 = SWIG_AsVal_bool(argv[1], &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","bitcoin_uri", 2, argv[1] ));
-  } 
-  arg2 = static_cast< bool >(val2);
-  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((std::string const &)*arg1,arg2);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((std::string const &)*arg1);
   DATA_PTR(self) = result;
   if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
   if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_ECPublic__SWIG_5(int argc, VALUE *argv, VALUE self) {
+  ec_compressed *arg1 = 0 ;
+  bool arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  libbitcoin::wallet::ec_public *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_compressed,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_compressed const &","ec_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed const &","ec_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< ec_compressed * >(argp1);
+  ecode2 = SWIG_AsVal_bool(argv[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","ec_public", 2, argv[1] ));
+  } 
+  arg2 = static_cast< bool >(val2);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_compressed const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_ECPublic__SWIG_6(int argc, VALUE *argv, VALUE self) {
+  ec_compressed *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ec_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_compressed,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_compressed const &","ec_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed const &","ec_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< ec_compressed * >(argp1);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_compressed const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_ECPublic__SWIG_7(int argc, VALUE *argv, VALUE self) {
+  ec_uncompressed *arg1 = 0 ;
+  bool arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  libbitcoin::wallet::ec_public *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_uncompressed,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_uncompressed const &","ec_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_uncompressed const &","ec_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< ec_uncompressed * >(argp1);
+  ecode2 = SWIG_AsVal_bool(argv[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","ec_public", 2, argv[1] ));
+  } 
+  arg2 = static_cast< bool >(val2);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_uncompressed const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  return self;
+fail:
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_BitcoinURI_allocate(VALUE self)
+_wrap_ECPublic_allocate(VALUE self)
 #else
-_wrap_BitcoinURI_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_ECPublic_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri);
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ec_public);
 #ifndef HAVE_RB_DEFINE_ALLOC_FUNC
   rb_obj_call_init(vresult, argc, argv);
 #endif
@@ -4674,36 +4821,32 @@ _wrap_BitcoinURI_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_BitcoinURI__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+_wrap_new_ECPublic__SWIG_8(int argc, VALUE *argv, VALUE self) {
+  ec_uncompressed *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ec_public *result = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
-    }
-    arg1 = ptr;
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_uncompressed,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_uncompressed const &","ec_public", 1, argv[0] )); 
   }
-  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((std::string const &)*arg1);
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_uncompressed const &","ec_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< ec_uncompressed * >(argp1);
+  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_uncompressed const &)*arg1);
   DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
   return self;
 fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
   return Qnil;
 }
 
 
-SWIGINTERN VALUE _wrap_new_BitcoinURI(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_new_ECPublic(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[2];
   int ii;
@@ -4714,15 +4857,51 @@ SWIGINTERN VALUE _wrap_new_BitcoinURI(int nargs, VALUE *args, VALUE self) {
     argv[ii] = args[ii];
   }
   if (argc == 0) {
-    return _wrap_new_BitcoinURI__SWIG_0(nargs, args, self);
+    return _wrap_new_ECPublic__SWIG_0(nargs, args, self);
   }
   if (argc == 1) {
     int _v;
     void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_BitcoinURI__SWIG_1(nargs, args, self);
+      return _wrap_new_ECPublic__SWIG_1(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_private, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_ECPublic__SWIG_2(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_ECPublic__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_compressed, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_ECPublic__SWIG_6(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_uncompressed, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_ECPublic__SWIG_8(nargs, args, self);
     }
   }
   if (argc == 1) {
@@ -4730,12 +4909,13 @@ SWIGINTERN VALUE _wrap_new_BitcoinURI(int nargs, VALUE *args, VALUE self) {
     int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_new_BitcoinURI__SWIG_3(nargs, args, self);
+      return _wrap_new_ECPublic__SWIG_4(nargs, args, self);
     }
   }
   if (argc == 2) {
     int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_uncompressed, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
       {
@@ -4743,17 +4923,37 @@ SWIGINTERN VALUE _wrap_new_BitcoinURI(int nargs, VALUE *args, VALUE self) {
         _v = SWIG_CheckState(res);
       }
       if (_v) {
-        return _wrap_new_BitcoinURI__SWIG_2(nargs, args, self);
+        return _wrap_new_ECPublic__SWIG_7(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_compressed, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_new_ECPublic__SWIG_5(nargs, args, self);
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 2, "bitcoin_uri.new", 
-    "    bitcoin_uri.new()\n"
-    "    bitcoin_uri.new(libbitcoin::wallet::bitcoin_uri const &other)\n"
-    "    bitcoin_uri.new(std::string const &uri, bool strict)\n"
-    "    bitcoin_uri.new(std::string const &uri)\n");
+  Ruby_Format_OverloadedError( argc, 2, "ec_public.new", 
+    "    ec_public.new()\n"
+    "    ec_public.new(libbitcoin::wallet::ec_public const &other)\n"
+    "    ec_public.new(libbitcoin::wallet::ec_private const &secret)\n"
+    "    ec_public.new(data_chunk const &decoded)\n"
+    "    ec_public.new(std::string const &base16)\n"
+    "    ec_public.new(ec_compressed const &point, bool compress)\n"
+    "    ec_public.new(ec_compressed const &point)\n"
+    "    ec_public.new(ec_uncompressed const &point, bool compress)\n"
+    "    ec_public.new(ec_uncompressed const &point)\n");
   
   return Qnil;
 }
@@ -4761,7 +4961,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::BitcoinURI.<
+  Document-method: Bitcoin::ECPublic.<
 
   call-seq:
     <(other) -> bool
@@ -4769,9 +4969,9 @@ fail:
 Lower than comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_BitcoinURI___lt__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  libbitcoin::wallet::bitcoin_uri *arg2 = 0 ;
+_wrap_ECPublic___lt__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
+  libbitcoin::wallet::ec_public *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 ;
@@ -4782,20 +4982,20 @@ _wrap_BitcoinURI___lt__(int argc, VALUE *argv, VALUE self) {
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","operator <", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator <", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri,  0 );
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ec_public,  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const &","operator <", 2, argv[0] )); 
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const &","operator <", 2, argv[0] )); 
   }
   if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::bitcoin_uri const &","operator <", 2, argv[0])); 
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_public const &","operator <", 2, argv[0])); 
   }
-  arg2 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp2);
-  result = (bool)((libbitcoin::wallet::bitcoin_uri const *)arg1)->operator <((libbitcoin::wallet::bitcoin_uri const &)*arg2);
+  arg2 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp2);
+  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->operator <((libbitcoin::wallet::ec_public const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
   return vresult;
 fail:
@@ -4805,7 +5005,7 @@ fail:
 
 
 /*
-  Document-method: Bitcoin::BitcoinURI.==
+  Document-method: Bitcoin::ECPublic.==
 
   call-seq:
     ==(other) -> bool
@@ -4813,9 +5013,9 @@ fail:
 Equality comparison operator.
 */
 SWIGINTERN VALUE
-_wrap_BitcoinURI___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  libbitcoin::wallet::bitcoin_uri *arg2 = 0 ;
+_wrap_ECPublic___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
+  libbitcoin::wallet::ec_public *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 ;
@@ -4826,20 +5026,20 @@ _wrap_BitcoinURI___eq__(int argc, VALUE *argv, VALUE self) {
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","operator ==", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator ==", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri,  0 );
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ec_public,  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const &","operator ==", 2, argv[0] )); 
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const &","operator ==", 2, argv[0] )); 
   }
   if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::bitcoin_uri const &","operator ==", 2, argv[0])); 
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_public const &","operator ==", 2, argv[0])); 
   }
-  arg2 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp2);
-  result = (bool)((libbitcoin::wallet::bitcoin_uri const *)arg1)->operator ==((libbitcoin::wallet::bitcoin_uri const &)*arg2);
+  arg2 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp2);
+  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->operator ==((libbitcoin::wallet::ec_public const &)*arg2);
   vresult = SWIG_From_bool(static_cast< bool >(result));
   return vresult;
 fail:
@@ -4848,8 +5048,8 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_BitcoinURI_validq___(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+_wrap_ECPublic_validq___(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   bool result;
@@ -4858,12 +5058,12 @@ _wrap_BitcoinURI_validq___(int argc, VALUE *argv, VALUE self) {
   if ((argc < 0) || (argc > 0)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","operator const bool", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator const bool", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = (bool)((libbitcoin::wallet::bitcoin_uri const *)arg1)->operator const bool();
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->operator const bool();
   vresult = SWIG_From_bool(static_cast< bool >(result));
   return vresult;
 fail:
@@ -4872,8 +5072,32 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_BitcoinURI_encoded(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+_wrap_ECPublic_ec_compressed(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ec_compressed *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator const ec_compressed&", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  result = (ec_compressed *) &((libbitcoin::wallet::ec_public const *)arg1)->operator const ec_compressed&();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ECPublic_encoded(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   std::string result;
@@ -4882,12 +5106,12 @@ _wrap_BitcoinURI_encoded(int argc, VALUE *argv, VALUE self) {
   if ((argc < 0) || (argc > 0)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","encoded", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","encoded", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->encoded();
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  result = ((libbitcoin::wallet::ec_public const *)arg1)->encoded();
   vresult = SWIG_From_std_string(static_cast< std::string >(result));
   return vresult;
 fail:
@@ -4896,23 +5120,23 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_BitcoinURI_amount(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+_wrap_ECPublic_point(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  uint64_t result;
+  ec_compressed *result = 0 ;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","amount", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","point", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->amount();
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  result = (ec_compressed *) &((libbitcoin::wallet::ec_public const *)arg1)->point();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
   return vresult;
 fail:
   return Qnil;
@@ -4920,23 +5144,23 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_BitcoinURI_label(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+_wrap_ECPublic_compressed(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  std::string result;
+  bool result;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","label", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","compressed", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->label();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->compressed();
+  vresult = SWIG_From_bool(static_cast< bool >(result));
   return vresult;
 fail:
   return Qnil;
@@ -4944,411 +5168,138 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_BitcoinURI_message(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+_wrap_ECPublic_to_data(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
+  data_chunk *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","message", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->message();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_r(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","r", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->r();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_address(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","address", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->address();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_payment(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  payment_address result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","payment", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->payment();
-  vresult = SWIG_NewPointerObj((new payment_address(static_cast< const payment_address& >(result))), SWIGTYPE_p_payment_address, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_stealth(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  stealth_address result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","stealth", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->stealth();
-  vresult = SWIG_NewPointerObj((new stealth_address(static_cast< const stealth_address& >(result))), SWIGTYPE_p_stealth_address, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_parameter(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  std::string result;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  bool result;
   VALUE vresult = Qnil;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","parameter", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_data", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","parameter", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","parameter", 2, argv[0])); 
-    }
-    arg2 = ptr;
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_data_chunk,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_chunk &","to_data", 2, argv[0] )); 
   }
-  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->parameter((std::string const &)*arg2);
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk &","to_data", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< data_chunk * >(argp2);
+  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->to_data(*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
   return vresult;
 fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_BitcoinURI_set_amount(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  uint64_t arg2 ;
+_wrap_ECPublic_to_uncompressed(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
+  ec_uncompressed *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_uncompressed", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_ec_uncompressed,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "ec_uncompressed &","to_uncompressed", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_uncompressed &","to_uncompressed", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< ec_uncompressed * >(argp2);
+  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->to_uncompressed(*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ECPublic_to_payment_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
+  uint8_t arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
+  libbitcoin::wallet::payment_address result;
+  VALUE vresult = Qnil;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_amount", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_payment_address", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
   {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint64_t,  0 );
+    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint8_t,  0 );
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint64_t","set_amount", 2, argv[0] )); 
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint8_t","to_payment_address", 2, argv[0] )); 
     }  
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","set_amount", 2, argv[0]));
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","to_payment_address", 2, argv[0]));
     } else {
-      arg2 = *(reinterpret_cast< uint64_t * >(argp2));
+      arg2 = *(reinterpret_cast< uint8_t * >(argp2));
     }
   }
-  (arg1)->set_amount(arg2);
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_label(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_label", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_label", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_label", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  (arg1)->set_label((std::string const &)*arg2);
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_message(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_message", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_message", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_message", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  (arg1)->set_message((std::string const &)*arg2);
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_r(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_r", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_r", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_r", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  (arg1)->set_r((std::string const &)*arg2);
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_address", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_address", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_address", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  result = (bool)(arg1)->set_address((std::string const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
+  result = ((libbitcoin::wallet::ec_public const *)arg1)->to_payment_address(arg2);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::payment_address(static_cast< const libbitcoin::wallet::payment_address& >(result))), SWIGTYPE_p_libbitcoin__wallet__payment_address, SWIG_POINTER_OWN |  0 );
   return vresult;
 fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
   return Qnil;
 }
 
 
 SWIGINTERN VALUE
-_wrap_BitcoinURI_set_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  payment_address *arg2 = 0 ;
+_wrap_ECPublic_to_payment_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
+  libbitcoin::wallet::payment_address result;
+  VALUE vresult = Qnil;
   
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_address", 1, self )); 
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_payment_address", 1, self )); 
   }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_payment_address,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "payment_address const &","set_address", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "payment_address const &","set_address", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< payment_address * >(argp2);
-  (arg1)->set_address((payment_address const &)*arg2);
-  return Qnil;
+  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
+  result = ((libbitcoin::wallet::ec_public const *)arg1)->to_payment_address();
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::payment_address(static_cast< const libbitcoin::wallet::payment_address& >(result))), SWIGTYPE_p_libbitcoin__wallet__payment_address, SWIG_POINTER_OWN |  0 );
+  return vresult;
 fail:
   return Qnil;
 }
 
 
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_address__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  stealth_address *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_address", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_stealth_address,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "stealth_address const &","set_address", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "stealth_address const &","set_address", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< stealth_address * >(argp2);
-  (arg1)->set_address((stealth_address const &)*arg2);
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_BitcoinURI_set_address(int nargs, VALUE *args, VALUE self) {
+SWIGINTERN VALUE _wrap_ECPublic_to_payment_address(int nargs, VALUE *args, VALUE self) {
   int argc;
   VALUE argv[3];
   int ii;
@@ -5359,410 +5310,44 @@ SWIGINTERN VALUE _wrap_BitcoinURI_set_address(int nargs, VALUE *args, VALUE self
   for (ii = 1; (ii < argc); ++ii) {
     argv[ii] = args[ii-1];
   }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_ECPublic_to_payment_address__SWIG_1(nargs, args, self);
+    }
+  }
   if (argc == 2) {
     int _v;
     void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
       void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_payment_address, 0);
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
-        return _wrap_BitcoinURI_set_address__SWIG_1(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_stealth_address, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_BitcoinURI_set_address__SWIG_2(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_BitcoinURI_set_address__SWIG_0(nargs, args, self);
+        return _wrap_ECPublic_to_payment_address__SWIG_0(nargs, args, self);
       }
     }
   }
   
 fail:
-  Ruby_Format_OverloadedError( argc, 3, "BitcoinURI.set_address", 
-    "    bool BitcoinURI.set_address(std::string const &address)\n"
-    "    void BitcoinURI.set_address(payment_address const &payment)\n"
-    "    void BitcoinURI.set_address(stealth_address const &stealth)\n");
+  Ruby_Format_OverloadedError( argc, 3, "ECPublic.to_payment_address", 
+    "    libbitcoin::wallet::payment_address ECPublic.to_payment_address(uint8_t version)\n"
+    "    libbitcoin::wallet::payment_address ECPublic.to_payment_address()\n");
   
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_strict(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  bool arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  bool val2 ;
-  int ecode2 = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_strict", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  ecode2 = SWIG_AsVal_bool(argv[0], &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","set_strict", 2, argv[0] ));
-  } 
-  arg2 = static_cast< bool >(val2);
-  (arg1)->set_strict(arg2);
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_scheme(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_scheme", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  result = (bool)(arg1)->set_scheme((std::string const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return vresult;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_authority(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_authority", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  result = (bool)(arg1)->set_authority((std::string const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return vresult;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_path(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_path", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  result = (bool)(arg1)->set_path((std::string const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return vresult;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_fragment(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_fragment", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  result = (bool)(arg1)->set_fragment((std::string const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return vresult;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_BitcoinURI_set_parameter(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
-  std::string *arg2 = 0 ;
-  std::string *arg3 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  int res3 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_parameter", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 2, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 2, argv[0])); 
-    }
-    arg2 = ptr;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res3 = SWIG_AsPtr_std_string(argv[1], &ptr);
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 3, argv[1] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 3, argv[1])); 
-    }
-    arg3 = ptr;
-  }
-  result = (bool)(arg1)->set_parameter((std::string const &)*arg2,(std::string const &)*arg3);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  if (SWIG_IsNewObj(res3)) delete arg3;
-  return vresult;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  if (SWIG_IsNewObj(res3)) delete arg3;
   return Qnil;
 }
 
 
 SWIGINTERN void
-free_libbitcoin_wallet_bitcoin_uri(void *self) {
-    libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *)self;
+free_libbitcoin_wallet_ec_public(void *self) {
+    libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *)self;
     delete arg1;
 }
-
-SWIGINTERN VALUE
-_wrap_dictionary_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::dictionary_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_en_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::en), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_es_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::es), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ja_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::ja), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_it_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::it), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_fr_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::fr), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_cs_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::cs), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ru_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::ru), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_uk_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::uk), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_zh_Hans_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::zh_Hans), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_zh_Hant_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::zh_Hant), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_all_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::all), SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,  0 );
-  return _val;
-}
-
 
 SWIGINTERN VALUE
 _wrap_wif_uncompressed_size_get(VALUE self) {
@@ -6763,7 +6348,7 @@ _wrap_ECPrivate_to_public(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  ec_public result;
+  libbitcoin::wallet::ec_public result;
   VALUE vresult = Qnil;
   
   if ((argc < 0) || (argc > 0)) {
@@ -6775,7 +6360,7 @@ _wrap_ECPrivate_to_public(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::ec_private * >(argp1);
   result = ((libbitcoin::wallet::ec_private const *)arg1)->to_public();
-  vresult = SWIG_NewPointerObj((new ec_public(static_cast< const ec_public& >(result))), SWIGTYPE_p_ec_public, SWIG_POINTER_OWN |  0 );
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::ec_public(static_cast< const libbitcoin::wallet::ec_public& >(result))), SWIGTYPE_p_libbitcoin__wallet__ec_public, SWIG_POINTER_OWN |  0 );
   return vresult;
 fail:
   return Qnil;
@@ -6811,5175 +6396,6 @@ free_libbitcoin_wallet_ec_private(void *self) {
     libbitcoin::wallet::ec_private *arg1 = (libbitcoin::wallet::ec_private *)self;
     delete arg1;
 }
-
-static swig_class SwigClassECPublic;
-
-SWIGINTERN VALUE
-_wrap_ECPublic_compressed_even_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::compressed_even), SWIGTYPE_p_uint8_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_compressed_odd_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::compressed_odd), SWIGTYPE_p_uint8_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_uncompressed_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::uncompressed), SWIGTYPE_p_uint8_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_mainnet_p2kh_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ec_public::mainnet_p2kh), SWIGTYPE_p_uint8_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ec_public,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const &","ec_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_public const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((libbitcoin::wallet::ec_public const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_private *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ec_private,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_private const &","ec_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_private const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_private * >(argp1);
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((libbitcoin::wallet::ec_private const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  data_chunk *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_chunk,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_chunk const &","ec_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< data_chunk * >(argp1);
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((data_chunk const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_4(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ec_public", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ec_public", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((std::string const &)*arg1);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_5(int argc, VALUE *argv, VALUE self) {
-  ec_compressed *arg1 = 0 ;
-  bool arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  bool val2 ;
-  int ecode2 = 0 ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_compressed,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_compressed const &","ec_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< ec_compressed * >(argp1);
-  ecode2 = SWIG_AsVal_bool(argv[1], &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","ec_public", 2, argv[1] ));
-  } 
-  arg2 = static_cast< bool >(val2);
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_compressed const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_6(int argc, VALUE *argv, VALUE self) {
-  ec_compressed *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_compressed,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_compressed const &","ec_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< ec_compressed * >(argp1);
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_compressed const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_7(int argc, VALUE *argv, VALUE self) {
-  ec_uncompressed *arg1 = 0 ;
-  bool arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  bool val2 ;
-  int ecode2 = 0 ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_uncompressed,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_uncompressed const &","ec_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_uncompressed const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< ec_uncompressed * >(argp1);
-  ecode2 = SWIG_AsVal_bool(argv[1], &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","ec_public", 2, argv[1] ));
-  } 
-  arg2 = static_cast< bool >(val2);
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_uncompressed const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_ECPublic_allocate(VALUE self)
-#else
-_wrap_ECPublic_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ec_public);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_ECPublic__SWIG_8(int argc, VALUE *argv, VALUE self) {
-  ec_uncompressed *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ec_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_uncompressed,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_uncompressed const &","ec_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_uncompressed const &","ec_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< ec_uncompressed * >(argp1);
-  result = (libbitcoin::wallet::ec_public *)new libbitcoin::wallet::ec_public((ec_uncompressed const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_new_ECPublic(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[2];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 2) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 0) {
-    return _wrap_new_ECPublic__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ECPublic__SWIG_1(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_private, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ECPublic__SWIG_2(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ECPublic__SWIG_3(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_compressed, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ECPublic__SWIG_6(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_uncompressed, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ECPublic__SWIG_8(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_ECPublic__SWIG_4(nargs, args, self);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_uncompressed, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        int res = SWIG_AsVal_bool(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_new_ECPublic__SWIG_7(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_ec_compressed, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      {
-        int res = SWIG_AsVal_bool(argv[1], NULL);
-        _v = SWIG_CheckState(res);
-      }
-      if (_v) {
-        return _wrap_new_ECPublic__SWIG_5(nargs, args, self);
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 2, "ec_public.new", 
-    "    ec_public.new()\n"
-    "    ec_public.new(libbitcoin::wallet::ec_public const &other)\n"
-    "    ec_public.new(libbitcoin::wallet::ec_private const &secret)\n"
-    "    ec_public.new(data_chunk const &decoded)\n"
-    "    ec_public.new(std::string const &base16)\n"
-    "    ec_public.new(ec_compressed const &point, bool compress)\n"
-    "    ec_public.new(ec_compressed const &point)\n"
-    "    ec_public.new(ec_uncompressed const &point, bool compress)\n"
-    "    ec_public.new(ec_uncompressed const &point)\n");
-  
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::ECPublic.<
-
-  call-seq:
-    <(other) -> bool
-
-Lower than comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_ECPublic___lt__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  libbitcoin::wallet::ec_public *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator <", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ec_public,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const &","operator <", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_public const &","operator <", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp2);
-  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->operator <((libbitcoin::wallet::ec_public const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::ECPublic.==
-
-  call-seq:
-    ==(other) -> bool
-
-Equality comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_ECPublic___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  libbitcoin::wallet::ec_public *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator ==", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ec_public,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const &","operator ==", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_public const &","operator ==", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp2);
-  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->operator ==((libbitcoin::wallet::ec_public const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_validq___(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator const bool", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->operator const bool();
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_ec_compressed(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  ec_compressed *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","operator const ec_compressed&", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  result = (ec_compressed *) &((libbitcoin::wallet::ec_public const *)arg1)->operator const ec_compressed&();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_encoded(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","encoded", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  result = ((libbitcoin::wallet::ec_public const *)arg1)->encoded();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_point(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  ec_compressed *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","point", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  result = (ec_compressed *) &((libbitcoin::wallet::ec_public const *)arg1)->point();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_compressed(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","compressed", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->compressed();
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_to_data(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  data_chunk *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_data", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_data_chunk,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_chunk &","to_data", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk &","to_data", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< data_chunk * >(argp2);
-  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->to_data(*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_to_uncompressed(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  ec_uncompressed *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_uncompressed", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_ec_uncompressed,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "ec_uncompressed &","to_uncompressed", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_uncompressed &","to_uncompressed", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< ec_uncompressed * >(argp2);
-  result = (bool)((libbitcoin::wallet::ec_public const *)arg1)->to_uncompressed(*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_to_payment_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  uint8_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::payment_address result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_payment_address", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint8_t","to_payment_address", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","to_payment_address", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint8_t * >(argp2));
-    }
-  }
-  result = ((libbitcoin::wallet::ec_public const *)arg1)->to_payment_address(arg2);
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::payment_address(static_cast< const libbitcoin::wallet::payment_address& >(result))), SWIGTYPE_p_libbitcoin__wallet__payment_address, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ECPublic_to_payment_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::payment_address result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ec_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_public const *","to_payment_address", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ec_public * >(argp1);
-  result = ((libbitcoin::wallet::ec_public const *)arg1)->to_payment_address();
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::payment_address(static_cast< const libbitcoin::wallet::payment_address& >(result))), SWIGTYPE_p_libbitcoin__wallet__payment_address, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_ECPublic_to_payment_address(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[3];
-  int ii;
-  
-  argc = nargs + 1;
-  argv[0] = self;
-  if (argc > 3) SWIG_fail;
-  for (ii = 1; (ii < argc); ++ii) {
-    argv[ii] = args[ii-1];
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_ECPublic_to_payment_address__SWIG_1(nargs, args, self);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_public, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint8_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_ECPublic_to_payment_address__SWIG_0(nargs, args, self);
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 3, "ECPublic.to_payment_address", 
-    "    libbitcoin::wallet::payment_address ECPublic.to_payment_address(uint8_t version)\n"
-    "    libbitcoin::wallet::payment_address ECPublic.to_payment_address()\n");
-  
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_ec_public(void *self) {
-    libbitcoin::wallet::ec_public *arg1 = (libbitcoin::wallet::ec_public *)self;
-    delete arg1;
-}
-
-static swig_class SwigClassEKPrivate;
-
-SWIGINTERN VALUE
-_wrap_new_EKPrivate__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKPrivate__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  libbitcoin::wallet::ek_private *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_private", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_private", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private((std::string const &)*arg1);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  encrypted_private *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ek_private *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_encrypted_private,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "encrypted_private const &","ek_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "encrypted_private const &","ek_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< encrypted_private * >(argp1);
-  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private((encrypted_private const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_EKPrivate_allocate(VALUE self)
-#else
-_wrap_EKPrivate_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_private);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKPrivate__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ek_private *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ek_private,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const &","ek_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_private const &","ek_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
-  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private((libbitcoin::wallet::ek_private const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_new_EKPrivate(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[1];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 1) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 0) {
-    return _wrap_new_EKPrivate__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_encrypted_private, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKPrivate__SWIG_2(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_private, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKPrivate__SWIG_3(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKPrivate__SWIG_1(nargs, args, self);
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 1, "ek_private.new", 
-    "    ek_private.new()\n"
-    "    ek_private.new(std::string const &encoded)\n"
-    "    ek_private.new(encrypted_private const &key)\n"
-    "    ek_private.new(libbitcoin::wallet::ek_private const &other)\n");
-  
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::EKPrivate.<
-
-  call-seq:
-    <(other) -> bool
-
-Lower than comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_EKPrivate___lt__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
-  libbitcoin::wallet::ek_private *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator <", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_private,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const &","operator <", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_private const &","operator <", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp2);
-  result = (bool)((libbitcoin::wallet::ek_private const *)arg1)->operator <((libbitcoin::wallet::ek_private const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::EKPrivate.==
-
-  call-seq:
-    ==(other) -> bool
-
-Equality comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_EKPrivate___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
-  libbitcoin::wallet::ek_private *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator ==", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_private,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const &","operator ==", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_private const &","operator ==", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp2);
-  result = (bool)((libbitcoin::wallet::ek_private const *)arg1)->operator ==((libbitcoin::wallet::ek_private const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPrivate_validq___(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator const bool", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
-  result = (bool)((libbitcoin::wallet::ek_private const *)arg1)->operator const bool();
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPrivate_encrypted_private(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  encrypted_private *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator const libbitcoin::wallet::encrypted_private&", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
-  result = (encrypted_private *) &((libbitcoin::wallet::ek_private const *)arg1)->operator const libbitcoin::wallet::encrypted_private&();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_encrypted_private, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPrivate_encoded(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","encoded", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
-  result = ((libbitcoin::wallet::ek_private const *)arg1)->encoded();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPrivate_private_key(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  encrypted_private *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","private_key", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
-  result = (encrypted_private *) &((libbitcoin::wallet::ek_private const *)arg1)->private_key();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_encrypted_private, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_ek_private(void *self) {
-    libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *)self;
-    delete arg1;
-}
-
-static swig_class SwigClassEKPublic;
-
-SWIGINTERN VALUE
-_wrap_new_EKPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  libbitcoin::wallet::ek_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_public", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_public", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public((std::string const &)*arg1);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  encrypted_public *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ek_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_encrypted_public,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "encrypted_public const &","ek_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "encrypted_public const &","ek_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< encrypted_public * >(argp1);
-  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public((encrypted_public const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_EKPublic_allocate(VALUE self)
-#else
-_wrap_EKPublic_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_public);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ek_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ek_public,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const &","ek_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_public const &","ek_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
-  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public((libbitcoin::wallet::ek_public const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_new_EKPublic(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[1];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 1) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 0) {
-    return _wrap_new_EKPublic__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_encrypted_public, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKPublic__SWIG_2(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_public, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKPublic__SWIG_3(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKPublic__SWIG_1(nargs, args, self);
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 1, "ek_public.new", 
-    "    ek_public.new()\n"
-    "    ek_public.new(std::string const &encoded)\n"
-    "    ek_public.new(encrypted_public const &key)\n"
-    "    ek_public.new(libbitcoin::wallet::ek_public const &other)\n");
-  
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::EKPublic.<
-
-  call-seq:
-    <(other) -> bool
-
-Lower than comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_EKPublic___lt__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
-  libbitcoin::wallet::ek_public *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator <", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_public,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const &","operator <", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_public const &","operator <", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp2);
-  result = (bool)((libbitcoin::wallet::ek_public const *)arg1)->operator <((libbitcoin::wallet::ek_public const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::EKPublic.==
-
-  call-seq:
-    ==(other) -> bool
-
-Equality comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_EKPublic___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
-  libbitcoin::wallet::ek_public *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator ==", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_public,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const &","operator ==", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_public const &","operator ==", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp2);
-  result = (bool)((libbitcoin::wallet::ek_public const *)arg1)->operator ==((libbitcoin::wallet::ek_public const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPublic_validq___(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator const bool", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
-  result = (bool)((libbitcoin::wallet::ek_public const *)arg1)->operator const bool();
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPublic_encrypted_public(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  encrypted_public *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator const libbitcoin::wallet::encrypted_public&", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
-  result = (encrypted_public *) &((libbitcoin::wallet::ek_public const *)arg1)->operator const libbitcoin::wallet::encrypted_public&();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_encrypted_public, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPublic_encoded(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","encoded", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
-  result = ((libbitcoin::wallet::ek_public const *)arg1)->encoded();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKPublic_public_key(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  encrypted_public *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","public_key", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
-  result = (encrypted_public *) &((libbitcoin::wallet::ek_public const *)arg1)->public_key();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_encrypted_public, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_ek_public(void *self) {
-    libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *)self;
-    delete arg1;
-}
-
-static swig_class SwigClassEKToken;
-
-SWIGINTERN VALUE
-_wrap_new_EKToken__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKToken__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  libbitcoin::wallet::ek_token *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_token", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_token", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token((std::string const &)*arg1);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKToken__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  encrypted_token *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ek_token *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_encrypted_token,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "encrypted_token const &","ek_token", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "encrypted_token const &","ek_token", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< encrypted_token * >(argp1);
-  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token((encrypted_token const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_EKToken_allocate(VALUE self)
-#else
-_wrap_EKToken_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_token);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_EKToken__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::ek_token *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ek_token,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const &","ek_token", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_token const &","ek_token", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
-  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token((libbitcoin::wallet::ek_token const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_new_EKToken(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[1];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 1) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 0) {
-    return _wrap_new_EKToken__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_encrypted_token, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKToken__SWIG_2(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_token, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKToken__SWIG_3(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_EKToken__SWIG_1(nargs, args, self);
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 1, "ek_token.new", 
-    "    ek_token.new()\n"
-    "    ek_token.new(std::string const &encoded)\n"
-    "    ek_token.new(encrypted_token const &key)\n"
-    "    ek_token.new(libbitcoin::wallet::ek_token const &other)\n");
-  
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::EKToken.<
-
-  call-seq:
-    <(other) -> bool
-
-Lower than comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_EKToken___lt__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
-  libbitcoin::wallet::ek_token *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator <", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_token,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const &","operator <", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_token const &","operator <", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp2);
-  result = (bool)((libbitcoin::wallet::ek_token const *)arg1)->operator <((libbitcoin::wallet::ek_token const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::EKToken.==
-
-  call-seq:
-    ==(other) -> bool
-
-Equality comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_EKToken___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
-  libbitcoin::wallet::ek_token *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator ==", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_token,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const &","operator ==", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_token const &","operator ==", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp2);
-  result = (bool)((libbitcoin::wallet::ek_token const *)arg1)->operator ==((libbitcoin::wallet::ek_token const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKToken_validq___(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator const bool", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
-  result = (bool)((libbitcoin::wallet::ek_token const *)arg1)->operator const bool();
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKToken_encrypted_token(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  encrypted_token *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator const libbitcoin::wallet::encrypted_token&", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
-  result = (encrypted_token *) &((libbitcoin::wallet::ek_token const *)arg1)->operator const libbitcoin::wallet::encrypted_token&();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_encrypted_token, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKToken_encoded(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","encoded", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
-  result = ((libbitcoin::wallet::ek_token const *)arg1)->encoded();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_EKToken_token(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  encrypted_token *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","token", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
-  result = (encrypted_token *) &((libbitcoin::wallet::ek_token const *)arg1)->token();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_encrypted_token, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_ek_token(void *self) {
-    libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *)self;
-    delete arg1;
-}
-
-SWIGINTERN VALUE
-_wrap_ek_max_lot_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ek_max_lot), SWIGTYPE_p_uint32_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ek_max_sequence_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ek_max_sequence), SWIGTYPE_p_uint32_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ek_salt_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_salt_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ek_entropy_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_entropy_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ek_seed_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_seed_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_encrypted_token_encoded_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_token_encoded_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_encrypted_token_decoded_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_token_decoded_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ek_private_encoded_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_private_encoded_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_ek_private_decoded_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_private_decoded_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_encrypted_public_encoded_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_public_encoded_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_encrypted_public_decoded_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_public_decoded_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_create_key_pair__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
-  ec_compressed *arg2 = 0 ;
-  libbitcoin::wallet::encrypted_token *arg3 = 0 ;
-  libbitcoin::wallet::ek_seed *arg4 = 0 ;
-  uint8_t arg5 ;
-  bool arg6 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  void *argp4 ;
-  int res4 = 0 ;
-  void *argp5 ;
-  int res5 = 0 ;
-  bool val6 ;
-  int ecode6 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 6) || (argc > 6)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 6)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_ec_compressed,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< ec_compressed * >(argp2);
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_byte_arrayT_53_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp3);
-  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_24_t,  0 );
-  if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
-  }
-  if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
-  }
-  arg4 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp4);
-  {
-    res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res5)) {
-      SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
-    }  
-    if (!argp5) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4]));
-    } else {
-      arg5 = *(reinterpret_cast< uint8_t * >(argp5));
-    }
-  }
-  ecode6 = SWIG_AsVal_bool(argv[5], &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::create_key_pair", 6, argv[5] ));
-  } 
-  arg6 = static_cast< bool >(val6);
-  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,(byte_array< 53 > const &)*arg3,(byte_array< 24 > const &)*arg4,arg5,arg6);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_create_key_pair__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
-  ec_compressed *arg2 = 0 ;
-  libbitcoin::wallet::encrypted_token *arg3 = 0 ;
-  libbitcoin::wallet::ek_seed *arg4 = 0 ;
-  uint8_t arg5 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  void *argp4 ;
-  int res4 = 0 ;
-  void *argp5 ;
-  int res5 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 5) || (argc > 5)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 5)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_ec_compressed,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< ec_compressed * >(argp2);
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_byte_arrayT_53_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp3);
-  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_24_t,  0 );
-  if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
-  }
-  if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
-  }
-  arg4 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp4);
-  {
-    res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res5)) {
-      SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
-    }  
-    if (!argp5) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4]));
-    } else {
-      arg5 = *(reinterpret_cast< uint8_t * >(argp5));
-    }
-  }
-  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,(byte_array< 53 > const &)*arg3,(byte_array< 24 > const &)*arg4,arg5);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_create_key_pair__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
-  libbitcoin::wallet::encrypted_public *arg2 = 0 ;
-  ec_compressed *arg3 = 0 ;
-  libbitcoin::wallet::encrypted_token *arg4 = 0 ;
-  libbitcoin::wallet::ek_seed *arg5 = 0 ;
-  uint8_t arg6 ;
-  bool arg7 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  void *argp4 ;
-  int res4 = 0 ;
-  void *argp5 ;
-  int res5 = 0 ;
-  void *argp6 ;
-  int res6 = 0 ;
-  bool val7 ;
-  int ecode7 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 7) || (argc > 7)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 7)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_byte_arrayT_55_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::encrypted_public * >(argp2);
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_compressed,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< ec_compressed * >(argp3);
-  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_53_t,  0 );
-  if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
-  }
-  if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
-  }
-  arg4 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp4);
-  res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_byte_arrayT_24_t,  0 );
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
-  }
-  if (!argp5) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4])); 
-  }
-  arg5 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp5);
-  {
-    res6 = SWIG_ConvertPtr(argv[5], &argp6, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res6)) {
-      SWIG_exception_fail(SWIG_ArgError(res6), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5] )); 
-    }  
-    if (!argp6) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5]));
-    } else {
-      arg6 = *(reinterpret_cast< uint8_t * >(argp6));
-    }
-  }
-  ecode7 = SWIG_AsVal_bool(argv[6], &val7);
-  if (!SWIG_IsOK(ecode7)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode7), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::create_key_pair", 7, argv[6] ));
-  } 
-  arg7 = static_cast< bool >(val7);
-  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,*arg3,(byte_array< 53 > const &)*arg4,(byte_array< 24 > const &)*arg5,arg6,arg7);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_create_key_pair__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
-  libbitcoin::wallet::encrypted_public *arg2 = 0 ;
-  ec_compressed *arg3 = 0 ;
-  libbitcoin::wallet::encrypted_token *arg4 = 0 ;
-  libbitcoin::wallet::ek_seed *arg5 = 0 ;
-  uint8_t arg6 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  void *argp4 ;
-  int res4 = 0 ;
-  void *argp5 ;
-  int res5 = 0 ;
-  void *argp6 ;
-  int res6 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 6) || (argc > 6)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 6)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_byte_arrayT_55_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::encrypted_public * >(argp2);
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_compressed,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< ec_compressed * >(argp3);
-  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_53_t,  0 );
-  if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
-  }
-  if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
-  }
-  arg4 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp4);
-  res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_byte_arrayT_24_t,  0 );
-  if (!SWIG_IsOK(res5)) {
-    SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
-  }
-  if (!argp5) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4])); 
-  }
-  arg5 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp5);
-  {
-    res6 = SWIG_ConvertPtr(argv[5], &argp6, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res6)) {
-      SWIG_exception_fail(SWIG_ArgError(res6), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5] )); 
-    }  
-    if (!argp6) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5]));
-    } else {
-      arg6 = *(reinterpret_cast< uint8_t * >(argp6));
-    }
-  }
-  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,*arg3,(byte_array< 53 > const &)*arg4,(byte_array< 24 > const &)*arg5,arg6);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_create_key_pair(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[7];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 7) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 5) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_ec_compressed, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          void *vptr = 0;
-          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
-          _v = SWIG_CheckState(res);
-          if (_v) {
-            void *vptr = 0;
-            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_uint8_t, 0);
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              return _wrap_create_key_pair__SWIG_1(nargs, args, self);
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 6) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_ec_compressed, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          void *vptr = 0;
-          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
-          _v = SWIG_CheckState(res);
-          if (_v) {
-            void *vptr = 0;
-            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_uint8_t, 0);
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              {
-                int res = SWIG_AsVal_bool(argv[5], NULL);
-                _v = SWIG_CheckState(res);
-              }
-              if (_v) {
-                return _wrap_create_key_pair__SWIG_0(nargs, args, self);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 6) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_byte_arrayT_55_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_compressed, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          void *vptr = 0;
-          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
-          _v = SWIG_CheckState(res);
-          if (_v) {
-            void *vptr = 0;
-            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              void *vptr = 0;
-              int res = SWIG_ConvertPtr(argv[5], &vptr, SWIGTYPE_p_uint8_t, 0);
-              _v = SWIG_CheckState(res);
-              if (_v) {
-                return _wrap_create_key_pair__SWIG_3(nargs, args, self);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (argc == 7) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_byte_arrayT_55_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_compressed, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          void *vptr = 0;
-          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
-          _v = SWIG_CheckState(res);
-          if (_v) {
-            void *vptr = 0;
-            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
-            _v = SWIG_CheckState(res);
-            if (_v) {
-              void *vptr = 0;
-              int res = SWIG_ConvertPtr(argv[5], &vptr, SWIGTYPE_p_uint8_t, 0);
-              _v = SWIG_CheckState(res);
-              if (_v) {
-                {
-                  int res = SWIG_AsVal_bool(argv[6], NULL);
-                  _v = SWIG_CheckState(res);
-                }
-                if (_v) {
-                  return _wrap_create_key_pair__SWIG_2(nargs, args, self);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 7, "create_key_pair", 
-    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version, bool compressed)\n"
-    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version)\n"
-    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, libbitcoin::wallet::encrypted_public &out_public, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version, bool compressed)\n"
-    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, libbitcoin::wallet::encrypted_public &out_public, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version)\n");
-  
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_hd_first_hardened_key_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_first_hardened_key), SWIGTYPE_p_uint32_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_hd_chain_code_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::hd_chain_code_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_hd_key_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::hd_key_size));
-  return _val;
-}
-
-
-static swig_class SwigClassHDLineage;
-
-SWIGINTERN VALUE
-_wrap_HDLineage_prefixes_set(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  uint64_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","prefixes", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint64_t","prefixes", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","prefixes", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint64_t * >(argp2));
-    }
-  }
-  if (arg1) (arg1)->prefixes = arg2;
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDLineage_prefixes_get(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  uint64_t result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","prefixes", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  result =  ((arg1)->prefixes);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDLineage_depth_set(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  uint8_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","depth", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint8_t","depth", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","depth", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint8_t * >(argp2));
-    }
-  }
-  if (arg1) (arg1)->depth = arg2;
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDLineage_depth_get(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  uint8_t result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","depth", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  result =  ((arg1)->depth);
-  vresult = SWIG_NewPointerObj((new uint8_t(static_cast< const uint8_t& >(result))), SWIGTYPE_p_uint8_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDLineage_parent_fingerprint_set(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  uint32_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","parent_fingerprint", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","parent_fingerprint", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","parent_fingerprint", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  if (arg1) (arg1)->parent_fingerprint = arg2;
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDLineage_parent_fingerprint_get(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  uint32_t result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","parent_fingerprint", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  result =  ((arg1)->parent_fingerprint);
-  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDLineage_child_number_set(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  uint32_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","child_number", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","child_number", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","child_number", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  if (arg1) (arg1)->child_number = arg2;
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDLineage_child_number_get(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  uint32_t result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","child_number", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  result =  ((arg1)->child_number);
-  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::HDLineage.==
-
-  call-seq:
-    ==(other) -> bool
-
-Equality comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_HDLineage___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
-  libbitcoin::wallet::hd_lineage *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage const *","operator ==", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_lineage,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage const &","operator ==", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_lineage const &","operator ==", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp2);
-  result = (bool)((libbitcoin::wallet::hd_lineage const *)arg1)->operator ==((libbitcoin::wallet::hd_lineage const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_HDLineage_allocate(VALUE self)
-#else
-_wrap_HDLineage_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_lineage);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDLineage(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_lineage *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::hd_lineage *)new libbitcoin::wallet::hd_lineage();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_hd_lineage(void *self) {
-    libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *)self;
-    delete arg1;
-}
-
-static swig_class SwigClassHDPublic;
-
-SWIGINTERN VALUE
-_wrap_HDPublic_mainnet_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_public::mainnet), SWIGTYPE_p_uint32_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_testnet_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_public::testnet), SWIGTYPE_p_uint32_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_to_prefix(int argc, VALUE *argv, VALUE self) {
-  uint64_t arg1 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  uint32_t result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint64_t","libbitcoin::wallet::hd_public::to_prefix", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","libbitcoin::wallet::hd_public::to_prefix", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< uint64_t * >(argp1));
-    }
-  }
-  result = libbitcoin::wallet::hd_public::to_prefix(arg1);
-  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__hd_public,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const &","hd_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_public const &","hd_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((libbitcoin::wallet::hd_public const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_key *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
-  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((libbitcoin::wallet::hd_key const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_key *arg1 = 0 ;
-  uint32_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_public *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_public", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_public", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((libbitcoin::wallet::hd_key const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPublic__SWIG_4(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  libbitcoin::wallet::hd_public *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((std::string const &)*arg1);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_HDPublic_allocate(VALUE self)
-#else
-_wrap_HDPublic_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_public);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPublic__SWIG_5(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  uint32_t arg2 ;
-  int res1 = SWIG_OLDOBJ ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_public *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_public", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_public", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((std::string const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_new_HDPublic(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[2];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 2) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 0) {
-    return _wrap_new_HDPublic__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__hd_public, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_HDPublic__SWIG_1(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_HDPublic__SWIG_2(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_HDPublic__SWIG_4(nargs, args, self);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_HDPublic__SWIG_3(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_HDPublic__SWIG_5(nargs, args, self);
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 2, "hd_public.new", 
-    "    hd_public.new()\n"
-    "    hd_public.new(libbitcoin::wallet::hd_public const &other)\n"
-    "    hd_public.new(libbitcoin::wallet::hd_key const &public_key)\n"
-    "    hd_public.new(libbitcoin::wallet::hd_key const &public_key, uint32_t prefix)\n"
-    "    hd_public.new(std::string const &encoded)\n"
-    "    hd_public.new(std::string const &encoded, uint32_t prefix)\n");
-  
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::HDPublic.<
-
-  call-seq:
-    <(other) -> bool
-
-Lower than comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_HDPublic___lt__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  libbitcoin::wallet::hd_public *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator <", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_public,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const &","operator <", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_public const &","operator <", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp2);
-  result = (bool)((libbitcoin::wallet::hd_public const *)arg1)->operator <((libbitcoin::wallet::hd_public const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::HDPublic.==
-
-  call-seq:
-    ==(other) -> bool
-
-Equality comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_HDPublic___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  libbitcoin::wallet::hd_public *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator ==", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_public,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const &","operator ==", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_public const &","operator ==", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp2);
-  result = (bool)((libbitcoin::wallet::hd_public const *)arg1)->operator ==((libbitcoin::wallet::hd_public const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_validq___(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator const bool", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = (bool)((libbitcoin::wallet::hd_public const *)arg1)->operator const bool();
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_ec_compressed(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  ec_compressed *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator const ec_compressed&", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = (ec_compressed *) &((libbitcoin::wallet::hd_public const *)arg1)->operator const ec_compressed&();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_encoded(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","encoded", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = ((libbitcoin::wallet::hd_public const *)arg1)->encoded();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_chain_code(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_chain_code *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","chain_code", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = (libbitcoin::wallet::hd_chain_code *) &((libbitcoin::wallet::hd_public const *)arg1)->chain_code();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_32_t, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_lineage(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_lineage *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","lineage", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = (libbitcoin::wallet::hd_lineage *) &((libbitcoin::wallet::hd_public const *)arg1)->lineage();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_point(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  ec_compressed *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","point", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = (ec_compressed *) &((libbitcoin::wallet::hd_public const *)arg1)->point();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_to_hd_key(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_key result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","to_hd_key", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  result = ((libbitcoin::wallet::hd_public const *)arg1)->to_hd_key();
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_key(static_cast< const libbitcoin::wallet::hd_key& >(result))), SWIGTYPE_p_byte_arrayT_82_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPublic_derive_public(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
-  uint32_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_public result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","derive_public", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","derive_public", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","derive_public", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = ((libbitcoin::wallet::hd_public const *)arg1)->derive_public(arg2);
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_public(static_cast< const libbitcoin::wallet::hd_public& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_public, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_hd_public(void *self) {
-    libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *)self;
-    delete arg1;
-}
-
-static swig_class SwigClassHDPrivate;
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_mainnet_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_private::mainnet), SWIGTYPE_p_uint64_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_testnet_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_private::testnet), SWIGTYPE_p_uint64_t,  0 );
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_to_prefix(int argc, VALUE *argv, VALUE self) {
-  uint64_t arg1 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  uint32_t result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint64_t","libbitcoin::wallet::hd_private::to_prefix", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","libbitcoin::wallet::hd_private::to_prefix", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< uint64_t * >(argp1));
-    }
-  }
-  result = libbitcoin::wallet::hd_private::to_prefix(arg1);
-  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_to_prefixes(int argc, VALUE *argv, VALUE self) {
-  uint32_t arg1 ;
-  uint32_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  uint64_t result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< uint32_t * >(argp1));
-    }
-  }
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = libbitcoin::wallet::hd_private::to_prefixes(arg1,arg2);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__hd_private,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const &","hd_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_private const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_private const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  data_chunk *arg1 = 0 ;
-  uint64_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_chunk,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_chunk const &","hd_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< data_chunk * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint64_t","hd_private", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","hd_private", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint64_t * >(argp2));
-    }
-  }
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((data_chunk const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  data_chunk *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_chunk,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_chunk const &","hd_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< data_chunk * >(argp1);
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((data_chunk const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_4(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_key *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_key const &)*arg1);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_5(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_key *arg1 = 0 ;
-  uint64_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint64_t","hd_private", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","hd_private", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint64_t * >(argp2));
-    }
-  }
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_key const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_6(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_key *arg1 = 0 ;
-  uint32_t arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_private", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_private", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_key const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_7(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  int res1 = SWIG_OLDOBJ ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_8(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  uint64_t arg2 ;
-  int res1 = SWIG_OLDOBJ ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint64_t","hd_private", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","hd_private", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint64_t * >(argp2));
-    }
-  }
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_HDPrivate_allocate(VALUE self)
-#else
-_wrap_HDPrivate_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_private);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_HDPrivate__SWIG_9(int argc, VALUE *argv, VALUE self) {
-  std::string *arg1 = 0 ;
-  uint32_t arg2 ;
-  int res1 = SWIG_OLDOBJ ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_private *result = 0 ;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
-    }
-    arg1 = ptr;
-  }
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_private", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_private", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1,arg2);
-  DATA_PTR(self) = result;
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return self;
-fail:
-  if (SWIG_IsNewObj(res1)) delete arg1;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_new_HDPrivate(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[2];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 2) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 0) {
-    return _wrap_new_HDPrivate__SWIG_0(nargs, args, self);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__hd_private, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_HDPrivate__SWIG_1(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_HDPrivate__SWIG_3(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_HDPrivate__SWIG_4(nargs, args, self);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_new_HDPrivate__SWIG_7(nargs, args, self);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint64_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_HDPrivate__SWIG_5(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_HDPrivate__SWIG_6(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint64_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_HDPrivate__SWIG_2(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint64_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_HDPrivate__SWIG_8(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_new_HDPrivate__SWIG_9(nargs, args, self);
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 2, "hd_private.new", 
-    "    hd_private.new()\n"
-    "    hd_private.new(libbitcoin::wallet::hd_private const &other)\n"
-    "    hd_private.new(data_chunk const &seed, uint64_t prefixes)\n"
-    "    hd_private.new(data_chunk const &seed)\n"
-    "    hd_private.new(libbitcoin::wallet::hd_key const &private_key)\n"
-    "    hd_private.new(libbitcoin::wallet::hd_key const &private_key, uint64_t prefixes)\n"
-    "    hd_private.new(libbitcoin::wallet::hd_key const &private_key, uint32_t public_prefix)\n"
-    "    hd_private.new(std::string const &encoded)\n"
-    "    hd_private.new(std::string const &encoded, uint64_t prefixes)\n"
-    "    hd_private.new(std::string const &encoded, uint32_t public_prefix)\n");
-  
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::HDPrivate.<
-
-  call-seq:
-    <(other) -> bool
-
-Lower than comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_HDPrivate___lt__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  libbitcoin::wallet::hd_private *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","operator <", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_private,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const &","operator <", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_private const &","operator <", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp2);
-  result = (bool)((libbitcoin::wallet::hd_private const *)arg1)->operator <((libbitcoin::wallet::hd_private const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-
-/*
-  Document-method: Bitcoin::HDPrivate.==
-
-  call-seq:
-    ==(other) -> bool
-
-Equality comparison operator.
-*/
-SWIGINTERN VALUE
-_wrap_HDPrivate___eq__(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  libbitcoin::wallet::hd_private *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","operator ==", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_private,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const &","operator ==", 2, argv[0] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_private const &","operator ==", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp2);
-  result = (bool)((libbitcoin::wallet::hd_private const *)arg1)->operator ==((libbitcoin::wallet::hd_private const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_ec_secret(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  ec_secret *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","operator const ec_secret&", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  result = (ec_secret *) &((libbitcoin::wallet::hd_private const *)arg1)->operator const ec_secret&();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_secret, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_encoded(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  std::string result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","encoded", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  result = ((libbitcoin::wallet::hd_private const *)arg1)->encoded();
-  vresult = SWIG_From_std_string(static_cast< std::string >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_secret(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  ec_secret *result = 0 ;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","secret", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  result = (ec_secret *) &((libbitcoin::wallet::hd_private const *)arg1)->secret();
-  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_secret, 0 |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_to_hd_key(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_key result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","to_hd_key", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  result = ((libbitcoin::wallet::hd_private const *)arg1)->to_hd_key();
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_key(static_cast< const libbitcoin::wallet::hd_key& >(result))), SWIGTYPE_p_byte_arrayT_82_t, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_to_public(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::hd_public result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","to_public", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  result = ((libbitcoin::wallet::hd_private const *)arg1)->to_public();
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_public(static_cast< const libbitcoin::wallet::hd_public& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_public, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_derive_private(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  uint32_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_private result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","derive_private", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","derive_private", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","derive_private", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = ((libbitcoin::wallet::hd_private const *)arg1)->derive_private(arg2);
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_private(static_cast< const libbitcoin::wallet::hd_private& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_private, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_HDPrivate_derive_public(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
-  uint32_t arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::hd_public result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","derive_public", 1, self )); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","derive_public", 2, argv[0] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","derive_public", 2, argv[0]));
-    } else {
-      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
-    }
-  }
-  result = ((libbitcoin::wallet::hd_private const *)arg1)->derive_public(arg2);
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_public(static_cast< const libbitcoin::wallet::hd_public& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_public, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_hd_private(void *self) {
-    libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *)self;
-    delete arg1;
-}
-
-SWIGINTERN VALUE
-_wrap_message_signature_size_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::message_signature_size));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_hash_message(int argc, VALUE *argv, VALUE self) {
-  SwigValueWrapper< data_slice > arg1 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  hash_digest result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::hash_message", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::hash_message", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< data_slice * >(argp1));
-    }
-  }
-  result = libbitcoin::wallet::hash_message(arg1);
-  vresult = SWIG_NewPointerObj((new hash_digest(static_cast< const hash_digest& >(result))), SWIGTYPE_p_hash_digest, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_sign_message__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::message_signature *arg1 = 0 ;
-  SwigValueWrapper< data_slice > arg2 ;
-  libbitcoin::wallet::ec_private *arg3 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< data_slice * >(argp2));
-    }
-  }
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_libbitcoin__wallet__ec_private,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_private const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_private const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< libbitcoin::wallet::ec_private * >(argp3);
-  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(libbitcoin::wallet::ec_private const &)*arg3);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_sign_message__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::message_signature *arg1 = 0 ;
-  SwigValueWrapper< data_slice > arg2 ;
-  std::string *arg3 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  int res3 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< data_slice * >(argp2));
-    }
-  }
-  {
-    std::string *ptr = (std::string *)0;
-    res3 = SWIG_AsPtr_std_string(argv[2], &ptr);
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
-    }
-    arg3 = ptr;
-  }
-  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(std::string const &)*arg3);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res3)) delete arg3;
-  return vresult;
-fail:
-  if (SWIG_IsNewObj(res3)) delete arg3;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_sign_message__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::message_signature *arg1 = 0 ;
-  SwigValueWrapper< data_slice > arg2 ;
-  ec_secret *arg3 = 0 ;
-  bool arg4 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  bool val4 ;
-  int ecode4 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 4) || (argc > 4)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 4)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< data_slice * >(argp2));
-    }
-  }
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_secret,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< ec_secret * >(argp3);
-  ecode4 = SWIG_AsVal_bool(argv[3], &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::sign_message", 4, argv[3] ));
-  } 
-  arg4 = static_cast< bool >(val4);
-  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(ec_secret const &)*arg3,arg4);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_sign_message__SWIG_3(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::message_signature *arg1 = 0 ;
-  SwigValueWrapper< data_slice > arg2 ;
-  ec_secret *arg3 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< data_slice * >(argp2));
-    }
-  }
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_secret,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< ec_secret * >(argp3);
-  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(ec_secret const &)*arg3);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_sign_message(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[4];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 4) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 3) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_private, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          return _wrap_sign_message__SWIG_0(nargs, args, self);
-        }
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_secret, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          return _wrap_sign_message__SWIG_3(nargs, args, self);
-        }
-      }
-    }
-  }
-  if (argc == 3) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        int res = SWIG_AsPtr_std_string(argv[2], (std::string**)(0));
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          return _wrap_sign_message__SWIG_1(nargs, args, self);
-        }
-      }
-    }
-  }
-  if (argc == 4) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_secret, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          {
-            int res = SWIG_AsVal_bool(argv[3], NULL);
-            _v = SWIG_CheckState(res);
-          }
-          if (_v) {
-            return _wrap_sign_message__SWIG_2(nargs, args, self);
-          }
-        }
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 4, "sign_message", 
-    "    bool sign_message(libbitcoin::wallet::message_signature &signature, data_slice message, libbitcoin::wallet::ec_private const &secret)\n"
-    "    bool sign_message(libbitcoin::wallet::message_signature &out_signature, data_slice message, std::string const &wif)\n"
-    "    bool sign_message(libbitcoin::wallet::message_signature &out_signature, data_slice message, ec_secret const &secret, bool compressed)\n"
-    "    bool sign_message(libbitcoin::wallet::message_signature &out_signature, data_slice message, ec_secret const &secret)\n");
-  
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_verify_message(int argc, VALUE *argv, VALUE self) {
-  SwigValueWrapper< data_slice > arg1 ;
-  libbitcoin::wallet::payment_address *arg2 = 0 ;
-  libbitcoin::wallet::message_signature *arg3 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::verify_message", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::verify_message", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< data_slice * >(argp1));
-    }
-  }
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_libbitcoin__wallet__payment_address,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::payment_address const &","libbitcoin::wallet::verify_message", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::payment_address const &","libbitcoin::wallet::verify_message", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::payment_address * >(argp2);
-  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature const &","libbitcoin::wallet::verify_message", 3, argv[2] )); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature const &","libbitcoin::wallet::verify_message", 3, argv[2])); 
-  }
-  arg3 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp3);
-  result = (bool)libbitcoin::wallet::verify_message(arg1,(libbitcoin::wallet::payment_address const &)*arg2,(byte_array< 1+ec_signature_size > const &)*arg3);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_recovery_id_to_magic(int argc, VALUE *argv, VALUE self) {
-  uint8_t *arg1 = 0 ;
-  uint8_t arg2 ;
-  bool arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool val3 ;
-  int ecode3 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint8_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint8_t &","libbitcoin::wallet::recovery_id_to_magic", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t &","libbitcoin::wallet::recovery_id_to_magic", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< uint8_t * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::recovery_id_to_magic", 2, argv[1] )); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::recovery_id_to_magic", 2, argv[1]));
-    } else {
-      arg2 = *(reinterpret_cast< uint8_t * >(argp2));
-    }
-  }
-  ecode3 = SWIG_AsVal_bool(argv[2], &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::recovery_id_to_magic", 3, argv[2] ));
-  } 
-  arg3 = static_cast< bool >(val3);
-  result = (bool)libbitcoin::wallet::recovery_id_to_magic(*arg1,arg2,arg3);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_magic_to_recovery_id(int argc, VALUE *argv, VALUE self) {
-  uint8_t *arg1 = 0 ;
-  bool *arg2 = 0 ;
-  uint8_t arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint8_t,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint8_t &","libbitcoin::wallet::magic_to_recovery_id", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t &","libbitcoin::wallet::magic_to_recovery_id", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< uint8_t * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_bool,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "bool &","libbitcoin::wallet::magic_to_recovery_id", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "bool &","libbitcoin::wallet::magic_to_recovery_id", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< bool * >(argp2);
-  {
-    res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_uint8_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::magic_to_recovery_id", 3, argv[2] )); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::magic_to_recovery_id", 3, argv[2]));
-    } else {
-      arg3 = *(reinterpret_cast< uint8_t * >(argp3));
-    }
-  }
-  result = (bool)libbitcoin::wallet::magic_to_recovery_id(*arg1,*arg2,arg3);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_minikey_to_secret(int argc, VALUE *argv, VALUE self) {
-  ec_secret *arg1 = 0 ;
-  std::string *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_secret,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_secret &","libbitcoin::wallet::minikey_to_secret", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_secret &","libbitcoin::wallet::minikey_to_secret", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< ec_secret * >(argp1);
-  {
-    std::string *ptr = (std::string *)0;
-    res2 = SWIG_AsPtr_std_string(argv[1], &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1] )); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1])); 
-    }
-    arg2 = ptr;
-  }
-  result = (bool)libbitcoin::wallet::minikey_to_secret(*arg1,(std::string const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return vresult;
-fail:
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_mnemonic_word_multiple_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::mnemonic_word_multiple));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_mnemonic_seed_multiple_get(VALUE self) {
-  VALUE _val;
-  
-  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::mnemonic_seed_multiple));
-  return _val;
-}
-
-
-SWIGINTERN VALUE
-_wrap_create_mnemonic__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  SwigValueWrapper< data_slice > arg1 ;
-  libbitcoin::wallet::dictionary *arg2 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  libbitcoin::wallet::word_list result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< data_slice * >(argp1));
-    }
-  }
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::create_mnemonic", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::create_mnemonic", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::dictionary * >(argp2);
-  result = libbitcoin::wallet::create_mnemonic(arg1,(std::array< char const *,2048 > const &)*arg2);
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::word_list(static_cast< const libbitcoin::wallet::word_list& >(result))), SWIGTYPE_p_string_list, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_create_mnemonic__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  SwigValueWrapper< data_slice > arg1 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  libbitcoin::wallet::word_list result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0] )); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0]));
-    } else {
-      arg1 = *(reinterpret_cast< data_slice * >(argp1));
-    }
-  }
-  result = libbitcoin::wallet::create_mnemonic(arg1);
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::word_list(static_cast< const libbitcoin::wallet::word_list& >(result))), SWIGTYPE_p_string_list, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_create_mnemonic(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[2];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 2) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_slice, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_create_mnemonic__SWIG_1(nargs, args, self);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_slice, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__arrayT_char_const_p_2048_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_create_mnemonic__SWIG_0(nargs, args, self);
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 2, "create_mnemonic", 
-    "    libbitcoin::wallet::word_list create_mnemonic(data_slice entropy, libbitcoin::wallet::dictionary const &lexicon)\n"
-    "    libbitcoin::wallet::word_list create_mnemonic(data_slice entropy)\n");
-  
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_validate_mnemonic__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::word_list *arg1 = 0 ;
-  libbitcoin::wallet::dictionary *arg2 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::dictionary * >(argp2);
-  result = (bool)libbitcoin::wallet::validate_mnemonic((string_list const &)*arg1,(std::array< char const *,2048 > const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_validate_mnemonic__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::word_list *arg1 = 0 ;
-  libbitcoin::wallet::dictionary_list *arg2 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::dictionary_list const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::dictionary_list const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::dictionary_list * >(argp2);
-  result = (bool)libbitcoin::wallet::validate_mnemonic((string_list const &)*arg1,(std::vector< std::array< char const *,2048 > const * > const &)*arg2);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_validate_mnemonic__SWIG_2(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::word_list *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  bool result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
-  result = (bool)libbitcoin::wallet::validate_mnemonic((string_list const &)*arg1);
-  vresult = SWIG_From_bool(static_cast< bool >(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_validate_mnemonic(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[2];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 2) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_string_list, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_validate_mnemonic__SWIG_2(nargs, args, self);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_string_list, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_validate_mnemonic__SWIG_1(nargs, args, self);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_string_list, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__arrayT_char_const_p_2048_t, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_validate_mnemonic__SWIG_0(nargs, args, self);
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 2, "validate_mnemonic", 
-    "    bool validate_mnemonic(libbitcoin::wallet::word_list const &mnemonic, libbitcoin::wallet::dictionary const &lexicon)\n"
-    "    bool validate_mnemonic(libbitcoin::wallet::word_list const &mnemonic, libbitcoin::wallet::dictionary_list const &lexicons)\n"
-    "    bool validate_mnemonic(libbitcoin::wallet::word_list const &mnemonic)\n");
-  
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_decode_mnemonic(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::word_list *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  long_hash result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::decode_mnemonic", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::decode_mnemonic", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
-  result = libbitcoin::wallet::decode_mnemonic((string_list const &)*arg1);
-  vresult = SWIG_NewPointerObj((new long_hash(static_cast< const long_hash& >(result))), SWIGTYPE_p_long_hash, SWIG_POINTER_OWN |  0 );
-  return vresult;
-fail:
-  return Qnil;
-}
-
 
 SWIGINTERN VALUE
 _wrap_payment_size_get(VALUE self) {
@@ -13520,224 +7936,6 @@ free_libbitcoin_wallet_wrapped_data(void *self) {
     delete arg1;
 }
 
-static swig_class SwigClassSelectOutputs;
-
-
-/*
-  Document-method: Bitcoin::SelectOutputs.select
-
-  call-seq:
-    select(out, unspent, minimum_value, option=greedy)
-    select(out, unspent, minimum_value)
-
-Iterate thru each element in the SelectOutputs and select those that match a condition.  A block must be provided.
-*/
-SWIGINTERN VALUE
-_wrap_SelectOutputs_select__SWIG_0(int argc, VALUE *argv, VALUE self) {
-  chain::points_value *arg1 = 0 ;
-  chain::points_value *arg2 = 0 ;
-  uint64_t arg3 ;
-  libbitcoin::wallet::select_outputs::algorithm arg4 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  int val4 ;
-  int ecode4 = 0 ;
-  
-  if ((argc < 4) || (argc > 4)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 4)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_chain__points_value,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< chain::points_value * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_chain__points_value,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< chain::points_value * >(argp2);
-  {
-    res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "uint64_t","libbitcoin::wallet::select_outputs::select", 3, argv[2] )); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","libbitcoin::wallet::select_outputs::select", 3, argv[2]));
-    } else {
-      arg3 = *(reinterpret_cast< uint64_t * >(argp3));
-    }
-  }
-  ecode4 = SWIG_AsVal_int(argv[3], &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), Ruby_Format_TypeError( "", "libbitcoin::wallet::select_outputs::algorithm","libbitcoin::wallet::select_outputs::select", 4, argv[3] ));
-  } 
-  arg4 = static_cast< libbitcoin::wallet::select_outputs::algorithm >(val4);
-  libbitcoin::wallet::select_outputs::select(*arg1,(chain::points_value const &)*arg2,arg3,arg4);
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SelectOutputs_select__SWIG_1(int argc, VALUE *argv, VALUE self) {
-  chain::points_value *arg1 = 0 ;
-  chain::points_value *arg2 = 0 ;
-  uint64_t arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_chain__points_value,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0] )); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0])); 
-  }
-  arg1 = reinterpret_cast< chain::points_value * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_chain__points_value,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1] )); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1])); 
-  }
-  arg2 = reinterpret_cast< chain::points_value * >(argp2);
-  {
-    res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_uint64_t,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "uint64_t","libbitcoin::wallet::select_outputs::select", 3, argv[2] )); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint64_t","libbitcoin::wallet::select_outputs::select", 3, argv[2]));
-    } else {
-      arg3 = *(reinterpret_cast< uint64_t * >(argp3));
-    }
-  }
-  libbitcoin::wallet::select_outputs::select(*arg1,(chain::points_value const &)*arg2,arg3);
-  return Qnil;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE _wrap_SelectOutputs_select(int nargs, VALUE *args, VALUE self) {
-  int argc;
-  VALUE argv[4];
-  int ii;
-  
-  argc = nargs;
-  if (argc > 4) SWIG_fail;
-  for (ii = 0; (ii < argc); ++ii) {
-    argv[ii] = args[ii];
-  }
-  if (argc == 3) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__points_value, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_chain__points_value, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_uint64_t, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          return _wrap_SelectOutputs_select__SWIG_1(nargs, args, self);
-        }
-      }
-    }
-  }
-  if (argc == 4) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__points_value, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_chain__points_value, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_uint64_t, 0);
-        _v = SWIG_CheckState(res);
-        if (_v) {
-          {
-            int res = SWIG_AsVal_int(argv[3], NULL);
-            _v = SWIG_CheckState(res);
-          }
-          if (_v) {
-            return _wrap_SelectOutputs_select__SWIG_0(nargs, args, self);
-          }
-        }
-      }
-    }
-  }
-  
-fail:
-  Ruby_Format_OverloadedError( argc, 4, "SelectOutputs.select", 
-    "    void SelectOutputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value, libbitcoin::wallet::select_outputs::algorithm option)\n"
-    "    void SelectOutputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value)\n");
-  
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_SelectOutputs_allocate(VALUE self)
-#else
-_wrap_SelectOutputs_allocate(int argc, VALUE *argv, VALUE self)
-#endif
-{
-  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__select_outputs);
-#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
-  rb_obj_call_init(vresult, argc, argv);
-#endif
-  return vresult;
-}
-
-
-SWIGINTERN VALUE
-_wrap_new_SelectOutputs(int argc, VALUE *argv, VALUE self) {
-  libbitcoin::wallet::select_outputs *result = 0 ;
-  
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (libbitcoin::wallet::select_outputs *)new libbitcoin::wallet::select_outputs();
-  DATA_PTR(self) = result;
-  return self;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN void
-free_libbitcoin_wallet_select_outputs(void *self) {
-    libbitcoin::wallet::select_outputs *arg1 = (libbitcoin::wallet::select_outputs *)self;
-    delete arg1;
-}
-
 static swig_class SwigClassStealthAddress;
 
 SWIGINTERN VALUE
@@ -14507,6 +8705,5691 @@ fail:
 SWIGINTERN void
 free_libbitcoin_wallet_stealth_address(void *self) {
     libbitcoin::wallet::stealth_address *arg1 = (libbitcoin::wallet::stealth_address *)self;
+    delete arg1;
+}
+
+static swig_class SwigClassBitcoinURI;
+
+SWIGINTERN VALUE
+_wrap_new_BitcoinURI__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_BitcoinURI__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const &","bitcoin_uri", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::bitcoin_uri const &","bitcoin_uri", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((libbitcoin::wallet::bitcoin_uri const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_BitcoinURI__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  bool arg2 ;
+  int res1 = SWIG_OLDOBJ ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  ecode2 = SWIG_AsVal_bool(argv[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","bitcoin_uri", 2, argv[1] ));
+  } 
+  arg2 = static_cast< bool >(val2);
+  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((std::string const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_BitcoinURI_allocate(VALUE self)
+#else
+_wrap_BitcoinURI_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_BitcoinURI__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::bitcoin_uri *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","bitcoin_uri", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","bitcoin_uri", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  result = (libbitcoin::wallet::bitcoin_uri *)new libbitcoin::wallet::bitcoin_uri((std::string const &)*arg1);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_new_BitcoinURI(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[2];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 2) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 0) {
+    return _wrap_new_BitcoinURI__SWIG_0(nargs, args, self);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_BitcoinURI__SWIG_1(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_BitcoinURI__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_new_BitcoinURI__SWIG_2(nargs, args, self);
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 2, "bitcoin_uri.new", 
+    "    bitcoin_uri.new()\n"
+    "    bitcoin_uri.new(libbitcoin::wallet::bitcoin_uri const &other)\n"
+    "    bitcoin_uri.new(std::string const &uri, bool strict)\n"
+    "    bitcoin_uri.new(std::string const &uri)\n");
+  
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::BitcoinURI.<
+
+  call-seq:
+    <(other) -> bool
+
+Lower than comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_BitcoinURI___lt__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  libbitcoin::wallet::bitcoin_uri *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","operator <", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const &","operator <", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::bitcoin_uri const &","operator <", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp2);
+  result = (bool)((libbitcoin::wallet::bitcoin_uri const *)arg1)->operator <((libbitcoin::wallet::bitcoin_uri const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::BitcoinURI.==
+
+  call-seq:
+    ==(other) -> bool
+
+Equality comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_BitcoinURI___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  libbitcoin::wallet::bitcoin_uri *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","operator ==", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const &","operator ==", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::bitcoin_uri const &","operator ==", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp2);
+  result = (bool)((libbitcoin::wallet::bitcoin_uri const *)arg1)->operator ==((libbitcoin::wallet::bitcoin_uri const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_validq___(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","operator const bool", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = (bool)((libbitcoin::wallet::bitcoin_uri const *)arg1)->operator const bool();
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_encoded(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","encoded", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->encoded();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_amount(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  uint64_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","amount", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->amount();
+  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_label(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","label", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->label();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_message(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","message", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->message();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_r(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","r", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->r();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_address(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","address", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->address();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_payment(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::payment_address result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","payment", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->payment();
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::payment_address(static_cast< const libbitcoin::wallet::payment_address& >(result))), SWIGTYPE_p_libbitcoin__wallet__payment_address, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_stealth(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::stealth_address result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","stealth", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->stealth();
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::stealth_address(static_cast< const libbitcoin::wallet::stealth_address& >(result))), SWIGTYPE_p_libbitcoin__wallet__stealth_address, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_parameter(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri const *","parameter", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","parameter", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","parameter", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->parameter((std::string const &)*arg2);
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_amount(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  uint64_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_amount", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    arg2 = NUM2ULONG(argv[0]);
+  }
+  (arg1)->set_amount(arg2);
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_label(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_label", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_label", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_label", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  (arg1)->set_label((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_message(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_message", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_message", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_message", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  (arg1)->set_message((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_r(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_r", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_r", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_r", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  (arg1)->set_r((std::string const &)*arg2);
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_address__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_address", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_address", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_address", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  result = (bool)(arg1)->set_address((std::string const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_address__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  libbitcoin::wallet::payment_address *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_address", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__payment_address,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::payment_address const &","set_address", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::payment_address const &","set_address", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::payment_address * >(argp2);
+  (arg1)->set_address((libbitcoin::wallet::payment_address const &)*arg2);
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_address__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  libbitcoin::wallet::stealth_address *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_address", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__stealth_address,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::stealth_address const &","set_address", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::stealth_address const &","set_address", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::stealth_address * >(argp2);
+  (arg1)->set_address((libbitcoin::wallet::stealth_address const &)*arg2);
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_BitcoinURI_set_address(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[3];
+  int ii;
+  
+  argc = nargs + 1;
+  argv[0] = self;
+  if (argc > 3) SWIG_fail;
+  for (ii = 1; (ii < argc); ++ii) {
+    argv[ii] = args[ii-1];
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_libbitcoin__wallet__payment_address, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_BitcoinURI_set_address__SWIG_1(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_libbitcoin__wallet__stealth_address, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_BitcoinURI_set_address__SWIG_2(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_AsPtr_std_string(argv[1], (std::string**)(0));
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_BitcoinURI_set_address__SWIG_0(nargs, args, self);
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 3, "BitcoinURI.set_address", 
+    "    bool BitcoinURI.set_address(std::string const &address)\n"
+    "    void BitcoinURI.set_address(libbitcoin::wallet::payment_address const &payment)\n"
+    "    void BitcoinURI.set_address(libbitcoin::wallet::stealth_address const &stealth)\n");
+  
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_strict(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  bool arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_strict", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  ecode2 = SWIG_AsVal_bool(argv[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","set_strict", 2, argv[0] ));
+  } 
+  arg2 = static_cast< bool >(val2);
+  (arg1)->set_strict(arg2);
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_scheme(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_scheme", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_scheme", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_scheme", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  result = (bool)(arg1)->set_scheme((std::string const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_authority(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_authority", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_authority", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_authority", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  result = (bool)(arg1)->set_authority((std::string const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_path(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_path", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_path", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_path", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  result = (bool)(arg1)->set_path((std::string const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_fragment(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_fragment", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_fragment", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_fragment", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  result = (bool)(arg1)->set_fragment((std::string const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_BitcoinURI_set_parameter(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  int res3 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::bitcoin_uri *","set_parameter", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 2, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 2, argv[0])); 
+    }
+    arg2 = ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res3 = SWIG_AsPtr_std_string(argv[1], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","set_parameter", 3, argv[1] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","set_parameter", 3, argv[1])); 
+    }
+    arg3 = ptr;
+  }
+  result = (bool)(arg1)->set_parameter((std::string const &)*arg2,(std::string const &)*arg3);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_bitcoin_uri(void *self) {
+    libbitcoin::wallet::bitcoin_uri *arg1 = (libbitcoin::wallet::bitcoin_uri *)self;
+    delete arg1;
+}
+
+SWIGINTERN VALUE
+_wrap_dictionary_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::dictionary_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_en_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::en), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_es_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::es), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ja_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::ja), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_it_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::it), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_fr_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::fr), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_cs_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::cs), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ru_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::ru), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_uk_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::uk), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_zh_Hans_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::zh_Hans), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_zh_Hant_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::zh_Hant), SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_all_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::language::all), SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ek_max_lot_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ek_max_lot), SWIGTYPE_p_uint32_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ek_max_sequence_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::ek_max_sequence), SWIGTYPE_p_uint32_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ek_salt_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_salt_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ek_entropy_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_entropy_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ek_seed_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_seed_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_encrypted_token_encoded_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_token_encoded_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_encrypted_token_decoded_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_token_decoded_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ek_private_encoded_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_private_encoded_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_ek_private_decoded_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::ek_private_decoded_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_encrypted_public_encoded_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_public_encoded_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_encrypted_public_decoded_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::encrypted_public_decoded_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_create_key_pair__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
+  ec_compressed *arg2 = 0 ;
+  libbitcoin::wallet::encrypted_token *arg3 = 0 ;
+  libbitcoin::wallet::ek_seed *arg4 = 0 ;
+  uint8_t arg5 ;
+  bool arg6 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  bool val6 ;
+  int ecode6 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 6) || (argc > 6)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 6)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_ec_compressed,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< ec_compressed * >(argp2);
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_byte_arrayT_53_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp3);
+  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_24_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
+  }
+  arg4 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp4);
+  {
+    res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_uint8_t,  0 );
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
+    }  
+    if (!argp5) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4]));
+    } else {
+      arg5 = *(reinterpret_cast< uint8_t * >(argp5));
+    }
+  }
+  ecode6 = SWIG_AsVal_bool(argv[5], &val6);
+  if (!SWIG_IsOK(ecode6)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode6), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::create_key_pair", 6, argv[5] ));
+  } 
+  arg6 = static_cast< bool >(val6);
+  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,(byte_array< 53 > const &)*arg3,(byte_array< 24 > const &)*arg4,arg5,arg6);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_create_key_pair__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
+  ec_compressed *arg2 = 0 ;
+  libbitcoin::wallet::encrypted_token *arg3 = 0 ;
+  libbitcoin::wallet::ek_seed *arg4 = 0 ;
+  uint8_t arg5 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 5) || (argc > 5)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 5)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_ec_compressed,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< ec_compressed * >(argp2);
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_byte_arrayT_53_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp3);
+  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_24_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
+  }
+  arg4 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp4);
+  {
+    res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_uint8_t,  0 );
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
+    }  
+    if (!argp5) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 5, argv[4]));
+    } else {
+      arg5 = *(reinterpret_cast< uint8_t * >(argp5));
+    }
+  }
+  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,(byte_array< 53 > const &)*arg3,(byte_array< 24 > const &)*arg4,arg5);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_create_key_pair__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
+  libbitcoin::wallet::encrypted_public *arg2 = 0 ;
+  ec_compressed *arg3 = 0 ;
+  libbitcoin::wallet::encrypted_token *arg4 = 0 ;
+  libbitcoin::wallet::ek_seed *arg5 = 0 ;
+  uint8_t arg6 ;
+  bool arg7 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  void *argp6 ;
+  int res6 = 0 ;
+  bool val7 ;
+  int ecode7 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 7) || (argc > 7)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 7)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_byte_arrayT_55_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::encrypted_public * >(argp2);
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_compressed,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< ec_compressed * >(argp3);
+  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_53_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
+  }
+  arg4 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp4);
+  res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_byte_arrayT_24_t,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4])); 
+  }
+  arg5 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp5);
+  {
+    res6 = SWIG_ConvertPtr(argv[5], &argp6, SWIGTYPE_p_uint8_t,  0 );
+    if (!SWIG_IsOK(res6)) {
+      SWIG_exception_fail(SWIG_ArgError(res6), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5] )); 
+    }  
+    if (!argp6) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5]));
+    } else {
+      arg6 = *(reinterpret_cast< uint8_t * >(argp6));
+    }
+  }
+  ecode7 = SWIG_AsVal_bool(argv[6], &val7);
+  if (!SWIG_IsOK(ecode7)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode7), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::create_key_pair", 7, argv[6] ));
+  } 
+  arg7 = static_cast< bool >(val7);
+  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,*arg3,(byte_array< 53 > const &)*arg4,(byte_array< 24 > const &)*arg5,arg6,arg7);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_create_key_pair__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
+  libbitcoin::wallet::encrypted_public *arg2 = 0 ;
+  ec_compressed *arg3 = 0 ;
+  libbitcoin::wallet::encrypted_token *arg4 = 0 ;
+  libbitcoin::wallet::ek_seed *arg5 = 0 ;
+  uint8_t arg6 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  void *argp6 ;
+  int res6 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 6) || (argc > 6)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 6)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private &","libbitcoin::wallet::create_key_pair", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_byte_arrayT_55_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_public &","libbitcoin::wallet::create_key_pair", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::encrypted_public * >(argp2);
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_compressed,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_compressed &","libbitcoin::wallet::create_key_pair", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< ec_compressed * >(argp3);
+  res4 = SWIG_ConvertPtr(argv[3], &argp4, SWIGTYPE_p_byte_arrayT_53_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3] )); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","libbitcoin::wallet::create_key_pair", 4, argv[3])); 
+  }
+  arg4 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp4);
+  res5 = SWIG_ConvertPtr(argv[4], &argp5, SWIGTYPE_p_byte_arrayT_24_t,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4] )); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_seed const &","libbitcoin::wallet::create_key_pair", 5, argv[4])); 
+  }
+  arg5 = reinterpret_cast< libbitcoin::wallet::ek_seed * >(argp5);
+  {
+    res6 = SWIG_ConvertPtr(argv[5], &argp6, SWIGTYPE_p_uint8_t,  0 );
+    if (!SWIG_IsOK(res6)) {
+      SWIG_exception_fail(SWIG_ArgError(res6), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5] )); 
+    }  
+    if (!argp6) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::create_key_pair", 6, argv[5]));
+    } else {
+      arg6 = *(reinterpret_cast< uint8_t * >(argp6));
+    }
+  }
+  result = (bool)libbitcoin::wallet::create_key_pair(*arg1,*arg2,*arg3,(byte_array< 53 > const &)*arg4,(byte_array< 24 > const &)*arg5,arg6);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_create_key_pair(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[7];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 7) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 5) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_ec_compressed, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          void *vptr = 0;
+          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            void *vptr = 0;
+            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_uint8_t, 0);
+            _v = SWIG_CheckState(res);
+            if (_v) {
+              return _wrap_create_key_pair__SWIG_1(nargs, args, self);
+            }
+          }
+        }
+      }
+    }
+  }
+  if (argc == 6) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_ec_compressed, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          void *vptr = 0;
+          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            void *vptr = 0;
+            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_uint8_t, 0);
+            _v = SWIG_CheckState(res);
+            if (_v) {
+              {
+                int res = SWIG_AsVal_bool(argv[5], NULL);
+                _v = SWIG_CheckState(res);
+              }
+              if (_v) {
+                return _wrap_create_key_pair__SWIG_0(nargs, args, self);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  if (argc == 6) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_byte_arrayT_55_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_compressed, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          void *vptr = 0;
+          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            void *vptr = 0;
+            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
+            _v = SWIG_CheckState(res);
+            if (_v) {
+              void *vptr = 0;
+              int res = SWIG_ConvertPtr(argv[5], &vptr, SWIGTYPE_p_uint8_t, 0);
+              _v = SWIG_CheckState(res);
+              if (_v) {
+                return _wrap_create_key_pair__SWIG_3(nargs, args, self);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  if (argc == 7) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_byte_arrayT_55_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_compressed, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          void *vptr = 0;
+          int res = SWIG_ConvertPtr(argv[3], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            void *vptr = 0;
+            int res = SWIG_ConvertPtr(argv[4], &vptr, SWIGTYPE_p_byte_arrayT_24_t, 0);
+            _v = SWIG_CheckState(res);
+            if (_v) {
+              void *vptr = 0;
+              int res = SWIG_ConvertPtr(argv[5], &vptr, SWIGTYPE_p_uint8_t, 0);
+              _v = SWIG_CheckState(res);
+              if (_v) {
+                {
+                  int res = SWIG_AsVal_bool(argv[6], NULL);
+                  _v = SWIG_CheckState(res);
+                }
+                if (_v) {
+                  return _wrap_create_key_pair__SWIG_2(nargs, args, self);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 7, "create_key_pair", 
+    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version, bool compressed)\n"
+    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version)\n"
+    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, libbitcoin::wallet::encrypted_public &out_public, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version, bool compressed)\n"
+    "    bool create_key_pair(libbitcoin::wallet::encrypted_private &out_private, libbitcoin::wallet::encrypted_public &out_public, ec_compressed &out_point, libbitcoin::wallet::encrypted_token const &token, libbitcoin::wallet::ek_seed const &seed, uint8_t version)\n");
+  
+  return Qnil;
+}
+
+
+static swig_class SwigClassEKPrivate;
+
+SWIGINTERN VALUE
+_wrap_new_EKPrivate__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKPrivate__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::ek_private *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private((std::string const &)*arg1);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::encrypted_private *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ek_private *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_43_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_private const &","ek_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_private const &","ek_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_private * >(argp1);
+  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private((libbitcoin::wallet::encrypted_private const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_EKPrivate_allocate(VALUE self)
+#else
+_wrap_EKPrivate_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_private);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKPrivate__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ek_private *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ek_private,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const &","ek_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_private const &","ek_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
+  result = (libbitcoin::wallet::ek_private *)new libbitcoin::wallet::ek_private((libbitcoin::wallet::ek_private const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_new_EKPrivate(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[1];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 1) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 0) {
+    return _wrap_new_EKPrivate__SWIG_0(nargs, args, self);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_43_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPrivate__SWIG_2(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_private, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPrivate__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPrivate__SWIG_1(nargs, args, self);
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 1, "ek_private.new", 
+    "    ek_private.new()\n"
+    "    ek_private.new(std::string const &encoded)\n"
+    "    ek_private.new(libbitcoin::wallet::encrypted_private const &key)\n"
+    "    ek_private.new(libbitcoin::wallet::ek_private const &other)\n");
+  
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::EKPrivate.<
+
+  call-seq:
+    <(other) -> bool
+
+Lower than comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_EKPrivate___lt__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
+  libbitcoin::wallet::ek_private *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator <", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_private,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const &","operator <", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_private const &","operator <", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp2);
+  result = (bool)((libbitcoin::wallet::ek_private const *)arg1)->operator <((libbitcoin::wallet::ek_private const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::EKPrivate.==
+
+  call-seq:
+    ==(other) -> bool
+
+Equality comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_EKPrivate___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
+  libbitcoin::wallet::ek_private *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator ==", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_private,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const &","operator ==", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_private const &","operator ==", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp2);
+  result = (bool)((libbitcoin::wallet::ek_private const *)arg1)->operator ==((libbitcoin::wallet::ek_private const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPrivate_validq___(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator const bool", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
+  result = (bool)((libbitcoin::wallet::ek_private const *)arg1)->operator const bool();
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPrivate_encrypted_private(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::encrypted_private *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","operator const libbitcoin::wallet::encrypted_private&", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
+  result = (libbitcoin::wallet::encrypted_private *) &((libbitcoin::wallet::ek_private const *)arg1)->operator const libbitcoin::wallet::encrypted_private&();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_43_t, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPrivate_encoded(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","encoded", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
+  result = ((libbitcoin::wallet::ek_private const *)arg1)->encoded();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPrivate_private_key(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::encrypted_private *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_private const *","private_key", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_private * >(argp1);
+  result = (libbitcoin::wallet::encrypted_private *) &((libbitcoin::wallet::ek_private const *)arg1)->private_key();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_43_t, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_ek_private(void *self) {
+    libbitcoin::wallet::ek_private *arg1 = (libbitcoin::wallet::ek_private *)self;
+    delete arg1;
+}
+
+static swig_class SwigClassEKPublic;
+
+SWIGINTERN VALUE
+_wrap_new_EKPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::ek_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_public", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_public", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public((std::string const &)*arg1);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::encrypted_public *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ek_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_55_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_public const &","ek_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_public const &","ek_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_public * >(argp1);
+  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public((libbitcoin::wallet::encrypted_public const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_EKPublic_allocate(VALUE self)
+#else
+_wrap_EKPublic_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_public);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ek_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ek_public,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const &","ek_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_public const &","ek_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
+  result = (libbitcoin::wallet::ek_public *)new libbitcoin::wallet::ek_public((libbitcoin::wallet::ek_public const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_new_EKPublic(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[1];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 1) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 0) {
+    return _wrap_new_EKPublic__SWIG_0(nargs, args, self);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_55_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPublic__SWIG_2(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_public, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPublic__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKPublic__SWIG_1(nargs, args, self);
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 1, "ek_public.new", 
+    "    ek_public.new()\n"
+    "    ek_public.new(std::string const &encoded)\n"
+    "    ek_public.new(libbitcoin::wallet::encrypted_public const &key)\n"
+    "    ek_public.new(libbitcoin::wallet::ek_public const &other)\n");
+  
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::EKPublic.<
+
+  call-seq:
+    <(other) -> bool
+
+Lower than comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_EKPublic___lt__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
+  libbitcoin::wallet::ek_public *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator <", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_public,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const &","operator <", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_public const &","operator <", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp2);
+  result = (bool)((libbitcoin::wallet::ek_public const *)arg1)->operator <((libbitcoin::wallet::ek_public const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::EKPublic.==
+
+  call-seq:
+    ==(other) -> bool
+
+Equality comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_EKPublic___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
+  libbitcoin::wallet::ek_public *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator ==", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_public,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const &","operator ==", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_public const &","operator ==", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp2);
+  result = (bool)((libbitcoin::wallet::ek_public const *)arg1)->operator ==((libbitcoin::wallet::ek_public const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPublic_validq___(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator const bool", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
+  result = (bool)((libbitcoin::wallet::ek_public const *)arg1)->operator const bool();
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPublic_encrypted_public(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::encrypted_public *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","operator const libbitcoin::wallet::encrypted_public&", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
+  result = (libbitcoin::wallet::encrypted_public *) &((libbitcoin::wallet::ek_public const *)arg1)->operator const libbitcoin::wallet::encrypted_public&();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_55_t, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPublic_encoded(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","encoded", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
+  result = ((libbitcoin::wallet::ek_public const *)arg1)->encoded();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKPublic_public_key(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::encrypted_public *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_public const *","public_key", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_public * >(argp1);
+  result = (libbitcoin::wallet::encrypted_public *) &((libbitcoin::wallet::ek_public const *)arg1)->public_key();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_55_t, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_ek_public(void *self) {
+    libbitcoin::wallet::ek_public *arg1 = (libbitcoin::wallet::ek_public *)self;
+    delete arg1;
+}
+
+static swig_class SwigClassEKToken;
+
+SWIGINTERN VALUE
+_wrap_new_EKToken__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKToken__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::ek_token *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","ek_token", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","ek_token", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token((std::string const &)*arg1);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKToken__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::encrypted_token *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ek_token *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_53_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::encrypted_token const &","ek_token", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::encrypted_token const &","ek_token", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::encrypted_token * >(argp1);
+  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token((libbitcoin::wallet::encrypted_token const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_EKToken_allocate(VALUE self)
+#else
+_wrap_EKToken_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__ek_token);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_EKToken__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::ek_token *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__ek_token,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const &","ek_token", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_token const &","ek_token", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
+  result = (libbitcoin::wallet::ek_token *)new libbitcoin::wallet::ek_token((libbitcoin::wallet::ek_token const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_new_EKToken(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[1];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 1) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 0) {
+    return _wrap_new_EKToken__SWIG_0(nargs, args, self);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_53_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKToken__SWIG_2(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__ek_token, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKToken__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_EKToken__SWIG_1(nargs, args, self);
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 1, "ek_token.new", 
+    "    ek_token.new()\n"
+    "    ek_token.new(std::string const &encoded)\n"
+    "    ek_token.new(libbitcoin::wallet::encrypted_token const &key)\n"
+    "    ek_token.new(libbitcoin::wallet::ek_token const &other)\n");
+  
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::EKToken.<
+
+  call-seq:
+    <(other) -> bool
+
+Lower than comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_EKToken___lt__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
+  libbitcoin::wallet::ek_token *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator <", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_token,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const &","operator <", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_token const &","operator <", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp2);
+  result = (bool)((libbitcoin::wallet::ek_token const *)arg1)->operator <((libbitcoin::wallet::ek_token const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::EKToken.==
+
+  call-seq:
+    ==(other) -> bool
+
+Equality comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_EKToken___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
+  libbitcoin::wallet::ek_token *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator ==", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__ek_token,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const &","operator ==", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ek_token const &","operator ==", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp2);
+  result = (bool)((libbitcoin::wallet::ek_token const *)arg1)->operator ==((libbitcoin::wallet::ek_token const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKToken_validq___(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator const bool", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
+  result = (bool)((libbitcoin::wallet::ek_token const *)arg1)->operator const bool();
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKToken_encrypted_token(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::encrypted_token *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","operator const libbitcoin::wallet::encrypted_token&", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
+  result = (libbitcoin::wallet::encrypted_token *) &((libbitcoin::wallet::ek_token const *)arg1)->operator const libbitcoin::wallet::encrypted_token&();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_53_t, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKToken_encoded(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","encoded", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
+  result = ((libbitcoin::wallet::ek_token const *)arg1)->encoded();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_EKToken_token(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::encrypted_token *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__ek_token, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::ek_token const *","token", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::ek_token * >(argp1);
+  result = (libbitcoin::wallet::encrypted_token *) &((libbitcoin::wallet::ek_token const *)arg1)->token();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_53_t, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_ek_token(void *self) {
+    libbitcoin::wallet::ek_token *arg1 = (libbitcoin::wallet::ek_token *)self;
+    delete arg1;
+}
+
+SWIGINTERN VALUE
+_wrap_hd_first_hardened_key_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_first_hardened_key), SWIGTYPE_p_uint32_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_hd_chain_code_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::hd_chain_code_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_hd_key_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::hd_key_size));
+  return _val;
+}
+
+
+static swig_class SwigClassHDLineage;
+
+SWIGINTERN VALUE
+_wrap_HDLineage_prefixes_set(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  uint64_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","prefixes", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  {
+    arg2 = NUM2ULONG(argv[0]);
+  }
+  if (arg1) (arg1)->prefixes = arg2;
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDLineage_prefixes_get(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  uint64_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","prefixes", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  result =  ((arg1)->prefixes);
+  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDLineage_depth_set(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  uint8_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","depth", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint8_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint8_t","depth", 2, argv[0] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","depth", 2, argv[0]));
+    } else {
+      arg2 = *(reinterpret_cast< uint8_t * >(argp2));
+    }
+  }
+  if (arg1) (arg1)->depth = arg2;
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDLineage_depth_get(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  uint8_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","depth", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  result =  ((arg1)->depth);
+  vresult = SWIG_NewPointerObj((new uint8_t(static_cast< const uint8_t& >(result))), SWIGTYPE_p_uint8_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDLineage_parent_fingerprint_set(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  uint32_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","parent_fingerprint", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","parent_fingerprint", 2, argv[0] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","parent_fingerprint", 2, argv[0]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  if (arg1) (arg1)->parent_fingerprint = arg2;
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDLineage_parent_fingerprint_get(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  uint32_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","parent_fingerprint", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  result =  ((arg1)->parent_fingerprint);
+  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDLineage_child_number_set(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  uint32_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","child_number", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","child_number", 2, argv[0] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","child_number", 2, argv[0]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  if (arg1) (arg1)->child_number = arg2;
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDLineage_child_number_get(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  uint32_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage *","child_number", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  result =  ((arg1)->child_number);
+  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::HDLineage.==
+
+  call-seq:
+    ==(other) -> bool
+
+Equality comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_HDLineage___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *) 0 ;
+  libbitcoin::wallet::hd_lineage *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage const *","operator ==", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_lineage,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_lineage const &","operator ==", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_lineage const &","operator ==", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp2);
+  result = (bool)((libbitcoin::wallet::hd_lineage const *)arg1)->operator ==((libbitcoin::wallet::hd_lineage const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_HDLineage_allocate(VALUE self)
+#else
+_wrap_HDLineage_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_lineage);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDLineage(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_lineage *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::hd_lineage *)new libbitcoin::wallet::hd_lineage();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_hd_lineage(void *self) {
+    libbitcoin::wallet::hd_lineage *arg1 = (libbitcoin::wallet::hd_lineage *)self;
+    delete arg1;
+}
+
+static swig_class SwigClassHDPublic;
+
+SWIGINTERN VALUE
+_wrap_HDPublic_mainnet_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_public::mainnet), SWIGTYPE_p_uint32_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_testnet_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_public::testnet), SWIGTYPE_p_uint32_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_to_prefix(int argc, VALUE *argv, VALUE self) {
+  uint64_t arg1 ;
+  uint32_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    arg1 = NUM2ULONG(argv[0]);
+  }
+  result = libbitcoin::wallet::hd_public::to_prefix(arg1);
+  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPublic__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPublic__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__hd_public,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const &","hd_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_public const &","hd_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((libbitcoin::wallet::hd_public const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPublic__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_key *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
+  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((libbitcoin::wallet::hd_key const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPublic__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_key *arg1 = 0 ;
+  uint32_t arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::hd_public *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_public", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_public", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_public", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((libbitcoin::wallet::hd_key const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPublic__SWIG_4(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::hd_public *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((std::string const &)*arg1);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_HDPublic_allocate(VALUE self)
+#else
+_wrap_HDPublic_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_public);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPublic__SWIG_5(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  uint32_t arg2 ;
+  int res1 = SWIG_OLDOBJ ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::hd_public *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_public", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_public", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_public", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_public", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = (libbitcoin::wallet::hd_public *)new libbitcoin::wallet::hd_public((std::string const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_new_HDPublic(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[2];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 2) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 0) {
+    return _wrap_new_HDPublic__SWIG_0(nargs, args, self);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__hd_public, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_HDPublic__SWIG_1(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_HDPublic__SWIG_2(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_HDPublic__SWIG_4(nargs, args, self);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_HDPublic__SWIG_3(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_HDPublic__SWIG_5(nargs, args, self);
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 2, "hd_public.new", 
+    "    hd_public.new()\n"
+    "    hd_public.new(libbitcoin::wallet::hd_public const &other)\n"
+    "    hd_public.new(libbitcoin::wallet::hd_key const &public_key)\n"
+    "    hd_public.new(libbitcoin::wallet::hd_key const &public_key, uint32_t prefix)\n"
+    "    hd_public.new(std::string const &encoded)\n"
+    "    hd_public.new(std::string const &encoded, uint32_t prefix)\n");
+  
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::HDPublic.<
+
+  call-seq:
+    <(other) -> bool
+
+Lower than comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_HDPublic___lt__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  libbitcoin::wallet::hd_public *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator <", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_public,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const &","operator <", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_public const &","operator <", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp2);
+  result = (bool)((libbitcoin::wallet::hd_public const *)arg1)->operator <((libbitcoin::wallet::hd_public const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::HDPublic.==
+
+  call-seq:
+    ==(other) -> bool
+
+Equality comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_HDPublic___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  libbitcoin::wallet::hd_public *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator ==", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_public,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const &","operator ==", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_public const &","operator ==", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp2);
+  result = (bool)((libbitcoin::wallet::hd_public const *)arg1)->operator ==((libbitcoin::wallet::hd_public const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_validq___(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator const bool", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = (bool)((libbitcoin::wallet::hd_public const *)arg1)->operator const bool();
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_ec_compressed(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ec_compressed *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","operator const ec_compressed&", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = (ec_compressed *) &((libbitcoin::wallet::hd_public const *)arg1)->operator const ec_compressed&();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_encoded(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","encoded", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = ((libbitcoin::wallet::hd_public const *)arg1)->encoded();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_chain_code(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_chain_code *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","chain_code", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = (libbitcoin::wallet::hd_chain_code *) &((libbitcoin::wallet::hd_public const *)arg1)->chain_code();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_byte_arrayT_32_t, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_lineage(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_lineage *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","lineage", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = (libbitcoin::wallet::hd_lineage *) &((libbitcoin::wallet::hd_public const *)arg1)->lineage();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_libbitcoin__wallet__hd_lineage, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_point(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ec_compressed *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","point", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = (ec_compressed *) &((libbitcoin::wallet::hd_public const *)arg1)->point();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_compressed, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_to_hd_key(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_key result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","to_hd_key", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  result = ((libbitcoin::wallet::hd_public const *)arg1)->to_hd_key();
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_key(static_cast< const libbitcoin::wallet::hd_key& >(result))), SWIGTYPE_p_byte_arrayT_82_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPublic_derive_public(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *) 0 ;
+  uint32_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::hd_public result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_public, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_public const *","derive_public", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_public * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","derive_public", 2, argv[0] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","derive_public", 2, argv[0]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = ((libbitcoin::wallet::hd_public const *)arg1)->derive_public(arg2);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_public(static_cast< const libbitcoin::wallet::hd_public& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_public, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_hd_public(void *self) {
+    libbitcoin::wallet::hd_public *arg1 = (libbitcoin::wallet::hd_public *)self;
+    delete arg1;
+}
+
+static swig_class SwigClassHDPrivate;
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_mainnet_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_private::mainnet), SWIGTYPE_p_uint64_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_testnet_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_NewPointerObj(SWIG_as_voidptr(&libbitcoin::wallet::hd_private::testnet), SWIGTYPE_p_uint64_t,  0 );
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_to_prefix(int argc, VALUE *argv, VALUE self) {
+  uint64_t arg1 ;
+  uint32_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    arg1 = NUM2ULONG(argv[0]);
+  }
+  result = libbitcoin::wallet::hd_private::to_prefix(arg1);
+  vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_to_prefixes(int argc, VALUE *argv, VALUE self) {
+  uint32_t arg1 ;
+  uint32_t arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  uint64_t result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 1, argv[0] )); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 1, argv[0]));
+    } else {
+      arg1 = *(reinterpret_cast< uint32_t * >(argp1));
+    }
+  }
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","libbitcoin::wallet::hd_private::to_prefixes", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = libbitcoin::wallet::hd_private::to_prefixes(arg1,arg2);
+  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_libbitcoin__wallet__hd_private,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const &","hd_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_private const &","hd_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_private const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  data_chunk *arg1 = 0 ;
+  uint64_t arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_chunk,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_chunk const &","hd_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk const &","hd_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< data_chunk * >(argp1);
+  {
+    arg2 = NUM2ULONG(argv[1]);
+  }
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((data_chunk const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  data_chunk *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_chunk,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_chunk const &","hd_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_chunk const &","hd_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< data_chunk * >(argp1);
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((data_chunk const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_4(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_key *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_key const &)*arg1);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_5(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_key *arg1 = 0 ;
+  uint64_t arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
+  {
+    arg2 = NUM2ULONG(argv[1]);
+  }
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_key const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_6(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_key *arg1 = 0 ;
+  uint32_t arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_82_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_key const &","hd_private", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_private", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_private", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_key const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_7(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_8(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  uint64_t arg2 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  {
+    arg2 = NUM2ULONG(argv[1]);
+  }
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_HDPrivate_allocate(VALUE self)
+#else
+_wrap_HDPrivate_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__hd_private);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_HDPrivate__SWIG_9(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  uint32_t arg2 ;
+  int res1 = SWIG_OLDOBJ ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::hd_private *result = 0 ;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","hd_private", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","hd_private", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","hd_private", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","hd_private", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1,arg2);
+  DATA_PTR(self) = result;
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return self;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_new_HDPrivate(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[2];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 2) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 0) {
+    return _wrap_new_HDPrivate__SWIG_0(nargs, args, self);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_libbitcoin__wallet__hd_private, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_HDPrivate__SWIG_1(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_HDPrivate__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_HDPrivate__SWIG_4(nargs, args, self);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_HDPrivate__SWIG_7(nargs, args, self);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_HDPrivate__SWIG_6(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_82_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = FIXNUM_P(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_new_HDPrivate__SWIG_5(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_chunk, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = FIXNUM_P(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_new_HDPrivate__SWIG_2(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_uint32_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_HDPrivate__SWIG_9(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = FIXNUM_P(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_new_HDPrivate__SWIG_8(nargs, args, self);
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 2, "hd_private.new", 
+    "    hd_private.new()\n"
+    "    hd_private.new(libbitcoin::wallet::hd_private const &other)\n"
+    "    hd_private.new(data_chunk const &seed, uint64_t prefixes)\n"
+    "    hd_private.new(data_chunk const &seed)\n"
+    "    hd_private.new(libbitcoin::wallet::hd_key const &private_key)\n"
+    "    hd_private.new(libbitcoin::wallet::hd_key const &private_key, uint64_t prefixes)\n"
+    "    hd_private.new(libbitcoin::wallet::hd_key const &private_key, uint32_t public_prefix)\n"
+    "    hd_private.new(std::string const &encoded)\n"
+    "    hd_private.new(std::string const &encoded, uint64_t prefixes)\n"
+    "    hd_private.new(std::string const &encoded, uint32_t public_prefix)\n");
+  
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::HDPrivate.<
+
+  call-seq:
+    <(other) -> bool
+
+Lower than comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_HDPrivate___lt__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  libbitcoin::wallet::hd_private *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","operator <", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_private,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const &","operator <", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_private const &","operator <", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp2);
+  result = (bool)((libbitcoin::wallet::hd_private const *)arg1)->operator <((libbitcoin::wallet::hd_private const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+
+/*
+  Document-method: Bitcoin::HDPrivate.==
+
+  call-seq:
+    ==(other) -> bool
+
+Equality comparison operator.
+*/
+SWIGINTERN VALUE
+_wrap_HDPrivate___eq__(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  libbitcoin::wallet::hd_private *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","operator ==", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_libbitcoin__wallet__hd_private,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const &","operator ==", 2, argv[0] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::hd_private const &","operator ==", 2, argv[0])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp2);
+  result = (bool)((libbitcoin::wallet::hd_private const *)arg1)->operator ==((libbitcoin::wallet::hd_private const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_ec_secret(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ec_secret *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","operator const ec_secret&", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  result = (ec_secret *) &((libbitcoin::wallet::hd_private const *)arg1)->operator const ec_secret&();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_secret, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_encoded(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  std::string result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","encoded", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  result = ((libbitcoin::wallet::hd_private const *)arg1)->encoded();
+  vresult = SWIG_From_std_string(static_cast< std::string >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_secret(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ec_secret *result = 0 ;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","secret", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  result = (ec_secret *) &((libbitcoin::wallet::hd_private const *)arg1)->secret();
+  vresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ec_secret, 0 |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_to_hd_key(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_key result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","to_hd_key", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  result = ((libbitcoin::wallet::hd_private const *)arg1)->to_hd_key();
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_key(static_cast< const libbitcoin::wallet::hd_key& >(result))), SWIGTYPE_p_byte_arrayT_82_t, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_to_public(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::hd_public result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","to_public", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  result = ((libbitcoin::wallet::hd_private const *)arg1)->to_public();
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_public(static_cast< const libbitcoin::wallet::hd_public& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_public, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_derive_private(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  uint32_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::hd_private result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","derive_private", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","derive_private", 2, argv[0] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","derive_private", 2, argv[0]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = ((libbitcoin::wallet::hd_private const *)arg1)->derive_private(arg2);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_private(static_cast< const libbitcoin::wallet::hd_private& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_private, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_HDPrivate_derive_public(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *) 0 ;
+  uint32_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::hd_public result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(self, &argp1,SWIGTYPE_p_libbitcoin__wallet__hd_private, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::hd_private const *","derive_public", 1, self )); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::hd_private * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_uint32_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint32_t","derive_public", 2, argv[0] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint32_t","derive_public", 2, argv[0]));
+    } else {
+      arg2 = *(reinterpret_cast< uint32_t * >(argp2));
+    }
+  }
+  result = ((libbitcoin::wallet::hd_private const *)arg1)->derive_public(arg2);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::hd_public(static_cast< const libbitcoin::wallet::hd_public& >(result))), SWIGTYPE_p_libbitcoin__wallet__hd_public, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_hd_private(void *self) {
+    libbitcoin::wallet::hd_private *arg1 = (libbitcoin::wallet::hd_private *)self;
+    delete arg1;
+}
+
+SWIGINTERN VALUE
+_wrap_message_signature_size_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::message_signature_size));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_hash_message(int argc, VALUE *argv, VALUE self) {
+  SwigValueWrapper< data_slice > arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  hash_digest result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::hash_message", 1, argv[0] )); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::hash_message", 1, argv[0]));
+    } else {
+      arg1 = *(reinterpret_cast< data_slice * >(argp1));
+    }
+  }
+  result = libbitcoin::wallet::hash_message(arg1);
+  vresult = SWIG_NewPointerObj((new hash_digest(static_cast< const hash_digest& >(result))), SWIGTYPE_p_hash_digest, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sign_message__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::message_signature *arg1 = 0 ;
+  SwigValueWrapper< data_slice > arg2 ;
+  libbitcoin::wallet::ec_private *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< data_slice * >(argp2));
+    }
+  }
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_libbitcoin__wallet__ec_private,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::ec_private const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::ec_private const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< libbitcoin::wallet::ec_private * >(argp3);
+  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(libbitcoin::wallet::ec_private const &)*arg3);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sign_message__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::message_signature *arg1 = 0 ;
+  SwigValueWrapper< data_slice > arg2 ;
+  std::string *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< data_slice * >(argp2));
+    }
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res3 = SWIG_AsPtr_std_string(argv[2], &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
+    }
+    arg3 = ptr;
+  }
+  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(std::string const &)*arg3);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sign_message__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::message_signature *arg1 = 0 ;
+  SwigValueWrapper< data_slice > arg2 ;
+  ec_secret *arg3 = 0 ;
+  bool arg4 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  bool val4 ;
+  int ecode4 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 4) || (argc > 4)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 4)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< data_slice * >(argp2));
+    }
+  }
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_secret,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< ec_secret * >(argp3);
+  ecode4 = SWIG_AsVal_bool(argv[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::sign_message", 4, argv[3] ));
+  } 
+  arg4 = static_cast< bool >(val4);
+  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(ec_secret const &)*arg3,arg4);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sign_message__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::message_signature *arg1 = 0 ;
+  SwigValueWrapper< data_slice > arg2 ;
+  ec_secret *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature &","libbitcoin::wallet::sign_message", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::sign_message", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< data_slice * >(argp2));
+    }
+  }
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_ec_secret,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_secret const &","libbitcoin::wallet::sign_message", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< ec_secret * >(argp3);
+  result = (bool)libbitcoin::wallet::sign_message(*arg1,arg2,(ec_secret const &)*arg3);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_sign_message(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[4];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 4) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_libbitcoin__wallet__ec_private, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_sign_message__SWIG_0(nargs, args, self);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_secret, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_sign_message__SWIG_3(nargs, args, self);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        int res = SWIG_AsPtr_std_string(argv[2], (std::string**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_sign_message__SWIG_1(nargs, args, self);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_data_slice, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_ec_secret, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          {
+            int res = SWIG_AsVal_bool(argv[3], NULL);
+            _v = SWIG_CheckState(res);
+          }
+          if (_v) {
+            return _wrap_sign_message__SWIG_2(nargs, args, self);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 4, "sign_message", 
+    "    bool sign_message(libbitcoin::wallet::message_signature &signature, data_slice message, libbitcoin::wallet::ec_private const &secret)\n"
+    "    bool sign_message(libbitcoin::wallet::message_signature &out_signature, data_slice message, std::string const &wif)\n"
+    "    bool sign_message(libbitcoin::wallet::message_signature &out_signature, data_slice message, ec_secret const &secret, bool compressed)\n"
+    "    bool sign_message(libbitcoin::wallet::message_signature &out_signature, data_slice message, ec_secret const &secret)\n");
+  
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_verify_message(int argc, VALUE *argv, VALUE self) {
+  SwigValueWrapper< data_slice > arg1 ;
+  libbitcoin::wallet::payment_address *arg2 = 0 ;
+  libbitcoin::wallet::message_signature *arg3 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  {
+    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::verify_message", 1, argv[0] )); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::verify_message", 1, argv[0]));
+    } else {
+      arg1 = *(reinterpret_cast< data_slice * >(argp1));
+    }
+  }
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_libbitcoin__wallet__payment_address,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::payment_address const &","libbitcoin::wallet::verify_message", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::payment_address const &","libbitcoin::wallet::verify_message", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::payment_address * >(argp2);
+  res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_byte_arrayT_1_ec_signature_size_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "libbitcoin::wallet::message_signature const &","libbitcoin::wallet::verify_message", 3, argv[2] )); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::message_signature const &","libbitcoin::wallet::verify_message", 3, argv[2])); 
+  }
+  arg3 = reinterpret_cast< libbitcoin::wallet::message_signature * >(argp3);
+  result = (bool)libbitcoin::wallet::verify_message(arg1,(libbitcoin::wallet::payment_address const &)*arg2,(byte_array< 1+ec_signature_size > const &)*arg3);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_recovery_id_to_magic(int argc, VALUE *argv, VALUE self) {
+  uint8_t *arg1 = 0 ;
+  uint8_t arg2 ;
+  bool arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool val3 ;
+  int ecode3 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint8_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint8_t &","libbitcoin::wallet::recovery_id_to_magic", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t &","libbitcoin::wallet::recovery_id_to_magic", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< uint8_t * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_uint8_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::recovery_id_to_magic", 2, argv[1] )); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::recovery_id_to_magic", 2, argv[1]));
+    } else {
+      arg2 = *(reinterpret_cast< uint8_t * >(argp2));
+    }
+  }
+  ecode3 = SWIG_AsVal_bool(argv[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), Ruby_Format_TypeError( "", "bool","libbitcoin::wallet::recovery_id_to_magic", 3, argv[2] ));
+  } 
+  arg3 = static_cast< bool >(val3);
+  result = (bool)libbitcoin::wallet::recovery_id_to_magic(*arg1,arg2,arg3);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_magic_to_recovery_id(int argc, VALUE *argv, VALUE self) {
+  uint8_t *arg1 = 0 ;
+  bool *arg2 = 0 ;
+  uint8_t arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_uint8_t,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "uint8_t &","libbitcoin::wallet::magic_to_recovery_id", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t &","libbitcoin::wallet::magic_to_recovery_id", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< uint8_t * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_bool,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "bool &","libbitcoin::wallet::magic_to_recovery_id", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "bool &","libbitcoin::wallet::magic_to_recovery_id", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< bool * >(argp2);
+  {
+    res3 = SWIG_ConvertPtr(argv[2], &argp3, SWIGTYPE_p_uint8_t,  0 );
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "uint8_t","libbitcoin::wallet::magic_to_recovery_id", 3, argv[2] )); 
+    }  
+    if (!argp3) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "uint8_t","libbitcoin::wallet::magic_to_recovery_id", 3, argv[2]));
+    } else {
+      arg3 = *(reinterpret_cast< uint8_t * >(argp3));
+    }
+  }
+  result = (bool)libbitcoin::wallet::magic_to_recovery_id(*arg1,*arg2,arg3);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_minikey_to_secret(int argc, VALUE *argv, VALUE self) {
+  ec_secret *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_ec_secret,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "ec_secret &","libbitcoin::wallet::minikey_to_secret", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "ec_secret &","libbitcoin::wallet::minikey_to_secret", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< ec_secret * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(argv[1], &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin::wallet::minikey_to_secret", 2, argv[1])); 
+    }
+    arg2 = ptr;
+  }
+  result = (bool)libbitcoin::wallet::minikey_to_secret(*arg1,(std::string const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_mnemonic_word_multiple_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::mnemonic_word_multiple));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_mnemonic_seed_multiple_get(VALUE self) {
+  VALUE _val;
+  
+  _val = SWIG_From_size_t(static_cast< size_t >(libbitcoin::wallet::mnemonic_seed_multiple));
+  return _val;
+}
+
+
+SWIGINTERN VALUE
+_wrap_create_mnemonic__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  SwigValueWrapper< data_slice > arg1 ;
+  libbitcoin::wallet::dictionary *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  libbitcoin::wallet::word_list result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0] )); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0]));
+    } else {
+      arg1 = *(reinterpret_cast< data_slice * >(argp1));
+    }
+  }
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::create_mnemonic", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::create_mnemonic", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::dictionary * >(argp2);
+  result = libbitcoin::wallet::create_mnemonic(arg1,(std::array< char const *,2048 > const &)*arg2);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::word_list(static_cast< const libbitcoin::wallet::word_list& >(result))), SWIGTYPE_p_string_list, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_create_mnemonic__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  SwigValueWrapper< data_slice > arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  libbitcoin::wallet::word_list result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_data_slice,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0] )); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "data_slice","libbitcoin::wallet::create_mnemonic", 1, argv[0]));
+    } else {
+      arg1 = *(reinterpret_cast< data_slice * >(argp1));
+    }
+  }
+  result = libbitcoin::wallet::create_mnemonic(arg1);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::word_list(static_cast< const libbitcoin::wallet::word_list& >(result))), SWIGTYPE_p_string_list, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_create_mnemonic(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[2];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 2) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_slice, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_create_mnemonic__SWIG_1(nargs, args, self);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_data_slice, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__arrayT_char_const_p_2048_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_create_mnemonic__SWIG_0(nargs, args, self);
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 2, "create_mnemonic", 
+    "    libbitcoin::wallet::word_list create_mnemonic(data_slice entropy, libbitcoin::wallet::dictionary const &lexicon)\n"
+    "    libbitcoin::wallet::word_list create_mnemonic(data_slice entropy)\n");
+  
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_validate_mnemonic__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::word_list *arg1 = 0 ;
+  libbitcoin::wallet::dictionary *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_std__arrayT_char_const_p_2048_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::dictionary const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::dictionary * >(argp2);
+  result = (bool)libbitcoin::wallet::validate_mnemonic((string_list const &)*arg1,(std::array< char const *,2048 > const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_validate_mnemonic__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::word_list *arg1 = 0 ;
+  libbitcoin::wallet::dictionary_list *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::dictionary_list const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::dictionary_list const &","libbitcoin::wallet::validate_mnemonic", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< libbitcoin::wallet::dictionary_list * >(argp2);
+  result = (bool)libbitcoin::wallet::validate_mnemonic((string_list const &)*arg1,(std::vector< std::array< char const *,2048 > const * > const &)*arg2);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_validate_mnemonic__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::word_list *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  bool result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::validate_mnemonic", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
+  result = (bool)libbitcoin::wallet::validate_mnemonic((string_list const &)*arg1);
+  vresult = SWIG_From_bool(static_cast< bool >(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_validate_mnemonic(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[2];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 2) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_string_list, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_validate_mnemonic__SWIG_2(nargs, args, self);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_string_list, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_validate_mnemonic__SWIG_1(nargs, args, self);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_string_list, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__arrayT_char_const_p_2048_t, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_validate_mnemonic__SWIG_0(nargs, args, self);
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 2, "validate_mnemonic", 
+    "    bool validate_mnemonic(libbitcoin::wallet::word_list const &mnemonic, libbitcoin::wallet::dictionary const &lexicon)\n"
+    "    bool validate_mnemonic(libbitcoin::wallet::word_list const &mnemonic, libbitcoin::wallet::dictionary_list const &lexicons)\n"
+    "    bool validate_mnemonic(libbitcoin::wallet::word_list const &mnemonic)\n");
+  
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_decode_mnemonic(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::word_list *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  long_hash result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_string_list,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::decode_mnemonic", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::word_list const &","libbitcoin::wallet::decode_mnemonic", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< libbitcoin::wallet::word_list * >(argp1);
+  result = libbitcoin::wallet::decode_mnemonic((string_list const &)*arg1);
+  vresult = SWIG_NewPointerObj((new long_hash(static_cast< const long_hash& >(result))), SWIGTYPE_p_long_hash, SWIG_POINTER_OWN |  0 );
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+static swig_class SwigClassSelectOutputs;
+
+
+/*
+  Document-method: Bitcoin::SelectOutputs.select
+
+  call-seq:
+    select(out, unspent, minimum_value, option=GREEDY)
+    select(out, unspent, minimum_value)
+
+Iterate thru each element in the SelectOutputs and select those that match a condition.  A block must be provided.
+*/
+SWIGINTERN VALUE
+_wrap_SelectOutputs_select__SWIG_0(int argc, VALUE *argv, VALUE self) {
+  chain::points_value *arg1 = 0 ;
+  chain::points_value *arg2 = 0 ;
+  uint64_t arg3 ;
+  libbitcoin::wallet::select_outputs::algorithm arg4 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  
+  if ((argc < 4) || (argc > 4)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 4)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_chain__points_value,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< chain::points_value * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_chain__points_value,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< chain::points_value * >(argp2);
+  {
+    arg3 = NUM2ULONG(argv[2]);
+  }
+  ecode4 = SWIG_AsVal_int(argv[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), Ruby_Format_TypeError( "", "libbitcoin::wallet::select_outputs::algorithm","libbitcoin::wallet::select_outputs::select", 4, argv[3] ));
+  } 
+  arg4 = static_cast< libbitcoin::wallet::select_outputs::algorithm >(val4);
+  libbitcoin::wallet::select_outputs::select(*arg1,(chain::points_value const &)*arg2,arg3,arg4);
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_SelectOutputs_select__SWIG_1(int argc, VALUE *argv, VALUE self) {
+  chain::points_value *arg1 = 0 ;
+  chain::points_value *arg2 = 0 ;
+  uint64_t arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  res1 = SWIG_ConvertPtr(argv[0], &argp1, SWIGTYPE_p_chain__points_value,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0] )); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value &","libbitcoin::wallet::select_outputs::select", 1, argv[0])); 
+  }
+  arg1 = reinterpret_cast< chain::points_value * >(argp1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_chain__points_value,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1] )); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "chain::points_value const &","libbitcoin::wallet::select_outputs::select", 2, argv[1])); 
+  }
+  arg2 = reinterpret_cast< chain::points_value * >(argp2);
+  {
+    arg3 = NUM2ULONG(argv[2]);
+  }
+  libbitcoin::wallet::select_outputs::select(*arg1,(chain::points_value const &)*arg2,arg3);
+  return Qnil;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_SelectOutputs_select(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[4];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 4) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__points_value, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_chain__points_value, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        {
+          _v = FIXNUM_P(argv[2]) ? 1 : 0;
+        }
+        if (_v) {
+          return _wrap_SelectOutputs_select__SWIG_1(nargs, args, self);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_chain__points_value, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_chain__points_value, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        {
+          _v = FIXNUM_P(argv[2]) ? 1 : 0;
+        }
+        if (_v) {
+          {
+            int res = SWIG_AsVal_int(argv[3], NULL);
+            _v = SWIG_CheckState(res);
+          }
+          if (_v) {
+            return _wrap_SelectOutputs_select__SWIG_0(nargs, args, self);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 4, "SelectOutputs.select", 
+    "    void SelectOutputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value, libbitcoin::wallet::select_outputs::algorithm option)\n"
+    "    void SelectOutputs.select(chain::points_value &out, chain::points_value const &unspent, uint64_t minimum_value)\n");
+  
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+#ifdef HAVE_RB_DEFINE_ALLOC_FUNC
+_wrap_SelectOutputs_allocate(VALUE self)
+#else
+_wrap_SelectOutputs_allocate(int argc, VALUE *argv, VALUE self)
+#endif
+{
+  VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_libbitcoin__wallet__select_outputs);
+#ifndef HAVE_RB_DEFINE_ALLOC_FUNC
+  rb_obj_call_init(vresult, argc, argv);
+#endif
+  return vresult;
+}
+
+
+SWIGINTERN VALUE
+_wrap_new_SelectOutputs(int argc, VALUE *argv, VALUE self) {
+  libbitcoin::wallet::select_outputs *result = 0 ;
+  
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (libbitcoin::wallet::select_outputs *)new libbitcoin::wallet::select_outputs();
+  DATA_PTR(self) = result;
+  return self;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN void
+free_libbitcoin_wallet_select_outputs(void *self) {
+    libbitcoin::wallet::select_outputs *arg1 = (libbitcoin::wallet::select_outputs *)self;
     delete arg1;
 }
 
@@ -15332,12 +15215,8 @@ static swig_type_info _swigt__p_config__checkpoint = {"_p_config__checkpoint", "
 static swig_type_info _swigt__p_data_chunk = {"_p_data_chunk", "data_chunk *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_data_slice = {"_p_data_slice", "data_slice *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ec_compressed = {"_p_ec_compressed", "ec_compressed *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_ec_public = {"_p_ec_public", "ec_public *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ec_secret = {"_p_ec_secret", "ec_secret *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ec_uncompressed = {"_p_ec_uncompressed", "ec_uncompressed *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_encrypted_private = {"_p_encrypted_private", "encrypted_private *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_encrypted_public = {"_p_encrypted_public", "encrypted_public *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_encrypted_token = {"_p_encrypted_token", "encrypted_token *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_hash_digest = {"_p_hash_digest", "hash_digest *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int32_t = {"_p_int32_t", "int32_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int64_t = {"_p_int64_t", "int64_t *", 0, 0, (void*)0, 0};
@@ -15359,7 +15238,6 @@ static swig_type_info _swigt__p_libbitcoin__wallet__uri = {"_p_libbitcoin__walle
 static swig_type_info _swigt__p_libbitcoin__wallet__uri_reader = {"_p_libbitcoin__wallet__uri_reader", "libbitcoin::wallet::uri_reader *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_libbitcoin__wallet__wrapped_data = {"_p_libbitcoin__wallet__wrapped_data", "libbitcoin::wallet::wrapped_data *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_long_hash = {"_p_long_hash", "long_hash *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_payment_address = {"_p_payment_address", "payment_address *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_point_list = {"_p_point_list", "point_list *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ptr = {"_p_ptr", "ptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_query_map = {"_p_query_map", "query_map *", 0, 0, (void*)0, 0};
@@ -15370,7 +15248,6 @@ static swig_type_info _swigt__p_std__error_condition = {"_p_std__error_condition
 static swig_type_info _swigt__p_std__functionT_void_fstd__error_code_const_RF_t = {"_p_std__functionT_void_fstd__error_code_const_RF_t", "libbitcoin::handle0 *|std::function< void (std::error_code const &) > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_std__string_t = {"_p_std__mapT_std__string_std__string_t", "libbitcoin::wallet::uri::query_map *|std::map< std::string,std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t = {"_p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t", "std::vector< std::array< char const *,2048 > const * > *|libbitcoin::wallet::dictionary_list *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_stealth_address = {"_p_stealth_address", "stealth_address *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_string_list = {"_p_string_list", "string_list *|libbitcoin::wallet::word_list *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_uint16_t = {"_p_uint16_t", "uint16_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_uint32_t = {"_p_uint32_t", "uint32_t *", 0, 0, (void*)0, 0};
@@ -15400,12 +15277,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_data_chunk,
   &_swigt__p_data_slice,
   &_swigt__p_ec_compressed,
-  &_swigt__p_ec_public,
   &_swigt__p_ec_secret,
   &_swigt__p_ec_uncompressed,
-  &_swigt__p_encrypted_private,
-  &_swigt__p_encrypted_public,
-  &_swigt__p_encrypted_token,
   &_swigt__p_hash_digest,
   &_swigt__p_int32_t,
   &_swigt__p_int64_t,
@@ -15427,7 +15300,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_libbitcoin__wallet__uri_reader,
   &_swigt__p_libbitcoin__wallet__wrapped_data,
   &_swigt__p_long_hash,
-  &_swigt__p_payment_address,
   &_swigt__p_point_list,
   &_swigt__p_ptr,
   &_swigt__p_query_map,
@@ -15438,7 +15310,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__functionT_void_fstd__error_code_const_RF_t,
   &_swigt__p_std__mapT_std__string_std__string_t,
   &_swigt__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,
-  &_swigt__p_stealth_address,
   &_swigt__p_string_list,
   &_swigt__p_uint16_t,
   &_swigt__p_uint32_t,
@@ -15468,12 +15339,8 @@ static swig_cast_info _swigc__p_config__checkpoint[] = {  {&_swigt__p_config__ch
 static swig_cast_info _swigc__p_data_chunk[] = {  {&_swigt__p_data_chunk, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_data_slice[] = {  {&_swigt__p_data_slice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ec_compressed[] = {  {&_swigt__p_ec_compressed, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ec_public[] = {  {&_swigt__p_ec_public, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ec_secret[] = {  {&_swigt__p_ec_secret, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ec_uncompressed[] = {  {&_swigt__p_ec_uncompressed, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_encrypted_private[] = {  {&_swigt__p_encrypted_private, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_encrypted_public[] = {  {&_swigt__p_encrypted_public, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_encrypted_token[] = {  {&_swigt__p_encrypted_token, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_hash_digest[] = {  {&_swigt__p_hash_digest, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int32_t[] = {  {&_swigt__p_int32_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int64_t[] = {  {&_swigt__p_int64_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -15495,7 +15362,6 @@ static swig_cast_info _swigc__p_libbitcoin__wallet__uri[] = {  {&_swigt__p_libbi
 static swig_cast_info _swigc__p_libbitcoin__wallet__uri_reader[] = {  {&_swigt__p_libbitcoin__wallet__uri_reader, 0, 0, 0},  {&_swigt__p_libbitcoin__wallet__bitcoin_uri, _p_libbitcoin__wallet__bitcoin_uriTo_p_libbitcoin__wallet__uri_reader, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_libbitcoin__wallet__wrapped_data[] = {  {&_swigt__p_libbitcoin__wallet__wrapped_data, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_long_hash[] = {  {&_swigt__p_long_hash, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_payment_address[] = {  {&_swigt__p_payment_address, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_point_list[] = {  {&_swigt__p_point_list, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ptr[] = {  {&_swigt__p_ptr, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_query_map[] = {  {&_swigt__p_query_map, 0, 0, 0},{0, 0, 0, 0}};
@@ -15506,7 +15372,6 @@ static swig_cast_info _swigc__p_std__error_condition[] = {  {&_swigt__p_std__err
 static swig_cast_info _swigc__p_std__functionT_void_fstd__error_code_const_RF_t[] = {  {&_swigt__p_std__functionT_void_fstd__error_code_const_RF_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_std__string_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t[] = {  {&_swigt__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_stealth_address[] = {  {&_swigt__p_stealth_address, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_string_list[] = {  {&_swigt__p_string_list, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_uint16_t[] = {  {&_swigt__p_uint16_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_uint32_t[] = {  {&_swigt__p_uint32_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -15536,12 +15401,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_data_chunk,
   _swigc__p_data_slice,
   _swigc__p_ec_compressed,
-  _swigc__p_ec_public,
   _swigc__p_ec_secret,
   _swigc__p_ec_uncompressed,
-  _swigc__p_encrypted_private,
-  _swigc__p_encrypted_public,
-  _swigc__p_encrypted_token,
   _swigc__p_hash_digest,
   _swigc__p_int32_t,
   _swigc__p_int64_t,
@@ -15563,7 +15424,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_libbitcoin__wallet__uri_reader,
   _swigc__p_libbitcoin__wallet__wrapped_data,
   _swigc__p_long_hash,
-  _swigc__p_payment_address,
   _swigc__p_point_list,
   _swigc__p_ptr,
   _swigc__p_query_map,
@@ -15574,7 +15434,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__functionT_void_fstd__error_code_const_RF_t,
   _swigc__p_std__mapT_std__string_std__string_t,
   _swigc__p_std__vectorT_std__arrayT_char_const_p_2048_t_const_p_t,
-  _swigc__p_stealth_address,
   _swigc__p_string_list,
   _swigc__p_uint16_t,
   _swigc__p_uint32_t,
@@ -15951,177 +15810,177 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_singleton_method(mBitcoin, "no_retarget_subsidy_interval", VALUEFUNC(_wrap_no_retarget_subsidy_interval_get), 0);
   rb_define_module_function(mBitcoin, "subsidy_interval", VALUEFUNC(_wrap_subsidy_interval), -1);
   rb_define_module_function(mBitcoin, "max_money", VALUEFUNC(_wrap_max_money), -1);
-  rb_define_const(mBitcoin, "Failure", SWIG_From_int(static_cast< int >(libbitcoin::failure)));
-  rb_define_const(mBitcoin, "Okay", SWIG_From_int(static_cast< int >(libbitcoin::okay)));
-  rb_define_const(mBitcoin, "Invalid", SWIG_From_int(static_cast< int >(libbitcoin::invalid)));
-  rb_define_const(mBitcoin, "Success", SWIG_From_int(static_cast< int >(libbitcoin::error::success)));
-  rb_define_const(mBitcoin, "Deprecated", SWIG_From_int(static_cast< int >(libbitcoin::error::deprecated)));
-  rb_define_const(mBitcoin, "Unknown", SWIG_From_int(static_cast< int >(libbitcoin::error::unknown)));
-  rb_define_const(mBitcoin, "Not_found", SWIG_From_int(static_cast< int >(libbitcoin::error::not_found)));
-  rb_define_const(mBitcoin, "File_system", SWIG_From_int(static_cast< int >(libbitcoin::error::file_system)));
-  rb_define_const(mBitcoin, "Non_standard", SWIG_From_int(static_cast< int >(libbitcoin::error::non_standard)));
-  rb_define_const(mBitcoin, "Not_implemented", SWIG_From_int(static_cast< int >(libbitcoin::error::not_implemented)));
-  rb_define_const(mBitcoin, "Oversubscribed", SWIG_From_int(static_cast< int >(libbitcoin::error::oversubscribed)));
-  rb_define_const(mBitcoin, "Service_stopped", SWIG_From_int(static_cast< int >(libbitcoin::error::service_stopped)));
-  rb_define_const(mBitcoin, "Operation_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::operation_failed)));
-  rb_define_const(mBitcoin, "Resolve_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::resolve_failed)));
-  rb_define_const(mBitcoin, "Network_unreachable", SWIG_From_int(static_cast< int >(libbitcoin::error::network_unreachable)));
-  rb_define_const(mBitcoin, "Address_in_use", SWIG_From_int(static_cast< int >(libbitcoin::error::address_in_use)));
-  rb_define_const(mBitcoin, "Listen_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::listen_failed)));
-  rb_define_const(mBitcoin, "Accept_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::accept_failed)));
-  rb_define_const(mBitcoin, "Bad_stream", SWIG_From_int(static_cast< int >(libbitcoin::error::bad_stream)));
-  rb_define_const(mBitcoin, "Channel_timeout", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_timeout)));
-  rb_define_const(mBitcoin, "Address_blocked", SWIG_From_int(static_cast< int >(libbitcoin::error::address_blocked)));
-  rb_define_const(mBitcoin, "Channel_stopped", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_stopped)));
-  rb_define_const(mBitcoin, "Peer_throttling", SWIG_From_int(static_cast< int >(libbitcoin::error::peer_throttling)));
-  rb_define_const(mBitcoin, "Store_block_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_duplicate)));
-  rb_define_const(mBitcoin, "Store_block_invalid_height", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_invalid_height)));
-  rb_define_const(mBitcoin, "Store_block_missing_parent", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_missing_parent)));
-  rb_define_const(mBitcoin, "Duplicate_block", SWIG_From_int(static_cast< int >(libbitcoin::error::duplicate_block)));
-  rb_define_const(mBitcoin, "Orphan_block", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_block)));
-  rb_define_const(mBitcoin, "Invalid_previous_block", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_previous_block)));
-  rb_define_const(mBitcoin, "Insufficient_work", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_work)));
-  rb_define_const(mBitcoin, "Orphan_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_transaction)));
-  rb_define_const(mBitcoin, "Insufficient_fee", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_fee)));
-  rb_define_const(mBitcoin, "Dusty_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::dusty_transaction)));
-  rb_define_const(mBitcoin, "Stale_chain", SWIG_From_int(static_cast< int >(libbitcoin::error::stale_chain)));
-  rb_define_const(mBitcoin, "Invalid_proof_of_work", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_proof_of_work)));
-  rb_define_const(mBitcoin, "Futuristic_timestamp", SWIG_From_int(static_cast< int >(libbitcoin::error::futuristic_timestamp)));
-  rb_define_const(mBitcoin, "Checkpoints_failed", SWIG_From_int(static_cast< int >(libbitcoin::error::checkpoints_failed)));
-  rb_define_const(mBitcoin, "Old_version_block", SWIG_From_int(static_cast< int >(libbitcoin::error::old_version_block)));
-  rb_define_const(mBitcoin, "Incorrect_proof_of_work", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_proof_of_work)));
-  rb_define_const(mBitcoin, "Timestamp_too_early", SWIG_From_int(static_cast< int >(libbitcoin::error::timestamp_too_early)));
-  rb_define_const(mBitcoin, "Block_size_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_size_limit)));
-  rb_define_const(mBitcoin, "Empty_block", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_block)));
-  rb_define_const(mBitcoin, "First_not_coinbase", SWIG_From_int(static_cast< int >(libbitcoin::error::first_not_coinbase)));
-  rb_define_const(mBitcoin, "Extra_coinbases", SWIG_From_int(static_cast< int >(libbitcoin::error::extra_coinbases)));
-  rb_define_const(mBitcoin, "Internal_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::internal_duplicate)));
-  rb_define_const(mBitcoin, "Block_internal_double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::block_internal_double_spend)));
-  rb_define_const(mBitcoin, "Forward_reference", SWIG_From_int(static_cast< int >(libbitcoin::error::forward_reference)));
-  rb_define_const(mBitcoin, "Merkle_mismatch", SWIG_From_int(static_cast< int >(libbitcoin::error::merkle_mismatch)));
-  rb_define_const(mBitcoin, "Block_legacy_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_legacy_sigop_limit)));
-  rb_define_const(mBitcoin, "Block_non_final", SWIG_From_int(static_cast< int >(libbitcoin::error::block_non_final)));
-  rb_define_const(mBitcoin, "Coinbase_height_mismatch", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_height_mismatch)));
-  rb_define_const(mBitcoin, "Coinbase_value_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_value_limit)));
-  rb_define_const(mBitcoin, "Block_embedded_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_embedded_sigop_limit)));
-  rb_define_const(mBitcoin, "Invalid_witness_commitment", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness_commitment)));
-  rb_define_const(mBitcoin, "Block_weight_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::block_weight_limit)));
-  rb_define_const(mBitcoin, "Empty_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_transaction)));
-  rb_define_const(mBitcoin, "Previous_output_null", SWIG_From_int(static_cast< int >(libbitcoin::error::previous_output_null)));
-  rb_define_const(mBitcoin, "Spend_overflow", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_overflow)));
-  rb_define_const(mBitcoin, "Invalid_coinbase_script_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_coinbase_script_size)));
-  rb_define_const(mBitcoin, "Coinbase_transaction", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_transaction)));
-  rb_define_const(mBitcoin, "Transaction_internal_double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_internal_double_spend)));
-  rb_define_const(mBitcoin, "Transaction_size_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_size_limit)));
-  rb_define_const(mBitcoin, "Transaction_legacy_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_legacy_sigop_limit)));
-  rb_define_const(mBitcoin, "Transaction_non_final", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_non_final)));
-  rb_define_const(mBitcoin, "Premature_validation", SWIG_From_int(static_cast< int >(libbitcoin::error::premature_validation)));
-  rb_define_const(mBitcoin, "Unspent_duplicate", SWIG_From_int(static_cast< int >(libbitcoin::error::unspent_duplicate)));
-  rb_define_const(mBitcoin, "Missing_previous_output", SWIG_From_int(static_cast< int >(libbitcoin::error::missing_previous_output)));
-  rb_define_const(mBitcoin, "Double_spend", SWIG_From_int(static_cast< int >(libbitcoin::error::double_spend)));
-  rb_define_const(mBitcoin, "Coinbase_maturity", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_maturity)));
-  rb_define_const(mBitcoin, "Spend_exceeds_value", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_exceeds_value)));
-  rb_define_const(mBitcoin, "Transaction_embedded_sigop_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_embedded_sigop_limit)));
-  rb_define_const(mBitcoin, "Sequence_locked", SWIG_From_int(static_cast< int >(libbitcoin::error::sequence_locked)));
-  rb_define_const(mBitcoin, "Transaction_weight_limit", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_weight_limit)));
-  rb_define_const(mBitcoin, "Invalid_script", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script)));
-  rb_define_const(mBitcoin, "Invalid_script_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_size)));
-  rb_define_const(mBitcoin, "Invalid_push_data_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_push_data_size)));
-  rb_define_const(mBitcoin, "Invalid_operation_count", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_operation_count)));
-  rb_define_const(mBitcoin, "Invalid_stack_size", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_size)));
-  rb_define_const(mBitcoin, "Invalid_stack_scope", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_scope)));
-  rb_define_const(mBitcoin, "Invalid_script_embed", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_embed)));
-  rb_define_const(mBitcoin, "Invalid_signature_encoding", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_encoding)));
-  rb_define_const(mBitcoin, "Invalid_signature_lax_encoding", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_lax_encoding)));
-  rb_define_const(mBitcoin, "Incorrect_signature", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_signature)));
-  rb_define_const(mBitcoin, "Unexpected_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::unexpected_witness)));
-  rb_define_const(mBitcoin, "Invalid_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness)));
-  rb_define_const(mBitcoin, "Dirty_witness", SWIG_From_int(static_cast< int >(libbitcoin::error::dirty_witness)));
-  rb_define_const(mBitcoin, "Stack_false", SWIG_From_int(static_cast< int >(libbitcoin::error::stack_false)));
-  rb_define_const(mBitcoin, "Op_disabled", SWIG_From_int(static_cast< int >(libbitcoin::error::op_disabled)));
-  rb_define_const(mBitcoin, "Op_reserved", SWIG_From_int(static_cast< int >(libbitcoin::error::op_reserved)));
-  rb_define_const(mBitcoin, "Op_push_size", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_size)));
-  rb_define_const(mBitcoin, "Op_push_data", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_data)));
-  rb_define_const(mBitcoin, "Op_if", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if)));
-  rb_define_const(mBitcoin, "Op_notif", SWIG_From_int(static_cast< int >(libbitcoin::error::op_notif)));
-  rb_define_const(mBitcoin, "Op_else", SWIG_From_int(static_cast< int >(libbitcoin::error::op_else)));
-  rb_define_const(mBitcoin, "Op_endif", SWIG_From_int(static_cast< int >(libbitcoin::error::op_endif)));
-  rb_define_const(mBitcoin, "Op_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify1)));
-  rb_define_const(mBitcoin, "Op_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify2)));
-  rb_define_const(mBitcoin, "Op_return", SWIG_From_int(static_cast< int >(libbitcoin::error::op_return)));
-  rb_define_const(mBitcoin, "Op_to_alt_stack", SWIG_From_int(static_cast< int >(libbitcoin::error::op_to_alt_stack)));
-  rb_define_const(mBitcoin, "Op_from_alt_stack", SWIG_From_int(static_cast< int >(libbitcoin::error::op_from_alt_stack)));
-  rb_define_const(mBitcoin, "Op_drop2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop2)));
-  rb_define_const(mBitcoin, "Op_dup2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup2)));
-  rb_define_const(mBitcoin, "Op_dup3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup3)));
-  rb_define_const(mBitcoin, "Op_over2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over2)));
-  rb_define_const(mBitcoin, "Op_rot2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot2)));
-  rb_define_const(mBitcoin, "Op_swap2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap2)));
-  rb_define_const(mBitcoin, "Op_if_dup", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if_dup)));
-  rb_define_const(mBitcoin, "Op_drop", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop)));
-  rb_define_const(mBitcoin, "Op_dup", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup)));
-  rb_define_const(mBitcoin, "Op_nip", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nip)));
-  rb_define_const(mBitcoin, "Op_over", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over)));
-  rb_define_const(mBitcoin, "Op_pick", SWIG_From_int(static_cast< int >(libbitcoin::error::op_pick)));
-  rb_define_const(mBitcoin, "Op_roll", SWIG_From_int(static_cast< int >(libbitcoin::error::op_roll)));
-  rb_define_const(mBitcoin, "Op_rot", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot)));
-  rb_define_const(mBitcoin, "Op_swap", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap)));
-  rb_define_const(mBitcoin, "Op_tuck", SWIG_From_int(static_cast< int >(libbitcoin::error::op_tuck)));
-  rb_define_const(mBitcoin, "Op_size", SWIG_From_int(static_cast< int >(libbitcoin::error::op_size)));
-  rb_define_const(mBitcoin, "Op_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal)));
-  rb_define_const(mBitcoin, "Op_equal_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify1)));
-  rb_define_const(mBitcoin, "Op_equal_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify2)));
-  rb_define_const(mBitcoin, "Op_add1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add1)));
-  rb_define_const(mBitcoin, "Op_sub1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub1)));
-  rb_define_const(mBitcoin, "Op_negate", SWIG_From_int(static_cast< int >(libbitcoin::error::op_negate)));
-  rb_define_const(mBitcoin, "Op_abs", SWIG_From_int(static_cast< int >(libbitcoin::error::op_abs)));
-  rb_define_const(mBitcoin, "Op_not", SWIG_From_int(static_cast< int >(libbitcoin::error::op_not)));
-  rb_define_const(mBitcoin, "Op_nonzero", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nonzero)));
-  rb_define_const(mBitcoin, "Op_add", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add)));
-  rb_define_const(mBitcoin, "Op_sub", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub)));
-  rb_define_const(mBitcoin, "Op_bool_and", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_and)));
-  rb_define_const(mBitcoin, "Op_bool_or", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_or)));
-  rb_define_const(mBitcoin, "Op_num_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal)));
-  rb_define_const(mBitcoin, "Op_num_equal_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify1)));
-  rb_define_const(mBitcoin, "Op_num_equal_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify2)));
-  rb_define_const(mBitcoin, "Op_num_not_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_not_equal)));
-  rb_define_const(mBitcoin, "Op_less_than", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than)));
-  rb_define_const(mBitcoin, "Op_greater_than", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than)));
-  rb_define_const(mBitcoin, "Op_less_than_or_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than_or_equal)));
-  rb_define_const(mBitcoin, "Op_greater_than_or_equal", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than_or_equal)));
-  rb_define_const(mBitcoin, "Op_min", SWIG_From_int(static_cast< int >(libbitcoin::error::op_min)));
-  rb_define_const(mBitcoin, "Op_max", SWIG_From_int(static_cast< int >(libbitcoin::error::op_max)));
-  rb_define_const(mBitcoin, "Op_within", SWIG_From_int(static_cast< int >(libbitcoin::error::op_within)));
-  rb_define_const(mBitcoin, "Op_ripemd160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_ripemd160)));
-  rb_define_const(mBitcoin, "Op_sha1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha1)));
-  rb_define_const(mBitcoin, "Op_sha256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha256)));
-  rb_define_const(mBitcoin, "Op_hash160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash160)));
-  rb_define_const(mBitcoin, "Op_hash256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash256)));
-  rb_define_const(mBitcoin, "Op_code_seperator", SWIG_From_int(static_cast< int >(libbitcoin::error::op_code_seperator)));
-  rb_define_const(mBitcoin, "Op_check_sig_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig_verify1)));
-  rb_define_const(mBitcoin, "Op_check_sig", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify1)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify2)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify3)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify4)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify5)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify6)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify7)));
-  rb_define_const(mBitcoin, "Op_check_multisig", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig)));
-  rb_define_const(mBitcoin, "Op_check_locktime_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify1)));
-  rb_define_const(mBitcoin, "Op_check_locktime_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify2)));
-  rb_define_const(mBitcoin, "Op_check_locktime_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify3)));
-  rb_define_const(mBitcoin, "Op_check_locktime_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify4)));
-  rb_define_const(mBitcoin, "Op_check_locktime_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify5)));
-  rb_define_const(mBitcoin, "Op_check_locktime_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify6)));
-  rb_define_const(mBitcoin, "Op_check_sequence_verify1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify1)));
-  rb_define_const(mBitcoin, "Op_check_sequence_verify2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify2)));
-  rb_define_const(mBitcoin, "Op_check_sequence_verify3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify3)));
-  rb_define_const(mBitcoin, "Op_check_sequence_verify4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify4)));
-  rb_define_const(mBitcoin, "Op_check_sequence_verify5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify5)));
-  rb_define_const(mBitcoin, "Op_check_sequence_verify6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify6)));
-  rb_define_const(mBitcoin, "Op_check_sequence_verify7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify7)));
-  rb_define_const(mBitcoin, "Op_check_multisig_verify8", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify8)));
+  rb_define_const(mBitcoin, "FAILURE", SWIG_From_int(static_cast< int >(libbitcoin::failure)));
+  rb_define_const(mBitcoin, "OKAY", SWIG_From_int(static_cast< int >(libbitcoin::okay)));
+  rb_define_const(mBitcoin, "INVALID", SWIG_From_int(static_cast< int >(libbitcoin::invalid)));
+  rb_define_const(mBitcoin, "SUCCESS", SWIG_From_int(static_cast< int >(libbitcoin::error::success)));
+  rb_define_const(mBitcoin, "DEPRECATED", SWIG_From_int(static_cast< int >(libbitcoin::error::deprecated)));
+  rb_define_const(mBitcoin, "UNKNOWN", SWIG_From_int(static_cast< int >(libbitcoin::error::unknown)));
+  rb_define_const(mBitcoin, "NOT_FOUND", SWIG_From_int(static_cast< int >(libbitcoin::error::not_found)));
+  rb_define_const(mBitcoin, "FILE_SYSTEM", SWIG_From_int(static_cast< int >(libbitcoin::error::file_system)));
+  rb_define_const(mBitcoin, "NON_STANDARD", SWIG_From_int(static_cast< int >(libbitcoin::error::non_standard)));
+  rb_define_const(mBitcoin, "NOT_IMPLEMENTED", SWIG_From_int(static_cast< int >(libbitcoin::error::not_implemented)));
+  rb_define_const(mBitcoin, "OVERSUBSCRIBED", SWIG_From_int(static_cast< int >(libbitcoin::error::oversubscribed)));
+  rb_define_const(mBitcoin, "SERVICE_STOPPED", SWIG_From_int(static_cast< int >(libbitcoin::error::service_stopped)));
+  rb_define_const(mBitcoin, "OPERATION_FAILED", SWIG_From_int(static_cast< int >(libbitcoin::error::operation_failed)));
+  rb_define_const(mBitcoin, "RESOLVE_FAILED", SWIG_From_int(static_cast< int >(libbitcoin::error::resolve_failed)));
+  rb_define_const(mBitcoin, "NETWORK_UNREACHABLE", SWIG_From_int(static_cast< int >(libbitcoin::error::network_unreachable)));
+  rb_define_const(mBitcoin, "ADDRESS_IN_USE", SWIG_From_int(static_cast< int >(libbitcoin::error::address_in_use)));
+  rb_define_const(mBitcoin, "LISTEN_FAILED", SWIG_From_int(static_cast< int >(libbitcoin::error::listen_failed)));
+  rb_define_const(mBitcoin, "ACCEPT_FAILED", SWIG_From_int(static_cast< int >(libbitcoin::error::accept_failed)));
+  rb_define_const(mBitcoin, "BAD_STREAM", SWIG_From_int(static_cast< int >(libbitcoin::error::bad_stream)));
+  rb_define_const(mBitcoin, "CHANNEL_TIMEOUT", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_timeout)));
+  rb_define_const(mBitcoin, "ADDRESS_BLOCKED", SWIG_From_int(static_cast< int >(libbitcoin::error::address_blocked)));
+  rb_define_const(mBitcoin, "CHANNEL_STOPPED", SWIG_From_int(static_cast< int >(libbitcoin::error::channel_stopped)));
+  rb_define_const(mBitcoin, "PEER_THROTTLING", SWIG_From_int(static_cast< int >(libbitcoin::error::peer_throttling)));
+  rb_define_const(mBitcoin, "STORE_BLOCK_DUPLICATE", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_duplicate)));
+  rb_define_const(mBitcoin, "STORE_BLOCK_INVALID_HEIGHT", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_invalid_height)));
+  rb_define_const(mBitcoin, "STORE_BLOCK_MISSING_PARENT", SWIG_From_int(static_cast< int >(libbitcoin::error::store_block_missing_parent)));
+  rb_define_const(mBitcoin, "DUPLICATE_BLOCK", SWIG_From_int(static_cast< int >(libbitcoin::error::duplicate_block)));
+  rb_define_const(mBitcoin, "ORPHAN_BLOCK", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_block)));
+  rb_define_const(mBitcoin, "INVALID_PREVIOUS_BLOCK", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_previous_block)));
+  rb_define_const(mBitcoin, "INSUFFICIENT_WORK", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_work)));
+  rb_define_const(mBitcoin, "ORPHAN_TRANSACTION", SWIG_From_int(static_cast< int >(libbitcoin::error::orphan_transaction)));
+  rb_define_const(mBitcoin, "INSUFFICIENT_FEE", SWIG_From_int(static_cast< int >(libbitcoin::error::insufficient_fee)));
+  rb_define_const(mBitcoin, "DUSTY_TRANSACTION", SWIG_From_int(static_cast< int >(libbitcoin::error::dusty_transaction)));
+  rb_define_const(mBitcoin, "STALE_CHAIN", SWIG_From_int(static_cast< int >(libbitcoin::error::stale_chain)));
+  rb_define_const(mBitcoin, "INVALID_PROOF_OF_WORK", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_proof_of_work)));
+  rb_define_const(mBitcoin, "FUTURISTIC_TIMESTAMP", SWIG_From_int(static_cast< int >(libbitcoin::error::futuristic_timestamp)));
+  rb_define_const(mBitcoin, "CHECKPOINTS_FAILED", SWIG_From_int(static_cast< int >(libbitcoin::error::checkpoints_failed)));
+  rb_define_const(mBitcoin, "OLD_VERSION_BLOCK", SWIG_From_int(static_cast< int >(libbitcoin::error::old_version_block)));
+  rb_define_const(mBitcoin, "INCORRECT_PROOF_OF_WORK", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_proof_of_work)));
+  rb_define_const(mBitcoin, "TIMESTAMP_TOO_EARLY", SWIG_From_int(static_cast< int >(libbitcoin::error::timestamp_too_early)));
+  rb_define_const(mBitcoin, "BLOCK_SIZE_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::block_size_limit)));
+  rb_define_const(mBitcoin, "EMPTY_BLOCK", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_block)));
+  rb_define_const(mBitcoin, "FIRST_NOT_COINBASE", SWIG_From_int(static_cast< int >(libbitcoin::error::first_not_coinbase)));
+  rb_define_const(mBitcoin, "EXTRA_COINBASES", SWIG_From_int(static_cast< int >(libbitcoin::error::extra_coinbases)));
+  rb_define_const(mBitcoin, "INTERNAL_DUPLICATE", SWIG_From_int(static_cast< int >(libbitcoin::error::internal_duplicate)));
+  rb_define_const(mBitcoin, "BLOCK_INTERNAL_DOUBLE_SPEND", SWIG_From_int(static_cast< int >(libbitcoin::error::block_internal_double_spend)));
+  rb_define_const(mBitcoin, "FORWARD_REFERENCE", SWIG_From_int(static_cast< int >(libbitcoin::error::forward_reference)));
+  rb_define_const(mBitcoin, "MERKLE_MISMATCH", SWIG_From_int(static_cast< int >(libbitcoin::error::merkle_mismatch)));
+  rb_define_const(mBitcoin, "BLOCK_LEGACY_SIGOP_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::block_legacy_sigop_limit)));
+  rb_define_const(mBitcoin, "BLOCK_NON_FINAL", SWIG_From_int(static_cast< int >(libbitcoin::error::block_non_final)));
+  rb_define_const(mBitcoin, "COINBASE_HEIGHT_MISMATCH", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_height_mismatch)));
+  rb_define_const(mBitcoin, "COINBASE_VALUE_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_value_limit)));
+  rb_define_const(mBitcoin, "BLOCK_EMBEDDED_SIGOP_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::block_embedded_sigop_limit)));
+  rb_define_const(mBitcoin, "INVALID_WITNESS_COMMITMENT", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness_commitment)));
+  rb_define_const(mBitcoin, "BLOCK_WEIGHT_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::block_weight_limit)));
+  rb_define_const(mBitcoin, "EMPTY_TRANSACTION", SWIG_From_int(static_cast< int >(libbitcoin::error::empty_transaction)));
+  rb_define_const(mBitcoin, "PREVIOUS_OUTPUT_NULL", SWIG_From_int(static_cast< int >(libbitcoin::error::previous_output_null)));
+  rb_define_const(mBitcoin, "SPEND_OVERFLOW", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_overflow)));
+  rb_define_const(mBitcoin, "INVALID_COINBASE_SCRIPT_SIZE", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_coinbase_script_size)));
+  rb_define_const(mBitcoin, "COINBASE_TRANSACTION", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_transaction)));
+  rb_define_const(mBitcoin, "TRANSACTION_INTERNAL_DOUBLE_SPEND", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_internal_double_spend)));
+  rb_define_const(mBitcoin, "TRANSACTION_SIZE_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_size_limit)));
+  rb_define_const(mBitcoin, "TRANSACTION_LEGACY_SIGOP_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_legacy_sigop_limit)));
+  rb_define_const(mBitcoin, "TRANSACTION_NON_FINAL", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_non_final)));
+  rb_define_const(mBitcoin, "PREMATURE_VALIDATION", SWIG_From_int(static_cast< int >(libbitcoin::error::premature_validation)));
+  rb_define_const(mBitcoin, "UNSPENT_DUPLICATE", SWIG_From_int(static_cast< int >(libbitcoin::error::unspent_duplicate)));
+  rb_define_const(mBitcoin, "MISSING_PREVIOUS_OUTPUT", SWIG_From_int(static_cast< int >(libbitcoin::error::missing_previous_output)));
+  rb_define_const(mBitcoin, "DOUBLE_SPEND", SWIG_From_int(static_cast< int >(libbitcoin::error::double_spend)));
+  rb_define_const(mBitcoin, "COINBASE_MATURITY", SWIG_From_int(static_cast< int >(libbitcoin::error::coinbase_maturity)));
+  rb_define_const(mBitcoin, "SPEND_EXCEEDS_VALUE", SWIG_From_int(static_cast< int >(libbitcoin::error::spend_exceeds_value)));
+  rb_define_const(mBitcoin, "TRANSACTION_EMBEDDED_SIGOP_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_embedded_sigop_limit)));
+  rb_define_const(mBitcoin, "SEQUENCE_LOCKED", SWIG_From_int(static_cast< int >(libbitcoin::error::sequence_locked)));
+  rb_define_const(mBitcoin, "TRANSACTION_WEIGHT_LIMIT", SWIG_From_int(static_cast< int >(libbitcoin::error::transaction_weight_limit)));
+  rb_define_const(mBitcoin, "INVALID_SCRIPT", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script)));
+  rb_define_const(mBitcoin, "INVALID_SCRIPT_SIZE", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_size)));
+  rb_define_const(mBitcoin, "INVALID_PUSH_DATA_SIZE", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_push_data_size)));
+  rb_define_const(mBitcoin, "INVALID_OPERATION_COUNT", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_operation_count)));
+  rb_define_const(mBitcoin, "INVALID_STACK_SIZE", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_size)));
+  rb_define_const(mBitcoin, "INVALID_STACK_SCOPE", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_stack_scope)));
+  rb_define_const(mBitcoin, "INVALID_SCRIPT_EMBED", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_script_embed)));
+  rb_define_const(mBitcoin, "INVALID_SIGNATURE_ENCODING", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_encoding)));
+  rb_define_const(mBitcoin, "INVALID_SIGNATURE_LAX_ENCODING", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_signature_lax_encoding)));
+  rb_define_const(mBitcoin, "INCORRECT_SIGNATURE", SWIG_From_int(static_cast< int >(libbitcoin::error::incorrect_signature)));
+  rb_define_const(mBitcoin, "UNEXPECTED_WITNESS", SWIG_From_int(static_cast< int >(libbitcoin::error::unexpected_witness)));
+  rb_define_const(mBitcoin, "INVALID_WITNESS", SWIG_From_int(static_cast< int >(libbitcoin::error::invalid_witness)));
+  rb_define_const(mBitcoin, "DIRTY_WITNESS", SWIG_From_int(static_cast< int >(libbitcoin::error::dirty_witness)));
+  rb_define_const(mBitcoin, "STACK_FALSE", SWIG_From_int(static_cast< int >(libbitcoin::error::stack_false)));
+  rb_define_const(mBitcoin, "OP_DISABLED", SWIG_From_int(static_cast< int >(libbitcoin::error::op_disabled)));
+  rb_define_const(mBitcoin, "OP_RESERVED", SWIG_From_int(static_cast< int >(libbitcoin::error::op_reserved)));
+  rb_define_const(mBitcoin, "OP_PUSH_SIZE", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_size)));
+  rb_define_const(mBitcoin, "OP_PUSH_DATA", SWIG_From_int(static_cast< int >(libbitcoin::error::op_push_data)));
+  rb_define_const(mBitcoin, "OP_IF", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if)));
+  rb_define_const(mBitcoin, "OP_NOTIF", SWIG_From_int(static_cast< int >(libbitcoin::error::op_notif)));
+  rb_define_const(mBitcoin, "OP_ELSE", SWIG_From_int(static_cast< int >(libbitcoin::error::op_else)));
+  rb_define_const(mBitcoin, "OP_ENDIF", SWIG_From_int(static_cast< int >(libbitcoin::error::op_endif)));
+  rb_define_const(mBitcoin, "OP_VERIFY1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify1)));
+  rb_define_const(mBitcoin, "OP_VERIFY2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_verify2)));
+  rb_define_const(mBitcoin, "OP_RETURN", SWIG_From_int(static_cast< int >(libbitcoin::error::op_return)));
+  rb_define_const(mBitcoin, "OP_TO_ALT_STACK", SWIG_From_int(static_cast< int >(libbitcoin::error::op_to_alt_stack)));
+  rb_define_const(mBitcoin, "OP_FROM_ALT_STACK", SWIG_From_int(static_cast< int >(libbitcoin::error::op_from_alt_stack)));
+  rb_define_const(mBitcoin, "OP_DROP2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop2)));
+  rb_define_const(mBitcoin, "OP_DUP2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup2)));
+  rb_define_const(mBitcoin, "OP_DUP3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup3)));
+  rb_define_const(mBitcoin, "OP_OVER2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over2)));
+  rb_define_const(mBitcoin, "OP_ROT2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot2)));
+  rb_define_const(mBitcoin, "OP_SWAP2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap2)));
+  rb_define_const(mBitcoin, "OP_IF_DUP", SWIG_From_int(static_cast< int >(libbitcoin::error::op_if_dup)));
+  rb_define_const(mBitcoin, "OP_DROP", SWIG_From_int(static_cast< int >(libbitcoin::error::op_drop)));
+  rb_define_const(mBitcoin, "OP_DUP", SWIG_From_int(static_cast< int >(libbitcoin::error::op_dup)));
+  rb_define_const(mBitcoin, "OP_NIP", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nip)));
+  rb_define_const(mBitcoin, "OP_OVER", SWIG_From_int(static_cast< int >(libbitcoin::error::op_over)));
+  rb_define_const(mBitcoin, "OP_PICK", SWIG_From_int(static_cast< int >(libbitcoin::error::op_pick)));
+  rb_define_const(mBitcoin, "OP_ROLL", SWIG_From_int(static_cast< int >(libbitcoin::error::op_roll)));
+  rb_define_const(mBitcoin, "OP_ROT", SWIG_From_int(static_cast< int >(libbitcoin::error::op_rot)));
+  rb_define_const(mBitcoin, "OP_SWAP", SWIG_From_int(static_cast< int >(libbitcoin::error::op_swap)));
+  rb_define_const(mBitcoin, "OP_TUCK", SWIG_From_int(static_cast< int >(libbitcoin::error::op_tuck)));
+  rb_define_const(mBitcoin, "OP_SIZE", SWIG_From_int(static_cast< int >(libbitcoin::error::op_size)));
+  rb_define_const(mBitcoin, "OP_EQUAL", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal)));
+  rb_define_const(mBitcoin, "OP_EQUAL_VERIFY1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify1)));
+  rb_define_const(mBitcoin, "OP_EQUAL_VERIFY2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_equal_verify2)));
+  rb_define_const(mBitcoin, "OP_ADD1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add1)));
+  rb_define_const(mBitcoin, "OP_SUB1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub1)));
+  rb_define_const(mBitcoin, "OP_NEGATE", SWIG_From_int(static_cast< int >(libbitcoin::error::op_negate)));
+  rb_define_const(mBitcoin, "OP_ABS", SWIG_From_int(static_cast< int >(libbitcoin::error::op_abs)));
+  rb_define_const(mBitcoin, "OP_NOT", SWIG_From_int(static_cast< int >(libbitcoin::error::op_not)));
+  rb_define_const(mBitcoin, "OP_NONZERO", SWIG_From_int(static_cast< int >(libbitcoin::error::op_nonzero)));
+  rb_define_const(mBitcoin, "OP_ADD", SWIG_From_int(static_cast< int >(libbitcoin::error::op_add)));
+  rb_define_const(mBitcoin, "OP_SUB", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sub)));
+  rb_define_const(mBitcoin, "OP_BOOL_AND", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_and)));
+  rb_define_const(mBitcoin, "OP_BOOL_OR", SWIG_From_int(static_cast< int >(libbitcoin::error::op_bool_or)));
+  rb_define_const(mBitcoin, "OP_NUM_EQUAL", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal)));
+  rb_define_const(mBitcoin, "OP_NUM_EQUAL_VERIFY1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify1)));
+  rb_define_const(mBitcoin, "OP_NUM_EQUAL_VERIFY2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_equal_verify2)));
+  rb_define_const(mBitcoin, "OP_NUM_NOT_EQUAL", SWIG_From_int(static_cast< int >(libbitcoin::error::op_num_not_equal)));
+  rb_define_const(mBitcoin, "OP_LESS_THAN", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than)));
+  rb_define_const(mBitcoin, "OP_GREATER_THAN", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than)));
+  rb_define_const(mBitcoin, "OP_LESS_THAN_OR_EQUAL", SWIG_From_int(static_cast< int >(libbitcoin::error::op_less_than_or_equal)));
+  rb_define_const(mBitcoin, "OP_GREATER_THAN_OR_EQUAL", SWIG_From_int(static_cast< int >(libbitcoin::error::op_greater_than_or_equal)));
+  rb_define_const(mBitcoin, "OP_MIN", SWIG_From_int(static_cast< int >(libbitcoin::error::op_min)));
+  rb_define_const(mBitcoin, "OP_MAX", SWIG_From_int(static_cast< int >(libbitcoin::error::op_max)));
+  rb_define_const(mBitcoin, "OP_WITHIN", SWIG_From_int(static_cast< int >(libbitcoin::error::op_within)));
+  rb_define_const(mBitcoin, "OP_RIPEMD160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_ripemd160)));
+  rb_define_const(mBitcoin, "OP_SHA1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha1)));
+  rb_define_const(mBitcoin, "OP_SHA256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_sha256)));
+  rb_define_const(mBitcoin, "OP_HASH160", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash160)));
+  rb_define_const(mBitcoin, "OP_HASH256", SWIG_From_int(static_cast< int >(libbitcoin::error::op_hash256)));
+  rb_define_const(mBitcoin, "OP_CODE_SEPERATOR", SWIG_From_int(static_cast< int >(libbitcoin::error::op_code_seperator)));
+  rb_define_const(mBitcoin, "OP_CHECK_SIG_VERIFY1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig_verify1)));
+  rb_define_const(mBitcoin, "OP_CHECK_SIG", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sig)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify1)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify2)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify3)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify4)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify5)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify6)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify7)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig)));
+  rb_define_const(mBitcoin, "OP_CHECK_LOCKTIME_VERIFY1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify1)));
+  rb_define_const(mBitcoin, "OP_CHECK_LOCKTIME_VERIFY2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify2)));
+  rb_define_const(mBitcoin, "OP_CHECK_LOCKTIME_VERIFY3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify3)));
+  rb_define_const(mBitcoin, "OP_CHECK_LOCKTIME_VERIFY4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify4)));
+  rb_define_const(mBitcoin, "OP_CHECK_LOCKTIME_VERIFY5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify5)));
+  rb_define_const(mBitcoin, "OP_CHECK_LOCKTIME_VERIFY6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_locktime_verify6)));
+  rb_define_const(mBitcoin, "OP_CHECK_SEQUENCE_VERIFY1", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify1)));
+  rb_define_const(mBitcoin, "OP_CHECK_SEQUENCE_VERIFY2", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify2)));
+  rb_define_const(mBitcoin, "OP_CHECK_SEQUENCE_VERIFY3", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify3)));
+  rb_define_const(mBitcoin, "OP_CHECK_SEQUENCE_VERIFY4", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify4)));
+  rb_define_const(mBitcoin, "OP_CHECK_SEQUENCE_VERIFY5", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify5)));
+  rb_define_const(mBitcoin, "OP_CHECK_SEQUENCE_VERIFY6", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify6)));
+  rb_define_const(mBitcoin, "OP_CHECK_SEQUENCE_VERIFY7", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_sequence_verify7)));
+  rb_define_const(mBitcoin, "OP_CHECK_MULTISIG_VERIFY8", SWIG_From_int(static_cast< int >(libbitcoin::error::op_check_multisig_verify8)));
   rb_define_module_function(mBitcoin, "make_error_code", VALUEFUNC(_wrap_make_error_code), -1);
   rb_define_module_function(mBitcoin, "make_error_condition", VALUEFUNC(_wrap_make_error_condition), -1);
   rb_define_module_function(mBitcoin, "boost_to_error_code", VALUEFUNC(_wrap_boost_to_error_code), -1);
@@ -16172,6 +16031,121 @@ SWIGEXPORT void Init_bitcoin(void) {
   SwigClassURIReader.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri_reader;
   SwigClassURIReader.trackObjects = 0;
   
+  SwigClassECPublic.klass = rb_define_class_under(mBitcoin, "ECPublic", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_public, (void *) &SwigClassECPublic);
+  rb_define_alloc_func(SwigClassECPublic.klass, _wrap_ECPublic_allocate);
+  rb_define_method(SwigClassECPublic.klass, "initialize", VALUEFUNC(_wrap_new_ECPublic), -1);
+  rb_define_singleton_method(SwigClassECPublic.klass, "compressed_even", VALUEFUNC(_wrap_ECPublic_compressed_even_get), 0);
+  rb_define_singleton_method(SwigClassECPublic.klass, "compressed_odd", VALUEFUNC(_wrap_ECPublic_compressed_odd_get), 0);
+  rb_define_singleton_method(SwigClassECPublic.klass, "uncompressed", VALUEFUNC(_wrap_ECPublic_uncompressed_get), 0);
+  rb_define_singleton_method(SwigClassECPublic.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ECPublic_mainnet_p2kh_get), 0);
+  rb_define_method(SwigClassECPublic.klass, "<", VALUEFUNC(_wrap_ECPublic___lt__), -1);
+  rb_define_method(SwigClassECPublic.klass, "==", VALUEFUNC(_wrap_ECPublic___eq__), -1);
+  rb_define_method(SwigClassECPublic.klass, "valid?", VALUEFUNC(_wrap_ECPublic_validq___), -1);
+  rb_define_method(SwigClassECPublic.klass, "ec_compressed", VALUEFUNC(_wrap_ECPublic_ec_compressed), -1);
+  rb_define_method(SwigClassECPublic.klass, "encoded", VALUEFUNC(_wrap_ECPublic_encoded), -1);
+  rb_define_method(SwigClassECPublic.klass, "point", VALUEFUNC(_wrap_ECPublic_point), -1);
+  rb_define_method(SwigClassECPublic.klass, "compressed", VALUEFUNC(_wrap_ECPublic_compressed), -1);
+  rb_define_method(SwigClassECPublic.klass, "to_data", VALUEFUNC(_wrap_ECPublic_to_data), -1);
+  rb_define_method(SwigClassECPublic.klass, "to_uncompressed", VALUEFUNC(_wrap_ECPublic_to_uncompressed), -1);
+  rb_define_method(SwigClassECPublic.klass, "to_payment_address", VALUEFUNC(_wrap_ECPublic_to_payment_address), -1);
+  SwigClassECPublic.mark = 0;
+  SwigClassECPublic.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_public;
+  SwigClassECPublic.trackObjects = 0;
+  rb_define_singleton_method(mBitcoin, "wif_uncompressed_size", VALUEFUNC(_wrap_wif_uncompressed_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "wif_compressed_size", VALUEFUNC(_wrap_wif_compressed_size_get), 0);
+  
+  SwigClassECPrivate.klass = rb_define_class_under(mBitcoin, "ECPrivate", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_private, (void *) &SwigClassECPrivate);
+  rb_define_alloc_func(SwigClassECPrivate.klass, _wrap_ECPrivate_allocate);
+  rb_define_method(SwigClassECPrivate.klass, "initialize", VALUEFUNC(_wrap_new_ECPrivate), -1);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "compressed_sentinel", VALUEFUNC(_wrap_ECPrivate_compressed_sentinel_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet_wif", VALUEFUNC(_wrap_ECPrivate_mainnet_wif_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ECPrivate_mainnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet", VALUEFUNC(_wrap_ECPrivate_mainnet_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet_wif", VALUEFUNC(_wrap_ECPrivate_testnet_wif_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet_p2kh", VALUEFUNC(_wrap_ECPrivate_testnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet", VALUEFUNC(_wrap_ECPrivate_testnet_get), 0);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "to_address_prefix", VALUEFUNC(_wrap_ECPrivate_to_address_prefix), -1);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "to_wif_prefix", VALUEFUNC(_wrap_ECPrivate_to_wif_prefix), -1);
+  rb_define_singleton_method(SwigClassECPrivate.klass, "to_version", VALUEFUNC(_wrap_ECPrivate_to_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "<", VALUEFUNC(_wrap_ECPrivate___lt__), -1);
+  rb_define_method(SwigClassECPrivate.klass, "==", VALUEFUNC(_wrap_ECPrivate___eq__), -1);
+  rb_define_method(SwigClassECPrivate.klass, "valid?", VALUEFUNC(_wrap_ECPrivate_validq___), -1);
+  rb_define_method(SwigClassECPrivate.klass, "ec_secret", VALUEFUNC(_wrap_ECPrivate_ec_secret), -1);
+  rb_define_method(SwigClassECPrivate.klass, "encoded", VALUEFUNC(_wrap_ECPrivate_encoded), -1);
+  rb_define_method(SwigClassECPrivate.klass, "secret", VALUEFUNC(_wrap_ECPrivate_secret), -1);
+  rb_define_method(SwigClassECPrivate.klass, "version", VALUEFUNC(_wrap_ECPrivate_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "payment_version", VALUEFUNC(_wrap_ECPrivate_payment_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "wif_version", VALUEFUNC(_wrap_ECPrivate_wif_version), -1);
+  rb_define_method(SwigClassECPrivate.klass, "compressed", VALUEFUNC(_wrap_ECPrivate_compressed), -1);
+  rb_define_method(SwigClassECPrivate.klass, "to_public", VALUEFUNC(_wrap_ECPrivate_to_public), -1);
+  rb_define_method(SwigClassECPrivate.klass, "to_payment_address", VALUEFUNC(_wrap_ECPrivate_to_payment_address), -1);
+  SwigClassECPrivate.mark = 0;
+  SwigClassECPrivate.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_private;
+  SwigClassECPrivate.trackObjects = 0;
+  rb_define_singleton_method(mBitcoin, "payment_size", VALUEFUNC(_wrap_payment_size_get), 0);
+  
+  SwigClassPaymentAddress.klass = rb_define_class_under(mBitcoin, "PaymentAddress", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__payment_address, (void *) &SwigClassPaymentAddress);
+  rb_define_alloc_func(SwigClassPaymentAddress.klass, _wrap_PaymentAddress_allocate);
+  rb_define_method(SwigClassPaymentAddress.klass, "initialize", VALUEFUNC(_wrap_new_PaymentAddress), -1);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "mainnet_p2kh", VALUEFUNC(_wrap_PaymentAddress_mainnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "mainnet_p2sh", VALUEFUNC(_wrap_PaymentAddress_mainnet_p2sh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "testnet_p2kh", VALUEFUNC(_wrap_PaymentAddress_testnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "testnet_p2sh", VALUEFUNC(_wrap_PaymentAddress_testnet_p2sh_get), 0);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract", VALUEFUNC(_wrap_PaymentAddress_extract), -1);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract_input", VALUEFUNC(_wrap_PaymentAddress_extract_input), -1);
+  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract_output", VALUEFUNC(_wrap_PaymentAddress_extract_output), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "<", VALUEFUNC(_wrap_PaymentAddress___lt__), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "==", VALUEFUNC(_wrap_PaymentAddress___eq__), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "valid?", VALUEFUNC(_wrap_PaymentAddress_validq___), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "short_hash", VALUEFUNC(_wrap_PaymentAddress_short_hash), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "encoded", VALUEFUNC(_wrap_PaymentAddress_encoded), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "version", VALUEFUNC(_wrap_PaymentAddress_version), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "hash", VALUEFUNC(_wrap_PaymentAddress_hash), -1);
+  rb_define_method(SwigClassPaymentAddress.klass, "to_payment", VALUEFUNC(_wrap_PaymentAddress_to_payment), -1);
+  SwigClassPaymentAddress.mark = 0;
+  SwigClassPaymentAddress.destroy = (void (*)(void *)) free_libbitcoin_wallet_payment_address;
+  SwigClassPaymentAddress.trackObjects = 0;
+  
+  SwigClassWrappedData.klass = rb_define_class_under(mBitcoin, "WrappedData", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__wrapped_data, (void *) &SwigClassWrappedData);
+  rb_define_alloc_func(SwigClassWrappedData.klass, _wrap_WrappedData_allocate);
+  rb_define_method(SwigClassWrappedData.klass, "initialize", VALUEFUNC(_wrap_new_WrappedData), -1);
+  rb_define_method(SwigClassWrappedData.klass, "version=", VALUEFUNC(_wrap_WrappedData_version_set), -1);
+  rb_define_method(SwigClassWrappedData.klass, "version", VALUEFUNC(_wrap_WrappedData_version_get), -1);
+  rb_define_method(SwigClassWrappedData.klass, "payload=", VALUEFUNC(_wrap_WrappedData_payload_set), -1);
+  rb_define_method(SwigClassWrappedData.klass, "payload", VALUEFUNC(_wrap_WrappedData_payload_get), -1);
+  rb_define_method(SwigClassWrappedData.klass, "checksum=", VALUEFUNC(_wrap_WrappedData_checksum_set), -1);
+  rb_define_method(SwigClassWrappedData.klass, "checksum", VALUEFUNC(_wrap_WrappedData_checksum_get), -1);
+  SwigClassWrappedData.mark = 0;
+  SwigClassWrappedData.destroy = (void (*)(void *)) free_libbitcoin_wallet_wrapped_data;
+  SwigClassWrappedData.trackObjects = 0;
+  
+  SwigClassStealthAddress.klass = rb_define_class_under(mBitcoin, "StealthAddress", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_address, (void *) &SwigClassStealthAddress);
+  rb_define_alloc_func(SwigClassStealthAddress.klass, _wrap_StealthAddress_allocate);
+  rb_define_method(SwigClassStealthAddress.klass, "initialize", VALUEFUNC(_wrap_new_StealthAddress), -1);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "mainnet_p2kh", VALUEFUNC(_wrap_StealthAddress_mainnet_p2kh_get), 0);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "reuse_key_flag", VALUEFUNC(_wrap_StealthAddress_reuse_key_flag_get), 0);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "min_filter_bits", VALUEFUNC(_wrap_StealthAddress_min_filter_bits_get), 0);
+  rb_define_singleton_method(SwigClassStealthAddress.klass, "max_filter_bits", VALUEFUNC(_wrap_StealthAddress_max_filter_bits_get), 0);
+  rb_define_method(SwigClassStealthAddress.klass, "<", VALUEFUNC(_wrap_StealthAddress___lt__), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "==", VALUEFUNC(_wrap_StealthAddress___eq__), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "valid?", VALUEFUNC(_wrap_StealthAddress_validq___), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "data_chunk", VALUEFUNC(_wrap_StealthAddress_data_chunk), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "encoded", VALUEFUNC(_wrap_StealthAddress_encoded), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "version", VALUEFUNC(_wrap_StealthAddress_version), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "scan_key", VALUEFUNC(_wrap_StealthAddress_scan_key), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "spend_keys", VALUEFUNC(_wrap_StealthAddress_spend_keys), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "signatures", VALUEFUNC(_wrap_StealthAddress_signatures), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "filter", VALUEFUNC(_wrap_StealthAddress_filter), -1);
+  rb_define_method(SwigClassStealthAddress.klass, "to_chunk", VALUEFUNC(_wrap_StealthAddress_to_chunk), -1);
+  SwigClassStealthAddress.mark = 0;
+  SwigClassStealthAddress.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_address;
+  SwigClassStealthAddress.trackObjects = 0;
+  
   SwigClassBitcoinURI.klass = rb_define_class_under(mBitcoin, "BitcoinURI", ((swig_class *) SWIGTYPE_p_libbitcoin__wallet__uri_reader->clientdata)->klass);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, (void *) &SwigClassBitcoinURI);
   rb_define_alloc_func(SwigClassBitcoinURI.klass, _wrap_BitcoinURI_allocate);
@@ -16214,60 +16188,23 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_singleton_method(mBitcoin, "zh_Hans", VALUEFUNC(_wrap_zh_Hans_get), 0);
   rb_define_singleton_method(mBitcoin, "zh_Hant", VALUEFUNC(_wrap_zh_Hant_get), 0);
   rb_define_singleton_method(mBitcoin, "all", VALUEFUNC(_wrap_all_get), 0);
-  rb_define_singleton_method(mBitcoin, "wif_uncompressed_size", VALUEFUNC(_wrap_wif_uncompressed_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "wif_compressed_size", VALUEFUNC(_wrap_wif_compressed_size_get), 0);
-  
-  SwigClassECPrivate.klass = rb_define_class_under(mBitcoin, "ECPrivate", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_private, (void *) &SwigClassECPrivate);
-  rb_define_alloc_func(SwigClassECPrivate.klass, _wrap_ECPrivate_allocate);
-  rb_define_method(SwigClassECPrivate.klass, "initialize", VALUEFUNC(_wrap_new_ECPrivate), -1);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "compressed_sentinel", VALUEFUNC(_wrap_ECPrivate_compressed_sentinel_get), 0);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet_wif", VALUEFUNC(_wrap_ECPrivate_mainnet_wif_get), 0);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ECPrivate_mainnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "mainnet", VALUEFUNC(_wrap_ECPrivate_mainnet_get), 0);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet_wif", VALUEFUNC(_wrap_ECPrivate_testnet_wif_get), 0);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet_p2kh", VALUEFUNC(_wrap_ECPrivate_testnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "testnet", VALUEFUNC(_wrap_ECPrivate_testnet_get), 0);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "to_address_prefix", VALUEFUNC(_wrap_ECPrivate_to_address_prefix), -1);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "to_wif_prefix", VALUEFUNC(_wrap_ECPrivate_to_wif_prefix), -1);
-  rb_define_singleton_method(SwigClassECPrivate.klass, "to_version", VALUEFUNC(_wrap_ECPrivate_to_version), -1);
-  rb_define_method(SwigClassECPrivate.klass, "<", VALUEFUNC(_wrap_ECPrivate___lt__), -1);
-  rb_define_method(SwigClassECPrivate.klass, "==", VALUEFUNC(_wrap_ECPrivate___eq__), -1);
-  rb_define_method(SwigClassECPrivate.klass, "valid?", VALUEFUNC(_wrap_ECPrivate_validq___), -1);
-  rb_define_method(SwigClassECPrivate.klass, "ec_secret", VALUEFUNC(_wrap_ECPrivate_ec_secret), -1);
-  rb_define_method(SwigClassECPrivate.klass, "encoded", VALUEFUNC(_wrap_ECPrivate_encoded), -1);
-  rb_define_method(SwigClassECPrivate.klass, "secret", VALUEFUNC(_wrap_ECPrivate_secret), -1);
-  rb_define_method(SwigClassECPrivate.klass, "version", VALUEFUNC(_wrap_ECPrivate_version), -1);
-  rb_define_method(SwigClassECPrivate.klass, "payment_version", VALUEFUNC(_wrap_ECPrivate_payment_version), -1);
-  rb_define_method(SwigClassECPrivate.klass, "wif_version", VALUEFUNC(_wrap_ECPrivate_wif_version), -1);
-  rb_define_method(SwigClassECPrivate.klass, "compressed", VALUEFUNC(_wrap_ECPrivate_compressed), -1);
-  rb_define_method(SwigClassECPrivate.klass, "to_public", VALUEFUNC(_wrap_ECPrivate_to_public), -1);
-  rb_define_method(SwigClassECPrivate.klass, "to_payment_address", VALUEFUNC(_wrap_ECPrivate_to_payment_address), -1);
-  SwigClassECPrivate.mark = 0;
-  SwigClassECPrivate.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_private;
-  SwigClassECPrivate.trackObjects = 0;
-  
-  SwigClassECPublic.klass = rb_define_class_under(mBitcoin, "ECPublic", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ec_public, (void *) &SwigClassECPublic);
-  rb_define_alloc_func(SwigClassECPublic.klass, _wrap_ECPublic_allocate);
-  rb_define_method(SwigClassECPublic.klass, "initialize", VALUEFUNC(_wrap_new_ECPublic), -1);
-  rb_define_singleton_method(SwigClassECPublic.klass, "compressed_even", VALUEFUNC(_wrap_ECPublic_compressed_even_get), 0);
-  rb_define_singleton_method(SwigClassECPublic.klass, "compressed_odd", VALUEFUNC(_wrap_ECPublic_compressed_odd_get), 0);
-  rb_define_singleton_method(SwigClassECPublic.klass, "uncompressed", VALUEFUNC(_wrap_ECPublic_uncompressed_get), 0);
-  rb_define_singleton_method(SwigClassECPublic.klass, "mainnet_p2kh", VALUEFUNC(_wrap_ECPublic_mainnet_p2kh_get), 0);
-  rb_define_method(SwigClassECPublic.klass, "<", VALUEFUNC(_wrap_ECPublic___lt__), -1);
-  rb_define_method(SwigClassECPublic.klass, "==", VALUEFUNC(_wrap_ECPublic___eq__), -1);
-  rb_define_method(SwigClassECPublic.klass, "valid?", VALUEFUNC(_wrap_ECPublic_validq___), -1);
-  rb_define_method(SwigClassECPublic.klass, "ec_compressed", VALUEFUNC(_wrap_ECPublic_ec_compressed), -1);
-  rb_define_method(SwigClassECPublic.klass, "encoded", VALUEFUNC(_wrap_ECPublic_encoded), -1);
-  rb_define_method(SwigClassECPublic.klass, "point", VALUEFUNC(_wrap_ECPublic_point), -1);
-  rb_define_method(SwigClassECPublic.klass, "compressed", VALUEFUNC(_wrap_ECPublic_compressed), -1);
-  rb_define_method(SwigClassECPublic.klass, "to_data", VALUEFUNC(_wrap_ECPublic_to_data), -1);
-  rb_define_method(SwigClassECPublic.klass, "to_uncompressed", VALUEFUNC(_wrap_ECPublic_to_uncompressed), -1);
-  rb_define_method(SwigClassECPublic.klass, "to_payment_address", VALUEFUNC(_wrap_ECPublic_to_payment_address), -1);
-  SwigClassECPublic.mark = 0;
-  SwigClassECPublic.destroy = (void (*)(void *)) free_libbitcoin_wallet_ec_public;
-  SwigClassECPublic.trackObjects = 0;
+  rb_define_singleton_method(mBitcoin, "ek_max_lot", VALUEFUNC(_wrap_ek_max_lot_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_max_sequence", VALUEFUNC(_wrap_ek_max_sequence_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_salt_size", VALUEFUNC(_wrap_ek_salt_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_entropy_size", VALUEFUNC(_wrap_ek_entropy_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_seed_size", VALUEFUNC(_wrap_ek_seed_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_token_encoded_size", VALUEFUNC(_wrap_encrypted_token_encoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_token_decoded_size", VALUEFUNC(_wrap_encrypted_token_decoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_private_encoded_size", VALUEFUNC(_wrap_ek_private_encoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "ek_private_decoded_size", VALUEFUNC(_wrap_ek_private_decoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_public_encoded_size", VALUEFUNC(_wrap_encrypted_public_encoded_size_get), 0);
+  rb_define_singleton_method(mBitcoin, "encrypted_public_decoded_size", VALUEFUNC(_wrap_encrypted_public_decoded_size_get), 0);
+  rb_define_const(mBitcoin, "LOT_SEQUENCE_KEY", SWIG_From_int(static_cast< int >(libbitcoin::wallet::lot_sequence_key)));
+  rb_define_const(mBitcoin, "EC_COMPRESSED_KEY", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_compressed_key)));
+  rb_define_const(mBitcoin, "EC_NON_MULTIPLIED_LOW", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_low)));
+  rb_define_const(mBitcoin, "EC_NON_MULTIPLIED_HIGH", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_high)));
+  rb_define_const(mBitcoin, "EC_NON_MULTIPLIED", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied)));
+  rb_define_module_function(mBitcoin, "create_key_pair", VALUEFUNC(_wrap_create_key_pair), -1);
   
   SwigClassEKPrivate.klass = rb_define_class_under(mBitcoin, "EKPrivate", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__ek_private, (void *) &SwigClassEKPrivate);
@@ -16310,23 +16247,6 @@ SWIGEXPORT void Init_bitcoin(void) {
   SwigClassEKToken.mark = 0;
   SwigClassEKToken.destroy = (void (*)(void *)) free_libbitcoin_wallet_ek_token;
   SwigClassEKToken.trackObjects = 0;
-  rb_define_singleton_method(mBitcoin, "ek_max_lot", VALUEFUNC(_wrap_ek_max_lot_get), 0);
-  rb_define_singleton_method(mBitcoin, "ek_max_sequence", VALUEFUNC(_wrap_ek_max_sequence_get), 0);
-  rb_define_singleton_method(mBitcoin, "ek_salt_size", VALUEFUNC(_wrap_ek_salt_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "ek_entropy_size", VALUEFUNC(_wrap_ek_entropy_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "ek_seed_size", VALUEFUNC(_wrap_ek_seed_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "encrypted_token_encoded_size", VALUEFUNC(_wrap_encrypted_token_encoded_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "encrypted_token_decoded_size", VALUEFUNC(_wrap_encrypted_token_decoded_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "ek_private_encoded_size", VALUEFUNC(_wrap_ek_private_encoded_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "ek_private_decoded_size", VALUEFUNC(_wrap_ek_private_decoded_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "encrypted_public_encoded_size", VALUEFUNC(_wrap_encrypted_public_encoded_size_get), 0);
-  rb_define_singleton_method(mBitcoin, "encrypted_public_decoded_size", VALUEFUNC(_wrap_encrypted_public_decoded_size_get), 0);
-  rb_define_const(mBitcoin, "Lot_sequence_key", SWIG_From_int(static_cast< int >(libbitcoin::wallet::lot_sequence_key)));
-  rb_define_const(mBitcoin, "Ec_compressed_key", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_compressed_key)));
-  rb_define_const(mBitcoin, "Ec_non_multiplied_low", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_low)));
-  rb_define_const(mBitcoin, "Ec_non_multiplied_high", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied_high)));
-  rb_define_const(mBitcoin, "Ec_non_multiplied", SWIG_From_int(static_cast< int >(libbitcoin::wallet::ec_non_multiplied)));
-  rb_define_module_function(mBitcoin, "create_key_pair", VALUEFUNC(_wrap_create_key_pair), -1);
   rb_define_singleton_method(mBitcoin, "hd_first_hardened_key", VALUEFUNC(_wrap_hd_first_hardened_key_get), 0);
   rb_define_singleton_method(mBitcoin, "hd_chain_code_size", VALUEFUNC(_wrap_hd_chain_code_size_get), 0);
   rb_define_singleton_method(mBitcoin, "hd_key_size", VALUEFUNC(_wrap_hd_key_size_get), 0);
@@ -16401,78 +16321,17 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_module_function(mBitcoin, "create_mnemonic", VALUEFUNC(_wrap_create_mnemonic), -1);
   rb_define_module_function(mBitcoin, "validate_mnemonic", VALUEFUNC(_wrap_validate_mnemonic), -1);
   rb_define_module_function(mBitcoin, "decode_mnemonic", VALUEFUNC(_wrap_decode_mnemonic), -1);
-  rb_define_singleton_method(mBitcoin, "payment_size", VALUEFUNC(_wrap_payment_size_get), 0);
-  
-  SwigClassPaymentAddress.klass = rb_define_class_under(mBitcoin, "PaymentAddress", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__payment_address, (void *) &SwigClassPaymentAddress);
-  rb_define_alloc_func(SwigClassPaymentAddress.klass, _wrap_PaymentAddress_allocate);
-  rb_define_method(SwigClassPaymentAddress.klass, "initialize", VALUEFUNC(_wrap_new_PaymentAddress), -1);
-  rb_define_singleton_method(SwigClassPaymentAddress.klass, "mainnet_p2kh", VALUEFUNC(_wrap_PaymentAddress_mainnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassPaymentAddress.klass, "mainnet_p2sh", VALUEFUNC(_wrap_PaymentAddress_mainnet_p2sh_get), 0);
-  rb_define_singleton_method(SwigClassPaymentAddress.klass, "testnet_p2kh", VALUEFUNC(_wrap_PaymentAddress_testnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassPaymentAddress.klass, "testnet_p2sh", VALUEFUNC(_wrap_PaymentAddress_testnet_p2sh_get), 0);
-  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract", VALUEFUNC(_wrap_PaymentAddress_extract), -1);
-  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract_input", VALUEFUNC(_wrap_PaymentAddress_extract_input), -1);
-  rb_define_singleton_method(SwigClassPaymentAddress.klass, "extract_output", VALUEFUNC(_wrap_PaymentAddress_extract_output), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "<", VALUEFUNC(_wrap_PaymentAddress___lt__), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "==", VALUEFUNC(_wrap_PaymentAddress___eq__), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "valid?", VALUEFUNC(_wrap_PaymentAddress_validq___), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "short_hash", VALUEFUNC(_wrap_PaymentAddress_short_hash), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "encoded", VALUEFUNC(_wrap_PaymentAddress_encoded), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "version", VALUEFUNC(_wrap_PaymentAddress_version), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "hash", VALUEFUNC(_wrap_PaymentAddress_hash), -1);
-  rb_define_method(SwigClassPaymentAddress.klass, "to_payment", VALUEFUNC(_wrap_PaymentAddress_to_payment), -1);
-  SwigClassPaymentAddress.mark = 0;
-  SwigClassPaymentAddress.destroy = (void (*)(void *)) free_libbitcoin_wallet_payment_address;
-  SwigClassPaymentAddress.trackObjects = 0;
-  
-  SwigClassWrappedData.klass = rb_define_class_under(mBitcoin, "WrappedData", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__wrapped_data, (void *) &SwigClassWrappedData);
-  rb_define_alloc_func(SwigClassWrappedData.klass, _wrap_WrappedData_allocate);
-  rb_define_method(SwigClassWrappedData.klass, "initialize", VALUEFUNC(_wrap_new_WrappedData), -1);
-  rb_define_method(SwigClassWrappedData.klass, "version=", VALUEFUNC(_wrap_WrappedData_version_set), -1);
-  rb_define_method(SwigClassWrappedData.klass, "version", VALUEFUNC(_wrap_WrappedData_version_get), -1);
-  rb_define_method(SwigClassWrappedData.klass, "payload=", VALUEFUNC(_wrap_WrappedData_payload_set), -1);
-  rb_define_method(SwigClassWrappedData.klass, "payload", VALUEFUNC(_wrap_WrappedData_payload_get), -1);
-  rb_define_method(SwigClassWrappedData.klass, "checksum=", VALUEFUNC(_wrap_WrappedData_checksum_set), -1);
-  rb_define_method(SwigClassWrappedData.klass, "checksum", VALUEFUNC(_wrap_WrappedData_checksum_get), -1);
-  SwigClassWrappedData.mark = 0;
-  SwigClassWrappedData.destroy = (void (*)(void *)) free_libbitcoin_wallet_wrapped_data;
-  SwigClassWrappedData.trackObjects = 0;
   
   SwigClassSelectOutputs.klass = rb_define_class_under(mBitcoin, "SelectOutputs", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__select_outputs, (void *) &SwigClassSelectOutputs);
   rb_define_alloc_func(SwigClassSelectOutputs.klass, _wrap_SelectOutputs_allocate);
   rb_define_method(SwigClassSelectOutputs.klass, "initialize", VALUEFUNC(_wrap_new_SelectOutputs), -1);
-  rb_define_const(SwigClassSelectOutputs.klass, "Algorithm_greedy", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::greedy)));
-  rb_define_const(SwigClassSelectOutputs.klass, "Algorithm_individual", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::individual)));
+  rb_define_const(SwigClassSelectOutputs.klass, "ALGORITHM_GREEDY", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::greedy)));
+  rb_define_const(SwigClassSelectOutputs.klass, "ALGORITHM_INDIVIDUAL", SWIG_From_int(static_cast< int >(libbitcoin::wallet::select_outputs::algorithm::individual)));
   rb_define_singleton_method(SwigClassSelectOutputs.klass, "select", VALUEFUNC(_wrap_SelectOutputs_select), -1);
   SwigClassSelectOutputs.mark = 0;
   SwigClassSelectOutputs.destroy = (void (*)(void *)) free_libbitcoin_wallet_select_outputs;
   SwigClassSelectOutputs.trackObjects = 0;
-  
-  SwigClassStealthAddress.klass = rb_define_class_under(mBitcoin, "StealthAddress", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_address, (void *) &SwigClassStealthAddress);
-  rb_define_alloc_func(SwigClassStealthAddress.klass, _wrap_StealthAddress_allocate);
-  rb_define_method(SwigClassStealthAddress.klass, "initialize", VALUEFUNC(_wrap_new_StealthAddress), -1);
-  rb_define_singleton_method(SwigClassStealthAddress.klass, "mainnet_p2kh", VALUEFUNC(_wrap_StealthAddress_mainnet_p2kh_get), 0);
-  rb_define_singleton_method(SwigClassStealthAddress.klass, "reuse_key_flag", VALUEFUNC(_wrap_StealthAddress_reuse_key_flag_get), 0);
-  rb_define_singleton_method(SwigClassStealthAddress.klass, "min_filter_bits", VALUEFUNC(_wrap_StealthAddress_min_filter_bits_get), 0);
-  rb_define_singleton_method(SwigClassStealthAddress.klass, "max_filter_bits", VALUEFUNC(_wrap_StealthAddress_max_filter_bits_get), 0);
-  rb_define_method(SwigClassStealthAddress.klass, "<", VALUEFUNC(_wrap_StealthAddress___lt__), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "==", VALUEFUNC(_wrap_StealthAddress___eq__), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "valid?", VALUEFUNC(_wrap_StealthAddress_validq___), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "data_chunk", VALUEFUNC(_wrap_StealthAddress_data_chunk), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "encoded", VALUEFUNC(_wrap_StealthAddress_encoded), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "version", VALUEFUNC(_wrap_StealthAddress_version), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "scan_key", VALUEFUNC(_wrap_StealthAddress_scan_key), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "spend_keys", VALUEFUNC(_wrap_StealthAddress_spend_keys), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "signatures", VALUEFUNC(_wrap_StealthAddress_signatures), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "filter", VALUEFUNC(_wrap_StealthAddress_filter), -1);
-  rb_define_method(SwigClassStealthAddress.klass, "to_chunk", VALUEFUNC(_wrap_StealthAddress_to_chunk), -1);
-  SwigClassStealthAddress.mark = 0;
-  SwigClassStealthAddress.destroy = (void (*)(void *)) free_libbitcoin_wallet_stealth_address;
-  SwigClassStealthAddress.trackObjects = 0;
   
   SwigClassStealthReceiver.klass = rb_define_class_under(mBitcoin, "StealthReceiver", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_libbitcoin__wallet__stealth_receiver, (void *) &SwigClassStealthReceiver);
