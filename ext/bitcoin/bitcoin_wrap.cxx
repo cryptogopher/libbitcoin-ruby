@@ -3227,10 +3227,12 @@ _wrap_max_money_recursive(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
   {
-    arg1 = NUM2ULONG(argv[0]);
+    arg1 = NUM2ULL(argv[0]);
   }
   result = libbitcoin::max_money_recursive(arg1);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -3256,10 +3258,12 @@ _wrap_bitcoin_to_satoshi__SWIG_0(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
   {
-    arg1 = NUM2ULONG(argv[0]);
+    arg1 = NUM2ULL(argv[0]);
   }
   result = libbitcoin::bitcoin_to_satoshi(arg1);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -3275,7 +3279,9 @@ _wrap_bitcoin_to_satoshi__SWIG_1(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
   result = libbitcoin::bitcoin_to_satoshi();
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -3332,7 +3338,9 @@ _wrap_initial_block_subsidy_satoshi(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
   result = libbitcoin::initial_block_subsidy_satoshi();
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -3383,7 +3391,9 @@ _wrap_subsidy_interval__SWIG_0(int argc, VALUE *argv, VALUE self) {
   } 
   arg1 = static_cast< bool >(val1);
   result = libbitcoin::subsidy_interval(arg1);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -3399,7 +3409,9 @@ _wrap_subsidy_interval__SWIG_1(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
   result = libbitcoin::subsidy_interval();
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -3456,7 +3468,9 @@ _wrap_max_money__SWIG_0(int argc, VALUE *argv, VALUE self) {
   } 
   arg1 = static_cast< bool >(val1);
   result = libbitcoin::max_money(arg1);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -3472,7 +3486,9 @@ _wrap_max_money__SWIG_1(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
   result = libbitcoin::max_money();
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -9043,7 +9059,9 @@ _wrap_BitcoinURI_amount(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
   result = ((libbitcoin::wallet::bitcoin_uri const *)arg1)->amount();
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -9249,7 +9267,7 @@ _wrap_BitcoinURI_set_amount(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::bitcoin_uri * >(argp1);
   {
-    arg2 = NUM2ULONG(argv[0]);
+    arg2 = NUM2ULL(argv[0]);
   }
   (arg1)->set_amount(arg2);
   return Qnil;
@@ -11588,7 +11606,7 @@ _wrap_HDLineage_prefixes_set(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
   {
-    arg2 = NUM2ULONG(argv[0]);
+    arg2 = NUM2ULL(argv[0]);
   }
   if (arg1) (arg1)->prefixes = arg2;
   return Qnil;
@@ -11614,7 +11632,9 @@ _wrap_HDLineage_prefixes_get(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::hd_lineage * >(argp1);
   result =  ((arg1)->prefixes);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -11908,7 +11928,7 @@ _wrap_HDPublic_to_prefix(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
   {
-    arg1 = NUM2ULONG(argv[0]);
+    arg1 = NUM2ULL(argv[0]);
   }
   result = libbitcoin::wallet::hd_public::to_prefix(arg1);
   vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
@@ -12524,7 +12544,7 @@ _wrap_HDPrivate_to_prefix(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
   }
   {
-    arg1 = NUM2ULONG(argv[0]);
+    arg1 = NUM2ULL(argv[0]);
   }
   result = libbitcoin::wallet::hd_private::to_prefix(arg1);
   vresult = SWIG_NewPointerObj((new uint32_t(static_cast< const uint32_t& >(result))), SWIGTYPE_p_uint32_t, SWIG_POINTER_OWN |  0 );
@@ -12571,7 +12591,9 @@ _wrap_HDPrivate_to_prefixes(int argc, VALUE *argv, VALUE self) {
     }
   }
   result = libbitcoin::wallet::hd_private::to_prefixes(arg1,arg2);
-  vresult = SWIG_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  {
+    vresult = ULL2NUM(result);
+  }
   return vresult;
 fail:
   return Qnil;
@@ -12639,7 +12661,7 @@ _wrap_new_HDPrivate__SWIG_2(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< data_chunk * >(argp1);
   {
-    arg2 = NUM2ULONG(argv[1]);
+    arg2 = NUM2ULL(argv[1]);
   }
   result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((data_chunk const &)*arg1,arg2);
   DATA_PTR(self) = result;
@@ -12721,7 +12743,7 @@ _wrap_new_HDPrivate__SWIG_5(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::hd_key * >(argp1);
   {
-    arg2 = NUM2ULONG(argv[1]);
+    arg2 = NUM2ULL(argv[1]);
   }
   result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((libbitcoin::wallet::hd_key const &)*arg1,arg2);
   DATA_PTR(self) = result;
@@ -12823,7 +12845,7 @@ _wrap_new_HDPrivate__SWIG_8(int argc, VALUE *argv, VALUE self) {
     arg1 = ptr;
   }
   {
-    arg2 = NUM2ULONG(argv[1]);
+    arg2 = NUM2ULL(argv[1]);
   }
   result = (libbitcoin::wallet::hd_private *)new libbitcoin::wallet::hd_private((std::string const &)*arg1,arg2);
   DATA_PTR(self) = result;
@@ -14240,7 +14262,7 @@ _wrap_SelectOutputs_select__SWIG_0(int argc, VALUE *argv, VALUE self) {
   }
   arg2 = reinterpret_cast< chain::points_value * >(argp2);
   {
-    arg3 = NUM2ULONG(argv[2]);
+    arg3 = NUM2ULL(argv[2]);
   }
   ecode4 = SWIG_AsVal_int(argv[3], &val4);
   if (!SWIG_IsOK(ecode4)) {
@@ -14284,7 +14306,7 @@ _wrap_SelectOutputs_select__SWIG_1(int argc, VALUE *argv, VALUE self) {
   }
   arg2 = reinterpret_cast< chain::points_value * >(argp2);
   {
-    arg3 = NUM2ULONG(argv[2]);
+    arg3 = NUM2ULL(argv[2]);
   }
   libbitcoin::wallet::select_outputs::select(*arg1,(chain::points_value const &)*arg2,arg3);
   return Qnil;

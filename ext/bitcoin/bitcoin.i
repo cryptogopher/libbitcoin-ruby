@@ -79,10 +79,13 @@ class data_slice;
 
 // typemap for converting: Fixnum/Bignum -> uint64_t
 %typemap(in) uint64_t {
-  $1 = NUM2ULONG($input);
+  $1 = NUM2ULL($input);
 }
 %typemap(typecheck, precedence=SWIG_TYPECHECK_UINT64) uint64_t {
   $1 = FIXNUM_P($input) ? 1 : 0;
+}
+%typemap(out) uint64_t {
+  $result = ULL2NUM($1);
 }
 
 // Give classes/constants more ruby names
