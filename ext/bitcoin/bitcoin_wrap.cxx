@@ -4244,7 +4244,16 @@ _wrap_URI_decode_query(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
   result = ((libbitcoin::wallet::uri const *)arg1)->decode_query();
-  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::uri::query_map(static_cast< const libbitcoin::wallet::uri::query_map& >(result))), SWIGTYPE_p_std__mapT_std__string_std__string_t, SWIG_POINTER_OWN |  0 );
+  {
+    VALUE hash = rb_hash_new();
+    std::map<std::string,std::string>::iterator i = (&result)->begin(), iend = (&result)->end();
+    for ( ; i!=iend; i++ )
+    rb_hash_aset(hash,
+      rb_str_new_cstr((*i).first.c_str()),
+      rb_str_new_cstr((*i).second.c_str())
+      );
+    vresult = hash;
+  }
   return vresult;
 fail:
   return Qnil;
@@ -4257,8 +4266,6 @@ _wrap_URI_encode_query(int argc, VALUE *argv, VALUE self) {
   libbitcoin::wallet::uri::query_map *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   
   if ((argc < 1) || (argc > 1)) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
@@ -4268,17 +4275,32 @@ _wrap_URI_encode_query(int argc, VALUE *argv, VALUE self) {
     SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri *","encode_query", 1, self )); 
   }
   arg1 = reinterpret_cast< libbitcoin::wallet::uri * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[0], &argp2, SWIGTYPE_p_std__mapT_std__string_std__string_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "libbitcoin::wallet::uri::query_map const &","encode_query", 2, argv[0] )); 
+  {
+    Check_Type(argv[0], T_HASH);
+    std::map<std::string,std::string> *map = new std::map<std::string,std::string>;
+    VALUE keys = rb_funcall(argv[0], rb_intern("keys"), 0);
+    long len = RARRAY_LEN(keys);
+    for (long i = 0; i < len; i++) {
+      VALUE key = rb_ary_entry(keys, i);
+      VALUE keyS = rb_funcall(key, rb_intern("to_s"), 0);
+      VALUE valS = rb_funcall(rb_hash_aref(argv[0], key), rb_intern("to_s"), 0);
+      map ->insert(
+        std::pair<std::string,std::string>(
+          std::string(StringValueCStr(keyS)),
+          std::string(StringValueCStr(valS))
+          ));
+    }
+    arg2 = map;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "libbitcoin::wallet::uri::query_map const &","encode_query", 2, argv[0])); 
-  }
-  arg2 = reinterpret_cast< libbitcoin::wallet::uri::query_map * >(argp2);
   (arg1)->encode_query((libbitcoin::wallet::uri::query_map const &)*arg2);
+  {
+    delete arg2;
+  }
   return Qnil;
 fail:
+  {
+    delete arg2;
+  }
   return Qnil;
 }
 

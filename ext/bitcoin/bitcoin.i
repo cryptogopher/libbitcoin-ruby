@@ -1,8 +1,12 @@
 // All naming trying to be consistent with Ruby style guide
 // https://github.com/bbatsov/ruby-style-guide#naming
+//
+// Currently only ascii-8bit encoding supported
 
 %module bitcoin
+//%include std_container.i
 %include std_string.i
+//%include std_map.i
 
 %{
 #include "bitcoin/bitcoin/compat.hpp"
@@ -77,7 +81,7 @@ using namespace libbitcoin;
 %feature("valuewrapper") data_slice;
 class data_slice;
 
-// typemap for converting: Fixnum/Bignum -> uint64_t
+// typemap for converting: Fixnum/Bignum -> uint64_t and back
 %typemap(in) uint64_t {
   $1 = NUM2ULL($input);
 }
@@ -86,6 +90,54 @@ class data_slice;
 }
 %typemap(out) uint64_t {
   $result = ULL2NUM($1);
+}
+// typemaps for converting: hash -> std::map and back
+// http://www.swig.org/Doc3.0/Ruby.html#Ruby_nn52
+// https://github.com/ruby/ruby/blob/trunk/doc/extension.rdoc
+// https://silverhammermba.github.io/emberb/c/
+// http://www.cplusplus.com/reference/map/map/insert/
+%typemap(in) std::map<std::string,std::string>&, const std::map<std::string,std::string>&
+{
+  Check_Type($input, T_HASH);
+  std::map<std::string,std::string> *map = new std::map<std::string,std::string>;
+  VALUE keys = rb_funcall($input, rb_intern("keys"), 0);
+  long len = RARRAY_LEN(keys);
+  for (long i = 0; i < len; i++) {
+    VALUE key = rb_ary_entry(keys, i);
+    VALUE keyS = rb_funcall(key, rb_intern("to_s"), 0);
+    VALUE valS = rb_funcall(rb_hash_aref($input, key), rb_intern("to_s"), 0);
+    map ->insert(
+      std::pair<std::string,std::string>(
+        std::string(StringValueCStr(keyS)),
+        std::string(StringValueCStr(valS))
+    ));
+  }
+  $1 = map;
+}
+%typemap(freearg) std::map<std::string,std::string>&,
+  const %std::map<std::string,std::string>&
+{
+  delete $1;
+}
+%typemap(out) std::map<std::string,std::string>&, const std::map<std::string,std::string>& {
+  VALUE hash = rb_hash_new();
+  std::map<std::string,std::string>::iterator i = $1->begin(), iend = $1->end();
+  for ( ; i!=iend; i++ )
+    rb_hash_aset(hash,
+      rb_str_new_cstr((*i).first.c_str()),
+      rb_str_new_cstr((*i).second.c_str())
+    );
+  $result = hash;
+}
+%typemap(out) std::map<std::string,std::string>, const std::map<std::string,std::string> {
+  VALUE hash = rb_hash_new();
+  std::map<std::string,std::string>::iterator i = $1.begin(), iend = $1.end();
+  for ( ; i!=iend; i++ )
+    rb_hash_aset(hash,
+      rb_str_new_cstr((*i).first.c_str()),
+      rb_str_new_cstr((*i).second.c_str())
+    );
+  $result = hash;
 }
 
 // Give classes/constants more ruby names
