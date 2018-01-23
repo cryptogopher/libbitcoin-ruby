@@ -140,6 +140,16 @@ class data_slice;
   $result = hash;
 }
 
+// Wrapping template static functions does not seem to work in SWIG
+// https://stackoverflow.com/questions/25663216/cant-wrap-a-template-static-function-with-swig
+//%template(parse) libbitcoin::wallet::uri_reader::parse<libbitcoin::wallet::bitcoin_uri>;
+%extend libbitcoin::wallet::uri_reader {
+  static libbitcoin::wallet::bitcoin_uri parse(const std::string& uri, bool strict=true) {
+    return
+      libbitcoin::wallet::uri_reader::parse<libbitcoin::wallet::bitcoin_uri>(uri, strict);
+  }
+};
+
 // Give classes/constants more ruby names
 %rename ("BitcoinURI") libbitcoin::wallet::bitcoin_uri;
 %rename ("URI") libbitcoin::wallet::uri;

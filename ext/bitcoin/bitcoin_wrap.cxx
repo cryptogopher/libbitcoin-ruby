@@ -2190,6 +2190,10 @@ SWIG_From_std_string  (const std::string& s)
   return SWIG_FromCharPtrAndSize(s.data(), s.size());
 }
 
+SWIGINTERN libbitcoin::wallet::bitcoin_uri libbitcoin_wallet_uri_reader_parse__SWIG_2(std::string const &uri,bool strict=true){
+    return
+      libbitcoin::wallet::uri_reader::parse<libbitcoin::wallet::bitcoin_uri>(uri, strict);
+  }
 SWIGINTERN VALUE
 _wrap_min_int64_get(VALUE self) {
   VALUE _val;
@@ -4578,6 +4582,118 @@ _wrap_URIReader_set_parameter(int argc, VALUE *argv, VALUE self) {
 fail:
   if (SWIG_IsNewObj(res2)) delete arg2;
   if (SWIG_IsNewObj(res3)) delete arg3;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_URIReader_parse__SWIG_2(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  bool arg2 ;
+  int res1 = SWIG_OLDOBJ ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  libbitcoin::wallet::bitcoin_uri result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","libbitcoin_wallet_uri_reader_parse__SWIG_2", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin_wallet_uri_reader_parse__SWIG_2", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  ecode2 = SWIG_AsVal_bool(argv[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), Ruby_Format_TypeError( "", "bool","libbitcoin_wallet_uri_reader_parse__SWIG_2", 2, argv[1] ));
+  } 
+  arg2 = static_cast< bool >(val2);
+  result = libbitcoin_wallet_uri_reader_parse__SWIG_2((std::string const &)*arg1,arg2);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::bitcoin_uri(static_cast< const libbitcoin::wallet::bitcoin_uri& >(result))), SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, SWIG_POINTER_OWN |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_URIReader_parse__SWIG_3(int argc, VALUE *argv, VALUE self) {
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  libbitcoin::wallet::bitcoin_uri result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(argv[0], &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), Ruby_Format_TypeError( "", "std::string const &","libbitcoin_wallet_uri_reader_parse__SWIG_2", 1, argv[0] )); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, Ruby_Format_TypeError("invalid null reference ", "std::string const &","libbitcoin_wallet_uri_reader_parse__SWIG_2", 1, argv[0])); 
+    }
+    arg1 = ptr;
+  }
+  result = libbitcoin_wallet_uri_reader_parse__SWIG_2((std::string const &)*arg1);
+  vresult = SWIG_NewPointerObj((new libbitcoin::wallet::bitcoin_uri(static_cast< const libbitcoin::wallet::bitcoin_uri& >(result))), SWIGTYPE_p_libbitcoin__wallet__bitcoin_uri, SWIG_POINTER_OWN |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return vresult;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE _wrap_URIReader_parse(int nargs, VALUE *args, VALUE self) {
+  int argc;
+  VALUE argv[2];
+  int ii;
+  
+  argc = nargs;
+  if (argc > 2) SWIG_fail;
+  for (ii = 0; (ii < argc); ++ii) {
+    argv[ii] = args[ii];
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_URIReader_parse__SWIG_3(nargs, args, self);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_URIReader_parse__SWIG_2(nargs, args, self);
+      }
+    }
+  }
+  
+fail:
+  Ruby_Format_OverloadedError( argc, 2, "parse", 
+    "    libbitcoin::wallet::bitcoin_uri parse(std::string const &uri, bool strict)\n"
+    "    libbitcoin::wallet::bitcoin_uri parse(std::string const &uri)\n");
+  
   return Qnil;
 }
 
@@ -16071,6 +16187,7 @@ SWIGEXPORT void Init_bitcoin(void) {
   rb_define_method(SwigClassURIReader.klass, "set_path", VALUEFUNC(_wrap_URIReader_set_path), -1);
   rb_define_method(SwigClassURIReader.klass, "set_fragment", VALUEFUNC(_wrap_URIReader_set_fragment), -1);
   rb_define_method(SwigClassURIReader.klass, "set_parameter", VALUEFUNC(_wrap_URIReader_set_parameter), -1);
+  rb_define_singleton_method(SwigClassURIReader.klass, "parse", VALUEFUNC(_wrap_URIReader_parse), -1);
   SwigClassURIReader.mark = 0;
   SwigClassURIReader.destroy = (void (*)(void *)) free_libbitcoin_wallet_uri_reader;
   SwigClassURIReader.trackObjects = 0;
