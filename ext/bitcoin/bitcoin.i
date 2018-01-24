@@ -7,6 +7,8 @@
 //%include std_container.i
 %include std_string.i
 //%include std_map.i
+%include typemaps.i
+//%naturalvar;
 
 %{
 #include "bitcoin/bitcoin/compat.hpp"
@@ -15,6 +17,13 @@
 #include "bitcoin/bitcoin/error.hpp"
 #include "bitcoin/bitcoin/handlers.hpp"
 #include "bitcoin/bitcoin/version.hpp"
+
+#include "bitcoin/bitcoin/formats/base_10.hpp"
+#include "bitcoin/bitcoin/formats/base_16.hpp"
+#include "bitcoin/bitcoin/formats/base_58.hpp"
+#include "bitcoin/bitcoin/formats/base_64.hpp"
+#include "bitcoin/bitcoin/formats/base_85.hpp"
+#include "base_xx.hpp"
 
 #include "bitcoin/bitcoin/wallet/uri.hpp"
 #include "bitcoin/bitcoin/wallet/uri_reader.hpp"
@@ -40,6 +49,7 @@
 
 using namespace libbitcoin;
 %}
+
 
 // operator!=: Ruby parses the expression a != b as !(a == b)
 // libbitcoin does the same
@@ -81,17 +91,12 @@ using namespace libbitcoin;
 %feature("valuewrapper") data_slice;
 class data_slice;
 
-// typemap for converting: Fixnum/Bignum -> uint64_t and back
-%typemap(in) uint64_t {
-  $1 = NUM2ULL($input);
-}
-%typemap(typecheck, precedence=SWIG_TYPECHECK_UINT64) uint64_t {
-  $1 = FIXNUM_P($input) ? 1 : 0;
-}
-%typemap(out) uint64_t {
-  $result = ULL2NUM($1);
-}
-// typemaps for converting: hash -> std::map and back
+// Hints for SWIG to treat these types as primitives.
+// Required for returning by value instead of pointer to object.
+typedef long int64_t;
+typedef unsigned long uint64_t;
+
+// typemaps: hash <-> std::map
 // http://www.swig.org/Doc3.0/Ruby.html#Ruby_nn52
 // https://github.com/ruby/ruby/blob/trunk/doc/extension.rdoc
 // https://silverhammermba.github.io/emberb/c/
@@ -186,6 +191,21 @@ class data_slice;
 %include "bitcoin/bitcoin/error.hpp"
 %include "bitcoin/bitcoin/handlers.hpp"
 %include "bitcoin/bitcoin/version.hpp"
+
+// Ignore and rewrite functions returning output in arguments (uint64_t& out)
+%ignore libbitcoin::decode_base10(uint64_t&, const std::string&, uint8_t=0, bool=true);
+%include "bitcoin/bitcoin/formats/base_10.hpp"
+%include "bitcoin/bitcoin/formats/base_16.hpp"
+// base58.hpp is unparsable for SWIG
+// (base_58.hpp:45: Error: Syntax error in input(1))
+BC_API bool is_base58(const char ch);
+BC_API bool is_base58(const std::string& text);
+BC_API std::string encode_base58(data_slice unencoded);
+BC_API bool decode_base58(data_chunk& out, const std::string& in);
+
+%include "bitcoin/bitcoin/formats/base_64.hpp"
+%include "bitcoin/bitcoin/formats/base_85.hpp"
+%include "base_xx.hpp"
 
 %include "bitcoin/bitcoin/wallet/uri.hpp"
 %include "bitcoin/bitcoin/wallet/uri_reader.hpp"
